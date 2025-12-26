@@ -12,7 +12,7 @@ from query_engine import QueryEngine
 from html_sanitizer import HTMLSanitizer
 
 
-def test_complete_workflow():
+def test_complete_workflow(target_url: str):
     """Test complete extraction workflow"""
     print("=" * 60)
     print("Web Extraction MCP - Complete Workflow Test")
@@ -27,13 +27,24 @@ def test_complete_workflow():
 
     # Navigate to test page
     print("\n2. Navigating to test page...")
-    result = browser.playwright_client.browser_navigate("https://example.com")
+    print(f"   Target URL: {target_url}")
+    result = browser.playwright_client.browser_navigate(target_url)
+    print(f"   Navigation result: {result}")
     if result.get("status") != "success":
         print(f"   ❌ Navigation failed: {result}")
         browser.close()
         return False
 
     time.sleep(2)  # Wait for page load
+
+    # Verify current URL matches target
+    current_url = browser.get_current_url()
+    print(f"   Current URL after navigation: {current_url}")
+    if current_url != target_url and not current_url.startswith(target_url):
+        print(f"   ⚠️  Warning: Current URL doesn't match target!")
+        print(f"   Expected: {target_url}")
+        print(f"   Got: {current_url}")
+
     print("   ✅ Navigation successful")
 
     # Get page metadata
@@ -57,10 +68,21 @@ def test_complete_workflow():
         print(f"   HTML type: {type(raw_html)}")
         print(f"   HTML length: {len(raw_html) if isinstance(raw_html, str) else 'N/A'} characters")
         print(f"   HTML preview: {str(raw_html)[:200]}...")
-        if not raw_html or not isinstance(raw_html, str):
-            print(f"   ⚠️  Warning: HTML is not a valid string: {raw_html}")
-            # Use fallback HTML
-            raw_html = "<html><body><h1>Example Domain</h1><p>This domain is for use in illustrative examples.</p></body></html>"
+
+        if not raw_html:
+            print(f"   ❌ ERROR: HTML is empty!")
+            print(f"   This usually means:")
+            print(f"      - The page didn't load properly")
+            print(f"      - The browser_evaluate call failed silently")
+            print(f"      - The page requires authentication or has bot protection")
+            browser.close()
+            return False
+
+        if not isinstance(raw_html, str):
+            print(f"   ❌ ERROR: HTML is not a string, got {type(raw_html)}: {raw_html}")
+            browser.close()
+            return False
+
         print("   ✅ HTML extracted")
     except Exception as e:
         print(f"   ❌ HTML extraction failed: {e}")
@@ -117,7 +139,7 @@ def test_complete_workflow():
     )
     print(f"   Found {len(results)} links")
     if results:
-        for i, r in enumerate(results[:3]):
+        for r in results[:3]:
             print(f"   - {r.get('text', 'No text')[:50]}")
 
     # Query 2: Natural language query
@@ -244,6 +266,7 @@ def main():
     print("Web Extraction MCP Test Suite")
     print("=" * 60)
 
+    target_url = "https://www.1point3acres.com/bbs/tag/openai-9407-1.html"
     # Test components individually
     try:
         test_components_individually()
@@ -255,7 +278,7 @@ def main():
 
     # Test complete workflow
     try:
-        test_complete_workflow()
+        test_complete_workflow(target_url)
     except Exception as e:
         print(f"\n❌ Workflow test FAILED: {e}")
         import traceback

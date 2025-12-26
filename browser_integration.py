@@ -4,6 +4,7 @@ Interfaces with Playwright MCP to extract page content
 """
 
 import json
+import re
 from typing import Dict, Optional
 from helper.PlaywrightMcpClient import MCPPlaywrightClient
 
@@ -42,33 +43,41 @@ class BrowserIntegration:
             function="() => document.documentElement.outerHTML"
         )
 
-        if result.get("status") != "success":
-            raise RuntimeError(f"Failed to get page HTML: {result.get('message', 'Unknown error')}")
+        # Handle MCP response format: {'status': 'success', 'result': {'content': [{'type': 'text', 'text': '...'}]}}
+        if isinstance(result, dict):
+            if result.get("status") != "success":
+                raise RuntimeError(f"Failed to get page HTML: {result.get('message', 'Unknown error')}")
 
-        # Extract content from nested result structure
-        content = result.get("result", "")
+            # Extract content from nested structure
+            result_data = result.get("result", {})
+            if isinstance(result_data, dict) and "content" in result_data:
+                content_list = result_data["content"]
+                if isinstance(content_list, list) and len(content_list) > 0:
+                    first_item = content_list[0]
+                    if isinstance(first_item, dict) and "text" in first_item:
+                        text = first_item["text"]
+                        # Parse the result from markdown format - HTML is quoted and escaped
+                        # Look for content after "### Result" - HTML might span multiple lines
+                        match = re.search(r'### Result\s*\n"((?:[^"\\]|\\.)*)"', text, re.DOTALL)
+                        if match:
+                            # Unescape the string
+                            html = match.group(1)
+                            html = html.replace('\\n', '\n').replace('\\t', '\t').replace('\\"', '"').replace('\\\\', '\\')
+                            return html
+                        # If no match, return the text as-is
+                        return text
 
-        # Handle list response (sometimes MCP returns list)
-        if isinstance(content, list):
-            if len(content) > 0:
-                content = content[0]
-            else:
-                return ""
+            # Fallback: try old format
+            content = result.get("result", "")
+            if isinstance(content, str):
+                return content
+            if isinstance(content, dict):
+                if "content" in content:
+                    return str(content["content"])
+                elif "result" in content:
+                    return str(content["result"])
 
-        if isinstance(content, dict):
-            # Handle different response formats
-            if "content" in content:
-                return content["content"]
-            elif "result" in content:
-                return content["result"]
-            # Sometimes the HTML is directly in the result
-            return str(content)
-
-        # Handle string or other types
-        if isinstance(content, str):
-            return content
-
-        return str(content)
+        return str(result)
 
     def get_current_url(self) -> str:
         """
@@ -81,29 +90,38 @@ class BrowserIntegration:
             function="() => window.location.href"
         )
 
-        if result.get("status") != "success":
-            raise RuntimeError(f"Failed to get page URL: {result.get('message', 'Unknown error')}")
+        # Handle MCP response format: {'status': 'success', 'result': {'content': [{'type': 'text', 'text': '...'}]}}
+        if isinstance(result, dict):
+            if result.get("status") != "success":
+                raise RuntimeError(f"Failed to get page URL: {result.get('message', 'Unknown error')}")
 
-        content = result.get("result", "")
+            # Extract content from nested structure
+            result_data = result.get("result", {})
+            if isinstance(result_data, dict) and "content" in result_data:
+                content_list = result_data["content"]
+                if isinstance(content_list, list) and len(content_list) > 0:
+                    first_item = content_list[0]
+                    if isinstance(first_item, dict) and "text" in first_item:
+                        text = first_item["text"]
+                        # Parse the result from markdown format
+                        # Look for the URL in quotes after "### Result"
+                        match = re.search(r'### Result\s*\n"([^"]+)"', text)
+                        if match:
+                            return match.group(1)
+                        # If no match, return the text as-is
+                        return text
 
-        # Handle list response
-        if isinstance(content, list):
-            if len(content) > 0:
-                content = content[0]
-            else:
-                return ""
+            # Fallback: try old format
+            content = result.get("result", "")
+            if isinstance(content, str):
+                return content
+            if isinstance(content, dict):
+                if "content" in content:
+                    return str(content["content"])
+                elif "result" in content:
+                    return str(content["result"])
 
-        if isinstance(content, dict):
-            if "content" in content:
-                return content["content"]
-            elif "result" in content:
-                return content["result"]
-            return str(content)
-
-        if isinstance(content, str):
-            return content
-
-        return str(content)
+        return str(result)
 
     def get_page_title(self) -> str:
         """
@@ -116,29 +134,38 @@ class BrowserIntegration:
             function="() => document.title"
         )
 
-        if result.get("status") != "success":
-            return ""
-
-        content = result.get("result", "")
-
-        # Handle list response
-        if isinstance(content, list):
-            if len(content) > 0:
-                content = content[0]
-            else:
+        # Handle MCP response format: {'status': 'success', 'result': {'content': [{'type': 'text', 'text': '...'}]}}
+        if isinstance(result, dict):
+            if result.get("status") != "success":
                 return ""
 
-        if isinstance(content, dict):
-            if "content" in content:
-                return content["content"]
-            elif "result" in content:
-                return content["result"]
-            return str(content)
+            # Extract content from nested structure
+            result_data = result.get("result", {})
+            if isinstance(result_data, dict) and "content" in result_data:
+                content_list = result_data["content"]
+                if isinstance(content_list, list) and len(content_list) > 0:
+                    first_item = content_list[0]
+                    if isinstance(first_item, dict) and "text" in first_item:
+                        text = first_item["text"]
+                        # Parse the result from markdown format
+                        # Look for the title in quotes after "### Result"
+                        match = re.search(r'### Result\s*\n"([^"]*)"', text)
+                        if match:
+                            return match.group(1)
+                        # If no match, return the text as-is
+                        return text
 
-        if isinstance(content, str):
-            return content
+            # Fallback: try old format
+            content = result.get("result", "")
+            if isinstance(content, str):
+                return content
+            if isinstance(content, dict):
+                if "content" in content:
+                    return str(content["content"])
+                elif "result" in content:
+                    return str(content["result"])
 
-        return str(content)
+        return str(result)
 
     def get_page_metadata(self) -> Dict[str, str]:
         """
@@ -169,42 +196,59 @@ class BrowserIntegration:
             }"""
         )
 
-        if result.get("status") != "success":
-            return {
-                "url": self.get_current_url(),
-                "title": self.get_page_title()
-            }
-
-        content = result.get("result", {})
-
-        # Handle list response
-        if isinstance(content, list):
-            if len(content) > 0:
-                content = content[0]
-            else:
+        # Handle MCP response format: {'status': 'success', 'result': {'content': [{'type': 'text', 'text': '...'}]}}
+        if isinstance(result, dict):
+            if result.get("status") != "success":
                 return {
                     "url": self.get_current_url(),
                     "title": self.get_page_title()
                 }
 
-        if isinstance(content, dict):
-            if "content" in content:
-                # Parse JSON if it's a string
-                if isinstance(content["content"], str):
-                    try:
-                        return json.loads(content["content"])
-                    except:
-                        return content["content"]
-                return content["content"]
-            elif "result" in content:
-                if isinstance(content["result"], str):
-                    try:
-                        return json.loads(content["result"])
-                    except:
-                        return content["result"]
-                return content["result"]
+            # Extract content from nested structure
+            result_data = result.get("result", {})
+            if isinstance(result_data, dict) and "content" in result_data:
+                content_list = result_data["content"]
+                if isinstance(content_list, list) and len(content_list) > 0:
+                    first_item = content_list[0]
+                    if isinstance(first_item, dict) and "text" in first_item:
+                        text = first_item["text"]
+                        # Parse the result from markdown format - extract JSON object
+                        # Look for JSON object after "### Result" (may be nested)
+                        match = re.search(r'### Result\s*\n(\{.*?\n\})', text, re.DOTALL)
+                        if match:
+                            try:
+                                return json.loads(match.group(1))
+                            except Exception as e:
+                                print(f"DEBUG: Failed to parse JSON metadata: {e}")
+                                pass
+                        # If no match, return fallback
+                        return {
+                            "url": self.get_current_url(),
+                            "title": self.get_page_title()
+                        }
 
-        return content if isinstance(content, dict) else {}
+            # Fallback: try old format
+            content = result.get("result", {})
+            if isinstance(content, dict):
+                if "content" in content:
+                    if isinstance(content["content"], str):
+                        try:
+                            return json.loads(content["content"])
+                        except:
+                            pass
+                    return content["content"]
+                elif "result" in content:
+                    if isinstance(content["result"], str):
+                        try:
+                            return json.loads(content["result"])
+                        except:
+                            pass
+                    return content["result"]
+
+        return {
+            "url": self.get_current_url(),
+            "title": self.get_page_title()
+        }
 
     def scroll_to_bottom(self) -> bool:
         """
