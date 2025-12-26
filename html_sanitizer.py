@@ -152,66 +152,123 @@ class HTMLSanitizer:
         return href.strip()
     
     def _build_element_registry(self, soup: BeautifulSoup, extraction_mode: str) -> None:
-        """Build registry of interactive/extractable elements"""
+        """Build registry of interactable elements only"""
         self.element_registry = []
         self._element_counter = 0
-        
-        # Define what elements to register based on extraction mode
-        target_elements = set()
-        if extraction_mode in ['links', 'all']:
-            target_elements.add('a')
-        if extraction_mode in ['forms', 'all']:
-            target_elements.update(['input', 'button', 'select', 'textarea'])
-        if extraction_mode in ['content', 'all']:
-            target_elements.update(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
-        
-        for tag in soup.find_all(target_elements):
-            if self._is_visible_element(tag):
+
+        # Find all potential interactable elements
+        # We check all elements and filter by interactability
+        for tag in soup.find_all(True):  # Find all tags
+            if self._is_visible_element(tag) and self._is_interactable_element(tag):
                 element_info = self._create_element_info(tag)
                 if element_info:
                     self.element_registry.append(element_info)
     
     def _is_visible_element(self, tag: Tag) -> bool:
         """Check if element is likely visible"""
+        # Check for hidden attribute
+        if tag.get('hidden'):
+            return False
+
         # Check for hidden attributes
         style = tag.get('style', '')
         if re.search(r'display\s*:\s*none|visibility\s*:\s*hidden', style, re.I):
             return False
-        
+
         # Check for hidden class patterns
         class_str = ' '.join(tag.get('class', []))
         if re.search(r'hidden|invisible|sr-only|visually-hidden', class_str, re.I):
             return False
-        
+
         return True
+
+    def _is_interactable_element(self, tag: Tag) -> bool:
+        """
+        Check if element is interactable and should get a web_agent_id.
+
+        Criteria:
+        1. Links: <a> with href (excluding javascript:, #, mailto:)
+        2. Buttons: <button>, <input type="submit/button/reset">
+        3. Form Inputs: <input>, <textarea>, <select>
+        4. Custom Interactive: Elements with onclick, role="button/link", tabindex >= 0
+        """
+        tag_name = tag.name.lower()
+
+        # 1. Links with valid href
+        if tag_name == 'a':
+            href = tag.get('href', '').strip()
+            if href and not href.startswith(('javascript:', 'mailto:', '#')):
+                return True
+            return False
+
+        # 2. Buttons
+        if tag_name == 'button':
+            return True
+
+        if tag_name == 'input':
+            input_type = tag.get('type', 'text').lower()
+            # Button-like inputs
+            if input_type in ['submit', 'button', 'reset']:
+                return True
+            # Form inputs (text, password, email, etc.)
+            if input_type in ['text', 'password', 'email', 'search', 'tel', 'url',
+                            'number', 'date', 'time', 'datetime-local', 'month',
+                            'week', 'color', 'range', 'file', 'checkbox', 'radio']:
+                return True
+            return False
+
+        # 3. Form elements
+        if tag_name in ['textarea', 'select']:
+            return True
+
+        # 4. Custom interactive elements
+        # Has onclick handler
+        if tag.get('onclick'):
+            return True
+
+        # Has button or link role
+        role = tag.get('role', '').lower()
+        if role in ['button', 'link']:
+            return True
+
+        # Has positive tabindex (focusable)
+        tabindex = tag.get('tabindex')
+        if tabindex is not None:
+            try:
+                if int(tabindex) >= 0:
+                    return True
+            except ValueError:
+                pass
+
+        return False
     
     def _create_element_info(self, tag: Tag) -> Optional[Dict]:
         """Create element information for registry"""
-        # Generate unique element ID
-        element_id = f"elem-{self._element_counter}"
+        # Generate unique web agent ID
+        web_agent_id = f"wa-{self._element_counter}"
         self._element_counter += 1
-        
-        # Inject data-element-id for later Playwright targeting
-        tag['data-element-id'] = element_id
-        
+
+        # Inject data-web-agent-id for later targeting
+        tag['data-web-agent-id'] = web_agent_id
+
         # Extract text content
         text = self._get_clean_text(tag)
-        
+
         # Build locator information
-        locators = self._build_locators(tag, element_id)
-        
+        locators = self._build_locators(tag, web_agent_id)
+
         element_info = {
             'index': len(self.element_registry),
-            'element_id': element_id,
+            'web_agent_id': web_agent_id,
             'tag': tag.name,
             'text': text[:100],  # Truncate long text
             'attributes': {
-                attr: tag.get(attr) for attr in ['href', 'class', 'id', 'type', 'name']
+                attr: tag.get(attr) for attr in ['href', 'class', 'id', 'type', 'name', 'placeholder', 'value']
                 if tag.get(attr)
             },
             'locators': locators
         }
-        
+
         return element_info
     
     def _get_clean_text(self, tag: Tag) -> str:
@@ -221,27 +278,31 @@ class HTMLSanitizer:
         text = ' '.join(text.split())
         return text
     
-    def _build_locators(self, tag: Tag, element_id: str) -> Dict[str, str]:
+    def _build_locators(self, tag: Tag, web_agent_id: str) -> Dict[str, str]:
         """Build multiple locator strategies for the element"""
         locators = {
-            'data_id': f'[data-element-id="{element_id}"]',
+            'data_id': f'[data-web-agent-id="{web_agent_id}"]',
         }
-        
+
         # Add other locator strategies
         if tag.get('id'):
             locators['id'] = f'#{tag["id"]}'
-        
+
         if tag.get('class'):
             classes = ' '.join(tag['class'])
             locators['class'] = f'.{".".join(tag["class"][:2])}'  # Use first 2 classes
-        
+
         # Generate XPath
         locators['xpath'] = self._generate_xpath(tag)
-        
+
         # For links, add href-based locator
         if tag.name == 'a' and tag.get('href'):
             locators['href'] = f'a[href="{tag["href"]}"]'
-        
+
+        # For inputs, add name-based locator
+        if tag.name == 'input' and tag.get('name'):
+            locators['name'] = f'input[name="{tag["name"]}"]'
+
         return locators
     
     def _generate_xpath(self, tag: Tag) -> str:
@@ -289,37 +350,44 @@ class HTMLSanitizer:
     
     def _truncate_preserving_structure(self, soup: BeautifulSoup) -> BeautifulSoup:
         """Truncate content while preserving important structure"""
-        # Keep elements with data-element-id (our registered elements)
-        important_elements = soup.find_all(attrs={'data-element-id': True})
-        
+        # Keep elements with data-web-agent-id (our registered elements)
+        important_elements = soup.find_all(attrs={'data-web-agent-id': True})
+
         # Create minimal soup with just important elements
         new_soup = BeautifulSoup('<html><body></body></html>', 'html.parser')
         body = new_soup.find('body')
-        
+
         for element in important_elements:
             # Clone element and its essential parent structure
-            clone = soup.new_tag(element.name, **element.attrs)
+            # Filter out 'name' from attrs to avoid conflict with tag name
+            attrs = {k: v for k, v in element.attrs.items() if k != 'name'}
+            clone = new_soup.new_tag(element.name, **attrs)
             clone.string = element.get_text()[:50]  # Truncate text
             body.append(clone)
-        
+
         return new_soup
     
     def _generate_indexed_text(self) -> str:
-        """Generate indexed text format for LLM consumption"""
+        """Generate indexed text format for LLM consumption with web_agent_id"""
         lines = []
         for element in self.element_registry:
             attrs = []
+            # Add web_agent_id
+            attrs.append(f'id="{element["web_agent_id"]}"')
+
             if element['attributes'].get('href'):
                 attrs.append(f'href="{element["attributes"]["href"]}"')
             if element['attributes'].get('type'):
                 attrs.append(f'type="{element["attributes"]["type"]}"')
-            
+            if element['attributes'].get('placeholder'):
+                attrs.append(f'placeholder="{element["attributes"]["placeholder"]}"')
+
             attr_str = ' ' + ' '.join(attrs) if attrs else ''
             text = element['text'][:50] if element['text'] else ''
-            
+
             line = f"[{element['index']}] <{element['tag']}{attr_str}>{text}</{element['tag']}>"
             lines.append(line)
-        
+
         return '\n'.join(lines)
     
     def _extract_pattern_hints(self) -> Dict[str, List[str]]:
@@ -405,7 +473,7 @@ def extract_post_links(html_content: str) -> List[Dict[str, str]]:
                     post_links.append({
                         'title': text,
                         'url': href,
-                        'element_id': element['element_id'],
+                        'web_agent_id': element['web_agent_id'],
                         'xpath': element['locators']['xpath']
                     })
                     break
