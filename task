@@ -1,0 +1,16 @@
+## Task
+You task is to review the design doc /home/zhenkai/personal/Projects/WebAgent/web_extraction_architecture_v2.md.
+Take a look at the code in /home/zhenkai/personal/Projects/WebAgent/related_works/feilian, understand how the html sanitization works.
+Think of we are going to build a tools, that the claude code can interact with this tool + playwright mcp to perform browsering website and utilizing 
+context efficiently beacuse of the santized web page. 
+
+during your developments, I have these milestones:
+1. review the design doc and doc, propose updates of the plan if needed
+2. use /home/zhenkai/personal/Projects/WebAgent/test/page.html as test data for the html sanization and interaction. Our main task is to identify all the posts links with titles, we should not miss any of them
+
+## requirements:
+1. be mindful when we say we are going to extract all posts links, we are trying to first let the sanization happen, then ask claude code, using its reasoning ability, to identify what 
+   is the pattern of a post and its link within the html, so that we constracut the xpath locator to find all the matched results. We should not pass the whole content to AI or claude code, and then ask AI to return the answer, which can have hallucianation
+
+## Helper
+1. you can use /home/zhenkai/personal/Projects/WebAgent/helper/PlaywrightMcpClient.py this cript which can help you call playwright API through python code

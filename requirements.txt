@@ -1,0 +1,7 @@
+# Core dependencies
+beautifulsoup4>=4.12.0
+mcp>=0.9.0
+
+# Existing dependencies (if not already installed)
+# These are likely already installed from your existing setup
+# Add them if needed
