@@ -68,32 +68,36 @@ class HTMLSanitizer:
     def sanitize(self, html_content: str, extraction_mode: str = 'links') -> Dict[str, any]:
         """
         Sanitize HTML content for AI processing.
-        
+
         Args:
             html_content: Raw HTML content
             extraction_mode: Type of extraction ('links', 'forms', 'content', 'all')
-            
+
         Returns:
             Dict containing sanitized HTML, element registry, and metadata
         """
         # Parse HTML
         soup = BeautifulSoup(html_content, 'html.parser')
-        
+
+        # CRITICAL: Build element registry FIRST from original HTML structure
+        # This ensures XPath and selectors work on the actual website
+        self._build_element_registry(soup, extraction_mode)
+
+        # Now sanitize for LLM consumption (compact, token-efficient)
+        # The registry already has correct XPath/selectors from original structure
+
         # Remove unwanted elements
         self._remove_unwanted_elements(soup)
-        
+
         # Remove comments and clean up
         self._remove_comments(soup)
-        
+
         # Sanitize attributes
         self._sanitize_attributes(soup)
-        
-        # Build element registry for interactive elements
-        self._build_element_registry(soup, extraction_mode)
-        
+
         # Apply token limits
         sanitized_soup = self._apply_token_limits(soup)
-        
+
         # Generate different output formats
         return {
             'sanitized_html': str(sanitized_soup),
