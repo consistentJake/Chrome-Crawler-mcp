@@ -43,7 +43,12 @@ class BrowserIntegration:
             function="() => document.documentElement.outerHTML"
         )
 
-        # Handle MCP response format: {'status': 'success', 'result': {'content': [{'type': 'text', 'text': '...'}]}}
+
+
+        return str(self.handle_mcp_response(result))
+
+    def handle_mcp_response(self, result: dict) -> str:
+                # Handle MCP response format: {'status': 'success', 'result': {'content': [{'type': 'text', 'text': '...'}]}}
         if isinstance(result, dict):
             if result.get("status") != "success":
                 raise RuntimeError(f"Failed to get page HTML: {result.get('message', 'Unknown error')}")
@@ -76,7 +81,6 @@ class BrowserIntegration:
                     return str(content["content"])
                 elif "result" in content:
                     return str(content["result"])
-
         return str(result)
 
     def get_current_url(self) -> str:

@@ -29,7 +29,7 @@ class MCPPlaywrightClient:
                              it is added to the server env when not already present.
                              If omitted, falls back to env var or default token.
         """
-        default_token = "4Exp11p2Kle_VSCJ5v6UgYksDs2s53Ty2vAe3mzYnqQ"
+        default_token = "_dj-nQ5KMNif5TTJln6g1B7HsjfSr8d5-CGokFw9Q3A" # linux token
         self.mcp_server_path = mcp_server_path
         self.mcp_command = mcp_command
         self.env = os.environ.copy()
