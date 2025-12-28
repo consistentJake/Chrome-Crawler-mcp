@@ -186,6 +186,8 @@ Workflow:
 2. query_elements(query="Find the 3rd page button")
 3. Get the web_agent_id from results (e.g., "wa-15")
 4. click_element(web_agent_id="wa-15")
+
+IMPORTANT: Use compact=true (default) for large result sets to reduce token usage. Only use compact=false if you need full element details.
 """,
             inputSchema={
                 "type": "object",
@@ -231,6 +233,11 @@ Workflow:
                         "type": "integer",
                         "description": "Maximum number of results to return",
                         "default": 50
+                    },
+                    "compact": {
+                        "type": "boolean",
+                        "description": "Return compact results (only web_agent_id, tag, text snippet, href) to save tokens. Default: true",
+                        "default": True
                     }
                 }
             }
@@ -253,6 +260,8 @@ Workflow:
 1. get_page_content()
 2. find_by_text(text="Submit")
 3. click_element(web_agent_id=result['matches'][0]['web_agent_id'])
+
+IMPORTANT: Use compact=true (default) for large result sets to reduce token usage.
 """,
             inputSchema={
                 "type": "object",
@@ -265,6 +274,11 @@ Workflow:
                         "type": "boolean",
                         "description": "Whether to match exactly (true) or partial match (false)",
                         "default": False
+                    },
+                    "compact": {
+                        "type": "boolean",
+                        "description": "Return compact results to save tokens. Default: true",
+                        "default": True
                     }
                 },
                 "required": ["text"]
@@ -450,14 +464,16 @@ async def call_tool(name: str, arguments: Any) -> List[TextContent]:
             result = await query_elements(
                 query=arguments.get("query"),
                 filters=arguments.get("filters"),
-                limit=arguments.get("limit")
+                limit=arguments.get("limit"),
+                compact=arguments.get("compact", True)
             )
             return [TextContent(type="text", text=json.dumps(result, indent=2, ensure_ascii=False))]
 
         elif name == "find_by_text":
             result = await find_by_text(
                 text=arguments["text"],
-                exact=arguments.get("exact", False)
+                exact=arguments.get("exact", False),
+                compact=arguments.get("compact", True)
             )
             return [TextContent(type="text", text=json.dumps(result, indent=2, ensure_ascii=False))]
 
@@ -657,10 +673,48 @@ async def get_page_content(output_format: str = "indexed") -> Dict:
     return output
 
 
+def _compact_element(element: Dict) -> Dict:
+    """
+    Create a compact representation of an element.
+
+    Only includes essential fields to reduce token usage:
+    - web_agent_id (required for interaction)
+    - tag (element type)
+    - text (first 100 chars)
+    - href (if it's a link)
+    - index (position)
+    """
+    compact = {
+        "web_agent_id": element.get("web_agent_id"),
+        "tag": element.get("tag"),
+        "index": element.get("index")
+    }
+
+    # Add text (truncated)
+    text = element.get("text", "")
+    if text:
+        compact["text"] = text[:100] + ("..." if len(text) > 100 else "")
+
+    # Add href for links
+    if element.get("tag") == "a" and element.get("attributes", {}).get("href"):
+        compact["href"] = element["attributes"]["href"]
+
+    # Add other useful attributes for specific elements
+    attrs = element.get("attributes", {})
+    if element.get("tag") == "input":
+        if "type" in attrs:
+            compact["type"] = attrs["type"]
+        if "placeholder" in attrs:
+            compact["placeholder"] = attrs["placeholder"]
+
+    return compact
+
+
 async def query_elements(
     query: Optional[str] = None,
     filters: Optional[Dict] = None,
-    limit: Optional[int] = None
+    limit: Optional[int] = None,
+    compact: bool = True
 ) -> Dict:
     """Query elements using natural language or structured filters"""
     global current_page_elements
@@ -689,17 +743,22 @@ async def query_elements(
         limit=limit
     )
 
+    # Convert to compact format if requested
+    if compact:
+        matches = [_compact_element(elem) for elem in matches]
+
     return {
         "success": True,
         "query": query,
         "filters": filters,
         "matches": matches,
         "count": len(matches),
-        "total_elements": len(current_page_elements)
+        "total_elements": len(current_page_elements),
+        "compact": compact
     }
 
 
-async def find_by_text(text: str, exact: bool = False) -> Dict:
+async def find_by_text(text: str, exact: bool = False, compact: bool = True) -> Dict:
     """Find elements by text content"""
     global current_page_elements
 
@@ -714,12 +773,17 @@ async def find_by_text(text: str, exact: bool = False) -> Dict:
     query_engine = QueryEngine()
     matches = query_engine.find_by_text(current_page_elements, text, exact)
 
+    # Convert to compact format if requested
+    if compact:
+        matches = [_compact_element(elem) for elem in matches]
+
     return {
         "success": True,
         "text": text,
         "exact": exact,
         "matches": matches,
-        "count": len(matches)
+        "count": len(matches),
+        "compact": compact
     }
 
 
