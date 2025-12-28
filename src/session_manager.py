@@ -127,14 +127,14 @@ class SessionManager:
 
     def _generate_session_id(self) -> str:
         """
-        Generate session ID: {8-char-uuid}_{YYYYMMDDHHmmss}
+        Generate session ID: {YYYYMMDDHHmmss}_{8-char-uuid}
 
         Returns:
             Session ID string
         """
         uuid_part = str(uuid.uuid4())[:8]
         timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-        return f"{uuid_part}_{timestamp}"
+        return f"{timestamp}_{uuid_part}"
 
     def _load_manager_file(self) -> Dict[str, Any]:
         """
