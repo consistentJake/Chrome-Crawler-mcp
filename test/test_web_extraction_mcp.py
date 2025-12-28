@@ -139,7 +139,7 @@ def test_complete_workflow(target_url: str):
     )
     print(f"   Found {len(results)} links")
     if results:
-        for r in results[:3]:
+        for i, r in enumerate(results[:3]):
             print(f"   - {r.get('text', 'No text')[:50]}")
 
     # Query 2: Natural language query
