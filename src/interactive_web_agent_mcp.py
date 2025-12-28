@@ -789,7 +789,7 @@ async def find_by_text(text: str, exact: bool = False, compact: bool = True) -> 
 
 async def click_element(web_agent_id: str, wait_after: float = 1.0) -> Dict:
     """Click on an element by its web_agent_id"""
-    global current_page_elements
+    global current_page_elements, current_page_url
 
     # Start timing for debug
     timer = OperationTimer()
@@ -819,6 +819,12 @@ async def click_element(web_agent_id: str, wait_after: float = 1.0) -> Dict:
 
         browser = get_browser()
 
+        # Store old URL for verification
+        try:
+            old_url = browser.get_current_url()
+        except:
+            old_url = current_page_url
+
         # Use the data-web-agent-id locator to click
         locator = element['locators']['data_id']  # e.g., '[data-web-agent-id="wa-5"]'
 
@@ -837,14 +843,22 @@ async def click_element(web_agent_id: str, wait_after: float = 1.0) -> Dict:
 
         result = browser.playwright_client.browser_evaluate(function=click_js)
 
-        # Wait after click
-        await asyncio.sleep(wait_after)
+        # Wait for navigation to complete (if it's a link)
+        if element.get("tag") == "a":
+            # Wait for page load with timeout (use max of wait_after and 3.0 seconds)
+            browser.wait_for_page_load(timeout=max(wait_after, 3.0))
+        else:
+            # For non-link elements, just wait the specified delay
+            await asyncio.sleep(wait_after)
 
         # Get new URL
         try:
             new_url = browser.get_current_url()
         except:
-            new_url = current_page_url
+            new_url = old_url
+
+        # Verify navigation occurred
+        navigation_occurred = (new_url != old_url)
 
         output = {
             "success": True,
@@ -852,8 +866,12 @@ async def click_element(web_agent_id: str, wait_after: float = 1.0) -> Dict:
             "element_text": element.get("text", "")[:50],
             "element_tag": element.get("tag"),
             "action": "clicked",
+            "old_url": old_url,
             "new_url": new_url,
-            "message": f"Clicked element {web_agent_id}. Call get_page_content() to see new page content."
+            "navigation_occurred": navigation_occurred,
+            "message": f"Clicked element {web_agent_id}. " +
+                      (f"Navigated from {old_url} to {new_url}" if navigation_occurred else f"No navigation occurred, still on {new_url}") +
+                      ". Call get_page_content() to see new page content."
         }
 
     # Log successful operation
