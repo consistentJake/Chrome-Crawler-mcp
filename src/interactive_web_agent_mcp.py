@@ -17,9 +17,18 @@ import os
 import sys
 import json
 import asyncio
+import subprocess
+import time
 from typing import Dict, List, Optional, Any
 from datetime import datetime
 from pathlib import Path
+
+try:
+    import pyautogui
+    PYAUTOGUI_AVAILABLE = True
+except ImportError:
+    PYAUTOGUI_AVAILABLE = False
+    print("[WARNING] PyAutoGUI not available. Scrolling will use JavaScript fallback.")
 
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -56,6 +65,66 @@ debug_logger = None
 if DEBUG_MODE:
     print(f"[DEBUG MODE] Enabled - Sessions will be saved to {DOWNLOADS_DIR}/sessions/")
     session_manager = SessionManager(DOWNLOADS_DIR, timeout_seconds=SESSION_TIMEOUT_SECONDS)
+
+
+def _get_chrome_bounds(app_name: str) -> tuple[int, int, int, int]:
+    """Get Chrome window bounds using AppleScript.
+
+    Args:
+        app_name: Name of the Chrome application (e.g., "Google Chrome" or "Arc")
+
+    Returns:
+        Tuple of (left, top, width, height)
+    """
+    try:
+        script = f'''
+        tell application "{app_name}"
+            get bounds of front window
+        end tell
+        '''
+        result = subprocess.run(
+            ["osascript", "-e", script],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        # Output format: "left, top, right, bottom"
+        bounds = [int(x.strip()) for x in result.stdout.strip().split(",")]
+        left, top, right, bottom = bounds
+        width = right - left
+        height = bottom - top
+        return left, top, width, height
+    except Exception as e:
+        print(f"[WARNING] Failed to get Chrome bounds: {e}")
+        # Return default screen center bounds
+        return 0, 0, 1920, 1080
+
+
+def _activate_chrome_and_position_mouse(app_name: str = "Google Chrome") -> tuple[int, int]:
+    """Activate Chrome window and position mouse in the center.
+
+    Args:
+        app_name: Name of the Chrome application (default: "Google Chrome")
+
+    Returns:
+        Tuple of (center_x, center_y) where mouse was positioned
+    """
+    # Activate Chrome
+    subprocess.run(["osascript", "-e", f'tell application "{app_name}" to activate'])
+    time.sleep(0.5)  # Give Chrome time to come to front
+
+    # Get window bounds
+    left, top, width, height = _get_chrome_bounds(app_name)
+
+    # Compute center point
+    center_x = left + width // 2
+    center_y = top + height // 2
+
+    # Move mouse to center
+    if PYAUTOGUI_AVAILABLE:
+        pyautogui.moveTo(center_x, center_y, duration=0.3)
+
+    return center_x, center_y
 
 
 def get_browser() -> BrowserIntegration:
@@ -435,6 +504,78 @@ Examples:
                 }
             }
         ),
+
+        Tool(
+            name="scroll_down",
+            description="""Scroll down the page using PyAutoGUI mouse wheel simulation.
+
+This simulates actual mouse wheel scrolling by:
+1. Activating the Chrome window and bringing it to front
+2. Positioning the mouse at the center of the window
+3. Performing mouse wheel scroll events
+
+Use this when:
+- Need to load more content on infinite scroll pages
+- Navigate to content below the fold
+- Trigger lazy-loaded elements that respond to real scroll events
+
+Examples:
+- scroll_down(times=1) - Scroll down once by default amount (3 clicks)
+- scroll_down(times=3, amount=5) - Scroll down 3 times, 5 clicks each time
+
+Note: Requires PyAutoGUI and accessibility permissions on macOS. Falls back to JavaScript if unavailable.
+""",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "times": {
+                        "type": "integer",
+                        "description": "Number of times to scroll down",
+                        "default": 1
+                    },
+                    "amount": {
+                        "type": "integer",
+                        "description": "Number of scroll clicks per action (default: 3). Higher values = faster scrolling."
+                    }
+                }
+            }
+        ),
+
+        Tool(
+            name="scroll_up",
+            description="""Scroll up the page using PyAutoGUI mouse wheel simulation.
+
+This simulates actual mouse wheel scrolling by:
+1. Activating the Chrome window and bringing it to front
+2. Positioning the mouse at the center of the window
+3. Performing mouse wheel scroll events
+
+Use this when:
+- Need to go back to previous content
+- Navigate to content above current view
+- Return to top of page
+
+Examples:
+- scroll_up(times=1) - Scroll up once by default amount (3 clicks)
+- scroll_up(times=3, amount=5) - Scroll up 3 times, 5 clicks each time
+
+Note: Requires PyAutoGUI and accessibility permissions on macOS. Falls back to JavaScript if unavailable.
+""",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "times": {
+                        "type": "integer",
+                        "description": "Number of times to scroll up",
+                        "default": 1
+                    },
+                    "amount": {
+                        "type": "integer",
+                        "description": "Number of scroll clicks per action (default: 3). Higher values = faster scrolling."
+                    }
+                }
+            }
+        ),
     ]
 
 
@@ -507,6 +648,20 @@ async def call_tool(name: str, arguments: Any) -> List[TextContent]:
             result = await wait_for_page(
                 seconds=arguments.get("seconds"),
                 text_to_appear=arguments.get("text_to_appear")
+            )
+            return [TextContent(type="text", text=json.dumps(result, indent=2, ensure_ascii=False))]
+
+        elif name == "scroll_down":
+            result = await scroll_down(
+                times=arguments.get("times", 1),
+                amount=arguments.get("amount")
+            )
+            return [TextContent(type="text", text=json.dumps(result, indent=2, ensure_ascii=False))]
+
+        elif name == "scroll_up":
+            result = await scroll_up(
+                times=arguments.get("times", 1),
+                amount=arguments.get("amount")
             )
             return [TextContent(type="text", text=json.dumps(result, indent=2, ensure_ascii=False))]
 
@@ -1197,6 +1352,156 @@ async def wait_for_page(seconds: Optional[float] = None, text_to_appear: Optiona
     if logger:
         logger.log_operation("wait_for_page", input_data, output, timer.get_duration())
         session_manager.update_operation_time()
+
+    return output
+
+
+async def scroll_down(times: int = 1, amount: Optional[int] = None) -> Dict:
+    """Scroll down the page using PyAutoGUI mouse wheel simulation"""
+    # Start timing for debug
+    timer = OperationTimer()
+    input_data = {"times": times, "amount": amount}
+
+    with timer:
+        if not PYAUTOGUI_AVAILABLE:
+            # Fallback to JavaScript scrolling
+            browser = get_browser()
+            result = browser.playwright_client.scroll_down(times=times, amount=amount)
+
+            if result.get("status") == "success":
+                output = {
+                    "success": True,
+                    "times": times,
+                    "scroll_amount": amount or 300,
+                    "method": "javascript_fallback",
+                    "message": result.get("message", f"Scrolled down {times} time(s) using JavaScript"),
+                    "results": result.get("results", [])
+                }
+            else:
+                output = {
+                    "success": False,
+                    "error": result.get("message", "Failed to scroll down")
+                }
+        else:
+            # Use PyAutoGUI for scrolling
+            try:
+                # Activate Chrome and position mouse
+                app_name = os.getenv("BROWSER_APP_NAME", "Google Chrome")
+                center_x, center_y = _activate_chrome_and_position_mouse(app_name)
+
+                # Perform scrolling
+                scroll_clicks = -(amount if amount is not None else 3)  # Negative for down
+                results = []
+
+                for i in range(times):
+                    pyautogui.scroll(scroll_clicks)
+                    results.append({
+                        "status": "success",
+                        "action": "scroll_down",
+                        "iteration": i + 1,
+                        "scroll_amount": scroll_clicks
+                    })
+
+                    # Pause between scrolls
+                    if i < times - 1:
+                        await asyncio.sleep(0.1)
+
+                output = {
+                    "success": True,
+                    "times": times,
+                    "scroll_amount": abs(scroll_clicks),
+                    "method": "pyautogui",
+                    "mouse_position": {"x": center_x, "y": center_y},
+                    "message": f"Scrolled down {times} time(s) using PyAutoGUI",
+                    "results": results
+                }
+            except Exception as e:
+                output = {
+                    "success": False,
+                    "error": f"PyAutoGUI scroll failed: {str(e)}"
+                }
+
+    # Log operation
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation("scroll_down", input_data, output, timer.get_duration())
+        if session_manager:
+            session_manager.update_operation_time()
+
+    return output
+
+
+async def scroll_up(times: int = 1, amount: Optional[int] = None) -> Dict:
+    """Scroll up the page using PyAutoGUI mouse wheel simulation"""
+    # Start timing for debug
+    timer = OperationTimer()
+    input_data = {"times": times, "amount": amount}
+
+    with timer:
+        if not PYAUTOGUI_AVAILABLE:
+            # Fallback to JavaScript scrolling
+            browser = get_browser()
+            result = browser.playwright_client.scroll_up(times=times, amount=amount)
+
+            if result.get("status") == "success":
+                output = {
+                    "success": True,
+                    "times": times,
+                    "scroll_amount": amount or 300,
+                    "method": "javascript_fallback",
+                    "message": result.get("message", f"Scrolled up {times} time(s) using JavaScript"),
+                    "results": result.get("results", [])
+                }
+            else:
+                output = {
+                    "success": False,
+                    "error": result.get("message", "Failed to scroll up")
+                }
+        else:
+            # Use PyAutoGUI for scrolling
+            try:
+                # Activate Chrome and position mouse
+                app_name = os.getenv("BROWSER_APP_NAME", "Google Chrome")
+                center_x, center_y = _activate_chrome_and_position_mouse(app_name)
+
+                # Perform scrolling
+                scroll_clicks = amount if amount is not None else 3  # Positive for up
+                results = []
+
+                for i in range(times):
+                    pyautogui.scroll(scroll_clicks)
+                    results.append({
+                        "status": "success",
+                        "action": "scroll_up",
+                        "iteration": i + 1,
+                        "scroll_amount": scroll_clicks
+                    })
+
+                    # Pause between scrolls
+                    if i < times - 1:
+                        await asyncio.sleep(0.1)
+
+                output = {
+                    "success": True,
+                    "times": times,
+                    "scroll_amount": scroll_clicks,
+                    "method": "pyautogui",
+                    "mouse_position": {"x": center_x, "y": center_y},
+                    "message": f"Scrolled up {times} time(s) using PyAutoGUI",
+                    "results": results
+                }
+            except Exception as e:
+                output = {
+                    "success": False,
+                    "error": f"PyAutoGUI scroll failed: {str(e)}"
+                }
+
+    # Log operation
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation("scroll_up", input_data, output, timer.get_duration())
+        if session_manager:
+            session_manager.update_operation_time()
 
     return output
 
