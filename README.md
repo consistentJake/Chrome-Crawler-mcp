@@ -533,3 +533,22 @@ The tool successfully processes the 1Point3Acres forum page:
 
 ### Pattern Extraction Documentation
 - **[IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md)** - Original implementation details
+
+
+## Set up Interactive-web-agent MCP
+
+in /home/zhenkai/.claude.json
+```
+      "mcpServers": {
+        "interactive-web-agent": {
+          "command": "python3",
+          "args": [
+            "/home/zhenkai/personal/Projects/WebAgent/src/interactive_web_agent_mcp.py"
+          ],
+          "env": {
+            "DOWNLOADS_DIR": "/home/zhenkai/personal/Projects/WebAgent/downloads",
+            "PYTHONPATH": "/home/zhenkai/personal/Projects/WebAgent",
+            "DEBUG_MODE": "true"
+          }
+        }
+```

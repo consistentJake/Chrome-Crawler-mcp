@@ -31,17 +31,31 @@ from mcp.types import Tool, TextContent
 from browser_integration import BrowserIntegration
 from query_engine import QueryEngine
 from html_sanitizer import HTMLSanitizer
+from session_manager import SessionManager
+from debug_logger import DebugLogger, OperationTimer
 
 
 # Configuration
 DOWNLOADS_DIR = os.getenv("DOWNLOADS_DIR", "./downloads")
 Path(DOWNLOADS_DIR).mkdir(parents=True, exist_ok=True)
 
+# Debug mode configuration
+DEBUG_MODE = os.getenv("DEBUG_MODE", "false").lower() in ("true", "1", "yes")
+SESSION_TIMEOUT_SECONDS = int(os.getenv("SESSION_TIMEOUT_SECONDS", "60"))
+
 # Global state
 browser_integration = None
 current_page_elements = []
 current_page_url = ""
 current_page_title = ""
+
+# Debug state
+session_manager = None
+debug_logger = None
+
+if DEBUG_MODE:
+    print(f"[DEBUG MODE] Enabled - Sessions will be saved to {DOWNLOADS_DIR}/sessions/")
+    session_manager = SessionManager(DOWNLOADS_DIR, timeout_seconds=SESSION_TIMEOUT_SECONDS)
 
 
 def get_browser() -> BrowserIntegration:
@@ -50,6 +64,25 @@ def get_browser() -> BrowserIntegration:
     if browser_integration is None:
         browser_integration = BrowserIntegration()
     return browser_integration
+
+
+def get_debug_logger() -> Optional[DebugLogger]:
+    """Get or create debug logger for current session"""
+    global session_manager, debug_logger
+
+    if not DEBUG_MODE or not session_manager:
+        return None
+
+    # Get or create session
+    session_id, session_dir = session_manager.get_or_create_session()
+
+    # Create debug logger if needed or session changed
+    if debug_logger is None or debug_logger.session_dir != session_dir:
+        debug_logger = DebugLogger(session_dir)
+        print(f"[DEBUG MODE] Session: {session_id}")
+        print(f"[DEBUG MODE] Session directory: {session_dir}")
+
+    return debug_logger
 
 
 # Create MCP server
@@ -480,99 +513,148 @@ async def navigate(url: str, wait_seconds: float = 2.0) -> Dict:
     """Navigate to URL and wait for page load"""
     global current_page_url, current_page_title, current_page_elements
 
-    browser = get_browser()
+    # Start timing for debug
+    timer = OperationTimer()
+    input_data = {"url": url, "wait_seconds": wait_seconds}
 
-    # Navigate
-    result = browser.playwright_client.browser_navigate(url)
-    if result.get("status") != "success":
-        return {
-            "success": False,
-            "error": f"Navigation failed: {result.get('message', 'Unknown error')}"
+    with timer:
+        browser = get_browser()
+
+        # Navigate
+        result = browser.playwright_client.browser_navigate(url)
+        if result.get("status") != "success":
+            output = {
+                "success": False,
+                "error": f"Navigation failed: {result.get('message', 'Unknown error')}"
+            }
+
+            # Log failed operation
+            logger = get_debug_logger()
+            if logger:
+                logger.log_operation("navigate", input_data, output, timer.get_duration())
+                session_manager.update_operation_time()
+
+            return output
+
+        # Wait for page load
+        await asyncio.sleep(wait_seconds)
+
+        # Get page metadata
+        try:
+            current_page_url = browser.get_current_url()
+            current_page_title = browser.get_page_title()
+        except Exception as e:
+            current_page_url = url
+            current_page_title = ""
+
+        # Clear current elements (will be populated on next get_page_content call)
+        current_page_elements = []
+
+        output = {
+            "success": True,
+            "url": current_page_url,
+            "title": current_page_title,
+            "message": f"Navigated to {current_page_url}. Call get_page_content() to see available elements."
         }
 
-    # Wait for page load
-    await asyncio.sleep(wait_seconds)
+    # Log successful operation
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation("navigate", input_data, output, timer.get_duration())
+        session_manager.update_operation_time()
 
-    # Get page metadata
-    try:
-        current_page_url = browser.get_current_url()
-        current_page_title = browser.get_page_title()
-    except Exception as e:
-        current_page_url = url
-        current_page_title = ""
-
-    # Clear current elements (will be populated on next get_page_content call)
-    current_page_elements = []
-
-    return {
-        "success": True,
-        "url": current_page_url,
-        "title": current_page_title,
-        "message": f"Navigated to {current_page_url}. Call get_page_content() to see available elements."
-    }
+    return output
 
 
 async def get_page_content(output_format: str = "indexed") -> Dict:
     """Extract and return sanitized page content with interactable elements"""
     global current_page_elements, current_page_url, current_page_title
 
-    browser = get_browser()
+    # Start timing for debug
+    timer = OperationTimer()
+    input_data = {"format": output_format}
 
-    # Get current URL and title
-    try:
-        current_page_url = browser.get_current_url()
-        current_page_title = browser.get_page_title()
-    except:
-        pass
+    with timer:
+        browser = get_browser()
 
-    # Get page HTML
-    try:
-        raw_html = browser.get_current_page_html()
-    except Exception as e:
-        return {
-            "success": False,
-            "error": f"Failed to get page HTML: {str(e)}"
-        }
+        # Get current URL and title
+        try:
+            current_page_url = browser.get_current_url()
+            current_page_title = browser.get_page_title()
+        except:
+            pass
 
-    # Sanitize HTML and extract interactable elements
-    sanitizer = HTMLSanitizer(max_tokens=8000, preserve_structure=True)
-    sanitized_result = sanitizer.sanitize(raw_html, extraction_mode="all")
+        # Get page HTML
+        try:
+            raw_html = browser.get_current_page_html()
+        except Exception as e:
+            output = {
+                "success": False,
+                "error": f"Failed to get page HTML: {str(e)}"
+            }
 
-    # Update global state
-    current_page_elements = sanitized_result['element_registry']
+            # Log failed operation
+            logger = get_debug_logger()
+            if logger:
+                logger.log_operation("get_page_content", input_data, output, timer.get_duration())
+                session_manager.update_operation_time()
 
-    # Return based on format
-    if output_format == "indexed":
-        content = sanitized_result['indexed_text']
-        return {
-            "url": current_page_url,
-            "title": current_page_title,
-            "format": "indexed",
-            "content": content,
-            "element_count": len(current_page_elements),
-            "element_types": sanitized_result['statistics']['element_types']
-        }
+            return output
 
-    elif output_format == "full_html":
-        return {
-            "url": current_page_url,
-            "title": current_page_title,
-            "format": "full_html",
-            "content": sanitized_result['sanitized_html'],
-            "element_count": len(current_page_elements)
-        }
+        # Sanitize HTML and extract interactable elements
+        sanitizer = HTMLSanitizer(max_tokens=8000, preserve_structure=True)
+        sanitized_result = sanitizer.sanitize(raw_html, extraction_mode="all")
 
-    elif output_format == "elements_json":
-        return {
-            "url": current_page_url,
-            "title": current_page_title,
-            "format": "elements_json",
-            "elements": current_page_elements,
-            "element_count": len(current_page_elements)
-        }
+        # Update global state
+        current_page_elements = sanitized_result['element_registry']
 
-    else:
-        return {"error": f"Unknown format: {output_format}"}
+        # Return based on format
+        if output_format == "indexed":
+            content = sanitized_result['indexed_text']
+            output = {
+                "url": current_page_url,
+                "title": current_page_title,
+                "format": "indexed",
+                "content": content,
+                "element_count": len(current_page_elements),
+                "element_types": sanitized_result['statistics']['element_types']
+            }
+
+        elif output_format == "full_html":
+            output = {
+                "url": current_page_url,
+                "title": current_page_title,
+                "format": "full_html",
+                "content": sanitized_result['sanitized_html'],
+                "element_count": len(current_page_elements)
+            }
+
+        elif output_format == "elements_json":
+            output = {
+                "url": current_page_url,
+                "title": current_page_title,
+                "format": "elements_json",
+                "elements": current_page_elements,
+                "element_count": len(current_page_elements)
+            }
+
+        else:
+            output = {"error": f"Unknown format: {output_format}"}
+
+    # Log operation with HTML snapshots
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation(
+            "get_page_content",
+            input_data,
+            output,
+            timer.get_duration(),
+            raw_html=raw_html,
+            sanitized_html=sanitized_result['sanitized_html']
+        )
+        session_manager.update_operation_time()
+
+    return output
 
 
 async def query_elements(
@@ -645,57 +727,78 @@ async def click_element(web_agent_id: str, wait_after: float = 1.0) -> Dict:
     """Click on an element by its web_agent_id"""
     global current_page_elements
 
-    # Find element in registry
-    element = None
-    for elem in current_page_elements:
-        if elem.get("web_agent_id") == web_agent_id:
-            element = elem
-            break
+    # Start timing for debug
+    timer = OperationTimer()
+    input_data = {"web_agent_id": web_agent_id, "wait_after": wait_after}
 
-    if not element:
-        return {
-            "success": False,
-            "error": f"Element with web_agent_id '{web_agent_id}' not found. Call get_page_content() to refresh elements."
+    with timer:
+        # Find element in registry
+        element = None
+        for elem in current_page_elements:
+            if elem.get("web_agent_id") == web_agent_id:
+                element = elem
+                break
+
+        if not element:
+            output = {
+                "success": False,
+                "error": f"Element with web_agent_id '{web_agent_id}' not found. Call get_page_content() to refresh elements."
+            }
+
+            # Log failed operation
+            logger = get_debug_logger()
+            if logger:
+                logger.log_operation("click_element", input_data, output, timer.get_duration())
+                session_manager.update_operation_time()
+
+            return output
+
+        browser = get_browser()
+
+        # Use the data-web-agent-id locator to click
+        locator = element['locators']['data_id']  # e.g., '[data-web-agent-id="wa-5"]'
+
+        # Use browser_evaluate to click the element
+        click_js = f"""
+        () => {{
+            const element = document.querySelector('{locator}');
+            if (element) {{
+                element.click();
+                return {{success: true, clicked: true}};
+            }} else {{
+                return {{success: false, error: 'Element not found in DOM'}};
+            }}
+        }}
+        """
+
+        result = browser.playwright_client.browser_evaluate(function=click_js)
+
+        # Wait after click
+        await asyncio.sleep(wait_after)
+
+        # Get new URL
+        try:
+            new_url = browser.get_current_url()
+        except:
+            new_url = current_page_url
+
+        output = {
+            "success": True,
+            "web_agent_id": web_agent_id,
+            "element_text": element.get("text", "")[:50],
+            "element_tag": element.get("tag"),
+            "action": "clicked",
+            "new_url": new_url,
+            "message": f"Clicked element {web_agent_id}. Call get_page_content() to see new page content."
         }
 
-    browser = get_browser()
+    # Log successful operation
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation("click_element", input_data, output, timer.get_duration())
+        session_manager.update_operation_time()
 
-    # Use the data-web-agent-id locator to click
-    locator = element['locators']['data_id']  # e.g., '[data-web-agent-id="wa-5"]'
-
-    # Use browser_evaluate to click the element
-    click_js = f"""
-    () => {{
-        const element = document.querySelector('{locator}');
-        if (element) {{
-            element.click();
-            return {{success: true, clicked: true}};
-        }} else {{
-            return {{success: false, error: 'Element not found in DOM'}};
-        }}
-    }}
-    """
-
-    result = browser.playwright_client.browser_evaluate(function=click_js)
-
-    # Wait after click
-    await asyncio.sleep(wait_after)
-
-    # Get new URL
-    try:
-        new_url = browser.get_current_url()
-    except:
-        new_url = current_page_url
-
-    return {
-        "success": True,
-        "web_agent_id": web_agent_id,
-        "element_text": element.get("text", "")[:50],
-        "element_tag": element.get("tag"),
-        "action": "clicked",
-        "new_url": new_url,
-        "message": f"Clicked element {web_agent_id}. Call get_page_content() to see new page content."
-    }
+    return output
 
 
 async def type_into_element(web_agent_id: str, text: str, submit: bool = False) -> Dict:
