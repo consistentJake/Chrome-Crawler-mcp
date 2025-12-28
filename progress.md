@@ -26,7 +26,8 @@
 
 some ideas:
 1. in get_content function, we can add a customerized extractor based on the website type, explicitly define the extraction logic of the page
-
+2. use the sanitized html, ask ai if he can filter more html content. given we have alreayd enrich the attribute with web-agent-id, even we remove many different elements or attribute, we can still use the wa-*** id to identify back to element in original html
+3. once the LLM make a serial of operations and work, we should focus on convert the oeprations into fixed workflow
 ## Dec 28
 1. try to fix bug in `click_element` function where navigation was not properly verified
    - **Issue**: The function only waited a fixed delay after clicking, didn't verify navigation completed
