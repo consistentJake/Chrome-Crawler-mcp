@@ -543,12 +543,16 @@ in /home/zhenkai/.claude.json
         "interactive-web-agent": {
           "command": "python3",
           "args": [
-            "/home/zhenkai/personal/Projects/WebAgent/src/interactive_web_agent_mcp.py"
+            "/your_worspace/WebAgent/src/interactive_web_agent_mcp.py"
           ],
           "env": {
-            "DOWNLOADS_DIR": "/home/zhenkai/personal/Projects/WebAgent/downloads",
-            "PYTHONPATH": "/home/zhenkai/personal/Projects/WebAgent",
+            "DOWNLOADS_DIR": "/your_worspace//WebAgent/downloads",
+            "PYTHONPATH": "/your_worspace/Projects/WebAgent",
             "DEBUG_MODE": "true"
           }
         }
 ```
+make sure you use the your right absolute folder path
+
+in helper/PlaywrightMcpClient.py, set the default_token based on OS.
+

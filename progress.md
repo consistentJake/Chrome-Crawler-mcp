@@ -9,3 +9,7 @@
 
 ```
 3. 
+
+## Dec 27
+1. /Users/zhenkai/Documents/personal/Projects/WebAgent/src/interactive_web_agent_mcp.py is working now as a mcp. We can successfully use 
+2. /Users/zhenkai/Documents/personal/Projects/WebAgent/downloads/sessions/9661bffa_20251227170627/html/002_raw.html
