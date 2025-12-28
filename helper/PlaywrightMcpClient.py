@@ -3,6 +3,7 @@ import subprocess
 import os
 import sys
 import json
+import random
 from typing import Dict, Any, List, Optional
 
 
@@ -15,6 +16,9 @@ class MCPPlaywrightClient:
         mcp_command: Optional[List[str]] = None,
         env: Optional[Dict[str, str]] = None,
         extension_token: Optional[str] = None,
+        scroll_amount: int = 300,
+        scroll_pause: float = 0.1,
+        jitter_range: tuple = (0.7, 1.3),
     ):
         """
         Initialize the Playwright MCP client.
@@ -28,11 +32,17 @@ class MCPPlaywrightClient:
             extension_token: Token for PLAYWRIGHT_MCP_EXTENSION_TOKEN. If provided,
                              it is added to the server env when not already present.
                              If omitted, falls back to env var or default token.
+            scroll_amount: Number of pixels to scroll per action (default: 300)
+            scroll_pause: Pause between scroll actions in seconds (default: 0.1)
+            jitter_range: Tuple of (min, max) multipliers for random jitter (default: 0.7 to 1.3)
         """
         # default_token = "_dj-nQ5KMNif5TTJln6g1B7HsjfSr8d5-CGokFw9Q3A" # linux token
         default_token = "4Exp11p2Kle_VSCJ5v6UgYksDs2s53Ty2vAe3mzYnqQ" #mac token
         self.mcp_server_path = mcp_server_path
         self.mcp_command = mcp_command
+        self.scroll_amount = scroll_amount
+        self.scroll_pause = scroll_pause
+        self.jitter_range = jitter_range
         self.env = os.environ.copy()
         if env:
             self.env.update(env)
@@ -419,35 +429,99 @@ class MCPPlaywrightClient:
 
     # Convenience methods
 
-    def scroll_down(self, times: int = 1) -> Dict[str, Any]:
+    def scroll_down(self, times: int = 1, amount: int = None) -> Dict[str, Any]:
         """
-        Scroll down the page using PageDown key.
+        Scroll down the page using JavaScript.
 
         Args:
             times: Number of times to scroll down
-        """
-        results = []
-        for _ in range(times):
-            result = self.browser_press_key("PageDown")
-            results.append(result)
-            if result.get("status") != "success":
-                break
-        return {"status": "success", "results": results}
+            amount: Number of pixels to scroll per action (overrides default)
 
-    def scroll_up(self, times: int = 1) -> Dict[str, Any]:
+        Returns:
+            Dict with status and results
         """
-        Scroll up the page using PageUp key.
+        scroll_pixels = amount if amount is not None else self.scroll_amount
+        results = []
+
+        try:
+            for i in range(times):
+                # Scroll down by the specified number of pixels
+                scroll_code = f"window.scrollBy(0, {scroll_pixels});"
+                result = self.browser_run_code(scroll_code)
+
+                results.append({
+                    "status": result.get("status", "success"),
+                    "action": "scroll_down",
+                    "iteration": i + 1,
+                    "scroll_amount": scroll_pixels
+                })
+
+                if result.get("status") != "success":
+                    break
+
+                # Pause between scrolls with jitter
+                if i < times - 1:  # Don't pause after the last scroll
+                    jittered_pause = self.scroll_pause * random.uniform(*self.jitter_range)
+                    time.sleep(jittered_pause)
+
+            return {
+                "status": "success",
+                "message": f"Scrolled down {times} time(s)",
+                "results": results
+            }
+        except Exception as e:
+            return {
+                "status": "error",
+                "message": f"Failed to scroll down: {str(e)}",
+                "results": results
+            }
+
+    def scroll_up(self, times: int = 1, amount: int = None) -> Dict[str, Any]:
+        """
+        Scroll up the page using JavaScript.
 
         Args:
             times: Number of times to scroll up
+            amount: Number of pixels to scroll per action (overrides default)
+
+        Returns:
+            Dict with status and results
         """
+        scroll_pixels = amount if amount is not None else self.scroll_amount
         results = []
-        for _ in range(times):
-            result = self.browser_press_key("PageUp")
-            results.append(result)
-            if result.get("status") != "success":
-                break
-        return {"status": "success", "results": results}
+
+        try:
+            for i in range(times):
+                # Scroll up by the specified number of pixels (negative value)
+                scroll_code = f"window.scrollBy(0, -{scroll_pixels});"
+                result = self.browser_run_code(scroll_code)
+
+                results.append({
+                    "status": result.get("status", "success"),
+                    "action": "scroll_up",
+                    "iteration": i + 1,
+                    "scroll_amount": scroll_pixels
+                })
+
+                if result.get("status") != "success":
+                    break
+
+                # Pause between scrolls with jitter
+                if i < times - 1:  # Don't pause after the last scroll
+                    jittered_pause = self.scroll_pause * random.uniform(*self.jitter_range)
+                    time.sleep(jittered_pause)
+
+            return {
+                "status": "success",
+                "message": f"Scrolled up {times} time(s)",
+                "results": results
+            }
+        except Exception as e:
+            return {
+                "status": "error",
+                "message": f"Failed to scroll up: {str(e)}",
+                "results": results
+            }
 
     def wait_seconds(self, seconds: float) -> Dict[str, Any]:
         """
