@@ -49,7 +49,7 @@ class HTMLSanitizer:
     PRESERVE_ATTRIBUTES = {
         'href', 'src', 'alt', 'title', 'class', 'id',
         'type', 'name', 'value', 'placeholder',
-        'role', 'aria-label', 'data-testid'
+        'role', 'aria-label', 'data-testid', 'data-web-agent-id'
     }
     
     def __init__(self, max_tokens: int = 8000, preserve_structure: bool = True):
