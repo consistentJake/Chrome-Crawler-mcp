@@ -4,7 +4,267 @@ import os
 import sys
 import json
 import random
-from typing import Dict, Any, List, Optional
+import platform
+from typing import Dict, Any, List, Optional, Tuple
+
+
+def get_chrome_bounds(app_name: str = "Google Chrome") -> Tuple[int, int, int, int]:
+    """Get Chrome window bounds in an OS-aware manner.
+
+    Args:
+        app_name: Name of the Chrome application (e.g., "Google Chrome" or "Arc")
+
+    Returns:
+        Tuple of (left, top, width, height)
+    """
+    system = platform.system()
+
+    if system == "Darwin":  # macOS
+        return _get_chrome_bounds_macos(app_name)
+    elif system == "Linux":  # Linux
+        return _get_chrome_bounds_linux(app_name)
+    else:
+        print(f"[WARNING] Unsupported OS: {system}. Using default bounds.")
+        return 0, 0, 1920, 1080
+
+
+def _get_chrome_bounds_macos(app_name: str) -> Tuple[int, int, int, int]:
+    """Get Chrome window bounds on macOS using AppleScript.
+
+    Args:
+        app_name: Name of the Chrome application (e.g., "Google Chrome" or "Arc")
+
+    Returns:
+        Tuple of (left, top, width, height)
+    """
+    try:
+        script = f'''
+        tell application "{app_name}"
+            get bounds of front window
+        end tell
+        '''
+        result = subprocess.run(
+            ["osascript", "-e", script],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        # Output format: "left, top, right, bottom"
+        bounds = [int(x.strip()) for x in result.stdout.strip().split(",")]
+        left, top, right, bottom = bounds
+        width = right - left
+        height = bottom - top
+        return left, top, width, height
+    except Exception as e:
+        print(f"[WARNING] Failed to get Chrome bounds on macOS: {e}")
+        # Return default screen center bounds
+        return 0, 0, 1920, 1080
+
+
+def _get_chrome_bounds_linux(app_name: str) -> Tuple[int, int, int, int]:
+    """Get Chrome window bounds on Linux using wmctrl or xdotool.
+
+    Args:
+        app_name: Name of the Chrome application (e.g., "Google Chrome" or "google-chrome")
+
+    Returns:
+        Tuple of (left, top, width, height)
+    """
+    try:
+        # Try wmctrl first (more reliable)
+        # wmctrl -l -G lists windows with geometry: <window id> <desktop> <x> <y> <width> <height> <client machine> <window title>
+        result = subprocess.run(
+            ["wmctrl", "-l", "-G"],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+
+        # Find the Chrome window
+        for line in result.stdout.split('\n'):
+            if app_name.lower() in line.lower() or "chrome" in line.lower():
+                parts = line.split()
+                if len(parts) >= 6:
+                    # Format: window_id desktop x y width height ...
+                    x, y, width, height = int(parts[2]), int(parts[3]), int(parts[4]), int(parts[5])
+                    return x, y, width, height
+
+        print("[WARNING] Chrome window not found in wmctrl output")
+        return 0, 0, 1920, 1080
+
+    except FileNotFoundError:
+        print("[WARNING] wmctrl not found. Trying xdotool...")
+        try:
+            # Fallback to xdotool
+            # First, find the window ID
+            result = subprocess.run(
+                ["xdotool", "search", "--name", "--onlyvisible", "Chrome"],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+
+            window_ids = result.stdout.strip().split('\n')
+            if window_ids and window_ids[0]:
+                window_id = window_ids[0]
+
+                # Get window geometry
+                result = subprocess.run(
+                    ["xdotool", "getwindowgeometry", window_id],
+                    capture_output=True,
+                    text=True,
+                    check=True
+                )
+
+                # Parse output like:
+                # Window 12345678
+                #   Position: 0,0 (screen: 0)
+                #   Geometry: 1920x1080
+                lines = result.stdout.split('\n')
+                x, y = 0, 0
+                width, height = 1920, 1080
+
+                for line in lines:
+                    if 'Position:' in line:
+                        # Extract x,y
+                        pos = line.split('Position:')[1].split('(')[0].strip()
+                        x, y = map(int, pos.split(','))
+                    elif 'Geometry:' in line:
+                        # Extract width x height
+                        geom = line.split('Geometry:')[1].strip()
+                        width, height = map(int, geom.split('x'))
+
+                return x, y, width, height
+            else:
+                print("[WARNING] Chrome window not found with xdotool")
+                return 0, 0, 1920, 1080
+
+        except Exception as e:
+            print(f"[WARNING] Failed to get Chrome bounds on Linux with xdotool: {e}")
+            return 0, 0, 1920, 1080
+    except Exception as e:
+        print(f"[WARNING] Failed to get Chrome bounds on Linux: {e}")
+        return 0, 0, 1920, 1080
+
+
+def activate_chrome_and_position_mouse(app_name: str = "Google Chrome") -> Tuple[int, int]:
+    """Activate Chrome window and position mouse in the center (OS-aware).
+
+    Args:
+        app_name: Name of the Chrome application (default: "Google Chrome")
+
+    Returns:
+        Tuple of (center_x, center_y) where mouse was positioned
+    """
+    system = platform.system()
+
+    if system == "Darwin":  # macOS
+        return _activate_chrome_and_position_mouse_macos(app_name)
+    elif system == "Linux":  # Linux
+        return _activate_chrome_and_position_mouse_linux(app_name)
+    else:
+        print(f"[WARNING] Unsupported OS: {system}")
+        return 960, 540  # Return center of typical screen
+
+
+def _activate_chrome_and_position_mouse_macos(app_name: str = "Google Chrome") -> Tuple[int, int]:
+    """Activate Chrome window and position mouse on macOS.
+
+    Args:
+        app_name: Name of the Chrome application (default: "Google Chrome")
+
+    Returns:
+        Tuple of (center_x, center_y) where mouse was positioned
+    """
+    try:
+        # Import pyautogui here to avoid import errors if not available
+        import pyautogui
+        PYAUTOGUI_AVAILABLE = True
+    except ImportError:
+        PYAUTOGUI_AVAILABLE = False
+        print("[WARNING] PyAutoGUI not available. Mouse positioning will be skipped.")
+
+    # Activate Chrome
+    subprocess.run(["osascript", "-e", f'tell application "{app_name}" to activate'])
+    time.sleep(0.5)  # Give Chrome time to come to front
+
+    # Get window bounds
+    left, top, width, height = _get_chrome_bounds_macos(app_name)
+
+    # Compute center point
+    center_x = left + width // 2
+    center_y = top + height // 2
+
+    # Move mouse to center
+    if PYAUTOGUI_AVAILABLE:
+        pyautogui.moveTo(center_x, center_y, duration=0.3)
+
+    return center_x, center_y
+
+
+def _activate_chrome_and_position_mouse_linux(app_name: str = "Google Chrome") -> Tuple[int, int]:
+    """Activate Chrome window and position mouse on Linux.
+
+    Args:
+        app_name: Name of the Chrome application (default: "Google Chrome")
+
+    Returns:
+        Tuple of (center_x, center_y) where mouse was positioned
+    """
+    try:
+        # Import pyautogui here to avoid import errors if not available
+        import pyautogui
+        PYAUTOGUI_AVAILABLE = True
+    except ImportError:
+        PYAUTOGUI_AVAILABLE = False
+        print("[WARNING] PyAutoGUI not available. Mouse positioning will be skipped.")
+
+    # Activate Chrome window using wmctrl or xdotool
+    try:
+        # Try wmctrl first
+        subprocess.run(
+            ["wmctrl", "-a", "Chrome"],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        try:
+            # Fallback to xdotool
+            result = subprocess.run(
+                ["xdotool", "search", "--name", "--onlyvisible", "Chrome"],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+
+            window_ids = result.stdout.strip().split('\n')
+            if window_ids and window_ids[0]:
+                window_id = window_ids[0]
+                # Activate the window
+                subprocess.run(
+                    ["xdotool", "windowactivate", window_id],
+                    capture_output=True,
+                    text=True,
+                    check=True
+                )
+        except Exception as e:
+            print(f"[WARNING] Failed to activate Chrome on Linux: {e}")
+
+    time.sleep(0.5)  # Give Chrome time to come to front
+
+    # Get window bounds
+    left, top, width, height = _get_chrome_bounds_linux(app_name)
+
+    # Compute center point
+    center_x = left + width // 2
+    center_y = top + height // 2
+
+    # Move mouse to center
+    if PYAUTOGUI_AVAILABLE:
+        pyautogui.moveTo(center_x, center_y, duration=0.3)
+
+    return center_x, center_y
 
 
 class MCPPlaywrightClient:

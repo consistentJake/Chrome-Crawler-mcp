@@ -33,6 +33,10 @@ except ImportError:
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+# Add helper directory to path for PlaywrightMcpClient import
+helper_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'helper')
+sys.path.insert(0, helper_dir)
+
 from mcp.server import Server
 from mcp.server.stdio import stdio_server
 from mcp.types import Tool, TextContent
@@ -42,6 +46,7 @@ from query_engine import QueryEngine
 from html_sanitizer import HTMLSanitizer
 from session_manager import SessionManager
 from debug_logger import DebugLogger, OperationTimer
+from PlaywrightMcpClient import activate_chrome_and_position_mouse
 
 
 # Configuration
@@ -65,66 +70,6 @@ debug_logger = None
 if DEBUG_MODE:
     print(f"[DEBUG MODE] Enabled - Sessions will be saved to {DOWNLOADS_DIR}/sessions/")
     session_manager = SessionManager(DOWNLOADS_DIR, timeout_seconds=SESSION_TIMEOUT_SECONDS)
-
-
-def _get_chrome_bounds(app_name: str) -> tuple[int, int, int, int]:
-    """Get Chrome window bounds using AppleScript.
-
-    Args:
-        app_name: Name of the Chrome application (e.g., "Google Chrome" or "Arc")
-
-    Returns:
-        Tuple of (left, top, width, height)
-    """
-    try:
-        script = f'''
-        tell application "{app_name}"
-            get bounds of front window
-        end tell
-        '''
-        result = subprocess.run(
-            ["osascript", "-e", script],
-            capture_output=True,
-            text=True,
-            check=True
-        )
-        # Output format: "left, top, right, bottom"
-        bounds = [int(x.strip()) for x in result.stdout.strip().split(",")]
-        left, top, right, bottom = bounds
-        width = right - left
-        height = bottom - top
-        return left, top, width, height
-    except Exception as e:
-        print(f"[WARNING] Failed to get Chrome bounds: {e}")
-        # Return default screen center bounds
-        return 0, 0, 1920, 1080
-
-
-def _activate_chrome_and_position_mouse(app_name: str = "Google Chrome") -> tuple[int, int]:
-    """Activate Chrome window and position mouse in the center.
-
-    Args:
-        app_name: Name of the Chrome application (default: "Google Chrome")
-
-    Returns:
-        Tuple of (center_x, center_y) where mouse was positioned
-    """
-    # Activate Chrome
-    subprocess.run(["osascript", "-e", f'tell application "{app_name}" to activate'])
-    time.sleep(0.5)  # Give Chrome time to come to front
-
-    # Get window bounds
-    left, top, width, height = _get_chrome_bounds(app_name)
-
-    # Compute center point
-    center_x = left + width // 2
-    center_y = top + height // 2
-
-    # Move mouse to center
-    if PYAUTOGUI_AVAILABLE:
-        pyautogui.moveTo(center_x, center_y, duration=0.3)
-
-    return center_x, center_y
 
 
 def get_browser() -> BrowserIntegration:
@@ -1223,7 +1168,16 @@ async def download_page(filename: Optional[str] = None, include_metadata: bool =
         if not filename.endswith(".html"):
             filename += ".html"
 
-        filepath = Path(DOWNLOADS_DIR) / filename
+        # Determine download directory
+        # If logger is present, use session folder; otherwise use default DOWNLOADS_DIR
+        logger = get_debug_logger()
+        if logger and logger.session_dir:
+            # Create downloads subfolder under session directory
+            download_dir = Path(logger.session_dir) / "downloads"
+            download_dir.mkdir(parents=True, exist_ok=True)
+            filepath = download_dir / filename
+        else:
+            filepath = Path(DOWNLOADS_DIR) / filename
 
         # Prepare content
         if include_metadata:
@@ -1387,7 +1341,7 @@ async def scroll_down(times: int = 1, amount: Optional[int] = None) -> Dict:
             try:
                 # Activate Chrome and position mouse
                 app_name = os.getenv("BROWSER_APP_NAME", "Google Chrome")
-                center_x, center_y = _activate_chrome_and_position_mouse(app_name)
+                center_x, center_y = activate_chrome_and_position_mouse(app_name)
 
                 # Perform scrolling
                 scroll_clicks = -(amount if amount is not None else 3)  # Negative for down
@@ -1462,7 +1416,7 @@ async def scroll_up(times: int = 1, amount: Optional[int] = None) -> Dict:
             try:
                 # Activate Chrome and position mouse
                 app_name = os.getenv("BROWSER_APP_NAME", "Google Chrome")
-                center_x, center_y = _activate_chrome_and_position_mouse(app_name)
+                center_x, center_y = activate_chrome_and_position_mouse(app_name)
 
                 # Perform scrolling
                 scroll_clicks = amount if amount is not None else 3  # Positive for up

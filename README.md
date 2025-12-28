@@ -556,3 +556,7 @@ make sure you use the your right absolute folder path
 
 in helper/PlaywrightMcpClient.py, set the default_token based on OS.
 
+## scoll down and up using pyautoGUI
+
+# On Ubuntu/Debian, install following dependency for activating chrome window
+  sudo apt-get install wmctrl xdotool
