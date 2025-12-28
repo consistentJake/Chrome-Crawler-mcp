@@ -28,7 +28,7 @@ some ideas:
 1. in get_content function, we can add a customerized extractor based on the website type, explicitly define the extraction logic of the page
 
 ## Dec 28
-1. Fixed bug in `click_element` function where navigation was not properly verified
+1. try to fix bug in `click_element` function where navigation was not properly verified
    - **Issue**: The function only waited a fixed delay after clicking, didn't verify navigation completed
    - **Root cause**:
      - Used `element.click()` and `await asyncio.sleep(wait_after)`
@@ -42,3 +42,5 @@ some ideas:
      - Added `old_url` to response for debugging
      - Improved message to show whether navigation occurred
    - **Result**: Click now properly waits for page load and verifies navigation success
+
+But we still see this issue.

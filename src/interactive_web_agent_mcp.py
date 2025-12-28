@@ -719,72 +719,114 @@ async def query_elements(
     """Query elements using natural language or structured filters"""
     global current_page_elements
 
-    if not current_page_elements:
-        return {
-            "success": False,
-            "error": "No page content loaded. Call get_page_content() first.",
-            "matches": [],
-            "count": 0
+    # Start timing for debug
+    timer = OperationTimer()
+    input_data = {"query": query, "filters": filters, "limit": limit, "compact": compact}
+
+    with timer:
+        if not current_page_elements:
+            output = {
+                "success": False,
+                "error": "No page content loaded. Call get_page_content() first.",
+                "matches": [],
+                "count": 0
+            }
+
+            # Log failed operation
+            logger = get_debug_logger()
+            if logger:
+                logger.log_operation("query_elements", input_data, output, timer.get_duration())
+                session_manager.update_operation_time()
+
+            return output
+
+        # Handle id_range filter
+        if filters and "id_range" in filters:
+            id_range = filters["id_range"]
+            if isinstance(id_range, list) and len(id_range) == 2:
+                filters["index_min"] = id_range[0]
+                filters["index_max"] = id_range[1]
+                del filters["id_range"]
+
+        query_engine = QueryEngine()
+        matches = query_engine.query_elements(
+            current_page_elements,
+            query=query,
+            filters=filters,
+            limit=limit
+        )
+
+        # Convert to compact format if requested
+        if compact:
+            matches = [_compact_element(elem) for elem in matches]
+
+        output = {
+            "success": True,
+            "query": query,
+            "filters": filters,
+            "matches": matches,
+            "count": len(matches),
+            "total_elements": len(current_page_elements),
+            "compact": compact
         }
 
-    # Handle id_range filter
-    if filters and "id_range" in filters:
-        id_range = filters["id_range"]
-        if isinstance(id_range, list) and len(id_range) == 2:
-            filters["index_min"] = id_range[0]
-            filters["index_max"] = id_range[1]
-            del filters["id_range"]
+    # Log successful operation
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation("query_elements", input_data, output, timer.get_duration())
+        session_manager.update_operation_time()
 
-    query_engine = QueryEngine()
-    matches = query_engine.query_elements(
-        current_page_elements,
-        query=query,
-        filters=filters,
-        limit=limit
-    )
-
-    # Convert to compact format if requested
-    if compact:
-        matches = [_compact_element(elem) for elem in matches]
-
-    return {
-        "success": True,
-        "query": query,
-        "filters": filters,
-        "matches": matches,
-        "count": len(matches),
-        "total_elements": len(current_page_elements),
-        "compact": compact
-    }
+    return output
 
 
 async def find_by_text(text: str, exact: bool = False, compact: bool = True) -> Dict:
     """Find elements by text content"""
     global current_page_elements
 
-    if not current_page_elements:
-        return {
-            "success": False,
-            "error": "No page content loaded. Call get_page_content() first.",
-            "matches": [],
-            "count": 0
+    # Start timing for debug
+    timer = OperationTimer()
+    input_data = {"text": text, "exact": exact, "compact": compact}
+
+    with timer:
+        if not current_page_elements:
+            output = {
+                "success": False,
+                "error": "No page content loaded. Call get_page_content() first.",
+                "matches": [],
+                "count": 0
+            }
+
+            # Log failed operation
+            logger = get_debug_logger()
+            if logger:
+                logger.log_operation("find_by_text", input_data, output, timer.get_duration())
+                session_manager.update_operation_time()
+
+            return output
+
+        query_engine = QueryEngine()
+        matches = query_engine.find_by_text(current_page_elements, text, exact)
+
+        # Convert to compact format if requested
+        if compact:
+            matches = [_compact_element(elem) for elem in matches]
+
+        output = {
+            "success": True,
+            "text": text,
+            "exact": exact,
+            "matches": matches,
+            "count": len(matches),
+            "compact": compact
         }
 
-    query_engine = QueryEngine()
-    matches = query_engine.find_by_text(current_page_elements, text, exact)
+    # Log successful operation
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation("find_by_text", input_data, output, timer.get_duration())
+        session_manager.update_operation_time()
 
-    # Convert to compact format if requested
-    if compact:
-        matches = [_compact_element(elem) for elem in matches]
-
-    return {
-        "success": True,
-        "text": text,
-        "exact": exact,
-        "matches": matches,
-        "count": len(matches),
-        "compact": compact
-    }
+    return output
 
 
 async def click_element(web_agent_id: str, wait_after: float = 1.0) -> Dict:
@@ -887,182 +929,276 @@ async def type_into_element(web_agent_id: str, text: str, submit: bool = False) 
     """Type text into an input element"""
     global current_page_elements
 
-    # Find element
-    element = None
-    for elem in current_page_elements:
-        if elem.get("web_agent_id") == web_agent_id:
-            element = elem
-            break
+    # Start timing for debug
+    timer = OperationTimer()
+    input_data = {"web_agent_id": web_agent_id, "text": text, "submit": submit}
 
-    if not element:
-        return {
-            "success": False,
-            "error": f"Element with web_agent_id '{web_agent_id}' not found."
-        }
+    with timer:
+        # Find element
+        element = None
+        for elem in current_page_elements:
+            if elem.get("web_agent_id") == web_agent_id:
+                element = elem
+                break
 
-    # Verify it's an input element
-    if element.get("tag") not in ["input", "textarea"]:
-        return {
-            "success": False,
-            "error": f"Element {web_agent_id} is a <{element.get('tag')}>, not an input. Can only type into <input> or <textarea>."
-        }
+        if not element:
+            output = {
+                "success": False,
+                "error": f"Element with web_agent_id '{web_agent_id}' not found."
+            }
 
-    browser = get_browser()
-    locator = element['locators']['data_id']
+            # Log failed operation
+            logger = get_debug_logger()
+            if logger:
+                logger.log_operation("type_into_element", input_data, output, timer.get_duration())
+                session_manager.update_operation_time()
 
-    # Type into element using JavaScript
-    type_js = f"""
-    () => {{
-        const element = document.querySelector('{locator}');
-        if (element) {{
-            element.value = {json.dumps(text)};
-            element.dispatchEvent(new Event('input', {{ bubbles: true }}));
-            element.dispatchEvent(new Event('change', {{ bubbles: true }}));
-            return {{success: true}};
-        }} else {{
-            return {{success: false, error: 'Element not found in DOM'}};
-        }}
-    }}
-    """
+            return output
 
-    result = browser.playwright_client.browser_evaluate(function=type_js)
+        # Verify it's an input element
+        if element.get("tag") not in ["input", "textarea"]:
+            output = {
+                "success": False,
+                "error": f"Element {web_agent_id} is a <{element.get('tag')}>, not an input. Can only type into <input> or <textarea>."
+            }
 
-    # Submit if requested
-    if submit:
-        submit_js = f"""
+            # Log failed operation
+            logger = get_debug_logger()
+            if logger:
+                logger.log_operation("type_into_element", input_data, output, timer.get_duration())
+                session_manager.update_operation_time()
+
+            return output
+
+        browser = get_browser()
+        locator = element['locators']['data_id']
+
+        # Type into element using JavaScript
+        type_js = f"""
         () => {{
             const element = document.querySelector('{locator}');
-            if (element && element.form) {{
-                element.form.submit();
+            if (element) {{
+                element.value = {json.dumps(text)};
+                element.dispatchEvent(new Event('input', {{ bubbles: true }}));
+                element.dispatchEvent(new Event('change', {{ bubbles: true }}));
                 return {{success: true}};
-            }} else if (element) {{
-                // Try pressing Enter
-                element.dispatchEvent(new KeyboardEvent('keydown', {{key: 'Enter', code: 'Enter', keyCode: 13, bubbles: true}}));
-                return {{success: true, submitted_via_enter: true}};
+            }} else {{
+                return {{success: false, error: 'Element not found in DOM'}};
             }}
-            return {{success: false}};
         }}
         """
-        browser.playwright_client.browser_evaluate(function=submit_js)
-        await asyncio.sleep(1.0)
 
-    return {
-        "success": True,
-        "web_agent_id": web_agent_id,
-        "action": "typed",
-        "text_length": len(text),
-        "submitted": submit
-    }
+        result = browser.playwright_client.browser_evaluate(function=type_js)
+
+        # Submit if requested
+        if submit:
+            submit_js = f"""
+            () => {{
+                const element = document.querySelector('{locator}');
+                if (element && element.form) {{
+                    element.form.submit();
+                    return {{success: true}};
+                }} else if (element) {{
+                    // Try pressing Enter
+                    element.dispatchEvent(new KeyboardEvent('keydown', {{key: 'Enter', code: 'Enter', keyCode: 13, bubbles: true}}));
+                    return {{success: true, submitted_via_enter: true}};
+                }}
+                return {{success: false}};
+            }}
+            """
+            browser.playwright_client.browser_evaluate(function=submit_js)
+            await asyncio.sleep(1.0)
+
+        output = {
+            "success": True,
+            "web_agent_id": web_agent_id,
+            "action": "typed",
+            "text_length": len(text),
+            "submitted": submit
+        }
+
+    # Log successful operation
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation("type_into_element", input_data, output, timer.get_duration())
+        session_manager.update_operation_time()
+
+    return output
 
 
 async def download_page(filename: Optional[str] = None, include_metadata: bool = True) -> Dict:
     """Download current page HTML to file"""
     global current_page_url, current_page_title
 
-    browser = get_browser()
+    # Start timing for debug
+    timer = OperationTimer()
+    input_data = {"filename": filename, "include_metadata": include_metadata}
 
-    # Get current page HTML
-    try:
-        html_content = browser.get_current_page_html()
-        url = browser.get_current_url()
-        title = browser.get_page_title()
-    except Exception as e:
-        return {
-            "success": False,
-            "error": f"Failed to get page content: {str(e)}"
-        }
+    with timer:
+        browser = get_browser()
 
-    # Generate filename if not provided
-    if not filename:
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        # Clean URL for filename
-        url_safe = url.replace("https://", "").replace("http://", "")
-        url_safe = "".join(c if c.isalnum() or c in "-_" else "_" for c in url_safe)[:50]
-        filename = f"page_{url_safe}_{timestamp}.html"
+        # Get current page HTML
+        try:
+            html_content = browser.get_current_page_html()
+            url = browser.get_current_url()
+            title = browser.get_page_title()
+        except Exception as e:
+            output = {
+                "success": False,
+                "error": f"Failed to get page content: {str(e)}"
+            }
 
-    # Ensure .html extension
-    if not filename.endswith(".html"):
-        filename += ".html"
+            # Log failed operation
+            logger = get_debug_logger()
+            if logger:
+                logger.log_operation("download_page", input_data, output, timer.get_duration())
+                session_manager.update_operation_time()
 
-    filepath = Path(DOWNLOADS_DIR) / filename
+            return output
 
-    # Prepare content
-    if include_metadata:
-        metadata = f"""<!--
+        # Generate filename if not provided
+        if not filename:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            # Clean URL for filename
+            url_safe = url.replace("https://", "").replace("http://", "")
+            url_safe = "".join(c if c.isalnum() or c in "-_" else "_" for c in url_safe)[:50]
+            filename = f"page_{url_safe}_{timestamp}.html"
+
+        # Ensure .html extension
+        if not filename.endswith(".html"):
+            filename += ".html"
+
+        filepath = Path(DOWNLOADS_DIR) / filename
+
+        # Prepare content
+        if include_metadata:
+            metadata = f"""<!--
 Downloaded: {datetime.now().isoformat()}
 URL: {url}
 Title: {title}
 -->
 
 """
-        content = metadata + html_content
-    else:
-        content = html_content
+            content = metadata + html_content
+        else:
+            content = html_content
 
-    # Write to file
-    try:
-        with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(content)
-    except Exception as e:
-        return {
-            "success": False,
-            "error": f"Failed to write file: {str(e)}"
+        # Write to file
+        try:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(content)
+        except Exception as e:
+            output = {
+                "success": False,
+                "error": f"Failed to write file: {str(e)}"
+            }
+
+            # Log failed operation
+            logger = get_debug_logger()
+            if logger:
+                logger.log_operation("download_page", input_data, output, timer.get_duration())
+                session_manager.update_operation_time()
+
+            return output
+
+        output = {
+            "success": True,
+            "url": url,
+            "title": title,
+            "filepath": str(filepath.absolute()),
+            "filename": filename,
+            "size_bytes": len(content),
+            "message": f"Page downloaded successfully to {filepath.absolute()}"
         }
 
-    return {
-        "success": True,
-        "url": url,
-        "title": title,
-        "filepath": str(filepath.absolute()),
-        "filename": filename,
-        "size_bytes": len(content),
-        "message": f"Page downloaded successfully to {filepath.absolute()}"
-    }
+    # Log successful operation
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation("download_page", input_data, output, timer.get_duration())
+        session_manager.update_operation_time()
+
+    return output
 
 
 async def get_current_url_tool() -> Dict:
     """Get current URL and title"""
-    browser = get_browser()
+    # Start timing for debug
+    timer = OperationTimer()
+    input_data = {}
 
-    try:
-        url = browser.get_current_url()
-        title = browser.get_page_title()
-    except Exception as e:
-        return {
-            "success": False,
-            "error": f"Failed to get URL: {str(e)}"
+    with timer:
+        browser = get_browser()
+
+        try:
+            url = browser.get_current_url()
+            title = browser.get_page_title()
+        except Exception as e:
+            output = {
+                "success": False,
+                "error": f"Failed to get URL: {str(e)}"
+            }
+
+            # Log failed operation
+            logger = get_debug_logger()
+            if logger:
+                logger.log_operation("get_current_url", input_data, output, timer.get_duration())
+                session_manager.update_operation_time()
+
+            return output
+
+        output = {
+            "success": True,
+            "url": url,
+            "title": title
         }
 
-    return {
-        "success": True,
-        "url": url,
-        "title": title
-    }
+    # Log successful operation
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation("get_current_url", input_data, output, timer.get_duration())
+        session_manager.update_operation_time()
+
+    return output
 
 
 async def wait_for_page(seconds: Optional[float] = None, text_to_appear: Optional[str] = None) -> Dict:
     """Wait for page load or text to appear"""
-    browser = get_browser()
+    # Start timing for debug
+    timer = OperationTimer()
+    input_data = {"seconds": seconds, "text_to_appear": text_to_appear}
 
-    if text_to_appear:
-        # Wait for text to appear
-        result = browser.playwright_client.browser_wait_for(text=text_to_appear)
-        return {
-            "success": result.get("status") == "success",
-            "waited_for_text": text_to_appear
-        }
-    elif seconds:
-        # Wait for specified time
-        await asyncio.sleep(seconds)
-        return {
-            "success": True,
-            "waited_seconds": seconds
-        }
-    else:
-        return {
-            "success": False,
-            "error": "Must specify either 'seconds' or 'text_to_appear'"
-        }
+    with timer:
+        browser = get_browser()
+
+        if text_to_appear:
+            # Wait for text to appear
+            result = browser.playwright_client.browser_wait_for(text=text_to_appear)
+            output = {
+                "success": result.get("status") == "success",
+                "waited_for_text": text_to_appear
+            }
+
+        elif seconds:
+            # Wait for specified time
+            await asyncio.sleep(seconds)
+            output = {
+                "success": True,
+                "waited_seconds": seconds
+            }
+
+        else:
+            output = {
+                "success": False,
+                "error": "Must specify either 'seconds' or 'text_to_appear'"
+            }
+
+    # Log operation (both success and failure cases)
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation("wait_for_page", input_data, output, timer.get_duration())
+        session_manager.update_operation_time()
+
+    return output
 
 
 async def main():
