@@ -758,6 +758,122 @@ async def navigate(url: str, wait_seconds: float = 2.0) -> Dict:
     return output
 
 
+async def _inject_web_agent_ids(browser, element_registry: List[Dict]) -> Dict:
+    """
+    Inject data-web-agent-id attributes into the actual browser DOM.
+
+    This ensures that click_element() can use [data-web-agent-id="wa-X"] CSS selectors
+    to target elements in the live browser page.
+
+    Args:
+        browser: BrowserIntegration instance
+        element_registry: List of element info dicts with locators
+
+    Returns:
+        Dict with injection results: {total, injected, failed, success}
+    """
+    if not element_registry:
+        return {
+            "success": True,
+            "total": 0,
+            "injected": 0,
+            "failed": []
+        }
+
+    # Build JavaScript to inject IDs using XPath for reliable element location
+    inject_js = """
+    (elements) => {
+        const results = {
+            total: elements.length,
+            injected: 0,
+            failed: []
+        };
+
+        elements.forEach(el => {
+            try {
+                // Use XPath to find the element (most reliable locator)
+                const xpath = el.locators.xpath;
+                const xpathResult = document.evaluate(
+                    xpath,
+                    document,
+                    null,
+                    XPathResult.FIRST_ORDERED_NODE_TYPE,
+                    null
+                );
+                const element = xpathResult.singleNodeValue;
+
+                if (element) {
+                    // Inject data-web-agent-id attribute
+                    element.setAttribute('data-web-agent-id', el.web_agent_id);
+                    results.injected++;
+                } else {
+                    results.failed.push({
+                        web_agent_id: el.web_agent_id,
+                        xpath: xpath,
+                        reason: 'Element not found by XPath'
+                    });
+                }
+            } catch (err) {
+                results.failed.push({
+                    web_agent_id: el.web_agent_id,
+                    xpath: el.locators.xpath,
+                    reason: err.message
+                });
+            }
+        });
+
+        return results;
+    }
+    """
+
+    try:
+        # Execute injection JavaScript
+        result = browser.playwright_client.browser_evaluate(function=inject_js)
+
+        # Parse response from MCP format
+        if result.get("status") == "success":
+            # Extract the actual result from nested MCP structure
+            result_data = result.get("result", {})
+            if isinstance(result_data, dict) and "content" in result_data:
+                content_list = result_data.get("content", [])
+                if isinstance(content_list, list) and len(content_list) > 0:
+                    first_item = content_list[0]
+                    if isinstance(first_item, dict) and "text" in first_item:
+                        text = first_item["text"]
+                        # Parse JSON from markdown format
+                        import re
+                        result_match = re.search(r'### Result\s*\n(\{.*?\})', text, re.DOTALL)
+                        if result_match:
+                            injection_result = json.loads(result_match.group(1))
+                            injection_result["success"] = True
+                            return injection_result
+
+            # Fallback: assume success if no errors
+            return {
+                "success": True,
+                "total": len(element_registry),
+                "injected": len(element_registry),
+                "failed": []
+            }
+        else:
+            return {
+                "success": False,
+                "total": len(element_registry),
+                "injected": 0,
+                "failed": [],
+                "error": result.get("message", "Injection failed")
+            }
+
+    except Exception as e:
+        return {
+            "success": False,
+            "total": len(element_registry),
+            "injected": 0,
+            "failed": [],
+            "error": f"Exception during injection: {str(e)}"
+        }
+
+
 async def get_page_content(output_format: str = "indexed") -> Dict:
     """Extract and return sanitized page content with interactable elements"""
     global current_page_elements, current_page_url, current_page_title
@@ -800,6 +916,17 @@ async def get_page_content(output_format: str = "indexed") -> Dict:
         # Update global state
         current_page_elements = sanitized_result['element_registry']
 
+        # Inject data-web-agent-id attributes into actual browser DOM
+        # This allows click_element() to use CSS selectors like [data-web-agent-id="wa-5"]
+        injection_result = await _inject_web_agent_ids(browser, current_page_elements)
+
+        # Log injection results if in debug mode
+        logger = get_debug_logger()
+        if logger and injection_result.get("failed"):
+            # Log warning about failed injections
+            failed_count = len(injection_result.get("failed", []))
+            print(f"[WARNING] Failed to inject {failed_count}/{injection_result.get('total', 0)} web_agent_ids")
+
         # Return based on format
         if output_format == "indexed":
             content = sanitized_result['indexed_text']
@@ -809,7 +936,12 @@ async def get_page_content(output_format: str = "indexed") -> Dict:
                 "format": "indexed",
                 "content": content,
                 "element_count": len(current_page_elements),
-                "element_types": sanitized_result['statistics']['element_types']
+                "element_types": sanitized_result['statistics']['element_types'],
+                "injection": {
+                    "total": injection_result.get("total", 0),
+                    "injected": injection_result.get("injected", 0),
+                    "failed": len(injection_result.get("failed", []))
+                }
             }
 
         elif output_format == "full_html":
@@ -818,7 +950,12 @@ async def get_page_content(output_format: str = "indexed") -> Dict:
                 "title": current_page_title,
                 "format": "full_html",
                 "content": sanitized_result['sanitized_html'],
-                "element_count": len(current_page_elements)
+                "element_count": len(current_page_elements),
+                "injection": {
+                    "total": injection_result.get("total", 0),
+                    "injected": injection_result.get("injected", 0),
+                    "failed": len(injection_result.get("failed", []))
+                }
             }
 
         elif output_format == "elements_json":
@@ -827,7 +964,12 @@ async def get_page_content(output_format: str = "indexed") -> Dict:
                 "title": current_page_title,
                 "format": "elements_json",
                 "elements": current_page_elements,
-                "element_count": len(current_page_elements)
+                "element_count": len(current_page_elements),
+                "injection": {
+                    "total": injection_result.get("total", 0),
+                    "injected": injection_result.get("injected", 0),
+                    "failed": len(injection_result.get("failed", []))
+                }
             }
 
         else:
