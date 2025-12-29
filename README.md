@@ -552,6 +552,30 @@ in /home/zhenkai/.claude.json
           }
         }
 ```
+
+```
+        "interactive-web-agent": {
+          "command": "python3",
+          "args": [
+            "/Users/zhenkai/Documents/personal/Projects/WebAgent/src/interactive_web_agent_mcp.py"
+          ],
+          "env": {
+            "DOWNLOADS_DIR": "/Users/zhenkai/Documents/personal/Projects/WebAgent/downloads",
+            "PYTHONPATH": "/Users/zhenkai/Documents/personal/Projects/WebAgent",
+            "DEBUG_MODE": "true"
+          }
+        }
+```
+
+```
+        "chrome-mcp": {
+          "command": "npx",
+          "args": [
+            "node",
+            "/Users/zhenkai/.nvm/versions/node/v22.16.0/lib/node_modules/mcp-chrome-bridge/dist/mcp/mcp-server-stdio.js"
+          ]
+        },
+```
 make sure you use the your right absolute folder path
 
 in helper/PlaywrightMcpClient.py, set the default_token based on OS.
