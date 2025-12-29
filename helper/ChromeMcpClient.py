@@ -639,14 +639,135 @@ class MCPChromeClient:
                     # Body is just an expression, need to add return
                     js_code = f"return {body}"
 
-        # Inject and execute the JavaScript code
-        # Use MAIN context to have access to page variables
-        result = self.chrome_inject_script(
-            js_script=f"(function() {{ {js_code} }})()",
+        # Generate a unique ID to store the result
+        import uuid
+        result_id = f"__mcp_result_{uuid.uuid4().hex[:8]}__"
+
+        # Wrap the script to store result in a hidden element
+        # chrome_inject_script doesn't return JS results, so we store them in DOM
+        wrapped_script = f"""
+        (function() {{
+            try {{
+                var result = (function() {{ {js_code} }})();
+                // Store result in a hidden element
+                var el = document.createElement('script');
+                el.id = '{result_id}';
+                el.type = 'application/json';
+                el.textContent = JSON.stringify(result);
+                document.head.appendChild(el);
+            }} catch (e) {{
+                var el = document.createElement('script');
+                el.id = '{result_id}';
+                el.type = 'application/json';
+                el.textContent = JSON.stringify({{__error__: e.message, __stack__: e.stack}});
+                document.head.appendChild(el);
+            }}
+        }})()
+        """
+
+        # Inject the script
+        inject_result = self.chrome_inject_script(
+            js_script=wrapped_script,
             script_type="MAIN"
         )
 
-        return result
+        if inject_result.get("status") != "success":
+            return inject_result
+
+        # Small delay to ensure script execution completes
+        time.sleep(0.1)
+
+        # Retrieve the result using a second script injection
+        retrieve_script = f"""
+        (function() {{
+            var el = document.getElementById('{result_id}');
+            if (el) {{
+                var result = el.textContent;
+                el.remove();  // Clean up
+                return result;
+            }}
+            return null;
+        }})()
+        """
+
+        # We need to use a different approach to get the result
+        # Use chrome_get_web_content with a selector to read the element content
+        # But first, let's check if the element exists
+        check_result = self.chrome_get_web_content(
+            selector=f'script#{result_id}',
+            text_content=True,
+            html_content=False
+        )
+
+        # Parse the nested Chrome MCP response
+        try:
+            result_data = check_result.get("result", {})
+            if isinstance(result_data, dict) and "content" in result_data:
+                content_list = result_data.get("content", [])
+                if isinstance(content_list, list) and len(content_list) > 0:
+                    outer_text = content_list[0].get("text", "{}")
+                    outer_data = json.loads(outer_text)
+
+                    if outer_data.get("status") == "success":
+                        inner_data = outer_data.get("data", {})
+                        inner_content = inner_data.get("content", [])
+                        if isinstance(inner_content, list) and len(inner_content) > 0:
+                            inner_text = inner_content[0].get("text", "{}")
+                            inner_parsed = json.loads(inner_text)
+                            text_content = inner_parsed.get("textContent", "")
+
+                            # The textContent is the JSON-stringified result
+                            if text_content:
+                                try:
+                                    actual_result = json.loads(text_content)
+
+                                    # Check for error
+                                    if isinstance(actual_result, dict) and "__error__" in actual_result:
+                                        return {
+                                            "status": "error",
+                                            "message": actual_result["__error__"],
+                                            "stack": actual_result.get("__stack__")
+                                        }
+
+                                    # Return in Playwright-compatible format
+                                    return {
+                                        "status": "success",
+                                        "result": {
+                                            "content": [{
+                                                "type": "text",
+                                                "text": f"### Result\n{json.dumps(actual_result, ensure_ascii=False)}"
+                                            }]
+                                        }
+                                    }
+                                except json.JSONDecodeError:
+                                    # Return raw text if not valid JSON
+                                    return {
+                                        "status": "success",
+                                        "result": {
+                                            "content": [{
+                                                "type": "text",
+                                                "text": f"### Result\n\"{text_content}\""
+                                            }]
+                                        }
+                                    }
+
+        except Exception as e:
+            pass
+
+        # Clean up the result element if retrieval failed
+        cleanup_script = f"""
+        (function() {{
+            var el = document.getElementById('{result_id}');
+            if (el) el.remove();
+        }})()
+        """
+        self.chrome_inject_script(js_script=cleanup_script, script_type="MAIN")
+
+        # Fallback: return the original inject result (which just says injected: true)
+        return {
+            "status": "error",
+            "message": "Failed to retrieve JavaScript evaluation result"
+        }
 
     def browser_wait_for(
         self,
