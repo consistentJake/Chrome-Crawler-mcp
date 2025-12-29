@@ -45,5 +45,57 @@ some ideas:
    - **Result**: Click now properly waits for page load and verifies navigation success
 
 But we still see this issue.
-2. found that playwright mcp need a live extension context to connect to the chrome profile/tab. Because playwright launchs its own process, only manage context it creates, therefore playwright can't access page manually opened. 
+2. found that playwright mcp need a live extension context to connect to the chrome profile/tab. Because playwright launchs its own process, only manage context it creates, therefore playwright can't access page manually opened.
 I am thinking of using chrome-mcp instead.CDP wrapper seesm support operations like check all opened chrome tabs.
+
+## Dec 29 resolve click issue
+
+### Bug Description
+- **Issue**: `chrome_click_element` failed to click pagination elements with error "Element is not visible"
+- **Test case**: `test/ChromeMcpClient_click_verify_url.py` - clicking on `a[href*="tag-9407-3.html"]` element
+- **Expected**: Click should navigate from page 1 to page 3 (https://www.1point3acres.com/bbs/tag-9407-3.html)
+- **Actual**: Click failed with visibility error, no navigation occurred
+
+### Root Cause Analysis
+1. The pagination element was located at the bottom of the page (y: 2309px), far below the viewport
+2. Chrome MCP's `chrome_click_element` performs visibility checks before clicking
+3. When an element is off-screen (not in viewport), it returns error: "Element with selector '...' is not visible"
+4. The method didn't automatically scroll elements into view before attempting to click
+
+### Verification Steps
+- Used MCP tools directly to reproduce the issue:
+  1. Navigate to page 1
+  2. Get interactive elements - found element at coordinates y: 2309
+  3. Attempt click - fails with visibility error
+  4. Manually scroll element into view using `scrollIntoView()`
+  5. Attempt click again - succeeds, URL changes to page 3
+
+### Fix Implementation
+**File**: `helper/ChromeMcpClient.py:242-289`
+
+Added automatic scroll-into-view functionality to `chrome_click_element`:
+1. Added new parameter `scroll_into_view: bool = True`
+2. Before clicking, inject JavaScript to scroll element into viewport:
+   ```javascript
+   element.scrollIntoView({behavior: 'instant', block: 'center'})
+   ```
+3. Wait 200ms for scroll to settle
+4. Then perform the actual click operation
+
+**Key changes**:
+- New parameter allows disabling auto-scroll if needed (`scroll_into_view=False`)
+- Uses `behavior: 'instant'` for immediate scroll (no animation delay)
+- Centers element in viewport with `block: 'center'` for maximum visibility
+- Only applies to selector-based clicks (not coordinate clicks)
+
+### Testing Results
+- Test `ChromeMcpClient_click_verify_url.py` now passes consistently
+- Click successfully navigates from page 1 to page 3
+- URL verification confirms navigation occurred
+- No manual scroll intervention needed
+
+### Benefits
+- Eliminates "element not visible" errors for off-screen elements
+- More robust click behavior matches user expectations
+- Backward compatible - existing code continues to work
+- Can be disabled per-call if needed for special cases

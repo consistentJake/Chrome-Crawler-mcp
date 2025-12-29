@@ -244,7 +244,8 @@ class MCPChromeClient:
         selector: str = None,
         coordinates: Dict[str, int] = None,
         wait_for_navigation: bool = False,
-        timeout: int = 5000
+        timeout: int = 5000,
+        scroll_into_view: bool = True
     ) -> Dict[str, Any]:
         """
         Click on an element in the current page or at specific coordinates.
@@ -254,7 +255,28 @@ class MCPChromeClient:
             coordinates: Coordinates to click at (relative to viewport), e.g., {"x": 100, "y": 200}
             wait_for_navigation: Wait for page navigation to complete after click
             timeout: Timeout in milliseconds for waiting (default: 5000)
+            scroll_into_view: Automatically scroll element into view before clicking (default: True)
         """
+        # If a selector is provided and scroll_into_view is enabled,
+        # scroll the element into view first to ensure it's visible
+        if selector and scroll_into_view:
+            scroll_script = f"""
+            (function() {{
+                var el = document.querySelector({json.dumps(selector)});
+                if (el) {{
+                    el.scrollIntoView({{behavior: 'instant', block: 'center'}});
+                    return true;
+                }}
+                return false;
+            }})()
+            """
+            scroll_result = self.chrome_inject_script(
+                js_script=scroll_script,
+                script_type="MAIN"
+            )
+            # Small delay to let the scroll settle
+            time.sleep(0.2)
+
         params = {}
         if selector:
             params["selector"] = selector
@@ -608,15 +630,14 @@ class MCPChromeClient:
             parts = js_code.split("=>", 1)
             if len(parts) == 2:
                 body = parts[1].strip()
-                # Remove surrounding braces if present
+                # Check if body has braces
                 if body.startswith("{") and body.endswith("}"):
+                    # Remove surrounding braces
                     body = body[1:-1].strip()
-                    # If there's a return statement, extract the value
-                    if body.startswith("return "):
-                        body = body[7:].strip()
-                        if body.endswith(";"):
-                            body = body[:-1]
-                js_code = body
+                    js_code = body
+                else:
+                    # Body is just an expression, need to add return
+                    js_code = f"return {body}"
 
         # Inject and execute the JavaScript code
         # Use MAIN context to have access to page variables
@@ -647,7 +668,15 @@ class MCPChromeClient:
         if time_seconds is not None:
             # Just sleep for the specified time
             time.sleep(time_seconds)
-            return {"status": "success", "waited_seconds": time_seconds}
+            return {
+                "status": "success",
+                "result": {
+                    "content": [{
+                        "type": "text",
+                        "text": f"Waited for {time_seconds}"
+                    }]
+                }
+            }
 
         if text or text_gone:
             # Chrome MCP doesn't have direct wait-for-text support
@@ -669,9 +698,25 @@ class MCPChromeClient:
                             text_content = str(content[0].get("text", ""))
 
                             if text and text in text_content:
-                                return {"status": "success", "text_found": text}
+                                return {
+                                    "status": "success",
+                                    "result": {
+                                        "content": [{
+                                            "type": "text",
+                                            "text": f"Text found: {text}"
+                                        }]
+                                    }
+                                }
                             elif text_gone and text_gone not in text_content:
-                                return {"status": "success", "text_gone": text_gone}
+                                return {
+                                    "status": "success",
+                                    "result": {
+                                        "content": [{
+                                            "type": "text",
+                                            "text": f"Text gone: {text_gone}"
+                                        }]
+                                    }
+                                }
 
                 time.sleep(poll_interval)
                 elapsed += poll_interval
@@ -721,16 +766,23 @@ class MCPChromeClient:
                 if i < times - 1:
                     time.sleep(0.1)
 
+            # Return in standard MCP format
             return {
                 "status": "success",
-                "message": f"Scrolled down {times} time(s)",
-                "results": results
+                "result": {
+                    "content": [{
+                        "type": "text",
+                        "text": json.dumps({
+                            "message": f"Scrolled down {times} time(s)",
+                            "results": results
+                        })
+                    }]
+                }
             }
         except Exception as e:
             return {
                 "status": "error",
-                "message": f"Failed to scroll down: {str(e)}",
-                "results": results
+                "message": f"Failed to scroll down: {str(e)}"
             }
 
     def scroll_up(self, times: int = 1, amount: int = None) -> Dict[str, Any]:
@@ -770,16 +822,23 @@ class MCPChromeClient:
                 if i < times - 1:
                     time.sleep(0.1)
 
+            # Return in standard MCP format
             return {
                 "status": "success",
-                "message": f"Scrolled up {times} time(s)",
-                "results": results
+                "result": {
+                    "content": [{
+                        "type": "text",
+                        "text": json.dumps({
+                            "message": f"Scrolled up {times} time(s)",
+                            "results": results
+                        })
+                    }]
+                }
             }
         except Exception as e:
             return {
                 "status": "error",
-                "message": f"Failed to scroll up: {str(e)}",
-                "results": results
+                "message": f"Failed to scroll up: {str(e)}"
             }
 
     def browser_close(self) -> Dict[str, Any]:
@@ -989,3 +1048,95 @@ class MCPChromeClient:
         params["store_base64"] = False
 
         return self.chrome_screenshot(**params)
+
+    # =======================================================================
+    # Content Extraction Methods
+    # These methods provide different ways to extract content from pages
+    # =======================================================================
+
+    def get_text_content(self, url: str = None) -> Dict[str, Any]:
+        """
+        Get the visible text content of the page.
+
+        Args:
+            url: URL to get content from. If not provided, uses current active tab
+
+        Returns:
+            Dictionary with text content and metadata
+        """
+        return self.chrome_get_web_content(url=url, text_content=True, html_content=False)
+
+    def get_html_content(self, url: str = None) -> Dict[str, Any]:
+        """
+        Get the HTML content of the page.
+
+        Args:
+            url: URL to get content from. If not provided, uses current active tab
+
+        Returns:
+            Dictionary with HTML content
+        """
+        return self.chrome_get_web_content(url=url, text_content=False, html_content=True)
+
+    def get_selector_content(self, selector: str, url: str = None, html: bool = True) -> Dict[str, Any]:
+        """
+        Get content from a specific element using CSS selector.
+
+        Args:
+            selector: CSS selector to target specific element
+            url: URL to get content from. If not provided, uses current active tab
+            html: If True, returns HTML content. If False, returns text content
+
+        Returns:
+            Dictionary with content from the selected element
+        """
+        return self.chrome_get_web_content(
+            url=url,
+            text_content=not html,
+            html_content=html,
+            selector=selector
+        )
+
+    def get_content_by_script(self, script: str = None, url: str = None) -> Dict[str, Any]:
+        """
+        Get content by injecting and executing JavaScript.
+
+        Args:
+            script: JavaScript code to execute. If not provided, returns full page HTML
+            url: URL to inject script into. If not provided, uses current active tab
+
+        Returns:
+            Dictionary with script execution results
+        """
+        if script is None:
+            # Default script to get full page HTML
+            script = """
+            (function() {
+                // Get the full HTML including doctype
+                var doctype = document.doctype ?
+                    '<!DOCTYPE ' + document.doctype.name + '>' : '';
+                return doctype + document.documentElement.outerHTML;
+            })()
+            """
+
+        # Use browser_evaluate which handles the script injection and result return
+        result = self.browser_evaluate(f"() => {{ {script} }}")
+
+        # Format the result to match other content extraction methods
+        if result.get("status") == "success":
+            # Extract the actual result from the nested structure
+            result_data = result.get("result", {})
+            if isinstance(result_data, dict) and "content" in result_data:
+                content_list = result_data["content"]
+                if isinstance(content_list, list) and len(content_list) > 0:
+                    text_content = content_list[0].get("text", "")
+                    return {
+                        "status": "success",
+                        "result": {
+                            "scriptResult": text_content,
+                            "url": url or "current_tab",
+                            "method": "script_injection"
+                        }
+                    }
+
+        return result
