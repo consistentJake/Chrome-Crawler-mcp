@@ -57,6 +57,10 @@ Path(DOWNLOADS_DIR).mkdir(parents=True, exist_ok=True)
 DEBUG_MODE = os.getenv("DEBUG_MODE", "false").lower() in ("true", "1", "yes")
 SESSION_TIMEOUT_SECONDS = int(os.getenv("SESSION_TIMEOUT_SECONDS", "60"))
 
+# MCP Client type configuration ("playwright" or "chrome")
+CLIENT_TYPE = os.getenv("MCP_CLIENT_TYPE", "playwright").lower()
+print(f"[MCP CLIENT] Using {CLIENT_TYPE} client")
+
 # Global state
 browser_integration = None
 current_page_elements = []
@@ -76,7 +80,7 @@ def get_browser() -> BrowserIntegration:
     """Get or create browser integration instance"""
     global browser_integration
     if browser_integration is None:
-        browser_integration = BrowserIntegration()
+        browser_integration = BrowserIntegration(client_type=CLIENT_TYPE)
     return browser_integration
 
 

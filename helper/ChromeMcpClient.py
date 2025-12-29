@@ -568,3 +568,424 @@ class MCPChromeClient:
         if tab_id:
             params["tabId"] = tab_id
         return self._make_request("chrome_send_command_to_inject_script", params)
+
+    # ========================================================================
+    # Playwright Compatibility Methods
+    # These methods provide compatibility with PlaywrightMcpClient interface
+    # ========================================================================
+
+    def browser_navigate(self, url: str) -> Dict[str, Any]:
+        """
+        Navigate to a URL (Playwright compatibility method).
+
+        Args:
+            url: URL to navigate to
+
+        Returns:
+            Result dictionary with status
+        """
+        return self.chrome_navigate(url=url)
+
+    def browser_evaluate(self, function: str, element: str = None, ref: str = None) -> Dict[str, Any]:
+        """
+        Evaluate JavaScript expression on page or element (Playwright compatibility method).
+
+        Args:
+            function: JavaScript function as string (e.g., "() => { return document.title; }")
+            element: Human-readable element description (optional)
+            ref: Exact target element reference (optional)
+
+        Returns:
+            Result dictionary with evaluation result
+        """
+        # Extract the function body from the arrow function syntax
+        # Handle formats like: "() => expression" or "() => { statements }"
+        js_code = function.strip()
+
+        # Remove arrow function wrapper if present
+        if "=>" in js_code:
+            # Extract code after =>
+            parts = js_code.split("=>", 1)
+            if len(parts) == 2:
+                body = parts[1].strip()
+                # Remove surrounding braces if present
+                if body.startswith("{") and body.endswith("}"):
+                    body = body[1:-1].strip()
+                    # If there's a return statement, extract the value
+                    if body.startswith("return "):
+                        body = body[7:].strip()
+                        if body.endswith(";"):
+                            body = body[:-1]
+                js_code = body
+
+        # Inject and execute the JavaScript code
+        # Use MAIN context to have access to page variables
+        result = self.chrome_inject_script(
+            js_script=f"(function() {{ {js_code} }})()",
+            script_type="MAIN"
+        )
+
+        return result
+
+    def browser_wait_for(
+        self,
+        text: str = None,
+        text_gone: str = None,
+        time_seconds: float = None
+    ) -> Dict[str, Any]:
+        """
+        Wait for text to appear/disappear or a specified time to pass (Playwright compatibility method).
+
+        Args:
+            text: Text to wait for to appear
+            text_gone: Text to wait for to disappear
+            time_seconds: Time to wait in seconds
+
+        Returns:
+            Result dictionary with status
+        """
+        if time_seconds is not None:
+            # Just sleep for the specified time
+            time.sleep(time_seconds)
+            return {"status": "success", "waited_seconds": time_seconds}
+
+        if text or text_gone:
+            # Chrome MCP doesn't have direct wait-for-text support
+            # We'll implement a simple polling mechanism
+            max_wait = 30  # Maximum 30 seconds
+            poll_interval = 0.5  # Check every 500ms
+            elapsed = 0
+
+            while elapsed < max_wait:
+                # Get page content
+                content_result = self.chrome_get_web_content(text_content=True)
+
+                if content_result.get("status") == "success":
+                    # Extract text content from the nested response
+                    result_data = content_result.get("result", {})
+                    if isinstance(result_data, dict):
+                        content = result_data.get("content", [])
+                        if isinstance(content, list) and len(content) > 0:
+                            text_content = str(content[0].get("text", ""))
+
+                            if text and text in text_content:
+                                return {"status": "success", "text_found": text}
+                            elif text_gone and text_gone not in text_content:
+                                return {"status": "success", "text_gone": text_gone}
+
+                time.sleep(poll_interval)
+                elapsed += poll_interval
+
+            # Timeout
+            return {
+                "status": "error",
+                "message": f"Timeout waiting for text: {text or text_gone}"
+            }
+
+        return {"status": "error", "message": "Must specify either text, text_gone, or time_seconds"}
+
+    def scroll_down(self, times: int = 1, amount: int = None) -> Dict[str, Any]:
+        """
+        Scroll down the page using JavaScript (Playwright compatibility method).
+
+        Args:
+            times: Number of times to scroll down
+            amount: Number of pixels to scroll per action (default: 300)
+
+        Returns:
+            Result dictionary with status and results
+        """
+        scroll_pixels = amount if amount is not None else 300
+        results = []
+
+        try:
+            for i in range(times):
+                # Scroll down by the specified number of pixels
+                scroll_code = f"window.scrollBy(0, {scroll_pixels});"
+                result = self.chrome_inject_script(
+                    js_script=scroll_code,
+                    script_type="MAIN"
+                )
+
+                results.append({
+                    "status": result.get("status", "success"),
+                    "action": "scroll_down",
+                    "iteration": i + 1,
+                    "scroll_amount": scroll_pixels
+                })
+
+                if result.get("status") != "success":
+                    break
+
+                # Pause between scrolls
+                if i < times - 1:
+                    time.sleep(0.1)
+
+            return {
+                "status": "success",
+                "message": f"Scrolled down {times} time(s)",
+                "results": results
+            }
+        except Exception as e:
+            return {
+                "status": "error",
+                "message": f"Failed to scroll down: {str(e)}",
+                "results": results
+            }
+
+    def scroll_up(self, times: int = 1, amount: int = None) -> Dict[str, Any]:
+        """
+        Scroll up the page using JavaScript (Playwright compatibility method).
+
+        Args:
+            times: Number of times to scroll up
+            amount: Number of pixels to scroll per action (default: 300)
+
+        Returns:
+            Result dictionary with status and results
+        """
+        scroll_pixels = amount if amount is not None else 300
+        results = []
+
+        try:
+            for i in range(times):
+                # Scroll up by the specified number of pixels (negative value)
+                scroll_code = f"window.scrollBy(0, -{scroll_pixels});"
+                result = self.chrome_inject_script(
+                    js_script=scroll_code,
+                    script_type="MAIN"
+                )
+
+                results.append({
+                    "status": result.get("status", "success"),
+                    "action": "scroll_up",
+                    "iteration": i + 1,
+                    "scroll_amount": scroll_pixels
+                })
+
+                if result.get("status") != "success":
+                    break
+
+                # Pause between scrolls
+                if i < times - 1:
+                    time.sleep(0.1)
+
+            return {
+                "status": "success",
+                "message": f"Scrolled up {times} time(s)",
+                "results": results
+            }
+        except Exception as e:
+            return {
+                "status": "error",
+                "message": f"Failed to scroll up: {str(e)}",
+                "results": results
+            }
+
+    def browser_close(self) -> Dict[str, Any]:
+        """
+        Close the current browser page/tab (Playwright compatibility method).
+
+        Returns:
+            Result dictionary with status
+        """
+        # Close the active tab
+        return self.chrome_close_tabs()
+
+    def browser_tabs(self, action: str, index: int = None) -> Dict[str, Any]:
+        """
+        Manage browser tabs - list, create, close, or select (Playwright compatibility method).
+
+        Args:
+            action: Operation to perform (list, new, close, select)
+            index: Tab index for close/select operations
+
+        Returns:
+            Result dictionary with tabs information
+        """
+        if action == "list":
+            # Get all windows and tabs
+            result = self.get_windows_and_tabs()
+
+            if result.get("status") == "success":
+                # Parse the response to extract tabs
+                result_data = result.get("result", {})
+                content = result_data.get("content", [])
+
+                if isinstance(content, list) and len(content) > 0:
+                    text_data = content[0].get("text", "")
+
+                    # Parse the JSON data
+                    try:
+                        data = json.loads(text_data)
+                        if data.get("status") == "success":
+                            inner_data = data.get("data", {})
+                            inner_content = inner_data.get("content", [])
+
+                            if isinstance(inner_content, list) and len(inner_content) > 0:
+                                tabs_json = inner_content[0].get("text", "{}")
+                                tabs_data = json.loads(tabs_json)
+
+                                # Extract tabs from windows
+                                tabs_list = []
+                                current_index = -1
+                                tab_index = 0
+
+                                for window in tabs_data.get("windows", []):
+                                    for tab in window.get("tabs", []):
+                                        tabs_list.append({
+                                            "index": tab_index,
+                                            "title": tab.get("title", ""),
+                                            "url": tab.get("url", ""),
+                                            "active": tab.get("active", False)
+                                        })
+
+                                        if tab.get("active"):
+                                            current_index = tab_index
+
+                                        tab_index += 1
+
+                                # Format as markdown text for Playwright compatibility
+                                markdown_lines = ["### Open tabs"]
+                                for tab in tabs_list:
+                                    current_marker = " (current)" if tab["index"] == current_index else ""
+                                    markdown_lines.append(
+                                        f"- {tab['index']}:{current_marker} [{tab['title']}] ({tab['url']})"
+                                    )
+
+                                markdown_text = "\n".join(markdown_lines)
+
+                                return {
+                                    "status": "success",
+                                    "result": {
+                                        "content": [{
+                                            "type": "text",
+                                            "text": markdown_text
+                                        }]
+                                    }
+                                }
+                    except Exception as e:
+                        return {
+                            "status": "error",
+                            "message": f"Failed to parse tabs data: {str(e)}"
+                        }
+
+            return result
+
+        elif action == "new":
+            # Chrome MCP doesn't have a direct "new tab" method
+            # We can navigate to a blank page in a new window
+            result = self.chrome_navigate(url="about:blank", new_window=False)
+            return result
+
+        elif action == "close":
+            if index is None:
+                return {"status": "error", "message": "index required for close action"}
+
+            # Get all tabs to find the tab ID
+            tabs_result = self.get_windows_and_tabs()
+
+            if tabs_result.get("status") == "success":
+                # Parse to get tab IDs
+                try:
+                    result_data = tabs_result.get("result", {})
+                    content = result_data.get("content", [])
+                    text_data = content[0].get("text", "")
+                    data = json.loads(text_data)
+
+                    if data.get("status") == "success":
+                        inner_data = data.get("data", {})
+                        inner_content = inner_data.get("content", [])
+                        tabs_json = inner_content[0].get("text", "{}")
+                        tabs_data = json.loads(tabs_json)
+
+                        # Find tab at index
+                        tab_index = 0
+                        for window in tabs_data.get("windows", []):
+                            for tab in window.get("tabs", []):
+                                if tab_index == index:
+                                    tab_id = tab.get("tabId")
+                                    return self.chrome_close_tabs(tab_ids=[tab_id])
+                                tab_index += 1
+
+                        return {"status": "error", "message": f"Tab at index {index} not found"}
+                except Exception as e:
+                    return {"status": "error", "message": f"Failed to close tab: {str(e)}"}
+
+            return tabs_result
+
+        elif action == "select":
+            if index is None:
+                return {"status": "error", "message": "index required for select action"}
+
+            # Get all tabs to find the tab URL
+            tabs_result = self.get_windows_and_tabs()
+
+            if tabs_result.get("status") == "success":
+                # Parse to get tab URLs
+                try:
+                    result_data = tabs_result.get("result", {})
+                    content = result_data.get("content", [])
+                    text_data = content[0].get("text", "")
+                    data = json.loads(text_data)
+
+                    if data.get("status") == "success":
+                        inner_data = data.get("data", {})
+                        inner_content = inner_data.get("content", [])
+                        tabs_json = inner_content[0].get("text", "{}")
+                        tabs_data = json.loads(tabs_json)
+
+                        # Find tab at index
+                        tab_index = 0
+                        for window in tabs_data.get("windows", []):
+                            for tab in window.get("tabs", []):
+                                if tab_index == index:
+                                    tab_url = tab.get("url")
+                                    # Navigate to the tab's URL to activate it
+                                    return self.chrome_navigate(url=tab_url)
+                                tab_index += 1
+
+                        return {"status": "error", "message": f"Tab at index {index} not found"}
+                except Exception as e:
+                    return {"status": "error", "message": f"Failed to select tab: {str(e)}"}
+
+            return tabs_result
+
+        else:
+            return {"status": "error", "message": f"Unknown action: {action}"}
+
+    def browser_take_screenshot(
+        self,
+        filename: str = None,
+        element: str = None,
+        ref: str = None,
+        full_page: bool = False,
+        screenshot_type: str = "png"
+    ) -> Dict[str, Any]:
+        """
+        Take a screenshot of the current page (Playwright compatibility method).
+
+        Args:
+            filename: File name to save screenshot to
+            element: Human-readable element description (for element screenshots)
+            ref: Exact target element reference (for element screenshots)
+            full_page: Take screenshot of full scrollable page
+            screenshot_type: Image format (png or jpeg)
+
+        Returns:
+            Result dictionary with screenshot info
+        """
+        params = {}
+        if filename:
+            params["name"] = filename
+        if full_page:
+            params["full_page"] = full_page
+        if element:
+            # Chrome MCP uses CSS selector instead of element description
+            # We'll use the element as a selector
+            params["selector"] = element
+
+        params["save_png"] = True
+        params["store_base64"] = False
+
+        return self.chrome_screenshot(**params)

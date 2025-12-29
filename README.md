@@ -580,6 +580,44 @@ make sure you use the your right absolute folder path
 
 in helper/PlaywrightMcpClient.py, set the default_token based on OS.
 
+## Switching Between Playwright and Chrome MCP Clients
+
+The `interactive-web-agent` MCP server supports both Playwright and Chrome MCP clients. You can switch between them using the `MCP_CLIENT_TYPE` environment variable:
+
+### Using Playwright Client (default)
+```json
+"interactive-web-agent": {
+  "command": "python3",
+  "args": [
+    "/Users/zhenkai/Documents/personal/Projects/WebAgent/src/interactive_web_agent_mcp.py"
+  ],
+  "env": {
+    "DOWNLOADS_DIR": "/Users/zhenkai/Documents/personal/Projects/WebAgent/downloads",
+    "PYTHONPATH": "/Users/zhenkai/Documents/personal/Projects/WebAgent",
+    "DEBUG_MODE": "true",
+    "MCP_CLIENT_TYPE": "playwright"
+  }
+}
+```
+
+### Using Chrome MCP Client
+```json
+"interactive-web-agent": {
+  "command": "python3",
+  "args": [
+    "/Users/zhenkai/Documents/personal/Projects/WebAgent/src/interactive_web_agent_mcp.py"
+  ],
+  "env": {
+    "DOWNLOADS_DIR": "/Users/zhenkai/Documents/personal/Projects/WebAgent/downloads",
+    "PYTHONPATH": "/Users/zhenkai/Documents/personal/Projects/WebAgent",
+    "DEBUG_MODE": "true",
+    "MCP_CLIENT_TYPE": "chrome"
+  }
+}
+```
+
+**Note**: When using `MCP_CLIENT_TYPE=chrome`, the Chrome MCP server must be installed and running. The Chrome client provides compatibility methods that match the Playwright interface, allowing seamless switching between the two clients.
+
 ## scoll down and up using pyautoGUI
 
 # On Ubuntu/Debian, install following dependency for activating chrome window

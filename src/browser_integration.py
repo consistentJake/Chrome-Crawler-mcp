@@ -1,19 +1,21 @@
 """
 Browser Integration for Web Extraction MCP
-Interfaces with Playwright MCP to extract page content
+Interfaces with Playwright MCP or Chrome MCP to extract page content
 """
 
 import json
 import re
 from typing import Dict, Optional
 from helper.PlaywrightMcpClient import MCPPlaywrightClient
+from helper.ChromeMcpClient import MCPChromeClient
 
 
 class BrowserIntegration:
-    """Integration with Playwright MCP for HTML extraction"""
+    """Integration with Playwright MCP or Chrome MCP for HTML extraction"""
 
     def __init__(
         self,
+        client_type: str = "playwright",
         mcp_server_path: Optional[str] = None,
         mcp_command: Optional[list] = None,
         extension_token: Optional[str] = None
@@ -22,15 +24,26 @@ class BrowserIntegration:
         Initialize browser integration.
 
         Args:
-            mcp_server_path: Path to custom Playwright MCP server
+            client_type: Type of MCP client to use ("playwright" or "chrome")
+            mcp_server_path: Path to custom MCP server
             mcp_command: Full command to start MCP server
-            extension_token: Extension token for Playwright MCP
+            extension_token: Extension token for Playwright MCP (ignored for Chrome)
         """
-        self.playwright_client = MCPPlaywrightClient(
-            mcp_server_path=mcp_server_path,
-            mcp_command=mcp_command,
-            extension_token=extension_token
-        )
+        self.client_type = client_type.lower()
+
+        if self.client_type == "chrome":
+            self.playwright_client = MCPChromeClient(
+                mcp_server_path=mcp_server_path,
+                mcp_command=mcp_command
+            )
+        elif self.client_type == "playwright":
+            self.playwright_client = MCPPlaywrightClient(
+                mcp_server_path=mcp_server_path,
+                mcp_command=mcp_command,
+                extension_token=extension_token
+            )
+        else:
+            raise ValueError(f"Unknown client_type: {client_type}. Must be 'playwright' or 'chrome'")
 
     def get_current_page_html(self) -> str:
         """
