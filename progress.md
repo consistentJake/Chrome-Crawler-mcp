@@ -45,3 +45,5 @@ some ideas:
    - **Result**: Click now properly waits for page load and verifies navigation success
 
 But we still see this issue.
+2. found that playwright mcp need a live extension context to connect to the chrome profile/tab. Because playwright launchs its own process, only manage context it creates, therefore playwright can't access page manually opened. 
+I am thinking of using chrome-mcp instead.CDP wrapper seesm support operations like check all opened chrome tabs.

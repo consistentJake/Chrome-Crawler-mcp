@@ -7,4 +7,4 @@
 3. use interactive-web-agent, go to https://platform.moonshot.cn/console/account, don't check the page first, just get the current url on the browswer and make sure we go to the right page, then scroll down 2 times, then scroll up 1 times, download the content. 
 
 ## scroll and test in current page
-4. still use interactive-web-agent, make sure the current url is starting with https://x.com, if we are in a chrome-extension page, close the current page. then we scroll down 100 times, download the content
+4. still use interactive-web-agent, switch to the tab with URL is like https://x.com/***, then we scroll down 100 times, download the content

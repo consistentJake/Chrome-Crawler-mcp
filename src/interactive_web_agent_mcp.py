@@ -521,6 +521,67 @@ Note: Requires PyAutoGUI and accessibility permissions on macOS. Falls back to J
                 }
             }
         ),
+
+        Tool(
+            name="close_page",
+            description="""Close the current browser page.
+
+Use this when:
+- Done with current browsing session
+- Need to clean up browser resources
+- Want to close the current page/tab
+
+This will close the current page that the browser is displaying.
+
+Example:
+- close_page() - Closes the current browser page
+""",
+            inputSchema={
+                "type": "object",
+                "properties": {}
+            }
+        ),
+
+        Tool(
+            name="manage_tabs",
+            description="""Manage browser tabs (list, create, close, or select).
+
+Use this to:
+- List all open tabs to see what's available
+- Create a new tab
+- Close a specific tab by index
+- Switch to a specific tab by index
+
+Actions:
+- "list" - Returns all open tabs with their index, title, and URL
+- "new" - Creates a new blank tab
+- "close" - Closes the tab at the specified index
+- "select" - Switches to the tab at the specified index
+
+Examples:
+- manage_tabs(action="list") - List all tabs
+- manage_tabs(action="new") - Create a new tab
+- manage_tabs(action="close", index=1) - Close tab at index 1
+- manage_tabs(action="select", index=0) - Switch to tab at index 0
+
+IMPORTANT: After selecting a tab, call get_page_content() to see the content of the newly selected tab.
+""",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "action": {
+                        "type": "string",
+                        "enum": ["list", "new", "close", "select"],
+                        "description": "Operation to perform: list all tabs, create new tab, close a tab, or select a tab"
+                    },
+                    "index": {
+                        "type": "integer",
+                        "description": "Tab index for close/select operations (0-based)"
+                    }
+                },
+                "required": ["action"]
+            }
+        ),
     ]
 
 
@@ -607,6 +668,17 @@ async def call_tool(name: str, arguments: Any) -> List[TextContent]:
             result = await scroll_up(
                 times=arguments.get("times", 1),
                 amount=arguments.get("amount")
+            )
+            return [TextContent(type="text", text=json.dumps(result, indent=2, ensure_ascii=False))]
+
+        elif name == "close_page":
+            result = await close_page()
+            return [TextContent(type="text", text=json.dumps(result, indent=2, ensure_ascii=False))]
+
+        elif name == "manage_tabs":
+            result = await manage_tabs(
+                action=arguments["action"],
+                index=arguments.get("index")
             )
             return [TextContent(type="text", text=json.dumps(result, indent=2, ensure_ascii=False))]
 
@@ -1454,6 +1526,187 @@ async def scroll_up(times: int = 1, amount: Optional[int] = None) -> Dict:
     logger = get_debug_logger()
     if logger:
         logger.log_operation("scroll_up", input_data, output, timer.get_duration())
+        if session_manager:
+            session_manager.update_operation_time()
+
+    return output
+
+
+async def close_page() -> Dict:
+    """Close the current browser page"""
+    # Start timing for debug
+    timer = OperationTimer()
+    input_data = {}
+
+    with timer:
+        try:
+            browser = get_browser()
+
+            # Close the browser page using the Playwright client
+            result = browser.playwright_client.browser_close()
+
+            if result.get("status") == "success":
+                output = {
+                    "success": True,
+                    "message": "Browser page closed successfully"
+                }
+            else:
+                output = {
+                    "success": False,
+                    "error": result.get("message", "Failed to close browser page")
+                }
+        except Exception as e:
+            output = {
+                "success": False,
+                "error": f"Failed to close page: {str(e)}"
+            }
+
+    # Log operation
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation("close_page", input_data, output, timer.get_duration())
+        if session_manager:
+            session_manager.update_operation_time()
+
+    return output
+
+
+async def manage_tabs(action: str, index: Optional[int] = None) -> Dict:
+    """Manage browser tabs (list, create, close, or select)"""
+    global current_page_url, current_page_title, current_page_elements
+
+    # Start timing for debug
+    timer = OperationTimer()
+    input_data = {"action": action, "index": index}
+
+    with timer:
+        try:
+            browser = get_browser()
+
+            # Validate index for operations that require it
+            if action in ["close", "select"] and index is None:
+                output = {
+                    "success": False,
+                    "error": f"Action '{action}' requires an 'index' parameter"
+                }
+            else:
+                # Call the browser_tabs method from PlaywrightMcpClient
+                result = browser.playwright_client.browser_tabs(action=action, index=index)
+
+                if result.get("status") == "success":
+                    # Parse the result based on action
+                    if action == "list":
+                        # Extract tabs data from nested MCP response format
+                        # The response is: {'status': 'success', 'result': {'content': [{'type': 'text', 'text': '...'}]}}
+                        # The text format is markdown like:
+                        # ### Open tabs
+                        # - 0: (current) [Example Domain] (https://example.com/)
+                        # - 1: [Google] (https://google.com/)
+
+                        tabs_list = []
+                        current_index = -1
+
+                        result_data = result.get("result", {})
+
+                        # Parse from nested content structure (MCP format)
+                        if isinstance(result_data, dict) and "content" in result_data:
+                            content_list = result_data.get("content", [])
+                            if isinstance(content_list, list) and len(content_list) > 0:
+                                first_item = content_list[0]
+                                if isinstance(first_item, dict) and "text" in first_item:
+                                    text = first_item["text"]
+
+                                    # Parse the markdown text format
+                                    # Format: "- 0: (current) [Title] (URL)"
+                                    import re
+                                    lines = text.split('\n')
+                                    for line in lines:
+                                        # Match pattern like: "- 0: (current) [Example Domain] (https://example.com/)"
+                                        # or: "- 1: [Google] (https://google.com/)"
+                                        match = re.match(r'^-\s*(\d+):\s*(\(current\)\s*)?\[([^\]]*)\]\s*\(([^)]+)\)', line.strip())
+                                        if match:
+                                            index = int(match.group(1))
+                                            is_current = bool(match.group(2))
+                                            title = match.group(3)
+                                            url = match.group(4)
+
+                                            tabs_list.append({
+                                                "index": index,
+                                                "title": title,
+                                                "url": url
+                                            })
+
+                                            if is_current:
+                                                current_index = index
+
+                        output = {
+                            "success": True,
+                            "action": "list",
+                            "tabs": tabs_list,
+                            "current_index": current_index,
+                            "total_tabs": len(tabs_list),
+                            "message": f"Found {len(tabs_list)} tab(s). Current tab index: {current_index}"
+                        }
+
+                    elif action == "new":
+                        output = {
+                            "success": True,
+                            "action": "new",
+                            "message": "New tab created successfully. Use get_page_content() to see the new tab content."
+                        }
+                        # Clear current elements since we're on a new tab
+                        current_page_elements = []
+
+                    elif action == "close":
+                        output = {
+                            "success": True,
+                            "action": "close",
+                            "closed_index": index,
+                            "message": f"Tab at index {index} closed successfully"
+                        }
+                        # Clear current elements as the active tab might have changed
+                        current_page_elements = []
+
+                    elif action == "select":
+                        output = {
+                            "success": True,
+                            "action": "select",
+                            "selected_index": index,
+                            "message": f"Switched to tab at index {index}. Use get_page_content() to see the tab content."
+                        }
+                        # Clear current elements since we switched tabs
+                        current_page_elements = []
+
+                        # Update current URL and title for the newly selected tab
+                        try:
+                            await asyncio.sleep(0.5)  # Brief wait for tab switch
+                            current_page_url = browser.get_current_url()
+                            current_page_title = browser.get_page_title()
+                            output["url"] = current_page_url
+                            output["title"] = current_page_title
+                        except:
+                            pass
+                    else:
+                        output = {
+                            "success": False,
+                            "error": f"Unknown action: {action}"
+                        }
+                else:
+                    output = {
+                        "success": False,
+                        "error": result.get("message", f"Tab operation '{action}' failed")
+                    }
+
+        except Exception as e:
+            output = {
+                "success": False,
+                "error": f"Failed to manage tabs: {str(e)}"
+            }
+
+    # Log operation
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation("manage_tabs", input_data, output, timer.get_duration())
         if session_manager:
             session_manager.update_operation_time()
 
