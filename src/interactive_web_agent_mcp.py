@@ -586,6 +586,46 @@ IMPORTANT: After selecting a tab, call get_page_content() to see the content of 
                 "required": ["action"]
             }
         ),
+
+        Tool(
+            name="parse_page_with_special_parser",
+            description="""Parse current page using a specialized parser for structured data extraction.
+
+Use this when you need to extract structured data from supported websites:
+- **x.com / twitter.com**: Extracts tweets with user info, text, engagement metrics, media
+  - Supports: search results, timelines, profiles
+  - Returns: tweet ID, username, display name, text, timestamp, metrics (replies, retweets, likes, views), media
+
+The parser is auto-selected based on the current URL, or you can specify one explicitly.
+Results are automatically saved to the session's parsed_results folder as JSON.
+
+Example workflow:
+1. navigate(url="https://x.com/search?q=gold")
+2. scroll_down(times=20)  # Load more content
+3. parse_page_with_special_parser()  # Extract all visible tweets
+4. Result: File saved with 50+ tweets in structured JSON format
+
+Returns:
+- Summary of extracted items (count, types)
+- Full file path to saved JSON results
+- Parser used and execution time
+""",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "parser_name": {
+                        "type": "string",
+                        "description": "Parser to use (auto-detected from URL if not specified)",
+                        "enum": ["auto", "x.com"]
+                    },
+                    "save_results": {
+                        "type": "boolean",
+                        "description": "Save results to file (default: true)",
+                        "default": True
+                    }
+                }
+            }
+        ),
     ]
 
 
@@ -683,6 +723,13 @@ async def call_tool(name: str, arguments: Any) -> List[TextContent]:
             result = await manage_tabs(
                 action=arguments["action"],
                 index=arguments.get("index")
+            )
+            return [TextContent(type="text", text=json.dumps(result, indent=2, ensure_ascii=False))]
+
+        elif name == "parse_page_with_special_parser":
+            result = await parse_page_with_special_parser(
+                parser_name=arguments.get("parser_name", "auto"),
+                save_results=arguments.get("save_results", True)
             )
             return [TextContent(type="text", text=json.dumps(result, indent=2, ensure_ascii=False))]
 
@@ -1862,6 +1909,180 @@ async def manage_tabs(action: str, index: Optional[int] = None) -> Dict:
             session_manager.update_operation_time()
 
     return output
+
+
+async def parse_page_with_special_parser(
+    parser_name: str = "auto",
+    save_results: bool = True
+) -> Dict:
+    """Parse current page using specialized parser"""
+    timer = OperationTimer()
+    input_data = {"parser_name": parser_name, "save_results": save_results}
+
+    with timer:
+        browser = get_browser()
+
+        # Get current URL
+        try:
+            current_url = browser.get_current_url()
+        except Exception as e:
+            output = {
+                "success": False,
+                "error": f"Failed to get current URL: {str(e)}"
+            }
+            return output
+
+        # Get parser
+        from special_parsers import get_parser_for_url, list_available_parsers
+
+        if parser_name == "auto":
+            parser = get_parser_for_url(current_url)
+            if not parser:
+                available = list_available_parsers()
+                output = {
+                    "success": False,
+                    "error": f"No parser available for URL: {current_url}",
+                    "available_parsers": available
+                }
+                return output
+        else:
+            # Try to get specific parser by name
+            parser = get_parser_for_url(f"https://{parser_name}/")
+            if not parser:
+                output = {
+                    "success": False,
+                    "error": f"Parser '{parser_name}' not found"
+                }
+                return output
+
+        # Validate page
+        if not parser.validate_page(browser):
+            output = {
+                "success": False,
+                "error": f"Current page not compatible with {parser.name} parser",
+                "url": current_url
+            }
+            return output
+
+        # Execute parser
+        try:
+            parsed_data = parser.parse(browser)
+        except Exception as e:
+            import traceback
+            output = {
+                "success": False,
+                "error": f"Parser execution failed: {str(e)}",
+                "traceback": traceback.format_exc()
+            }
+            return output
+
+        # Save results if requested
+        filepath = None
+        if save_results:
+            filepath = _save_parsed_results(parser.name, parsed_data)
+
+        # Build output
+        output = {
+            "success": True,
+            "parser_used": parser.name,
+            "parser_version": parser.version,
+            "url": current_url,
+            "item_count": parsed_data.get("item_count", 0),
+            "items_summary": _summarize_items(parsed_data.get("items", [])),
+            "filepath": str(filepath) if filepath else None,
+            "execution_time_ms": parsed_data.get("metadata", {}).get("extraction_time_ms", 0),
+            "message": f"Successfully parsed {parsed_data.get('item_count', 0)} items using {parser.name} parser" +
+                      (f". Results saved to {filepath}" if filepath else "")
+        }
+
+    # Log operation
+    logger = get_debug_logger()
+    if logger:
+        logger.log_operation("parse_page_with_special_parser", input_data, output, timer.get_duration())
+        if session_manager:
+            session_manager.update_operation_time()
+
+    return output
+
+
+def _save_parsed_results(parser_name: str, parsed_data: Dict) -> Path:
+    """
+    Save parsed results to session folder.
+
+    Returns:
+        Path to saved file
+    """
+    # Get session directory
+    logger = get_debug_logger()
+    if logger and logger.session_dir:
+        base_dir = Path(logger.session_dir)
+    else:
+        base_dir = Path(DOWNLOADS_DIR)
+
+    # Create parsed_results directory structure
+    parsed_results_dir = base_dir / "parsed_results" / parser_name
+    parsed_results_dir.mkdir(parents=True, exist_ok=True)
+
+    # Generate filename from URL and timestamp
+    url = parsed_data.get("url", "")
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    # Extract query or identifier from URL
+    import re
+    from urllib.parse import urlparse, parse_qs
+
+    parsed_url = urlparse(url)
+    query_params = parse_qs(parsed_url.query)
+
+    # Try to get meaningful identifier
+    identifier = ""
+    if 'q' in query_params:  # Search query
+        identifier = query_params['q'][0][:30]  # Limit length
+    elif parsed_url.path:
+        # Use last path component
+        path_parts = [p for p in parsed_url.path.split('/') if p]
+        if path_parts:
+            identifier = path_parts[-1][:30]
+
+    # Clean identifier for filename
+    identifier = re.sub(r'[^\w\-]', '_', identifier) if identifier else "page"
+
+    filename = f"{timestamp}_{identifier}.json"
+    filepath = parsed_results_dir / filename
+
+    # Save JSON
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(parsed_data, f, indent=2, ensure_ascii=False)
+
+    return filepath
+
+
+def _summarize_items(items: List[Dict]) -> Dict:
+    """Create summary of parsed items"""
+    if not items:
+        return {"total": 0}
+
+    # Count by type if available
+    type_counts = {}
+    for item in items:
+        item_type = item.get("type", "item")
+        type_counts[item_type] = type_counts.get(item_type, 0) + 1
+
+    # Sample first few items
+    sample = items[:3] if len(items) > 3 else items
+
+    return {
+        "total": len(items),
+        "type_counts": type_counts,
+        "sample": [
+            {
+                "id": item.get("id", ""),
+                "text": item.get("text", "")[:100],  # First 100 chars
+                "username": item.get("username", "")
+            }
+            for item in sample
+        ]
+    }
 
 
 async def main():
