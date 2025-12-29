@@ -58,7 +58,7 @@ DEBUG_MODE = os.getenv("DEBUG_MODE", "false").lower() in ("true", "1", "yes")
 SESSION_TIMEOUT_SECONDS = int(os.getenv("SESSION_TIMEOUT_SECONDS", "60"))
 
 # MCP Client type configuration ("playwright" or "chrome")
-CLIENT_TYPE = os.getenv("MCP_CLIENT_TYPE", "playwright").lower()
+CLIENT_TYPE = os.getenv("MCP_CLIENT_TYPE", "chrome").lower()
 print(f"[MCP CLIENT] Using {CLIENT_TYPE} client")
 
 # Global state
@@ -1046,20 +1046,24 @@ async def click_element(web_agent_id: str, wait_after: float = 1.0) -> Dict:
         # Use the data-web-agent-id locator to click
         locator = element['locators']['data_id']  # e.g., '[data-web-agent-id="wa-5"]'
 
-        # Use browser_evaluate to click the element
-        click_js = f"""
-        () => {{
-            const element = document.querySelector('{locator}');
-            if (element) {{
-                element.click();
-                return {{success: true, clicked: true}};
-            }} else {{
-                return {{success: false, error: 'Element not found in DOM'}};
-            }}
-        }}
-        """
+        # Use the new click_element method which handles Chrome auto-scroll
+        # Don't use wait_for_navigation here - we handle waiting separately below
+        result = browser.click_element(css_selector=locator, wait_for_navigation=False)
 
-        result = browser.playwright_client.browser_evaluate(function=click_js)
+        # Check if click was successful
+        if result.get("status") == "error":
+            output = {
+                "success": False,
+                "error": f"Failed to click element: {result.get('message', 'Unknown error')}"
+            }
+
+            # Log failed operation
+            logger = get_debug_logger()
+            if logger:
+                logger.log_operation("click_element", input_data, output, timer.get_duration())
+                session_manager.update_operation_time()
+
+            return output
 
         # Wait for navigation to complete (if it's a link)
         if element.get("tag") == "a":
@@ -1149,22 +1153,23 @@ async def type_into_element(web_agent_id: str, text: str, submit: bool = False) 
         browser = get_browser()
         locator = element['locators']['data_id']
 
-        # Type into element using JavaScript
-        type_js = f"""
-        () => {{
-            const element = document.querySelector('{locator}');
-            if (element) {{
-                element.value = {json.dumps(text)};
-                element.dispatchEvent(new Event('input', {{ bubbles: true }}));
-                element.dispatchEvent(new Event('change', {{ bubbles: true }}));
-                return {{success: true}};
-            }} else {{
-                return {{success: false, error: 'Element not found in DOM'}};
-            }}
-        }}
-        """
+        # Use the new type_into_element method which handles Chrome native typing
+        result = browser.type_into_element(css_selector=locator, text=text)
 
-        result = browser.playwright_client.browser_evaluate(function=type_js)
+        # Check if typing was successful
+        if result.get("status") == "error":
+            output = {
+                "success": False,
+                "error": f"Failed to type into element: {result.get('message', 'Unknown error')}"
+            }
+
+            # Log failed operation
+            logger = get_debug_logger()
+            if logger:
+                logger.log_operation("type_into_element", input_data, output, timer.get_duration())
+                session_manager.update_operation_time()
+
+            return output
 
         # Submit if requested
         if submit:

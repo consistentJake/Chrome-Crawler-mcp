@@ -32,16 +32,23 @@ class BrowserIntegration:
         self.client_type = client_type.lower()
 
         if self.client_type == "chrome":
-            self.playwright_client = MCPChromeClient(
-                mcp_server_path=mcp_server_path,
-                mcp_command=mcp_command
-            )
+            # Only pass parameters if they're not None to avoid overriding defaults
+            chrome_params = {}
+            if mcp_server_path is not None:
+                chrome_params["mcp_server_path"] = mcp_server_path
+            if mcp_command is not None:
+                chrome_params["mcp_command"] = mcp_command
+            self.playwright_client = MCPChromeClient(**chrome_params)
         elif self.client_type == "playwright":
-            self.playwright_client = MCPPlaywrightClient(
-                mcp_server_path=mcp_server_path,
-                mcp_command=mcp_command,
-                extension_token=extension_token
-            )
+            # Only pass parameters if they're not None to avoid overriding defaults
+            playwright_params = {}
+            if mcp_server_path is not None:
+                playwright_params["mcp_server_path"] = mcp_server_path
+            if mcp_command is not None:
+                playwright_params["mcp_command"] = mcp_command
+            if extension_token is not None:
+                playwright_params["extension_token"] = extension_token
+            self.playwright_client = MCPPlaywrightClient(**playwright_params)
         else:
             raise ValueError(f"Unknown client_type: {client_type}. Must be 'playwright' or 'chrome'")
 
@@ -52,13 +59,16 @@ class BrowserIntegration:
         Returns:
             Full HTML content of current page
         """
-        result = self.playwright_client.browser_evaluate(
-            function="() => document.documentElement.outerHTML"
-        )
-
-
-
-        return str(self.handle_mcp_response(result))
+        if self.client_type == "chrome":
+            # Use Chrome's native get_html_content method
+            result = self.playwright_client.get_html_content()
+            return str(self.handle_chrome_content_response(result, "htmlContent"))
+        else:
+            # Use Playwright's browser_evaluate method
+            result = self.playwright_client.browser_evaluate(
+                function="() => document.documentElement.outerHTML"
+            )
+            return str(self.handle_mcp_response(result))
 
     def handle_mcp_response(self, result: dict) -> str:
                 # Handle MCP response format: {'status': 'success', 'result': {'content': [{'type': 'text', 'text': '...'}]}}
@@ -95,6 +105,39 @@ class BrowserIntegration:
                 elif "result" in content:
                     return str(content["result"])
         return str(result)
+
+    def handle_chrome_content_response(self, result: dict, content_key: str) -> str:
+        """
+        Handle Chrome MCP response format with nested JSON.
+        Chrome MCP returns a double-nested JSON structure that needs to be parsed twice.
+
+        Args:
+            result: The result dictionary from Chrome MCP
+            content_key: The key to extract from the inner JSON ("htmlContent" or "textContent")
+
+        Returns:
+            Extracted content string
+        """
+        if isinstance(result, dict):
+            if result.get("status") != "success":
+                raise RuntimeError(f"Failed to get page content: {result.get('message', 'Unknown error')}")
+
+            # Extract content from nested structure
+            result_data = result.get("result", {})
+            if isinstance(result_data, dict) and "content" in result_data:
+                content_list = result_data["content"]
+                if isinstance(content_list, list) and len(content_list) > 0:
+                    # First parse: get outer wrapper
+                    outer_data = json.loads(content_list[0].get("text", "{}"))
+                    # Second parse: get actual content from nested JSON
+                    inner_text = outer_data.get("data", {}).get("content", [{}])[0].get("text", "{}")
+                    if inner_text:
+                        inner_data = json.loads(inner_text)
+                        # Extract the requested content (htmlContent or textContent)
+                        content = inner_data.get(content_key, "")
+                        return content
+
+        raise RuntimeError(f"Failed to extract {content_key} from Chrome MCP response")
 
     def get_current_url(self) -> str:
         """
@@ -291,6 +334,117 @@ class BrowserIntegration:
         """
         result = self.playwright_client.browser_wait_for(time_seconds=timeout)
         return result.get("status") == "success"
+
+    def click_element(self, css_selector: str, wait_for_navigation: bool = False, timeout: int = 5000) -> Dict:
+        """
+        Click on an element using the appropriate client method.
+
+        Args:
+            css_selector: CSS selector for the element (e.g., '[data-web-agent-id="wa-5"]')
+            wait_for_navigation: Whether to wait for navigation after click (Chrome only)
+            timeout: Timeout in milliseconds for waiting (Chrome only, default: 5000)
+
+        Returns:
+            Result dictionary with status
+        """
+        if self.client_type == "chrome":
+            # Use Chrome's native click with auto-scroll
+            result = self.playwright_client.chrome_click_element(
+                selector=css_selector,
+                wait_for_navigation=wait_for_navigation,
+                timeout=timeout,
+                scroll_into_view=True  # Use the new auto-scroll feature
+            )
+
+            # Handle Chrome MCP response format
+            if isinstance(result, dict):
+                if result.get("status") == "success":
+                    return result
+                else:
+                    # Return error in consistent format
+                    return {
+                        "status": "error",
+                        "message": result.get("message", "Click failed")
+                    }
+            return result
+        else:
+            # Use JavaScript evaluation for Playwright
+            click_js = f"""
+            () => {{
+                const element = document.querySelector('{css_selector}');
+                if (element) {{
+                    element.click();
+                    return {{success: true, clicked: true}};
+                }} else {{
+                    return {{success: false, error: 'Element not found in DOM'}};
+                }}
+            }}
+            """
+            result = self.playwright_client.browser_evaluate(function=click_js)
+
+            # Normalize result format to match Chrome response
+            if isinstance(result, dict) and result.get("status") == "success":
+                return result
+            else:
+                return {
+                    "status": "error",
+                    "message": result.get("message", "Click failed")
+                }
+
+    def type_into_element(self, css_selector: str, text: str) -> Dict:
+        """
+        Type text into an input element using the appropriate client method.
+
+        Args:
+            css_selector: CSS selector for the input element
+            text: Text to type into the element
+
+        Returns:
+            Result dictionary with status
+        """
+        if self.client_type == "chrome":
+            # Use Chrome's native fill method
+            result = self.playwright_client.chrome_fill_or_select(
+                selector=css_selector,
+                value=text
+            )
+
+            # Handle Chrome MCP response format
+            if isinstance(result, dict):
+                if result.get("status") == "success":
+                    return result
+                else:
+                    return {
+                        "status": "error",
+                        "message": result.get("message", "Type failed")
+                    }
+            return result
+        else:
+            # Use JavaScript evaluation for Playwright
+            import json as json_module
+            type_js = f"""
+            () => {{
+                const element = document.querySelector('{css_selector}');
+                if (element) {{
+                    element.value = {json_module.dumps(text)};
+                    element.dispatchEvent(new Event('input', {{ bubbles: true }}));
+                    element.dispatchEvent(new Event('change', {{ bubbles: true }}));
+                    return {{success: true}};
+                }} else {{
+                    return {{success: false, error: 'Element not found in DOM'}};
+                }}
+            }}
+            """
+            result = self.playwright_client.browser_evaluate(function=type_js)
+
+            # Normalize result format
+            if isinstance(result, dict) and result.get("status") == "success":
+                return result
+            else:
+                return {
+                    "status": "error",
+                    "message": result.get("message", "Type failed")
+                }
 
     def take_screenshot(self, filename: str, full_page: bool = False) -> bool:
         """

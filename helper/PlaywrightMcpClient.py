@@ -724,16 +724,23 @@ class MCPPlaywrightClient:
                     jittered_pause = self.scroll_pause * random.uniform(*self.jitter_range)
                     time.sleep(jittered_pause)
 
+            # Return in standard MCP format
             return {
                 "status": "success",
-                "message": f"Scrolled down {times} time(s)",
-                "results": results
+                "result": {
+                    "content": [{
+                        "type": "text",
+                        "text": json.dumps({
+                            "message": f"Scrolled down {times} time(s)",
+                            "results": results
+                        })
+                    }]
+                }
             }
         except Exception as e:
             return {
                 "status": "error",
-                "message": f"Failed to scroll down: {str(e)}",
-                "results": results
+                "message": f"Failed to scroll down: {str(e)}"
             }
 
     def scroll_up(self, times: int = 1, amount: int = None) -> Dict[str, Any]:
@@ -771,16 +778,23 @@ class MCPPlaywrightClient:
                     jittered_pause = self.scroll_pause * random.uniform(*self.jitter_range)
                     time.sleep(jittered_pause)
 
+            # Return in standard MCP format
             return {
                 "status": "success",
-                "message": f"Scrolled up {times} time(s)",
-                "results": results
+                "result": {
+                    "content": [{
+                        "type": "text",
+                        "text": json.dumps({
+                            "message": f"Scrolled up {times} time(s)",
+                            "results": results
+                        })
+                    }]
+                }
             }
         except Exception as e:
             return {
                 "status": "error",
-                "message": f"Failed to scroll up: {str(e)}",
-                "results": results
+                "message": f"Failed to scroll up: {str(e)}"
             }
 
     def wait_seconds(self, seconds: float) -> Dict[str, Any]:
