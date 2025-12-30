@@ -7,6 +7,7 @@ import re
 from typing import Optional
 from .base import BaseParser
 from .x_com import XComParser
+from .onepoint3acres import OnePoint3AcresParser
 
 
 # Parser registry with URL pattern matching
@@ -19,6 +20,15 @@ PARSER_REGISTRY = {
         "parser_class": XComParser,
         "description": "Extracts tweets with user info, text, metrics, and media",
         "supported_pages": ["search", "timeline", "profile", "tweet"]
+    },
+    "1point3acres": {
+        "patterns": [
+            r"1point3acres\.com",
+            r"1point3acres",
+        ],
+        "parser_class": OnePoint3AcresParser,
+        "description": "Extracts forum posts and replies with user info, content, and reactions",
+        "supported_pages": ["thread", "forum"]
     },
     # Future parsers can be added here
     # "reddit": {
@@ -68,6 +78,7 @@ def list_available_parsers():
 __all__ = [
     "BaseParser",
     "XComParser",
+    "OnePoint3AcresParser",
     "get_parser_for_url",
     "list_available_parsers",
     "PARSER_REGISTRY"

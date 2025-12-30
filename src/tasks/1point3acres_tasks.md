@@ -11,3 +11,6 @@
 ## test scrolling
 4. use interactive-web-agent, go to https://platform.moonshot.cn/console/account, don't check the page first, just get the current url on the browswer and make sure we go to the right page, then scroll down 2 times, then scroll up 1 times, download the content. 
 
+5. use interactive-web-agent, go to https://x.com/search?q=gold, scroll down 20 times, use special parser to parse and dump the content
+
+6. use interactive-web-agent, go to https://www.1point3acres.com/bbs/tag/openai-9407-1.html, get all the posts link. For each of the post link, we do speical parsing on the post page one by one.

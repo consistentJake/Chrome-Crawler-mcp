@@ -2057,8 +2057,29 @@ def _save_parsed_results(parser_name: str, parsed_data: Dict) -> Path:
     return filepath
 
 
-def _summarize_items(items: List[Dict]) -> Dict:
+def _summarize_items(items) -> Dict:
     """Create summary of parsed items"""
+    # Handle both list and dict formats
+    if isinstance(items, dict):
+        # For parsers like 1point3acres that return {main_post: ..., replies: [...]}
+        total = 0
+        summary = {}
+
+        if "main_post" in items:
+            total += 1
+            summary["main_post"] = True
+            if items["main_post"] and items["main_post"].get("content"):
+                summary["main_post_preview"] = items["main_post"].get("content", "")[:100]
+
+        if "replies" in items:
+            total += len(items["replies"])
+            summary["replies_count"] = len(items["replies"])
+            if items["replies"]:
+                summary["first_reply_preview"] = items["replies"][0].get("content", "")[:100] if items["replies"][0] else ""
+
+        summary["total"] = total
+        return summary
+
     if not items:
         return {"total": 0}
 

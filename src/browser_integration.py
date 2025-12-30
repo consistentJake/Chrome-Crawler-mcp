@@ -123,7 +123,8 @@ class BrowserIntegration:
                 raise RuntimeError(f"Failed to get page content: {result.get('message', 'Unknown error')}")
 
             # Extract content from nested structure
-            result_data = result.get("result", {})
+            # Try "result" first (Playwright MCP), then "data" (Chrome MCP)
+            result_data = result.get("result") or result.get("data", {})
             if isinstance(result_data, dict) and "content" in result_data:
                 content_list = result_data["content"]
                 if isinstance(content_list, list) and len(content_list) > 0:
@@ -146,6 +147,36 @@ class BrowserIntegration:
         Returns:
             Current page URL
         """
+        # For Chrome MCP, use get_windows_and_tabs to get URL
+        if self.client_type == "chrome":
+            result = self.playwright_client.get_windows_and_tabs()
+            if result.get("status") == "success":
+                import json
+                # Chrome MCP has triple-nested JSON structure
+                # Level 1: result.content[0].text
+                result_data = result.get("result") or result.get("data", {})
+                content_list = result_data.get("content", [])
+                if content_list:
+                    level1_text = content_list[0].get("text", "{}")
+                    level1_data = json.loads(level1_text)
+                    # Level 2: data.content[0].text
+                    level2_data = level1_data.get("data", {})
+                    level2_content = level2_data.get("content", [])
+                    if level2_content:
+                        level2_text = level2_content[0].get("text", "{}")
+                        # Level 3: actual tabs data
+                        tabs_data = json.loads(level2_text)
+                        # Get active tab
+                        for window in tabs_data.get("windows", []):
+                            for tab in window.get("tabs", []):
+                                if tab.get("active"):
+                                    return tab.get("url", "")
+                        # Fallback: return first tab URL
+                        if tabs_data.get("windows") and tabs_data["windows"][0].get("tabs"):
+                            return tabs_data["windows"][0]["tabs"][0].get("url", "")
+            return ""
+
+        # For Playwright MCP, use browser_evaluate
         result = self.playwright_client.browser_evaluate(
             function="() => window.location.href"
         )
@@ -156,7 +187,8 @@ class BrowserIntegration:
                 raise RuntimeError(f"Failed to get page URL: {result.get('message', 'Unknown error')}")
 
             # Extract content from nested structure
-            result_data = result.get("result", {})
+            # Try "result" first (Playwright MCP), then "data" (Chrome MCP)
+            result_data = result.get("result") or result.get("data", {})
             if isinstance(result_data, dict) and "content" in result_data:
                 content_list = result_data["content"]
                 if isinstance(content_list, list) and len(content_list) > 0:
@@ -190,6 +222,36 @@ class BrowserIntegration:
         Returns:
             Page title
         """
+        # For Chrome MCP, use get_windows_and_tabs to get title
+        if self.client_type == "chrome":
+            result = self.playwright_client.get_windows_and_tabs()
+            if result.get("status") == "success":
+                import json
+                # Chrome MCP has triple-nested JSON structure
+                # Level 1: result.content[0].text
+                result_data = result.get("result") or result.get("data", {})
+                content_list = result_data.get("content", [])
+                if content_list:
+                    level1_text = content_list[0].get("text", "{}")
+                    level1_data = json.loads(level1_text)
+                    # Level 2: data.content[0].text
+                    level2_data = level1_data.get("data", {})
+                    level2_content = level2_data.get("content", [])
+                    if level2_content:
+                        level2_text = level2_content[0].get("text", "{}")
+                        # Level 3: actual tabs data
+                        tabs_data = json.loads(level2_text)
+                        # Get active tab
+                        for window in tabs_data.get("windows", []):
+                            for tab in window.get("tabs", []):
+                                if tab.get("active"):
+                                    return tab.get("title", "")
+                        # Fallback: return first tab title
+                        if tabs_data.get("windows") and tabs_data["windows"][0].get("tabs"):
+                            return tabs_data["windows"][0]["tabs"][0].get("title", "")
+            return ""
+
+        # For Playwright MCP, use browser_evaluate
         result = self.playwright_client.browser_evaluate(
             function="() => document.title"
         )
@@ -200,7 +262,8 @@ class BrowserIntegration:
                 return ""
 
             # Extract content from nested structure
-            result_data = result.get("result", {})
+            # Try "result" first (Playwright MCP), then "data" (Chrome MCP)
+            result_data = result.get("result") or result.get("data", {})
             if isinstance(result_data, dict) and "content" in result_data:
                 content_list = result_data["content"]
                 if isinstance(content_list, list) and len(content_list) > 0:
