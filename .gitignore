@@ -41,3 +41,7 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Test artifacts
+test/*.html
+test/*.json
