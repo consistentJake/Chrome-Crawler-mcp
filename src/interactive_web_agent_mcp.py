@@ -1377,30 +1377,77 @@ async def type_into_element(web_agent_id: str, text: str, submit: bool = False) 
 
         # Submit if requested
         if submit:
-            # Use keyboard Enter instead of JavaScript events for React compatibility
+            # Use JavaScript to simulate Enter key press for both Chrome and Playwright
+            # This creates proper keyboard events that React/Vue/Angular can handle
+            submit_js = f"""
+            (function() {{
+                var selector = '{locator}';
+                var element = document.querySelector(selector);
+                if (!element) {{
+                    return {{ success: false, error: 'Element not found' }};
+                }}
+
+                // Focus the element first
+                element.focus();
+
+                // Create and dispatch keydown event for Enter
+                var keydownEvent = new KeyboardEvent('keydown', {{
+                    key: 'Enter',
+                    code: 'Enter',
+                    keyCode: 13,
+                    which: 13,
+                    bubbles: true,
+                    cancelable: true
+                }});
+                element.dispatchEvent(keydownEvent);
+
+                // Create and dispatch keypress event for Enter
+                var keypressEvent = new KeyboardEvent('keypress', {{
+                    key: 'Enter',
+                    code: 'Enter',
+                    keyCode: 13,
+                    which: 13,
+                    bubbles: true,
+                    cancelable: true
+                }});
+                element.dispatchEvent(keypressEvent);
+
+                // Create and dispatch keyup event for Enter
+                var keyupEvent = new KeyboardEvent('keyup', {{
+                    key: 'Enter',
+                    code: 'Enter',
+                    keyCode: 13,
+                    which: 13,
+                    bubbles: true,
+                    cancelable: true
+                }});
+                element.dispatchEvent(keyupEvent);
+
+                // If element has a form, try submitting it
+                if (element.form) {{
+                    // Try to find and click submit button first
+                    var submitBtn = element.form.querySelector('button[type="submit"], input[type="submit"]');
+                    if (submitBtn) {{
+                        submitBtn.click();
+                    }} else {{
+                        // Dispatch submit event on form
+                        var submitEvent = new Event('submit', {{ bubbles: true, cancelable: true }});
+                        element.form.dispatchEvent(submitEvent);
+                    }}
+                }}
+
+                return {{ success: true, submitted: true }};
+            }})()
+            """
+
             if browser.client_type == "chrome":
-                # Use Chrome's native keyboard simulation for Enter key
-                browser.playwright_client.chrome_keyboard(
-                    keys="Enter",
-                    selector=locator
+                browser.playwright_client.chrome_inject_script(
+                    js_script=submit_js,
+                    script_type="MAIN"
                 )
             else:
-                # Fallback to JavaScript for Playwright
-                submit_js = f"""
-                () => {{
-                    const element = document.querySelector('{locator}');
-                    if (element && element.form) {{
-                        element.form.submit();
-                        return {{success: true}};
-                    }} else if (element) {{
-                        // Try pressing Enter
-                        element.dispatchEvent(new KeyboardEvent('keydown', {{key: 'Enter', code: 'Enter', keyCode: 13, bubbles: true}}));
-                        return {{success: true, submitted_via_enter: true}};
-                    }}
-                    return {{success: false}};
-                }}
-                """
                 browser.playwright_client.browser_evaluate(function=submit_js)
+
             await asyncio.sleep(1.0)
 
         output = {

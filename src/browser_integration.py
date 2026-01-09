@@ -467,8 +467,8 @@ class BrowserIntegration:
         """
         Type text into an input element using the appropriate client method.
 
-        For Chrome, this uses keyboard simulation to work with React/Vue/Angular
-        controlled inputs that don't respond to direct value setting.
+        For Chrome, this uses JavaScript to simulate proper input events that
+        work with React/Vue/Angular controlled inputs.
 
         Args:
             css_selector: CSS selector for the input element
@@ -478,44 +478,68 @@ class BrowserIntegration:
             Result dictionary with status
         """
         if self.client_type == "chrome":
-            # Step 1: Click to focus the element first
-            click_result = self.playwright_client.chrome_click_element(
-                selector=css_selector,
-                scroll_into_view=True
-            )
+            # Use JavaScript injection to type text with proper React-compatible events
+            # This approach uses execCommand('insertText') which triggers proper input events
+            import json as json_module
+            escaped_text = json_module.dumps(text)
 
-            if click_result.get("status") != "success":
-                return {
-                    "status": "error",
-                    "message": f"Failed to focus element: {click_result.get('message', 'Unknown error')}"
-                }
+            type_js = f"""
+            (function() {{
+                var selector = {json_module.dumps(css_selector)};
+                var text = {escaped_text};
+                var element = document.querySelector(selector);
 
-            # Small delay after focus
-            import time
-            time.sleep(0.2)
+                if (!element) {{
+                    return {{ success: false, error: 'Element not found: ' + selector }};
+                }}
 
-            # Step 2: Clear existing content with Ctrl+A then Delete
-            clear_result = self.playwright_client.chrome_keyboard(
-                keys="Ctrl+a",
-                selector=css_selector
-            )
-            time.sleep(0.05)
+                // Focus the element
+                element.focus();
 
-            # Delete selected text
-            self.playwright_client.chrome_keyboard(
-                keys="Backspace",
-                selector=css_selector
-            )
-            time.sleep(0.05)
+                // Clear existing content
+                element.select();
 
-            # Step 3: Type the text using keyboard simulation
-            # Chrome MCP's chrome_keyboard expects comma-separated keys for sequences
-            # Convert text to comma-separated characters: "gold" -> "g,o,l,d"
-            keys_sequence = ','.join(list(text))
-            result = self.playwright_client.chrome_keyboard(
-                keys=keys_sequence,
-                selector=css_selector,
-                delay=10  # Small delay between characters for React to process
+                // For input/textarea elements
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {{
+                    // Set native value setter to bypass React's controlled input
+                    var nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+                        window.HTMLInputElement.prototype, 'value'
+                    ).set;
+                    var nativeTextAreaValueSetter = Object.getOwnPropertyDescriptor(
+                        window.HTMLTextAreaElement.prototype, 'value'
+                    ).set;
+
+                    if (element.tagName === 'INPUT') {{
+                        nativeInputValueSetter.call(element, text);
+                    }} else {{
+                        nativeTextAreaValueSetter.call(element, text);
+                    }}
+
+                    // Dispatch input event to trigger React state update
+                    var inputEvent = new Event('input', {{ bubbles: true, cancelable: true }});
+                    element.dispatchEvent(inputEvent);
+
+                    // Also dispatch change event
+                    var changeEvent = new Event('change', {{ bubbles: true, cancelable: true }});
+                    element.dispatchEvent(changeEvent);
+
+                    return {{ success: true, method: 'native_setter' }};
+                }}
+
+                // For contenteditable elements
+                if (element.isContentEditable) {{
+                    document.execCommand('selectAll', false, null);
+                    document.execCommand('insertText', false, text);
+                    return {{ success: true, method: 'execCommand' }};
+                }}
+
+                return {{ success: false, error: 'Unsupported element type' }};
+            }})()
+            """
+
+            result = self.playwright_client.chrome_inject_script(
+                js_script=type_js,
+                script_type="MAIN"
             )
 
             # Handle Chrome MCP response format
