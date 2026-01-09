@@ -827,19 +827,34 @@ async def _inject_web_agent_ids(browser, element_registry: List[Dict]) -> Dict:
             "failed": []
         }
 
+    # Extract only the necessary data for injection (web_agent_id and xpath)
+    # This reduces the payload size and avoids JSON serialization issues
+    injection_data = [
+        {
+            "web_agent_id": el["web_agent_id"],
+            "xpath": el["locators"]["xpath"]
+        }
+        for el in element_registry
+    ]
+
+    # Serialize the injection data as JSON and embed it in the JavaScript
+    injection_data_json = json.dumps(injection_data, ensure_ascii=False)
+
     # Build JavaScript to inject IDs using XPath for reliable element location
-    inject_js = """
-    (elements) => {
-        const results = {
+    # The element data is embedded directly in the script as a JSON literal
+    inject_js = f"""
+    () => {{
+        const elements = {injection_data_json};
+        const results = {{
             total: elements.length,
             injected: 0,
             failed: []
-        };
+        }};
 
-        elements.forEach(el => {
-            try {
+        elements.forEach(el => {{
+            try {{
                 // Use XPath to find the element (most reliable locator)
-                const xpath = el.locators.xpath;
+                const xpath = el.xpath;
                 const xpathResult = document.evaluate(
                     xpath,
                     document,
@@ -849,28 +864,28 @@ async def _inject_web_agent_ids(browser, element_registry: List[Dict]) -> Dict:
                 );
                 const element = xpathResult.singleNodeValue;
 
-                if (element) {
+                if (element) {{
                     // Inject data-web-agent-id attribute
                     element.setAttribute('data-web-agent-id', el.web_agent_id);
                     results.injected++;
-                } else {
-                    results.failed.push({
+                }} else {{
+                    results.failed.push({{
                         web_agent_id: el.web_agent_id,
                         xpath: xpath,
                         reason: 'Element not found by XPath'
-                    });
-                }
-            } catch (err) {
-                results.failed.push({
+                    }});
+                }}
+            }} catch (err) {{
+                results.failed.push({{
                     web_agent_id: el.web_agent_id,
-                    xpath: el.locators.xpath,
+                    xpath: el.xpath,
                     reason: err.message
-                });
-            }
-        });
+                }});
+            }}
+        }});
 
         return results;
-    }
+    }}
     """
 
     try:
@@ -1362,21 +1377,30 @@ async def type_into_element(web_agent_id: str, text: str, submit: bool = False) 
 
         # Submit if requested
         if submit:
-            submit_js = f"""
-            () => {{
-                const element = document.querySelector('{locator}');
-                if (element && element.form) {{
-                    element.form.submit();
-                    return {{success: true}};
-                }} else if (element) {{
-                    // Try pressing Enter
-                    element.dispatchEvent(new KeyboardEvent('keydown', {{key: 'Enter', code: 'Enter', keyCode: 13, bubbles: true}}));
-                    return {{success: true, submitted_via_enter: true}};
+            # Use keyboard Enter instead of JavaScript events for React compatibility
+            if browser.client_type == "chrome":
+                # Use Chrome's native keyboard simulation for Enter key
+                browser.playwright_client.chrome_keyboard(
+                    keys="Enter",
+                    selector=locator
+                )
+            else:
+                # Fallback to JavaScript for Playwright
+                submit_js = f"""
+                () => {{
+                    const element = document.querySelector('{locator}');
+                    if (element && element.form) {{
+                        element.form.submit();
+                        return {{success: true}};
+                    }} else if (element) {{
+                        // Try pressing Enter
+                        element.dispatchEvent(new KeyboardEvent('keydown', {{key: 'Enter', code: 'Enter', keyCode: 13, bubbles: true}}));
+                        return {{success: true, submitted_via_enter: true}};
+                    }}
+                    return {{success: false}};
                 }}
-                return {{success: false}};
-            }}
-            """
-            browser.playwright_client.browser_evaluate(function=submit_js)
+                """
+                browser.playwright_client.browser_evaluate(function=submit_js)
             await asyncio.sleep(1.0)
 
         output = {

@@ -8,6 +8,11 @@ import re
 from typing import Dict, Optional
 from helper.PlaywrightMcpClient import MCPPlaywrightClient
 from helper.ChromeMcpClient import MCPChromeClient
+from util import detect_host_os
+
+
+LINUX_CHROME_MCP_SERVER = "/home/zhenkai/personal/Projects/UnifiedReader/mcp-chrome/app/native-server/dist/mcp/mcp-server-stdio.js"
+MACOS_CHROME_MCP_SERVER = "/Users/zhenkai/.nvm/versions/node/v22.16.0/lib/node_modules/mcp-chrome-bridge/dist/mcp/mcp-server-stdio.js"
 
 
 class BrowserIntegration:
@@ -34,10 +39,14 @@ class BrowserIntegration:
         if self.client_type == "chrome":
             # Only pass parameters if they're not None to avoid overriding defaults
             chrome_params = {}
-            if mcp_server_path is not None:
-                chrome_params["mcp_server_path"] = mcp_server_path
-            if mcp_command is not None:
-                chrome_params["mcp_command"] = mcp_command
+            host_os = detect_host_os()
+            default_server_path = (
+                MACOS_CHROME_MCP_SERVER if host_os == "macos" else LINUX_CHROME_MCP_SERVER
+            )
+            resolved_server_path = mcp_server_path or default_server_path
+            chrome_params["mcp_server_path"] = resolved_server_path
+            resolved_command = mcp_command or ["npx", "node", resolved_server_path]
+            chrome_params["mcp_command"] = resolved_command
             self.playwright_client = MCPChromeClient(**chrome_params)
         elif self.client_type == "playwright":
             # Only pass parameters if they're not None to avoid overriding defaults
@@ -458,6 +467,9 @@ class BrowserIntegration:
         """
         Type text into an input element using the appropriate client method.
 
+        For Chrome, this uses keyboard simulation to work with React/Vue/Angular
+        controlled inputs that don't respond to direct value setting.
+
         Args:
             css_selector: CSS selector for the input element
             text: Text to type into the element
@@ -466,10 +478,44 @@ class BrowserIntegration:
             Result dictionary with status
         """
         if self.client_type == "chrome":
-            # Use Chrome's native fill method
-            result = self.playwright_client.chrome_fill_or_select(
+            # Step 1: Click to focus the element first
+            click_result = self.playwright_client.chrome_click_element(
                 selector=css_selector,
-                value=text
+                scroll_into_view=True
+            )
+
+            if click_result.get("status") != "success":
+                return {
+                    "status": "error",
+                    "message": f"Failed to focus element: {click_result.get('message', 'Unknown error')}"
+                }
+
+            # Small delay after focus
+            import time
+            time.sleep(0.2)
+
+            # Step 2: Clear existing content with Ctrl+A then Delete
+            clear_result = self.playwright_client.chrome_keyboard(
+                keys="Ctrl+a",
+                selector=css_selector
+            )
+            time.sleep(0.05)
+
+            # Delete selected text
+            self.playwright_client.chrome_keyboard(
+                keys="Backspace",
+                selector=css_selector
+            )
+            time.sleep(0.05)
+
+            # Step 3: Type the text using keyboard simulation
+            # Chrome MCP's chrome_keyboard expects comma-separated keys for sequences
+            # Convert text to comma-separated characters: "gold" -> "g,o,l,d"
+            keys_sequence = ','.join(list(text))
+            result = self.playwright_client.chrome_keyboard(
+                keys=keys_sequence,
+                selector=css_selector,
+                delay=10  # Small delay between characters for React to process
             )
 
             # Handle Chrome MCP response format

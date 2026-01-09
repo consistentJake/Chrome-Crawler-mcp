@@ -10,7 +10,7 @@ class MCPChromeClient:
 
     def __init__(
         self,
-        mcp_server_path: str = "/Users/zhenkai/.nvm/versions/node/v22.16.0/lib/node_modules/mcp-chrome-bridge/dist/mcp/mcp-server-stdio.js",
+        mcp_server_path: str,
         mcp_command: Optional[List[str]] = None,
         env: Optional[Dict[str, str]] = None,
     ):
@@ -35,11 +35,11 @@ class MCPChromeClient:
     def _start_server(self):
         """Start the MCP server subprocess"""
         try:
-            if self.mcp_command:
+            if self.mcp_command is not None:
                 command = self.mcp_command
             else:
-                command = ["npx", "node", self.mcp_server_path]
-
+                raise ValueError("mcp_command is required, should not be None")
+                
             self.process = subprocess.Popen(
                 command,
                 stdin=subprocess.PIPE,
