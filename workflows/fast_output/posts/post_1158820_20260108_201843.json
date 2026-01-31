@@ -1,0 +1,197 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1158820-1-1.html",
+  "timestamp": "2026-01-08T20:18:43.899303",
+  "item_count": 9,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1158820-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20752602",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "感谢地里的分享. 之前投了一个team的岗位, 也完成了VO. 我发现大家VO之后很快得到一个明确的结果. 我这边就很迷惑, VO之后一直没有消息, 等了两周催了一下HR, 等来的是Cross function team的多轮chat和面试. HR那边也没有给太多的context,  到底是team match还是额外的XFN.\n\n请问这是什么一个信号呢?",
+        "timestamp": "2025-12-20 16:54:58",
+        "reactions": {
+          "likes": 2,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158820-1-1.html#20752602"
+      },
+      {
+        "post_id": "rate_div_20752602",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158820-1-1.html#rate_div_20752602"
+      },
+      {
+        "post_id": "20753486",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "想问一下楼主是什么岗位呢？",
+        "timestamp": "2025-12-21 13:36:26",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158820-1-1.html#20753486"
+      },
+      {
+        "post_id": "rate_div_20753486",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158820-1-1.html#rate_div_20753486"
+      },
+      {
+        "post_id": "20755492",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "看上去像team match，难道recruiter没明说吗？不应该啊。 你可以问recruiter？",
+        "timestamp": "2025-12-22 23:01:22",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158820-1-1.html#20755492"
+      },
+      {
+        "post_id": "rate_div_20755492",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158820-1-1.html#rate_div_20755492"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158820-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158820-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "开放爱VO之后多轮面试|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 112,
+    "thread_title": "[面试经验]\n开放爱VO之后多轮面试",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 8
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 19,
+    "original_link": {
+      "href": "thread-1158820-1-1.html",
+      "text": "开放爱VO之后多轮面试",
+      "web_agent_id": "wa-279",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1158820-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:43.899342"
+  }
+}

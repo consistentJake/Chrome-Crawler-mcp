@@ -1,0 +1,498 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html",
+  "timestamp": "2026-01-08T20:18:41.744314",
+  "item_count": 25,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20754731",
+        "user": {
+          "username": "Unknown",
+          "user_id": "44512",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "本帖最后由 匿名 于 2025-12-22 12:35 编辑 \n\n刚收到了openai的offer, 感觉从base来看定的是l4，但是rsu和地里l4相比低很多，请问是被lowball了吗(不知道是不是和我只有不到一年的全职经验有关，但看dp有很多NG也是l4的包？但网上都说openai给的是标准包，但这个又明显比网上的标准包低，有必要和hr谈一下rsu吗还是现在l4的rsu都调整到这个数了\n\n目前还有亚麻某lab的l5 offer但是包算下来比这个低，还能用来compete吗？顺便问问大家建议去哪里0.0\n\n\n(帮助解答问题的友友会帮忙加米!)\n\n补充内容 (2025-12-23 07:55 +08:00):\n补充一下发这个贴是想真诚求建议，因为以前都是乖乖的直接签offer的人，从来没有过这样的经验，我能搜索到的信息感觉也是参差不齐的，怕不是很准确，所以想听听大家的建议，",
+        "timestamp": "2025-12-22 12:33:50",
+        "reactions": {
+          "likes": 2,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#20754731"
+      },
+      {
+        "post_id": "rate_20754731",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#rate_20754731"
+      },
+      {
+        "post_id": "20754967",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "本帖最后由 匿名 于 2025-12-22 15:51 编辑 \n匿名用户 发表于 2025-12-22 14:58\n开发爱不up level给出比其他公司+1级的包裹的话，有别的选择谁会去？\n\n去了要牺牲wlb，job security堪忧， ...\n怎么感觉有点酸葡萄的味道，open ai也没这么不堪吧。现在AI这么火，有这个公司名字放在简历里，难道是什么减分项么？AI领域哪个wlb不是这样。Anthropic不也在SF？难不成选xAI？谷歌要不是最近股票好了，不也是狗都嫌弃么，个个都说谷歌药丸。别告诉我所谓的别的选择是亚麻和meta这种wlb又好job security也好的公司",
+        "timestamp": "2025-12-22 15:45:08",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-22 14:58\n开发爱不up level给出比其他公司+1级的包裹的话，有别的选择谁会去？\n\n去了要牺牲wlb，job security堪忧， ...",
+          "匿名用户 发表于 2025-12-22 14:58\n开发爱不up level给出比其他公司+1级的包裹的话，有别的选择谁会去？\n\n去了要牺牲wlb，job security堪忧， ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#20754967"
+      },
+      {
+        "post_id": "rate_div_20754967",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#rate_div_20754967"
+      },
+      {
+        "post_id": "20754857",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "普通SWE，硕士才一年工作经验，就给40多万？",
+        "timestamp": "2025-12-22 14:25:29",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#20754857"
+      },
+      {
+        "post_id": "rate_div_20754857",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#rate_div_20754857"
+      },
+      {
+        "post_id": "20754901",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-22 14:25:29\n普通SWE，硕士才一年工作经验，就给40多万？开发爱不up level给出比其他公司+1级的包裹的话，有别的选择谁会去？\n\n去了要牺牲wlb，job security堪忧，PPU(最近开始发RSU)流动性差，还要去SF通勤，就为了一个护城河是先发优势的公司title么",
+        "timestamp": "2025-12-22 14:58:22",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-22 14:25:29\n普通SWE，硕士才一年工作经验，就给40多万？",
+          "匿名用户 发表于 2025-12-22 14:25:29\n普通SWE，硕士才一年工作经验，就给40多万？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#20754901"
+      },
+      {
+        "post_id": "rate_div_20754901",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#rate_div_20754901"
+      },
+      {
+        "post_id": "20754871",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "恭喜楼主! 请问你是怎么找到这个early career的职位的？ 我看开放爱网站， 都是要求年限很高的",
+        "timestamp": "2025-12-22 14:37:10",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#20754871"
+      },
+      {
+        "post_id": "rate_div_20754871",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#rate_div_20754871"
+      },
+      {
+        "post_id": "20754897",
+        "user": {
+          "username": "kyu668",
+          "user_id": "769154",
+          "stats": {
+            "posts": "1",
+            "replies": "18",
+            "points": "23"
+          },
+          "is_anonymous": false
+        },
+        "content": "可以求一个timeline吗",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#20754897"
+      },
+      {
+        "post_id": "rate_div_20754897",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#rate_div_20754897"
+      },
+      {
+        "post_id": "20754904",
+        "user": {
+          "username": "ytx2013",
+          "user_id": "521202",
+          "stats": {
+            "posts": "4",
+            "replies": "412",
+            "points": "167"
+          },
+          "is_anonymous": false
+        },
+        "content": "恭喜楼主！\n\n开放爱只在三番有office？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#20754904"
+      },
+      {
+        "post_id": "rate_div_20754904",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#rate_div_20754904"
+      },
+      {
+        "post_id": "20754930",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "恭喜楼主！想问下楼主是啥timeline呀，需要reference letter吗？",
+        "timestamp": "2025-12-22 15:21:14",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#20754930"
+      },
+      {
+        "post_id": "rate_div_20754930",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#rate_div_20754930"
+      },
+      {
+        "post_id": "20754935",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "天呐,工作一年 居然可以拿那么大的包lol",
+        "timestamp": "2025-12-22 15:24:57",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#20754935"
+      },
+      {
+        "post_id": "rate_div_20754935",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#rate_div_20754935"
+      },
+      {
+        "post_id": "20754958",
+        "user": {
+          "username": "Butters0-0",
+          "user_id": "986661",
+          "stats": {
+            "posts": "3",
+            "replies": "63",
+            "points": "113"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-22 14:37\n恭喜楼主! 请问你是怎么找到这个early career的职位的？ 我看开放爱网站， 都是要求年限很高的\n是通过内推到组然后组招的，感觉他们没有那么看重年限(个人感觉，包括亚麻也是) 主要感觉是看有没有相关的research经历以及面试表现",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-22 14:37\n恭喜楼主! 请问你是怎么找到这个early career的职位的？ 我看开放爱网站， 都是要求年限很高的",
+          "匿名用户 发表于 2025-12-22 14:37\n恭喜楼主! 请问你是怎么找到这个early career的职位的？ 我看开放爱网站， 都是要求年限很高的"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#20754958"
+      },
+      {
+        "post_id": "rate_div_20754958",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#rate_div_20754958"
+      },
+      {
+        "post_id": "20754963",
+        "user": {
+          "username": "Butters0-0",
+          "user_id": "986661",
+          "stats": {
+            "posts": "3",
+            "replies": "63",
+            "points": "113"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-22 15:24\n天呐,工作一年 居然可以拿那么大的包lol\n其实投的时候还不到半年，但是很多NG佬佬们拿的比这个好像还多，且大家都说是按标准包发的, 所以感觉他们应该不是看年限，才感觉是不是被lowball了Orz",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-22 15:24\n天呐,工作一年 居然可以拿那么大的包lol",
+          "匿名用户 发表于 2025-12-22 15:24\n天呐,工作一年 居然可以拿那么大的包lol"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#20754963"
+      },
+      {
+        "post_id": "rate_div_20754963",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#rate_div_20754963"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "新鲜开放爱l4 (lowball?) 包|openai工资|一亩三分地🔑晒工资抖包袱版",
+    "extraction_time_ms": 113,
+    "thread_title": "[💰晒工资抖包袱]\n新鲜开放爱l4 (lowball?) 包",
+    "thread_tags": [
+      "晒工资抖包袱",
+      "BayArea湾区",
+      "openai"
+    ],
+    "total_replies": 24
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 18,
+    "original_link": {
+      "href": "thread-1158976-1-1.html",
+      "text": "新鲜开放爱l4 (lowball?) 包",
+      "web_agent_id": "wa-273",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1158976-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:41.744360"
+  }
+}

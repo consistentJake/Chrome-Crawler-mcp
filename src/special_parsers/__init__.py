@@ -8,6 +8,8 @@ from typing import Optional
 from .base import BaseParser
 from .x_com import XComParser
 from .onepoint3acres import OnePoint3AcresParser
+from .linkedin_jobs import LinkedInJobsParser
+from .reddit import RedditParser
 
 
 # Parser registry with URL pattern matching
@@ -30,12 +32,22 @@ PARSER_REGISTRY = {
         "description": "Extracts forum posts and replies with user info, content, and reactions",
         "supported_pages": ["thread", "forum"]
     },
-    # Future parsers can be added here
-    # "reddit": {
-    #     "patterns": [r"reddit\.com"],
-    #     "parser_class": RedditParser,
-    #     "description": "Extracts posts, comments, subreddit info"
-    # },
+    "linkedin-jobs": {
+        "patterns": [
+            r"linkedin\.com/jobs",
+        ],
+        "parser_class": LinkedInJobsParser,
+        "description": "Extracts job listings with title, company, location, salary, and metadata",
+        "supported_pages": ["search", "company-jobs"]
+    },
+    "reddit": {
+        "patterns": [
+            r"reddit\.com",
+        ],
+        "parser_class": RedditParser,
+        "description": "Extracts posts and comments from subreddit listings and post pages",
+        "supported_pages": ["subreddit", "post"]
+    },
 }
 
 
@@ -79,6 +91,8 @@ __all__ = [
     "BaseParser",
     "XComParser",
     "OnePoint3AcresParser",
+    "LinkedInJobsParser",
+    "RedditParser",
     "get_parser_for_url",
     "list_available_parsers",
     "PARSER_REGISTRY"

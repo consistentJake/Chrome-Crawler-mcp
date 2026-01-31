@@ -99,3 +99,25 @@ Added automatic scroll-into-view functionality to `chrome_click_element`:
 - More robust click behavior matches user expectations
 - Backward compatible - existing code continues to work
 - Can be disabled per-call if needed for special cases
+
+## Jan 11
+1. type in element is working in google.com, failed in x.com, beacuse x.com is react based. known issue in knowIssues/knowIssues.md
+2. 
+
+
+## Jan 21
+1. think about the prompt processing, can we convert the json format into a more concise format, for token efficiency?
+
+
+## Jan 22
+
+can you use '/home/zhenkai/personal/Projects/WebAgent/workflows/onepoint3acres_workflow.py' 's output as the input for '/home/zhenkai/personal/Projects/WebAgent/PostProcessing/promptProcessing/main.py'; before connection, you should try to update the       
+  '/home/zhenkai/personal/Projects/WebAgent/PostProcessing/promptProcessing/main.py' to generate the intermmediate output into a folder with timestamp as suffix in folder name. I want you to think of optimize the code, remove those unused codes, merged duplicated    
+  logics, more core logic into some utils helper class for code files under '/home/zhenkai/personal/Projects/WebAgent/PostProcessing/promptProcessing' and '/home/zhenkai/personal/Projects/WebAgent/workflows'                  
+
+（resolved)
+
+
+dont' include timestamp in post when we are creating contents in prompt (resolved)
+
+I want to have a local small model, can be used to quickly filter the content is related to interview or not. if not, don't incldue the post into the final prompt processing

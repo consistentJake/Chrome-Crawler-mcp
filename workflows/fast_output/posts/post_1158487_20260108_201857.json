@@ -1,0 +1,497 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html",
+  "timestamp": "2026-01-08T20:18:57.611295",
+  "item_count": 25,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20748684",
+        "user": {
+          "username": "Unknown",
+          "user_id": "191858",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "social network题目\n\n\n\n\n大概意思是 要实现一个social network 的class 可以生成snapshot 然后用户相互关注. 然后问用户在某一个snapshot 里是不是 关注了彼此\n\n第一问是 实现 类似于 \n\nsocial_network = SocialNetwork()\n\nsocial_network.add_user(\"A\")\n\nsocial_network.add_user(\"B\")\n\nsocial_network.follow(\"A\", \"B\")\n\nsnapshot = social_network.create_snapshot()\n\nassert snapshot.is_follow(\"A\", \"B\")\n\n第二问是返回follower 和followee 的名单\n\n第三问是给某个用户推荐关注对象。做法是从这个用户已经关注的人出发，查看这些人各自关注了谁，在这些候选人中，统计哪些人被该用户的关注者关注得次数最多，最后选出关注次数最多的前 k 个作为推荐结果\n\n\n\n\n希望能帮助到大家 求大米!",
+        "timestamp": "2025-12-17 22:33:20",
+        "reactions": {
+          "likes": 5,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#20748684"
+      },
+      {
+        "post_id": "rate_20748684",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#rate_20748684"
+      },
+      {
+        "post_id": "20756837",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "sexyvish 发表于 2025-12-23 13:09\n- snapshot是immutable的嘛？就比如user能不能到snapshot里面取关snapshot.unfollow(A,B)\n\n- snapshot存哪 ...\nHello my Indian Bruh",
+        "timestamp": "2025-12-23 20:19:53",
+        "reactions": {},
+        "quotes": [
+          "sexyvish 发表于 2025-12-23 13:09\n- snapshot是immutable的嘛？就比如user能不能到snapshot里面取关snapshot.unfollow(A,B)\n\n- snapshot存哪 ...",
+          "sexyvish 发表于 2025-12-23 13:09\n- snapshot是immutable的嘛？就比如user能不能到snapshot里面取关snapshot.unfollow(A,B)\n\n- snapshot存哪 ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#20756837"
+      },
+      {
+        "post_id": "rate_div_20756837",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#rate_div_20756837"
+      },
+      {
+        "post_id": "20750295",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-18 04:25\nsnapshot 在这里是干嘛用的？\n它的所有操作是基于snapshot的 然后不同snapshot 之间可能user unfollow啊导致snapshot 不一样",
+        "timestamp": "2025-12-18 20:54:26",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-18 04:25\nsnapshot 在这里是干嘛用的？",
+          "匿名用户 发表于 2025-12-18 04:25\nsnapshot 在这里是干嘛用的？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#20750295"
+      },
+      {
+        "post_id": "rate_div_20750295",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#rate_div_20750295"
+      },
+      {
+        "post_id": "20770708",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "已加米，请问lz这个需要优化么？还是就是纯考OOD，每次createSnapshot就暴力deep clone整个graph就好了",
+        "timestamp": "4 天前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#20770708"
+      },
+      {
+        "post_id": "rate_div_20770708",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#rate_div_20770708"
+      },
+      {
+        "post_id": "20748734",
+        "user": {
+          "username": "openaiautopilot",
+          "user_id": "1185274",
+          "stats": {
+            "posts": "5",
+            "replies": "64",
+            "points": "505"
+          },
+          "is_anonymous": false
+        },
+        "content": "谢谢！这是 60 分钟还是 75 分钟？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#20748734"
+      },
+      {
+        "post_id": "rate_div_20748734",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#rate_div_20748734"
+      },
+      {
+        "post_id": "20748785",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "请问这题是60 分钟还是 75 分钟？大米以加！",
+        "timestamp": "2025-12-18 00:07:01",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#20748785"
+      },
+      {
+        "post_id": "rate_div_20748785",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#rate_div_20748785"
+      },
+      {
+        "post_id": "20748932",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "snapshot 在这里是干嘛用的？",
+        "timestamp": "2025-12-18 04:25:09",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#20748932"
+      },
+      {
+        "post_id": "rate_div_20748932",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#rate_div_20748932"
+      },
+      {
+        "post_id": "20750294",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-18 00:07\n请问这题是60 分钟还是 75 分钟？大米以加！\n60分钟的",
+        "timestamp": "2025-12-18 20:53:50",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-18 00:07\n请问这题是60 分钟还是 75 分钟？大米以加！",
+          "匿名用户 发表于 2025-12-18 00:07\n请问这题是60 分钟还是 75 分钟？大米以加！"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#20750294"
+      },
+      {
+        "post_id": "rate_div_20750294",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#rate_div_20750294"
+      },
+      {
+        "post_id": "20750360",
+        "user": {
+          "username": "chuckhelios",
+          "user_id": "153327",
+          "stats": {
+            "posts": "9",
+            "replies": "78",
+            "points": "610"
+          },
+          "is_anonymous": false
+        },
+        "content": "这是新题吗",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#20750360"
+      },
+      {
+        "post_id": "rate_div_20750360",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#rate_div_20750360"
+      },
+      {
+        "post_id": "20751030",
+        "user": {
+          "username": "xybinxzz",
+          "user_id": "1280294",
+          "stats": {
+            "posts": "2",
+            "replies": "12",
+            "points": "103"
+          },
+          "is_anonymous": false
+        },
+        "content": "lz好人，已经加米！",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#20751030"
+      },
+      {
+        "post_id": "rate_div_20751030",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#rate_div_20751030"
+      },
+      {
+        "post_id": "20755406",
+        "user": {
+          "username": "sexyvish",
+          "user_id": "1245915",
+          "stats": {
+            "posts": "0",
+            "replies": "23",
+            "points": "502"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-18 04:25:09\nsnapshot 在这里是干嘛用的？- snapshot是immutable的嘛？就比如user能不能到snapshot里面取关snapshot.unfollow(A,B)\n\n- snapshot存哪？dict里面嘛？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-18 04:25:09\nsnapshot 在这里是干嘛用的？",
+          "匿名用户 发表于 2025-12-18 04:25:09\nsnapshot 在这里是干嘛用的？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#20755406"
+      },
+      {
+        "post_id": "rate_div_20755406",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#rate_div_20755406"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "开放爱 面经|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 111,
+    "thread_title": "[面试经验]\n开放爱 面经",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 24
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 3,
+    "original_link": {
+      "href": "thread-1158487-1-1.html",
+      "text": "开放爱 面经",
+      "web_agent_id": "wa-170",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1158487-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:57.611336"
+  }
+}

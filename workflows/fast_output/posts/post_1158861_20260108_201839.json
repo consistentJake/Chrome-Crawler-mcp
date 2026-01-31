@@ -1,0 +1,470 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html",
+  "timestamp": "2026-01-08T20:18:39.585587",
+  "item_count": 23,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20753114",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "上周一面的onsite，一共五轮，当时面完hr和我说一两天能出结果。周三问了一下，说early feedback positive，周四还call了一下聊了能给的range和reference call的要求，说当晚或者周五能够给结果，结果现在还没有什么updates，不知道是啥情况。",
+        "timestamp": "2025-12-21 06:33:03",
+        "reactions": {
+          "likes": 4,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#20753114"
+      },
+      {
+        "post_id": "rate_div_20753114",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#rate_div_20753114"
+      },
+      {
+        "post_id": "20754929",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "long43ashui 发表于 2025-12-21 09:07\n那还早 只能等消息 这recruiter自己有点沉不住气啊 .. \n请问大佬上周二(12.16)面的最后两轮bq和deep dive，然后目前hr还没有给可能的进入team match的消息或者拒信，这是正常的吗？holiday有影响吗？感谢感谢",
+        "timestamp": "2025-12-22 15:20:41",
+        "reactions": {},
+        "quotes": [
+          "long43ashui 发表于 2025-12-21 09:07\n那还早 只能等消息 这recruiter自己有点沉不住气啊",
+          "long43ashui 发表于 2025-12-21 09:07\n那还早 只能等消息 这recruiter自己有点沉不住气啊"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#20754929"
+      },
+      {
+        "post_id": "rate_div_20754929",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#rate_div_20754929"
+      },
+      {
+        "post_id": "20754642",
+        "user": {
+          "username": "casinonly",
+          "user_id": "1133366",
+          "stats": {
+            "posts": "0",
+            "replies": "7",
+            "points": "926"
+          },
+          "is_anonymous": false
+        },
+        "content": "long43ashui 发表于 2025-12-21 09:07. check 1point3acres for more.\n那还早 只能等消息 这recruiter自己有点沉不住气啊\n大佬 求问给完reference call之后多久能出结果啊？ exec review 也是每周二 周五吗？ \n感谢🙏",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "long43ashui 发表于 2025-12-21 09:07. check 1point3acres for more.\n那还早 只能等消息 这recruiter自己有点沉不住气啊",
+          "long43ashui 发表于 2025-12-21 09:07. check 1point3acres for more.\n那还早 只能等消息 这recruiter自己有点沉不住气啊"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#20754642"
+      },
+      {
+        "post_id": "rate_div_20754642",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#rate_div_20754642"
+      },
+      {
+        "post_id": "20754942",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "kyu668 发表于 2025-12-22 15:25\n请问你面的什么组呀zszs\n想问下你现在正在面吗？大概是啥阶段了？现在holiday进度有没有被影响呀？",
+        "timestamp": "2025-12-22 15:28:04",
+        "reactions": {},
+        "quotes": [
+          "kyu668 发表于 2025-12-22 15:25\n请问你面的什么组呀zszs",
+          "kyu668 发表于 2025-12-22 15:25\n请问你面的什么组呀zszs"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#20754942"
+      },
+      {
+        "post_id": "rate_div_20754942",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#rate_div_20754942"
+      },
+      {
+        "post_id": "20753195",
+        "user": {
+          "username": "long43ashui",
+          "user_id": "395084",
+          "stats": {
+            "posts": "0",
+            "replies": "152",
+            "points": "99"
+          },
+          "is_anonymous": false
+        },
+        "content": "reference call哪有那么快啊 起码一周了",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#20753195"
+      },
+      {
+        "post_id": "rate_div_20753195",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#rate_div_20753195"
+      },
+      {
+        "post_id": "20753205",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "long43ashui 发表于 2025-12-21 08:41:01.--\nreference call哪有那么快啊 起码一周了\n\n\n\n\n\n不知道呀 主要recruiter说要还有人没输入feedback，会moving fast我还以为周五debrief完了就会有结果",
+        "timestamp": "2025-12-21 08:49:04",
+        "reactions": {},
+        "quotes": [
+          "long43ashui 发表于 2025-12-21 08:41:01.--\nreference call哪有那么快啊 起码一周了",
+          "long43ashui 发表于 2025-12-21 08:41:01.--\nreference call哪有那么快啊 起码一周了"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#20753205"
+      },
+      {
+        "post_id": "rate_div_20753205",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#rate_div_20753205"
+      },
+      {
+        "post_id": "20753222",
+        "user": {
+          "username": "long43ashui",
+          "user_id": "395084",
+          "stats": {
+            "posts": "0",
+            "replies": "152",
+            "points": "99"
+          },
+          "is_anonymous": false
+        },
+        "content": "Vertex_Chen 发表于 2025-12-21 08:49:04\n不知道呀 主要recruiter说要还有人没输入feedback，会moving fast我还以为周五debrief完了就会有结果那还早 只能等消息 这recruiter自己有点沉不住气啊",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "Vertex_Chen 发表于 2025-12-21 08:49:04\n不知道呀 主要recruiter说要还有人没输入feedback，会moving fast我还以为周五debrief完了就会有结果",
+          "Vertex_Chen 发表于 2025-12-21 08:49:04\n不知道呀 主要recruiter说要还有人没输入feedback，会moving fast我还以为周五debrief完了就会有结果"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#20753222"
+      },
+      {
+        "post_id": "rate_div_20753222",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#rate_div_20753222"
+      },
+      {
+        "post_id": "20754936",
+        "user": {
+          "username": "kyu668",
+          "user_id": "769154",
+          "stats": {
+            "posts": "1",
+            "replies": "18",
+            "points": "23"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-22 15:20:41\n请问大佬上周二(12.16)面的最后两轮bq和deep dive，然后目前hr还没有给可能的进入team match的消息或者拒信，这是正常的吗？holiday请问你面的什么组呀zszs",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-22 15:20:41\n请问大佬上周二(12.16)面的最后两轮bq和deep dive，然后目前hr还没有给可能的进入team match的消息或者拒信，这是正常的吗？holiday",
+          "匿名用户 发表于 2025-12-22 15:20:41\n请问大佬上周二(12.16)面的最后两轮bq和deep dive，然后目前hr还没有给可能的进入team match的消息或者拒信，这是正常的吗？holiday"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#20754936"
+      },
+      {
+        "post_id": "rate_div_20754936",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#rate_div_20754936"
+      },
+      {
+        "post_id": "20754940",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "kyu668 发表于 2025-12-22 15:25\n请问你面的什么组呀zszs\n应该是general hire 后续如果过了要match的那种",
+        "timestamp": "2025-12-22 15:27:22",
+        "reactions": {},
+        "quotes": [
+          "kyu668 发表于 2025-12-22 15:25\n请问你面的什么组呀zszs",
+          "kyu668 发表于 2025-12-22 15:25\n请问你面的什么组呀zszs"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#20754940"
+      },
+      {
+        "post_id": "rate_div_20754940",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#rate_div_20754940"
+      },
+      {
+        "post_id": "20754944",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "想问下楼主现在有新的update了吗？",
+        "timestamp": "2025-12-22 15:30:07",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#20754944"
+      },
+      {
+        "post_id": "rate_div_20754944",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#rate_div_20754944"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "OpenAI VO等结果 HR迷惑call|一亩三分地职场达人版",
+    "extraction_time_ms": 112,
+    "thread_title": "[跳槽]\nOpenAI VO等结果 HR迷惑call",
+    "thread_tags": [
+      "职场达人",
+      "openai"
+    ],
+    "total_replies": 22
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 17,
+    "original_link": {
+      "href": "thread-1158861-1-1.html",
+      "text": "OpenAI VO等结果 HR迷惑call",
+      "web_agent_id": "wa-266",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1158861-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:39.585628"
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1158706-1-1.html",
+  "timestamp": "2026-01-08T20:18:24.486886",
+  "item_count": 9,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1158706-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20751327",
+        "user": {
+          "username": "Unknown",
+          "user_id": "651418",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "给大家分享完整的玩具语言coding题，回馈一下。求米！\n\nYour goal is to implement a \n\n以下内容需要积分高于 200 您已经可以浏览\ntype system for a custom Toy Language. This system must handle primitive types, generics, nested tuples, and function signatures. You will implement the core data structures and a Type Inference engine that substitutes generics with concrete types.\n\nType Definitions\n    Primitives: Lowercase strings like int, float, str, bool\n    Generics: Uppercase letters followed by numbers, e.g., T1, T2\n    Tuples: Comma-separated types inside brackets, which can be nested. Example: [int, [T1, str]].\n    Functions: Defined by a list of parameter types and a single return type. Syntax: [param1, param2] -> returnType.\n\nPart 1: Implement to_str in Node and Function.\n\nNode Class: Represents a type node. It can be a leaf (primitive/generic) or a tuple (list of child nodes).\n\nclass Node:\n    def  __init__(self, node_type):\n\n        If node_type is a string: It is a primitive or generic.\n\n        If node_type is a list: It is a tuple containing other Node objects.\n\n    def to_str(self):\n\n        Primitives/Generics: Return the string name (e.g., \"int\").\n\n        Tuples: Return bracketed, comma-separated types (e.g., \"[int,T1]\").\n\nclass Function:\n    def    __init__(self, parameters, output_type):\n        Represents a function signature.\n        parameters: A List[Node] objects.\n\n        output_type: A single Node object.\n\n    def to_str(self):\n\n        Format: (param1,param2,...) -> returnType.\n\n        Example: (int,T1) -> [T1,str]\n\nPart 2: Implement a function get_return_type(parameters, function) that determines the concrete return type of a function based on provided arguments.\n\ndef get_return_type(parameters: List[Node], function: Function) -> Node:\n    pass\n\nRequirements:\n    Generic Resolution: Build a mapping (substitution table) by comparing the Function's expected parameters to the actual parameters provided.\n\n    Substitution: Recursively replace all generics in the function's output_type with the concrete types found during resolution.\n\n    Error Handling:\n        Argument Count Mismatch: Raise an error if the number of arguments doesn't match.\n        Type Mismatch: Raise an error if a concrete type (e.g., int) is expected but a different type (e.g., str) is provided.\n        Generic Conflict: Raise an error if the same generic (e.g., T1) is bound to two different concrete types in the same call.\n\nTest Examples\nExample 1: Basic Substitution\n\n    Function: [T1, T2, int, T1] -> [T1, T2]\n    Arguments: [int, str, int, int]\n    Logic: T1 maps to int, T2 maps to str.\n    Result: [int, str]\n\nExample 2: Nested Tuples & Complex Generics\n\n    Function: [[T1, float], T2, T3] -> [T3, T1]\n    Arguments: [[str, float], [int, str], int]\n    Logic: * T1 is extracted from the first tuple as str.\n        T2 maps to the tuple [int, str].\n        T3 maps to int.\n\n    Result: [int, str]\n\nExample 3: Conflict Error\n    Function: [T1, T1] -> T1\n    Arguments: [int, str]\n    Error: T1 cannot be both int and str.\n\n\n祝大家面试顺利，求米！",
+        "timestamp": "2025-12-19 14:41:31",
+        "reactions": {
+          "likes": 10,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158706-1-1.html#20751327"
+      },
+      {
+        "post_id": "rate_20751327",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158706-1-1.html#rate_20751327"
+      },
+      {
+        "post_id": "20761018",
+        "user": {
+          "username": "ESTELLE酱",
+          "user_id": "282088",
+          "stats": {
+            "posts": "5",
+            "replies": "52",
+            "points": "238"
+          },
+          "is_anonymous": false
+        },
+        "content": "感谢楼主分享！请问要考虑T1，T2是tuple的情况吗",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158706-1-1.html#20761018"
+      },
+      {
+        "post_id": "rate_div_20761018",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158706-1-1.html#rate_div_20761018"
+      },
+      {
+        "post_id": "20770424",
+        "user": {
+          "username": "Rachael",
+          "user_id": "427354",
+          "stats": {
+            "posts": "12",
+            "replies": "101",
+            "points": "156"
+          },
+          "is_anonymous": false
+        },
+        "content": "请问楼主面的什么开发类型，能自己选language吗？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158706-1-1.html#20770424"
+      },
+      {
+        "post_id": "rate_div_20770424",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158706-1-1.html#rate_div_20770424"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158706-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158706-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "分享开放爱完整玩具语言coding题|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 110,
+    "thread_title": "[面试经验]\n分享开放爱完整玩具语言coding题",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 8
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 10,
+    "original_link": {
+      "href": "thread-1158706-1-1.html",
+      "text": "分享开放爱完整玩具语言coding题",
+      "web_agent_id": "wa-216",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1158706-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:24.486924"
+  }
+}

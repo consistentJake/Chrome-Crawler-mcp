@@ -1,0 +1,350 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html",
+  "timestamp": "2026-01-08T20:18:53.308859",
+  "item_count": 17,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20739626",
+        "user": {
+          "username": "Unknown",
+          "user_id": "85488",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "以下内容需要积分高于 200 您已经可以浏览\nKV + CICD",
+        "timestamp": "2025-12-11 20:25:37",
+        "reactions": {
+          "likes": 0,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#20739626"
+      },
+      {
+        "post_id": "rate_20739626",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#rate_20739626"
+      },
+      {
+        "post_id": "20752983",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-20 02:00\n我上周四面完一轮，有一题没完全做出来，hr上周五跟我说have a good weekend，现在还没收到消息 ，请问正常 ...\n不好说，我最近问我coordinator问题他也隔了好几天，年底可能很忙或者很多人放假",
+        "timestamp": "2025-12-20 23:31:59",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-20 02:00\n我上周四面完一轮，有一题没完全做出来，hr上周五跟我说have a good weekend，现在还没收到消息 ，请问正常 ...",
+          "匿名用户 发表于 2025-12-20 02:00\n我上周四面完一轮，有一题没完全做出来，hr上周五跟我说have a good weekend，现在还没收到消息 ，请问正常 ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#20752983"
+      },
+      {
+        "post_id": "rate_div_20752983",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#rate_div_20752983"
+      },
+      {
+        "post_id": "20740737",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "感谢分享。请问楼主面好多久收到的消息",
+        "timestamp": "2025-12-12 16:40:00",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#20740737"
+      },
+      {
+        "post_id": "rate_div_20740737",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#rate_div_20740737"
+      },
+      {
+        "post_id": "20743996",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-12 16:40:00\n感谢分享。请问楼主面好多久收到的消息隔了一天收到的",
+        "timestamp": "2025-12-15 11:10:57",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-12 16:40:00\n感谢分享。请问楼主面好多久收到的消息",
+          "匿名用户 发表于 2025-12-12 16:40:00\n感谢分享。请问楼主面好多久收到的消息"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#20743996"
+      },
+      {
+        "post_id": "rate_div_20743996",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#rate_div_20743996"
+      },
+      {
+        "post_id": "20752014",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "我上周四面完一轮，有一题没完全做出来，hr上周五跟我说have a good weekend，现在还没收到消息 ，请问正常吗。。",
+        "timestamp": "2025-12-20 02:00:07",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#20752014"
+      },
+      {
+        "post_id": "rate_div_20752014",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#rate_div_20752014"
+      },
+      {
+        "post_id": "20752989",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "感谢分享！ 请问楼主有KV Store这题比较权威的帖子的链接吗？ 找了一圈没找到",
+        "timestamp": "2025-12-20 23:41:31",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#20752989"
+      },
+      {
+        "post_id": "rate_div_20752989",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#rate_div_20752989"
+      },
+      {
+        "post_id": "20772721",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-20 23:41:31\n感谢分享！ 请问楼主有KV Store这题比较权威的帖子的链接吗？ 找了一圈没找到有好几个的，可以再仔细看看",
+        "timestamp": "前天 09:44",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-20 23:41:31\n感谢分享！ 请问楼主有KV Store这题比较权威的帖子的链接吗？ 找了一圈没找到",
+          "匿名用户 发表于 2025-12-20 23:41:31\n感谢分享！ 请问楼主有KV Store这题比较权威的帖子的链接吗？ 找了一圈没找到"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#20772721"
+      },
+      {
+        "post_id": "rate_div_20772721",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#rate_div_20772721"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "开放爱店面|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 410,
+    "thread_title": "[面试经验]\n开放爱店面",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 16
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 1,
+    "original_link": {
+      "href": "thread-1157750-1-1.html",
+      "text": "开放爱店面",
+      "web_agent_id": "wa-156",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1157750-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:53.308906"
+  }
+}

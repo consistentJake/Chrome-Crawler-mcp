@@ -50,6 +50,7 @@ class OnePoint3AcresParser(BaseParser):
         main_post = extraction_result.get('main_post', {})
         replies = extraction_result.get('replies', [])
         metadata = extraction_result.get('metadata', {})
+        pagination = extraction_result.get('pagination', {})
 
         return {
             "parser": self.name,
@@ -67,7 +68,8 @@ class OnePoint3AcresParser(BaseParser):
                 "thread_title": metadata.get('thread_title', ''),
                 "thread_tags": metadata.get('tags', []),
                 "total_replies": len(replies)
-            }
+            },
+            "pagination": pagination
         }
 
     def get_extraction_js(self) -> str:
@@ -118,6 +120,7 @@ class OnePoint3AcresParser(BaseParser):
                 // Get post ID from element id
                 // Real page uses: id="post_20740624" or id="pid20740624"
                 // Sanitized page uses: id="postnum20740624"
+                // Invalid ids to filter: "rate_div_*", "new", "replytmp", etc.
                 let postId = '';
                 if (postElement.id) {
                   if (postElement.id.startsWith('post_')) {
@@ -126,6 +129,9 @@ class OnePoint3AcresParser(BaseParser):
                     postId = postElement.id.replace('pid', '');
                   } else if (postElement.id.startsWith('postnum')) {
                     postId = postElement.id.replace('postnum', '');
+                  } else {
+                    // For unknown prefixes, use the full id (will be filtered by isValidPost)
+                    postId = postElement.id;
                   }
                 }
 
@@ -236,8 +242,18 @@ class OnePoint3AcresParser(BaseParser):
                 const quotes = [];
                 const quoteElements = postElement.querySelectorAll('.quote, blockquote');
                 quoteElements.forEach(quote => {
-                  quotes.push(quote.textContent?.trim() || '');
+                  const quoteText = quote.textContent?.trim() || '';
+                  if (quoteText) {
+                    // Normalize whitespace: collapse multiple spaces/newlines into single space
+                    const normalizedQuote = quoteText.replace(/\s+/g, ' ').trim();
+                    if (normalizedQuote) {
+                      quotes.push(normalizedQuote);
+                    }
+                  }
                 });
+
+                // Deduplicate quotes (using normalized text)
+                const uniqueQuotes = [...new Set(quotes)];
 
                 return {
                   post_id: postId,
@@ -254,7 +270,7 @@ class OnePoint3AcresParser(BaseParser):
                   content: content,
                   timestamp: timestamp,
                   reactions: reactions,
-                  quotes: quotes,
+                  quotes: uniqueQuotes,
                   url: window.location.href + '#' + postId
                 };
               } catch (err) {
@@ -263,6 +279,27 @@ class OnePoint3AcresParser(BaseParser):
                   stack: err.stack
                 };
               }
+            };
+
+            // Helper function to validate if a post should be included
+            const isValidPost = (post) => {
+              if (!post || post.error) {
+                return false;
+              }
+
+              // Check if post_id is purely numeric
+              const postId = post.post_id || '';
+              if (!postId || !/^\d+$/.test(postId)) {
+                return false;
+              }
+
+              // Check if content is not empty
+              const content = post.content || '';
+              if (!content.trim()) {
+                return false;
+              }
+
+              return true;
             };
 
             // Extract main post
@@ -279,7 +316,10 @@ class OnePoint3AcresParser(BaseParser):
             }
 
             if (postElements.length > 0) {
-              mainPost = extractPost(postElements[0]);
+              const extractedMainPost = extractPost(postElements[0]);
+              if (isValidPost(extractedMainPost)) {
+                mainPost = extractedMainPost;
+              }
             }
 
             // Extract all replies
@@ -290,7 +330,7 @@ class OnePoint3AcresParser(BaseParser):
 
             for (let i = startIdx; i < postElements.length; i++) {
               const post = extractPost(postElements[i]);
-              if (post && !post.error) {
+              if (isValidPost(post)) {
                 replies.push(post);
               }
             }
@@ -298,10 +338,57 @@ class OnePoint3AcresParser(BaseParser):
             // Extract metadata
             const metadata = extractMetadata();
 
+            // Extract pagination info (check for next page button)
+            const extractPagination = () => {
+              const pagination = {
+                has_next_page: false,
+                next_page_url: null,
+                current_page: 1,
+                total_pages: null
+              };
+
+              // Look for "下一页" (next page) button
+              const nextPageButtons = document.querySelectorAll('a');
+              for (const button of nextPageButtons) {
+                const buttonText = button.textContent?.trim() || '';
+                if (buttonText.includes('下一页') || buttonText === '下一页') {
+                  pagination.has_next_page = true;
+                  pagination.next_page_url = button.getAttribute('href') || '';
+                  break;
+                }
+              }
+
+              // Try to extract current page number from URL
+              const urlMatch = window.location.href.match(/thread-\d+-(\d+)-\d+\.html/);
+              if (urlMatch) {
+                pagination.current_page = parseInt(urlMatch[1], 10);
+              }
+
+              // Look for page numbers to determine total pages
+              const pageLinks = document.querySelectorAll('a[href*="thread-"]');
+              let maxPage = pagination.current_page;
+              pageLinks.forEach(link => {
+                const href = link.getAttribute('href') || '';
+                const pageMatch = href.match(/thread-\d+-(\d+)-\d+\.html/);
+                if (pageMatch) {
+                  const pageNum = parseInt(pageMatch[1], 10);
+                  if (pageNum > maxPage) {
+                    maxPage = pageNum;
+                  }
+                }
+              });
+              pagination.total_pages = maxPage;
+
+              return pagination;
+            };
+
+            const pagination = extractPagination();
+
             return {
               main_post: mainPost,
               replies: replies,
               metadata: metadata,
+              pagination: pagination,
               total_posts: postElements.length,
               extraction_timestamp: new Date().toISOString()
             };

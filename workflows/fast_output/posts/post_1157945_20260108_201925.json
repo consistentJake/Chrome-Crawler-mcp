@@ -1,0 +1,125 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1157945-1-1.html",
+  "timestamp": "2026-01-08T20:19:25.593542",
+  "item_count": 5,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1157945-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20741972",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "还是每个Eng Team都一样卷",
+        "timestamp": "2025-12-13 19:45:35",
+        "reactions": {
+          "likes": 0,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157945-1-1.html#20741972"
+      },
+      {
+        "post_id": "rate_div_20741972",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157945-1-1.html#rate_div_20741972"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157945-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157945-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "请问OpenAI有相对没那么卷的组吗？|一亩三分地职场达人版",
+    "extraction_time_ms": 109,
+    "thread_title": "[请问贵司]\n请问OpenAI有相对没那么卷的组吗？",
+    "thread_tags": [
+      "职场达人",
+      "openai"
+    ],
+    "total_replies": 4
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 16,
+    "original_link": {
+      "href": "thread-1157945-1-1.html",
+      "text": "请问OpenAI有相对没那么卷的组吗？",
+      "web_agent_id": "wa-259",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1157945-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:25.593580"
+  }
+}

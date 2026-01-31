@@ -1,0 +1,458 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html",
+  "timestamp": "2026-01-08T20:18:15.925700",
+  "item_count": 23,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20771658",
+        "user": {
+          "username": "Unknown",
+          "user_id": "899458",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "很久没系统准备面试，假期前recruiter骚扰想着试一试，这次都看地里面的高频题结果那些个又臭又长的coding都没碰到，整了个leetcode的题lol。。。\n\ncoding：ip / cidr iterator\n\nQ1 - 升序iterate 一个 ip address\n\nQ2 - 降序iterate 一个 ip address\n\nQ3 - iterate 一个cidr\n\n这题非常简单，但是我好久没做bit 操作了cidr的时候写test case写错了给自己绕进去了，浪费了好多时间\n\nsystem design： design online chess.com game\n\n纯没准备，根本不会，连requirements都没怎么想好，xjb 借用了google doc的online real-time coordinate的概念，但是其他的一点不会。\n\n两年前面过oai还到了onsite才被拒，这次直接店面应该就无了。还得多准备啊----",
+        "timestamp": "3 天前",
+        "reactions": {
+          "likes": 5,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#20771658"
+      },
+      {
+        "post_id": "rate_20771658",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#rate_20771658"
+      },
+      {
+        "post_id": "20772133",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "感谢楼主！比其他那些只愿意交换题目的人好多了！支持",
+        "timestamp": "3 天前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#20772133"
+      },
+      {
+        "post_id": "rate_div_20772133",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#rate_div_20772133"
+      },
+      {
+        "post_id": "20771687",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "感谢分享。楼主能具体讲一下 Q3 - iterate 一个cidr 的要求的输入和输出形式吗？他是必须要用位运算吗？ 感谢",
+        "timestamp": "3 天前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#20771687"
+      },
+      {
+        "post_id": "rate_div_20771687",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#rate_div_20771687"
+      },
+      {
+        "post_id": "20771744",
+        "user": {
+          "username": "xybinxzz",
+          "user_id": "1280294",
+          "stats": {
+            "posts": "2",
+            "replies": "12",
+            "points": "103"
+          },
+          "is_anonymous": false
+        },
+        "content": "感谢lz，已经加米。请问coding那题给的提示是什么？data structures一类的吗？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#20771744"
+      },
+      {
+        "post_id": "rate_div_20771744",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#rate_div_20771744"
+      },
+      {
+        "post_id": "20771763",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "感谢楼主分享，已加米。",
+        "timestamp": "3 天前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#20771763"
+      },
+      {
+        "post_id": "rate_div_20771763",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#rate_div_20771763"
+      },
+      {
+        "post_id": "20771825",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2026-1-5 15:54\n感谢分享。楼主能具体讲一下 Q3 - iterate 一个cidr 的要求的输入和输出形式吗？他是必须要用位运算吗？ 感 ...\n非常简单- 前面给你个ipv4，255.255.255.0这样的，现在给你个cidr 255.255.255.0/30 这样，一样的逻辑ip转成number然后在range里面iterate就行了",
+        "timestamp": "3 天前",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2026-1-5 15:54\n感谢分享。楼主能具体讲一下 Q3 - iterate 一个cidr 的要求的输入和输出形式吗？他是必须要用位运算吗？ 感 ...",
+          "匿名用户 发表于 2026-1-5 15:54\n感谢分享。楼主能具体讲一下 Q3 - iterate 一个cidr 的要求的输入和输出形式吗？他是必须要用位运算吗？ 感 ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#20771825"
+      },
+      {
+        "post_id": "rate_div_20771825",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#rate_div_20771825"
+      },
+      {
+        "post_id": "20772045",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2026-1-6 09:34\n非常简单- 前面给你个ipv4，255.255.255.0这样的，现在给你个cidr 255.255.255.0/30 这样，一样的逻辑ip ...\n感谢感谢。 所以就是规定了上限和下限 然后在区间内iterate是吗？",
+        "timestamp": "3 天前",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2026-1-6 09:34\n非常简单- 前面给你个ipv4，255.255.255.0这样的，现在给你个cidr 255.255.255.0/30 这样，一样的逻辑ip ...",
+          "匿名用户 发表于 2026-1-6 09:34\n非常简单- 前面给你个ipv4，255.255.255.0这样的，现在给你个cidr 255.255.255.0/30 这样，一样的逻辑ip ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#20772045"
+      },
+      {
+        "post_id": "rate_div_20772045",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#rate_div_20772045"
+      },
+      {
+        "post_id": "20772180",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "加米了，能问下promo对应的是什么吗？",
+        "timestamp": "3 天前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#20772180"
+      },
+      {
+        "post_id": "rate_div_20772180",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#rate_div_20772180"
+      },
+      {
+        "post_id": "20772187",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "楼主是一个店面 既问coding又问design吗，还是两个店面",
+        "timestamp": "3 天前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#20772187"
+      },
+      {
+        "post_id": "rate_div_20772187",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#rate_div_20772187"
+      },
+      {
+        "post_id": "20772573",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2026-01-05 19:47:00\n感谢感谢。 所以就是规定了上限和下限 然后在区间内iterate是吗？cidr就是个range，拿到cidr之后找base ip你就知道range的boundary了，这题主要看coding style把iterator写漂亮就行了， LC里面有个cidr的题是一样的概念，转number然后计算最后再转回ip就可以了",
+        "timestamp": "前天 07:46",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2026-01-05 19:47:00\n感谢感谢。 所以就是规定了上限和下限 然后在区间内iterate是吗？",
+          "匿名用户 发表于 2026-01-05 19:47:00\n感谢感谢。 所以就是规定了上限和下限 然后在区间内iterate是吗？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#20772573"
+      },
+      {
+        "post_id": "rate_div_20772573",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#rate_div_20772573"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "开放爱 新年店面|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 129,
+    "thread_title": "[面试经验]\n开放爱 新年店面",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 22
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 6,
+    "original_link": {
+      "href": "thread-1160199-1-1.html",
+      "text": "开放爱 新年店面",
+      "web_agent_id": "wa-190",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1160199-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:15.925744"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1158347-1-1.html",
+  "timestamp": "2026-01-08T20:19:14.820496",
+  "item_count": 11,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1158347-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20747302",
+        "user": {
+          "username": "gavinLaw",
+          "user_id": "1165600",
+          "stats": {
+            "posts": "17",
+            "replies": "186",
+            "points": "307"
+          },
+          "is_anonymous": false
+        },
+        "content": "如题, hr之前跟我说是1轮coding 75分钟, 然后就是virtual onsite.\n但是上周做完coding后, hr说\"We'd like to advance you to a second coding screen as a next step\", 没提VO的事, 啥意思? 是我第一轮coding信号不够, 团队想再来一面交叉看看吗? 还是把一些VO的coding轮前置了?. 1point 3 acres\n\n\n确实第一轮只做出了正常解, follow up没写好. 这个第二轮code screen好像说比较像basic的工程实现.\n. 1point3acres",
+        "timestamp": "",
+        "reactions": {
+          "likes": 1,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158347-1-1.html#20747302"
+      },
+      {
+        "post_id": "rate_div_20747302",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158347-1-1.html#rate_div_20747302"
+      },
+      {
+        "post_id": "20747363",
+        "user": {
+          "username": "gavinLaw",
+          "user_id": "1165600",
+          "stats": {
+            "posts": "17",
+            "replies": "186",
+            "points": "307"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-17 13:05.1point3acres\n现在改革流程了吧，就是两轮代码，一轮sys coding\n我同学一面丝滑秒杀, 然后他说第二天就联系onsite了, 感觉还是第一轮信号不够强, 所以再来一轮.",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-17 13:05.1point3acres\n现在改革流程了吧，就是两轮代码，一轮sys coding",
+          "匿名用户 发表于 2025-12-17 13:05.1point3acres\n现在改革流程了吧，就是两轮代码，一轮sys coding"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158347-1-1.html#20747363"
+      },
+      {
+        "post_id": "rate_div_20747363",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158347-1-1.html#rate_div_20747363"
+      },
+      {
+        "post_id": "20747356",
+        "user": {
+          "username": "Unknown",
+          "user_id": "65999",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "现在改革流程了吧，就是两轮代码，一轮sys coding",
+        "timestamp": "2025-12-17 10:05:16",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158347-1-1.html#20747356"
+      },
+      {
+        "post_id": "rate_20747356",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158347-1-1.html#rate_20747356"
+      },
+      {
+        "post_id": "20748981",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "请问75min coding考的哪道题啊",
+        "timestamp": "2025-12-18 05:29:18",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158347-1-1.html#20748981"
+      },
+      {
+        "post_id": "rate_div_20748981",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158347-1-1.html#rate_div_20748981"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158347-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158347-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "OpenAI 在过了一面code后,又发来第二个coding是为啥?|一亩三分地职场达人版",
+    "extraction_time_ms": 110,
+    "thread_title": "[请问贵司]\nOpenAI 在过了一面code后, 又发来第二个coding是为啥?",
+    "thread_tags": [
+      "职场达人",
+      "openai"
+    ],
+    "total_replies": 10
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 11,
+    "original_link": {
+      "href": "thread-1158347-1-1.html",
+      "text": "OpenAI 在过了一面code后, 又发来第二个coding是为啥?",
+      "web_agent_id": "wa-226",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1158347-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:14.820540"
+  }
+}

@@ -1,0 +1,458 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html",
+  "timestamp": "2026-01-08T20:18:55.464557",
+  "item_count": 23,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20743829",
+        "user": {
+          "username": "ben_viv",
+          "user_id": "188275",
+          "stats": {
+            "posts": "29",
+            "replies": "167",
+            "points": "455"
+          },
+          "is_anonymous": false
+        },
+        "content": "本帖最后由 ben_viv 于 2025-12-15 09:37 编辑 \n\n店面请看🔗 www.1point3acres.com\n\n以下是v-onsite -> 有详细behavioral内容和sd新题目，本着面挂了就可以尽情分享的态度祝要面试的朋友们好运！\n\n\n以下内容需要积分高于 400 您已经可以浏览\n\nHM chat\n- Why OpenAI?\n\n- What are the risks to AGI?\n\n- How would you decide if a newer model could be released or not?\n\n- How have you come to your current place in your career?\n\n- 其他常规behavioral\n\n\n\n\nProject deepdive\n- 自己挑了一个既有深度，又有广度，还有 practical tradeoff 的项目。经过好几家其他公司的捶打，感觉这一轮是最稳的。当然也只有这一轮是自己可以主导 discussion，也不意外。\n\n\n\n\nCoding - GPU credits\n- 有一个 test case 没有通过，很遗憾，最后都没有把这一个 bug 改出来，时间太紧了，不知道是不是挂在这里。\n\n\n\n\nDesign\n- 这是一个新题，非常难搞，面试官是一个在 AWS EC2 干了快十年的老哥，直接进入他的专属领域，全程几乎被他带着走。不过自己觉得也是有来有回，对他的各种 guidance 还是能够非常快地抓住。\n\n- 最后这一轮估计还是不够，自我评估就是 design 和 coding 不够好。\n\n- 题目：Design a system to provide remote devbox in the cloud on demand",
+        "timestamp": "",
+        "reactions": {
+          "likes": 1,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#20743829"
+      },
+      {
+        "post_id": "rate_20743829",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#rate_20743829"
+      },
+      {
+        "post_id": "20744000",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "感谢楼主分享！可以请教一下楼主有hear back decision吗？如果hear back了可以问一下vo结束了以后多少个工作日hear back的吗？我也卡在了vo刚结束的这个环节。。。正在焦虑等消息",
+        "timestamp": "2025-12-15 11:12:54",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#20744000"
+      },
+      {
+        "post_id": "rate_div_20744000",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#rate_div_20744000"
+      },
+      {
+        "post_id": "20744790",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "感谢楼主分享，已加米。\n请问project deepdive recruiter有给提示要准备slides吗？",
+        "timestamp": "2025-12-15 19:27:17",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#20744790"
+      },
+      {
+        "post_id": "rate_div_20744790",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#rate_div_20744790"
+      },
+      {
+        "post_id": "20744821",
+        "user": {
+          "username": "ben_viv",
+          "user_id": "188275",
+          "stats": {
+            "posts": "29",
+            "replies": "167",
+            "points": "455"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-15 11:12\n感谢楼主分享！可以请教一下楼主有hear back decision吗？如果hear back了可以问一下vo结束了以后多少个工 ...\nvo结束了之后大概5-6个工作日收到email拒信",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-15 11:12\n感谢楼主分享！可以请教一下楼主有hear back decision吗？如果hear back了可以问一下vo结束了以后多少个工 ...",
+          "匿名用户 发表于 2025-12-15 11:12\n感谢楼主分享！可以请教一下楼主有hear back decision吗？如果hear back了可以问一下vo结束了以后多少个工 ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#20744821"
+      },
+      {
+        "post_id": "rate_20744821",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#rate_20744821"
+      },
+      {
+        "post_id": "20744822",
+        "user": {
+          "username": "ben_viv",
+          "user_id": "188275",
+          "stats": {
+            "posts": "29",
+            "replies": "167",
+            "points": "455"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-15 19:27\n感谢楼主分享，已加米。\n请问project deepdive recruiter有给提示要准备slides吗？\nrecruiter会说，最好准备slides",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-15 19:27\n感谢楼主分享，已加米。\n请问project deepdive recruiter有给提示要准备slides吗？",
+          "匿名用户 发表于 2025-12-15 19:27\n感谢楼主分享，已加米。\n请问project deepdive recruiter有给提示要准备slides吗？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#20744822"
+      },
+      {
+        "post_id": "rate_20744822",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#rate_20744822"
+      },
+      {
+        "post_id": "20744825",
+        "user": {
+          "username": "ahujarajat261",
+          "user_id": "1050129",
+          "stats": {
+            "posts": "0",
+            "replies": "9",
+            "points": "501"
+          },
+          "is_anonymous": false
+        },
+        "content": "- 问题：设计一个系统，按需在云端提供远程开发环境。\n你能详细解释一下这个问题吗？他们想要达到什么目的？根据收到的反馈，你现在会如何设计？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#20744825"
+      },
+      {
+        "post_id": "rate_div_20744825",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#rate_div_20744825"
+      },
+      {
+        "post_id": "20746490",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "ben_viv 发表于 2025-12-15 19:54\nrecruiter会说，最好准备slides\n感谢分享。请问HM chat提示词有提到要了解AGI，AI Safety这些吗，还是只是普通的提示说要更好了解你之类的",
+        "timestamp": "2025-12-16 17:49:45",
+        "reactions": {},
+        "quotes": [
+          "ben_viv 发表于 2025-12-15 19:54\nrecruiter会说，最好准备slides",
+          "ben_viv 发表于 2025-12-15 19:54\nrecruiter会说，最好准备slides"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#20746490"
+      },
+      {
+        "post_id": "rate_div_20746490",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#rate_div_20746490"
+      },
+      {
+        "post_id": "20748423",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "我去。。。楼主这是什么岗位啊问的这么底层？",
+        "timestamp": "2025-12-17 19:28:58",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#20748423"
+      },
+      {
+        "post_id": "rate_div_20748423",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#rate_div_20748423"
+      },
+      {
+        "post_id": "20768146",
+        "user": {
+          "username": "nandywu",
+          "user_id": "340193",
+          "stats": {
+            "posts": "3",
+            "replies": "59",
+            "points": "327"
+          },
+          "is_anonymous": false
+        },
+        "content": "这个怎么要求400分才能看。。。",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#20768146"
+      },
+      {
+        "post_id": "rate_div_20768146",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#rate_div_20768146"
+      },
+      {
+        "post_id": "20772098",
+        "user": {
+          "username": "微信用户_j7txa",
+          "user_id": "910835",
+          "stats": {
+            "posts": "3",
+            "replies": "30",
+            "points": "159"
+          },
+          "is_anonymous": false
+        },
+        "content": "应该是被管理员改成400分了，逼你买会员",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#20772098"
+      },
+      {
+        "post_id": "rate_div_20772098",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#rate_div_20772098"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "OAI SDE BE全套-有sd新题目|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 110,
+    "thread_title": "[面试经验]\nOAI SDE BE全套 - 有sd新题目",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 22
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 2,
+    "original_link": {
+      "href": "thread-1158080-1-1.html",
+      "text": "OAI SDE BE全套 - 有sd新题目",
+      "web_agent_id": "wa-162",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1158080-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:55.464597"
+  }
+}

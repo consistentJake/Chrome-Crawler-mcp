@@ -1,0 +1,506 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html",
+  "timestamp": "2026-01-08T20:19:16.977945",
+  "item_count": 25,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20738162",
+        "user": {
+          "username": "wwjk2003",
+          "user_id": "171417",
+          "stats": {
+            "posts": "35",
+            "replies": "132",
+            "points": "327"
+          },
+          "is_anonymous": false
+        },
+        "content": "两轮背靠背\n\n以下内容需要积分高于 200 您已经可以浏览\nCoding是GPU，6个test case没全过，目测要跪。\n\nSD是payment system。感觉答的不是很在点上。看面试官心情。\n\n\n\n\n\n求大米谢谢！",
+        "timestamp": "",
+        "reactions": {
+          "likes": 1,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#20738162"
+      },
+      {
+        "post_id": "rate_20738162",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#rate_20738162"
+      },
+      {
+        "post_id": "20739701",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-11 19:54\n感谢楼主回复，所以跟地理的面经是一样的吗（add 和 take 不是按照时间单调递增的）？还是有变形？\n请问地里的面经有链接么？我看到两个版本，但区别还挺大。消耗信用分的方法是制定信用ID，只能从同一个ID的信用里去扣除？还是不指定ID，随便找最早要过期的去消耗即可？",
+        "timestamp": "2025-12-11 21:20:31",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-11 19:54\n感谢楼主回复，所以跟地理的面经是一样的吗（add 和 take 不是按照时间单调递增的）？还是有变形？",
+          "匿名用户 发表于 2025-12-11 19:54\n感谢楼主回复，所以跟地理的面经是一样的吗（add 和 take 不是按照时间单调递增的）？还是有变形？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#20739701"
+      },
+      {
+        "post_id": "rate_div_20739701",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#rate_div_20739701"
+      },
+      {
+        "post_id": "20746423",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-12 13:47\n我看到的都是跟id 无关的， 可以从任意的id 里边，扣最先要过期的 credit\n感谢分享。能问一下有跟id无关的版本的链接吗？ 我也看到好几个版本了。。\n跟https://www.hack2hire.com/compan ... 148869dd6a56c434054  这个上面的题一样么？",
+        "timestamp": "2025-12-16 17:01:35",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-12 13:47\n我看到的都是跟id 无关的， 可以从任意的id 里边，扣最先要过期的 credit",
+          "匿名用户 发表于 2025-12-12 13:47\n我看到的都是跟id 无关的， 可以从任意的id 里边，扣最先要过期的 credit"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#20746423"
+      },
+      {
+        "post_id": "rate_div_20746423",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#rate_div_20746423"
+      },
+      {
+        "post_id": "20739580",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "wwjk2003 发表于 2025-12-11 18:15\ntest case都是正常的，我一开始对题目有误解所以做的不对，有些case没handle好。\n感谢楼主回复，所以跟地理的面经是一样的吗（add 和 take 不是按照时间单调递增的）？还是有变形？",
+        "timestamp": "2025-12-11 19:54:25",
+        "reactions": {},
+        "quotes": [
+          "wwjk2003 发表于 2025-12-11 18:15\ntest case都是正常的，我一开始对题目有误解所以做的不对，有些case没handle好。",
+          "wwjk2003 发表于 2025-12-11 18:15\ntest case都是正常的，我一开始对题目有误解所以做的不对，有些case没handle好。"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#20739580"
+      },
+      {
+        "post_id": "rate_div_20739580",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#rate_div_20739580"
+      },
+      {
+        "post_id": "20738707",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "请问test case 有哪些是特殊的吗？感谢 以加米",
+        "timestamp": "2025-12-11 09:54:22",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#20738707"
+      },
+      {
+        "post_id": "rate_div_20738707",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#rate_div_20738707"
+      },
+      {
+        "post_id": "20739328",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "请问是payment组招才会问payment相关的SD吗",
+        "timestamp": "2025-12-11 16:25:50",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#20739328"
+      },
+      {
+        "post_id": "rate_div_20739328",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#rate_div_20739328"
+      },
+      {
+        "post_id": "20739484",
+        "user": {
+          "username": "wwjk2003",
+          "user_id": "171417",
+          "stats": {
+            "posts": "35",
+            "replies": "132",
+            "points": "327"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-11 09:54\n请问test case 有哪些是特殊的吗？感谢 以加米\ntest case都是正常的，我一开始对题目有误解所以做的不对，有些case没handle好。",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-11 09:54\n请问test case 有哪些是特殊的吗？感谢 以加米",
+          "匿名用户 发表于 2025-12-11 09:54\n请问test case 有哪些是特殊的吗？感谢 以加米"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#20739484"
+      },
+      {
+        "post_id": "rate_div_20739484",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#rate_div_20739484"
+      },
+      {
+        "post_id": "20739485",
+        "user": {
+          "username": "wwjk2003",
+          "user_id": "171417",
+          "stats": {
+            "posts": "35",
+            "replies": "132",
+            "points": "327"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-11 16:25\n请问是payment组招才会问payment相关的SD吗\n我面的不是payment组。",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-11 16:25\n请问是payment组招才会问payment相关的SD吗",
+          "匿名用户 发表于 2025-12-11 16:25\n请问是payment组招才会问payment相关的SD吗"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#20739485"
+      },
+      {
+        "post_id": "rate_div_20739485",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#rate_div_20739485"
+      },
+      {
+        "post_id": "20739736",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-11 21:20\n请问地里的面经有链接么？我看到两个版本，但区别还挺大。消耗信用分的方法是制定信用ID，只能从同一个ID ...\n我看到的都是跟id 无关的， 可以从任意的id 里边，扣最先要过期的 credit",
+        "timestamp": "2025-12-11 21:47:24",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-11 21:20\n请问地里的面经有链接么？我看到两个版本，但区别还挺大。消耗信用分的方法是制定信用ID，只能从同一个ID ...",
+          "匿名用户 发表于 2025-12-11 21:20\n请问地里的面经有链接么？我看到两个版本，但区别还挺大。消耗信用分的方法是制定信用ID，只能从同一个ID ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#20739736"
+      },
+      {
+        "post_id": "rate_div_20739736",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#rate_div_20739736"
+      },
+      {
+        "post_id": "20739935",
+        "user": {
+          "username": "wwjk2003",
+          "user_id": "171417",
+          "stats": {
+            "posts": "35",
+            "replies": "132",
+            "points": "327"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-11 21:47\n我看到的都是跟id 无关的， 可以从任意的id 里边，扣最先要过期的 credit\n这个是对的。我现在还没想到特别好的思路。",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-11 21:47\n我看到的都是跟id 无关的， 可以从任意的id 里边，扣最先要过期的 credit",
+          "匿名用户 发表于 2025-12-11 21:47\n我看到的都是跟id 无关的， 可以从任意的id 里边，扣最先要过期的 credit"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#20739935"
+      },
+      {
+        "post_id": "rate_div_20739935",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#rate_div_20739935"
+      },
+      {
+        "post_id": "20741859",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "想问下，你们用的支付系统是基于holds和charges的那种，还是像Stripe那种通用型的呀？给楼主加个米！",
+        "timestamp": "2025-12-13 17:24:13",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#20741859"
+      },
+      {
+        "post_id": "rate_div_20741859",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#rate_div_20741859"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "开放爱店面|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 111,
+    "thread_title": "[面试经验]\n开放爱店面",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 24
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 12,
+    "original_link": {
+      "href": "thread-1157627-1-1.html",
+      "text": "开放爱店面",
+      "web_agent_id": "wa-233",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1157627-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:16.977985"
+  }
+}

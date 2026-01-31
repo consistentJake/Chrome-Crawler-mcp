@@ -1,0 +1,214 @@
+{
+    "parser": "1point3acres",
+    "parser_version": "1.0.0",
+    "url": "https://www.1point3acres.com/bbs/thread-1157003-1-1.html",
+    "timestamp": "2026-01-11T18:06:31.382556",
+    "item_count": 9,
+    "items": {
+      "main_post": null,
+      "replies": [
+        {
+          "post_id": "20730859",
+          "user": {
+            "username": "Unknown",
+            "user_id": "",
+            "stats": {
+              "posts": "",
+              "replies": "",
+              "points": ""
+            },
+            "is_anonymous": true
+          },
+          "content": "楼主内推拿到面试的，面完等了一天debrief后recruiter说It was a close call, but ultimately there were a few areas technically that didn't quite meet what we are looking for in this role. 这情况还有什么办法吗？如果是general hire还会有这种问题吗？是海投的才能general hire吗？",
+          "timestamp": "2025-12-5 13:16:00",
+          "reactions": {
+            "likes": 2,
+            "dislikes": 0
+          },
+          "quotes": [],
+          "url": "https://www.1point3acres.com/bbs/thread-1157003-1-1.html#20730859"
+        },
+        {
+          "post_id": "20730876",
+          "user": {
+            "username": "Unknown",
+            "user_id": "",
+            "stats": {
+              "posts": "",
+              "replies": "",
+              "points": ""
+            },
+            "is_anonymous": true
+          },
+          "content": "别想了，就是tech没过，这方面的bar是一样的",
+          "timestamp": "2025-12-5 13:25:44",
+          "reactions": {},
+          "quotes": [],
+          "url": "https://www.1point3acres.com/bbs/thread-1157003-1-1.html#20730876"
+        },
+        {
+          "post_id": "20730897",
+          "user": {
+            "username": "EricGGGGx",
+            "user_id": "1279411",
+            "stats": {
+              "posts": "0",
+              "replies": "3",
+              "points": "1"
+            },
+            "is_anonymous": false
+          },
+          "content": "你是题没全写出来吗",
+          "timestamp": "",
+          "reactions": {},
+          "quotes": [],
+          "url": "https://www.1point3acres.com/bbs/thread-1157003-1-1.html#20730897"
+        },
+        {
+          "post_id": "20730974",
+          "user": {
+            "username": "Unknown",
+            "user_id": "",
+            "stats": {
+              "posts": "",
+              "replies": "",
+              "points": ""
+            },
+            "is_anonymous": true
+          },
+          "content": "求面经。",
+          "timestamp": "2025-12-5 14:36:25",
+          "reactions": {},
+          "quotes": [],
+          "url": "https://www.1point3acres.com/bbs/thread-1157003-1-1.html#20730974"
+        },
+        {
+          "post_id": "20732037",
+          "user": {
+            "username": "Unknown",
+            "user_id": "",
+            "stats": {
+              "posts": "",
+              "replies": "",
+              "points": ""
+            },
+            "is_anonymous": true
+          },
+          "content": "我跟你的情况类似，recuriter 说是 tech 全过了而且 strong, 但是 project deep dive 和 BQ 有一点弱一些的 signal, 如果是面 junior 一级的话就过了...\n\n后来问了问当时聊的 HM, 说是已经没有 HC 了...",
+          "timestamp": "2025-12-6 14:57:58",
+          "reactions": {},
+          "quotes": [],
+          "url": "https://www.1point3acres.com/bbs/thread-1157003-1-1.html#20732037"
+        },
+        {
+          "post_id": "20732605",
+          "user": {
+            "username": "Unknown",
+            "user_id": "",
+            "stats": {
+              "posts": "",
+              "replies": "",
+              "points": ""
+            },
+            "is_anonymous": true
+          },
+          "content": "匿名用户 发表于 2025-12-6 14:57\n我跟你的情况类似，recuriter 说是 tech 全过了而且 strong, 但是 project deep dive 和 BQ 有一点弱一些的 ...\n你面的什么级别的",
+          "timestamp": "2025-12-7 00:51:39",
+          "reactions": {},
+          "quotes": [
+            "匿名用户 发表于 2025-12-6 14:57\n我跟你的情况类似，recuriter 说是 tech 全过了而且 strong, 但是 project deep dive 和 BQ 有一点弱一些的 ..."
+          ],
+          "url": "https://www.1point3acres.com/bbs/thread-1157003-1-1.html#20732605"
+        },
+        {
+          "post_id": "20732825",
+          "user": {
+            "username": "tequilasunrise",
+            "user_id": "346361",
+            "stats": {
+              "posts": "0",
+              "replies": "134",
+              "points": "987"
+            },
+            "is_anonymous": false
+          },
+          "content": "匿名用户 发表于 2025-12-7 06:57\n我跟你的情况类似，recuriter 说是 tech 全过了而且 strong, 但是 project deep dive 和 BQ 有一点弱一些的 ...\n所以这种情况是reject 还是waitlist等hc ?",
+          "timestamp": "",
+          "reactions": {},
+          "quotes": [
+            "匿名用户 发表于 2025-12-7 06:57\n我跟你的情况类似，recuriter 说是 tech 全过了而且 strong, 但是 project deep dive 和 BQ 有一点弱一些的 ..."
+          ],
+          "url": "https://www.1point3acres.com/bbs/thread-1157003-1-1.html#20732825"
+        },
+        {
+          "post_id": "20732839",
+          "user": {
+            "username": "Unknown",
+            "user_id": "",
+            "stats": {
+              "posts": "",
+              "replies": "",
+              "points": ""
+            },
+            "is_anonymous": true
+          },
+          "content": "匿名用户 发表于 2025-12-7 00:51\n你面的什么级别的\n面的 Staff 级别",
+          "timestamp": "2025-12-7 09:45:52",
+          "reactions": {},
+          "quotes": [
+            "匿名用户 发表于 2025-12-7 00:51\n你面的什么级别的"
+          ],
+          "url": "https://www.1point3acres.com/bbs/thread-1157003-1-1.html#20732839"
+        },
+        {
+          "post_id": "20732840",
+          "user": {
+            "username": "Unknown",
+            "user_id": "",
+            "stats": {
+              "posts": "",
+              "replies": "",
+              "points": ""
+            },
+            "is_anonymous": true
+          },
+          "content": "tequilasunrise 发表于 2025-12-7 09:32\n所以这种情况是reject 还是waitlist等hc ?\n拒信\n\nzszs",
+          "timestamp": "2025-12-7 09:46:14",
+          "reactions": {},
+          "quotes": [
+            "tequilasunrise 发表于 2025-12-7 09:32\n所以这种情况是reject 还是waitlist等hc ?"
+          ],
+          "url": "https://www.1point3acres.com/bbs/thread-1157003-1-1.html#20732840"
+        }
+      ]
+    },
+    "metadata": {
+      "page_title": "OpenAI组招|openai面经|一亩三分地海外面经版",
+      "extraction_time_ms": 114,
+      "thread_title": "[面试经验]\nOpenAI组招",
+      "thread_tags": [
+        "海外面经",
+        "openai"
+      ],
+      "total_replies": 9
+    },
+    "pagination": {
+      "has_next_page": false,
+      "next_page_url": null,
+      "current_page": 1,
+      "total_pages": 1
+    },
+    "workflow_metadata": {
+      "source_page": 3,
+      "post_index": 13,
+      "original_link": {
+        "href": "thread-1157003-1-1.html",
+        "text": "OpenAI组招",
+        "web_agent_id": "wa-241",
+        "full_url": "https://www.1point3acres.com/bbs/thread-1157003-1-1.html"
+      },
+      "processed_at": "2026-01-11T18:06:31.382640",
+      "total_pages_in_post": 1,
+      "pages_data_count": 1
+    }
+  }

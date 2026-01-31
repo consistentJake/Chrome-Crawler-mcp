@@ -1,0 +1,311 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html",
+  "timestamp": "2026-01-08T20:19:29.923577",
+  "item_count": 15,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20734249",
+        "user": {
+          "username": "Aurora～",
+          "user_id": "301497",
+          "stats": {
+            "posts": "100",
+            "replies": "1925",
+            "points": "1946"
+          },
+          "is_anonymous": false
+        },
+        "content": "第一轮system design：\n\nDesign a multi tenant CI/CD system which schedules and executes user defined workflows in response to git pushes. The system receives information about pushes via API calls from an internal service which contain the repository id and the current state of the repository (commit hash). Workflows are a sequence of jobs which are defined within a single YAML file in a static location for each repository. Users should be able to view the output and status of jobs as they are running.\n\n第二轮coding具体题目忘了，但是不是那种典型的algorithm，而是更偏向practical coding。感觉答得都不错，不明白挂在哪。看来openai bar高是真的。",
+        "timestamp": "",
+        "reactions": {
+          "likes": 1,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#20734249"
+      },
+      {
+        "post_id": "rate_20734249",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#rate_20734249"
+      },
+      {
+        "post_id": "20736537",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "patpat楼主，很有用的消息，最近在准备OAI",
+        "timestamp": "2025-12-9 22:39:07",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#20736537"
+      },
+      {
+        "post_id": "rate_div_20736537",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#rate_div_20736537"
+      },
+      {
+        "post_id": "20734284",
+        "user": {
+          "username": "tequilasunrise",
+          "user_id": "346361",
+          "stats": {
+            "posts": "0",
+            "replies": "133",
+            "points": "985"
+          },
+          "is_anonymous": false
+        },
+        "content": "第二轮是不是chat bot refactoring ?",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#20734284"
+      },
+      {
+        "post_id": "rate_div_20734284",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#rate_div_20734284"
+      },
+      {
+        "post_id": "20734767",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "patpat, 楼主多久收到通知的？",
+        "timestamp": "2025-12-8 18:41:21",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#20734767"
+      },
+      {
+        "post_id": "rate_div_20734767",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#rate_div_20734767"
+      },
+      {
+        "post_id": "20734955",
+        "user": {
+          "username": "Aurora～",
+          "user_id": "301497",
+          "stats": {
+            "posts": "100",
+            "replies": "1925",
+            "points": "1946"
+          },
+          "is_anonymous": false
+        },
+        "content": "tequilasunrise 发表于 2025-12-8 12:45\n第二轮是不是chat bot refactoring ?\n不好意思记不清了，总之是给一些class和function，让填内容什么的",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "tequilasunrise 发表于 2025-12-8 12:45\n第二轮是不是chat bot refactoring ?",
+          "tequilasunrise 发表于 2025-12-8 12:45\n第二轮是不是chat bot refactoring ?"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#20734955"
+      },
+      {
+        "post_id": "rate_div_20734955",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#rate_div_20734955"
+      },
+      {
+        "post_id": "20734956",
+        "user": {
+          "username": "Aurora～",
+          "user_id": "301497",
+          "stats": {
+            "posts": "100",
+            "replies": "1925",
+            "points": "1946"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-8 18:41\npatpat, 楼主多久收到通知的？\n大概几天后",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-8 18:41\npatpat, 楼主多久收到通知的？",
+          "匿名用户 发表于 2025-12-8 18:41\npatpat, 楼主多久收到通知的？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#20734956"
+      },
+      {
+        "post_id": "rate_div_20734956",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#rate_div_20734956"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "OpenAI店面挂经|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 112,
+    "thread_title": "[面试经验]\nOpenAI店面挂经",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 14
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 18,
+    "original_link": {
+      "href": "thread-1157300-1-1.html",
+      "text": "OpenAI店面挂经",
+      "web_agent_id": "wa-272",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:29.923617"
+  }
+}

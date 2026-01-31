@@ -1,0 +1,172 @@
+# =============================================================================
+# WebAgent Unified Configuration
+# =============================================================================
+# This is the central configuration file for the entire WebAgent pipeline.
+# Copy to config.local.yaml for local customization (gitignored).
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Scraper Settings (1point3acres forum scraper)
+# -----------------------------------------------------------------------------
+scraper:
+  # Target URL to scrape
+  url: "https://www.1point3acres.com/bbs/tag-9407-1.html"
+
+  # Number of pages to scrape
+  num_pages: 1
+
+  # Posts per page to parse (null = all posts)
+  posts_per_page: 3
+
+  # Speed profile: fast, normal, slow, cautious
+  speed: "normal"
+
+  # Custom wait times (overrides speed profile if enabled)
+  custom_waits:
+    enabled: false
+    page_load_wait: 3.0
+    between_posts_wait: 1.5
+    between_pages_wait: 2.0
+
+  # Output settings
+  output:
+    directory: "./scraper_output"
+    save_individual_posts: true
+    save_combined_results: true
+
+  # Verification settings
+  verification:
+    min_posts_per_page: 1
+    verify_post_content: true
+
+  # Runtime options
+  runtime:
+    verbose: true
+    client_type: "chrome"
+
+  # Resume settings (for interrupted scraping)
+  resume:
+    enabled: false
+    start_page: 1
+    resume_from_post: 0
+
+# -----------------------------------------------------------------------------
+# Extraction Settings (LLM-based interview info extraction)
+# -----------------------------------------------------------------------------
+extraction:
+  # API Settings
+  api:
+    # Provider: "anthropic" or "openai"
+    provider: "anthropic"
+
+    # API key (can also use ANTHROPIC_API_KEY env var)
+    api_key: ""  # Set via environment variable or config.local.yaml
+
+    # Base URL (optional, for proxies or alternative endpoints)
+    # Examples:
+    #   - OpenRouter: https://openrouter.ai/api/v1
+    #   - Moonshot: https://api.moonshot.cn/anthropic
+    #   - Leave null for official Anthropic API
+    base_url: "https://api.moonshot.cn/anthropic"
+
+    # Model to use
+    model: "kimi-k2-0905-preview"
+    # Options: claude-sonnet-4-20250514, claude-opus-4-20250514, claude-3-5-haiku-20241022
+    # If using OpenRouter or other providers, use their model names
+
+    # Max output tokens per call
+    max_tokens: 4096
+
+    # Temperature (lower = more consistent)
+    temperature: 0.1
+
+  # Processing settings
+  processing:
+    # Number of posts per LLM call (2-3 recommended)
+    posts_per_group: 3
+
+    # Minimum content length to process a post
+    min_content_length: 50
+
+    # Delay between API calls (seconds)
+    delay_between_calls: 1.0
+
+  # Output settings
+  output:
+    # Base output directory (will have timestamp suffix added, e.g., output_20250122_153045)
+    output_dir: "output"
+
+    # Save intermediate files (markdown inputs, raw responses)
+    save_intermediate: true
+
+    # Subdirectory names for intermediate files (inside timestamped output folder)
+    intermediate_dirs:
+      markdown: "markdown"      # Converted markdown files
+      prompts: "prompts"        # LLM prompts (when using --dump-prompt)
+      responses: "responses"    # Raw LLM responses
+      dry_run: "dry_run"        # Dry run output
+
+# -----------------------------------------------------------------------------
+# Filter Settings (shared between scraper and extraction)
+# -----------------------------------------------------------------------------
+filters:
+  # Skip posts containing these keywords in title/content
+  skip_keywords:
+    - "新人如何使用"
+    - "发错了"
+    - "Welcome on board"
+    - "如何免费获得"
+    - "积分限制"
+
+  # Low-value reply patterns to filter
+  low_value_patterns:
+    - "感谢楼主"
+    - "已加米"
+    - "求加米"
+    - "顶"
+    - "mark"
+    - "已私信"
+    - "已dm"
+
+  # LLM-based filtering configuration
+  llm_filter:
+    enabled: true
+
+    # API settings (falls back to extraction.api if not specified)
+    api:
+      provider: "anthropic"          # or "openai"
+      api_key: ""                    # Falls back to extraction.api.api_key
+      base_url: null                 # Falls back to extraction.api.base_url
+      model: "claude-3-5-haiku-20241022"  # Cheaper model for filtering
+      max_tokens: 2048
+      temperature: 0.0               # Deterministic
+
+    # Batch processing
+    processing:
+      posts_per_batch: 20            # Larger batches for filtering
+      confidence_threshold: 0.7      # Filter out if confidence > this AND not interview-related
+      delay_between_calls: 0.5
+
+    # Output
+    output:
+      save_results: true
+      results_filename: "filter_results.json"
+
+# -----------------------------------------------------------------------------
+# Pipeline Settings (orchestration)
+# -----------------------------------------------------------------------------
+pipeline:
+  # Run extraction automatically after scraping
+  auto_extract: true
+
+  # Use dry-run mode for extraction (no API calls)
+  dry_run: true
+
+  # Dump prompts only (no API calls, saves prompts to files)
+  dump_prompt_only: false
+
+  # Pipeline stage toggles
+  stages:
+    keyword_filter: true    # Enable/disable keyword-based filtering
+    llm_filter: true        # Enable/disable LLM-based filtering
+    extraction: true        # Enable/disable final extraction

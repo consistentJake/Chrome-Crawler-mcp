@@ -1,0 +1,554 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html",
+  "timestamp": "2026-01-08T20:18:26.655524",
+  "item_count": 27,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20760938",
+        "user": {
+          "username": "迪阿娜要努力",
+          "user_id": "1260037",
+          "stats": {
+            "posts": "1",
+            "replies": "14",
+            "points": "219"
+          },
+          "is_anonymous": false
+        },
+        "content": "本帖最后由 迪阿娜要努力 于 2025-12-27 22:18 编辑 \n\nLZ节前被OAI的hr通知进reference call和office visit阶段（screening, on site, hm chat, 和research talk已经全部结束了），hr问了其他公司的offer情况（只问了level并没问package）。当时问了hr level的事，hr说需要参考reference强度。想咨询一下地里的朋友们：\n听说OAI的同一个职位（比如Research Scientist）的同一个level基本只有一个固定的package，是这样的吗？是不是意味着要更高的package只能通过拿到更高的level？用别的公司的offer能在OAI涨package/level吗？以及什么时候、什么方式提compete offer合适呢？目前看起来hr并不是很关心别家offer的具体package。",
+        "timestamp": "",
+        "reactions": {
+          "likes": 6,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#20760938"
+      },
+      {
+        "post_id": "rate_20760938",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#rate_20760938"
+      },
+      {
+        "post_id": "20761789",
+        "user": {
+          "username": "oauth",
+          "user_id": "97604",
+          "stats": {
+            "posts": "24",
+            "replies": "803",
+            "points": "1057"
+          },
+          "is_anonymous": false
+        },
+        "content": "本帖最后由 oauth 于 2025-12-28 22:01 编辑 \n\noai不compete。同一个title，同样的level package一模一样，你想要多的钱就只能争取升一个level。sign-on据我所知一般就是50k左右 (applied engineer, RS和RE不清楚)\n\n最后定级主要是参考你现在工作的impact/scope/level/yoe，你面试的表现和reference的强度，但是我个人觉得前两个因素可能决定性更大，reference对于那种on the edge可上可下的case可能帮助更大。\n. 1point 3 acres\n用compete offer基本不会帮你bump level的，可以帮你要到sign on，oai不会compete offer，pipeline的人多，有太多人挤破头想进去，有恃无恐。",
+        "timestamp": "",
+        "reactions": {
+          "emoji_reactions": [
+            {
+              "emoji": "🙏",
+              "count": 2
+            },
+            {
+              "emoji": "🙏",
+              "count": 2
+            }
+          ]
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#20761789"
+      },
+      {
+        "post_id": "rate_20761789",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#rate_20761789"
+      },
+      {
+        "post_id": "20761483",
+        "user": {
+          "username": "cherudim9",
+          "user_id": "214682",
+          "stats": {
+            "posts": "9",
+            "replies": "224",
+            "points": "137"
+          },
+          "is_anonymous": false
+        },
+        "content": "hr会和reference打不超过10分钟的电话。主要问强项、弱点、rank percentile",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#20761483"
+      },
+      {
+        "post_id": "rate_20761483",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#rate_20761483"
+      },
+      {
+        "post_id": "20761808",
+        "user": {
+          "username": "oauth",
+          "user_id": "97604",
+          "stats": {
+            "posts": "24",
+            "replies": "803",
+            "points": "1057"
+          },
+          "is_anonymous": false
+        },
+        "content": "gmfang 发表于 2025-12-28 18:12\n感谢回复，给你加米了，想问下是recuiter打还是manager亲自打啊？还可继续加米，谢谢！我经历的case是 recruiter会给你的推荐人发邮件，邮件很长，会有很多问题like 你怎么认识这个人的，这个人的role和responsibilities，这个人的长处是什么 etc etc",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "gmfang 发表于 2025-12-28 18:12\n感谢回复，给你加米了，想问下是recuiter打还是manager亲自打啊？还可继续加米，谢谢！",
+          "gmfang 发表于 2025-12-28 18:12\n感谢回复，给你加米了，想问下是recuiter打还是manager亲自打啊？还可继续加米，谢谢！"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#20761808"
+      },
+      {
+        "post_id": "rate_20761808",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#rate_20761808"
+      },
+      {
+        "post_id": "20761352",
+        "user": {
+          "username": "迪阿娜要努力",
+          "user_id": "1260037",
+          "stats": {
+            "posts": "1",
+            "replies": "14",
+            "points": "219"
+          },
+          "is_anonymous": false
+        },
+        "content": "球球各位朋友提供些指导呀",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#20761352"
+      },
+      {
+        "post_id": "rate_div_20761352",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#rate_div_20761352"
+      },
+      {
+        "post_id": "20761452",
+        "user": {
+          "username": "gmfang",
+          "user_id": "175980",
+          "stats": {
+            "posts": "35",
+            "replies": "738",
+            "points": "1147"
+          },
+          "is_anonymous": false
+        },
+        "content": "据说他家不compete，最多给点sign-on, level对应的package应该是固定的，请问楼主reference call是HM亲自打视频过去吗？还是给提供的人发个邮件就行了",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#20761452"
+      },
+      {
+        "post_id": "rate_20761452",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#rate_20761452"
+      },
+      {
+        "post_id": "20761477",
+        "user": {
+          "username": "迪阿娜要努力",
+          "user_id": "1260037",
+          "stats": {
+            "posts": "1",
+            "replies": "14",
+            "points": "219"
+          },
+          "is_anonymous": false
+        },
+        "content": "gmfang 发表于 2025-12-28 12:37. .и\n据说他家不compete，最多给点sign-on, level对应的package应该是固定的，请问楼主reference call是HM亲自打 ...\nsign-on大概是什么量级的呢？\n-baidu 1point3acres\n我提供了reference的邮箱，hr应该会去联系reference，但是具体是什么形式并不清楚。",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "gmfang 发表于 2025-12-28 12:37. .и\n据说他家不compete，最多给点sign-on, level对应的package应该是固定的，请问楼主reference call是HM亲自打 ...",
+          "gmfang 发表于 2025-12-28 12:37. .и\n据说他家不compete，最多给点sign-on, level对应的package应该是固定的，请问楼主reference call是HM亲自打 ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#20761477"
+      },
+      {
+        "post_id": "rate_div_20761477",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#rate_div_20761477"
+      },
+      {
+        "post_id": "20761494",
+        "user": {
+          "username": "迪阿娜要努力",
+          "user_id": "1260037",
+          "stats": {
+            "posts": "1",
+            "replies": "14",
+            "points": "219"
+          },
+          "is_anonymous": false
+        },
+        "content": "cherudim9 发表于 2025-12-28 13:08\nhr会和reference打不超过10分钟的电话。主要问强项、弱点、rank percentile. 1point3acres\n那在职跳槽是不是不太好搞啊。。尤其是在现在公司呆了很久的，找现manager明显不合适，找前司的又隔太久",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "cherudim9 发表于 2025-12-28 13:08\nhr会和reference打不超过10分钟的电话。主要问强项、弱点、rank percentile",
+          "cherudim9 发表于 2025-12-28 13:08\nhr会和reference打不超过10分钟的电话。主要问强项、弱点、rank percentile"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#20761494"
+      },
+      {
+        "post_id": "rate_div_20761494",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#rate_div_20761494"
+      },
+      {
+        "post_id": "20761605",
+        "user": {
+          "username": "gmfang",
+          "user_id": "175980",
+          "stats": {
+            "posts": "35",
+            "replies": "738",
+            "points": "1147"
+          },
+          "is_anonymous": false
+        },
+        "content": "cherudim9 发表于 2025-12-28 13:08\nhr会和reference打不超过10分钟的电话。主要问强项、弱点、rank percentile-baidu 1point3acres\n感谢回复，给你加米了，想问下是recuiter打还是manager亲自打啊？还可继续加米，谢谢！",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "cherudim9 发表于 2025-12-28 13:08\nhr会和reference打不超过10分钟的电话。主要问强项、弱点、rank percentile",
+          "cherudim9 发表于 2025-12-28 13:08\nhr会和reference打不超过10分钟的电话。主要问强项、弱点、rank percentile"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#20761605"
+      },
+      {
+        "post_id": "rate_div_20761605",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#rate_div_20761605"
+      },
+      {
+        "post_id": "20761608",
+        "user": {
+          "username": "gmfang",
+          "user_id": "175980",
+          "stats": {
+            "posts": "35",
+            "replies": "738",
+            "points": "1147"
+          },
+          "is_anonymous": false
+        },
+        "content": "迪阿娜要努力 发表于 2025-12-28 13:06\nsign-on大概是什么量级的呢？\n. 1point 3acres \n我提供了reference的邮箱，hr应该会去联系reference，但是具体是什么形 ...\n可以看下levels fyi有没有数据点",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "迪阿娜要努力 发表于 2025-12-28 13:06\nsign-on大概是什么量级的呢？\n. 1point 3acres \n我提供了reference的邮箱，hr应该会去联系reference，但是具体是什么形 ...",
+          "迪阿娜要努力 发表于 2025-12-28 13:06\nsign-on大概是什么量级的呢？\n. 1point 3acres \n我提供了reference的邮箱，hr应该会去联系reference，但是具体是什么形 ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#20761608"
+      },
+      {
+        "post_id": "rate_div_20761608",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#rate_div_20761608"
+      },
+      {
+        "post_id": "20761668",
+        "user": {
+          "username": "cherudim9",
+          "user_id": "214682",
+          "stats": {
+            "posts": "9",
+            "replies": "224",
+            "points": "137"
+          },
+          "is_anonymous": false
+        },
+        "content": "迪阿娜要努力 发表于 2025-12-28 13:16\n那在职跳槽是不是不太好搞啊。。尤其是在现在公司呆了很久的，找现manager明显不合适，找前司的又隔太久\n确实，不知道目前tenure比较长的人怎么处理的",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "迪阿娜要努力 发表于 2025-12-28 13:16\n那在职跳槽是不是不太好搞啊。。尤其是在现在公司呆了很久的，找现manager明显不合适，找前司的又隔太久",
+          "迪阿娜要努力 发表于 2025-12-28 13:16\n那在职跳槽是不是不太好搞啊。。尤其是在现在公司呆了很久的，找现manager明显不合适，找前司的又隔太久"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#20761668"
+      },
+      {
+        "post_id": "rate_div_20761668",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#rate_div_20761668"
+      },
+      {
+        "post_id": "20761670",
+        "user": {
+          "username": "cherudim9",
+          "user_id": "214682",
+          "stats": {
+            "posts": "9",
+            "replies": "224",
+            "points": "137"
+          },
+          "is_anonymous": false
+        },
+        "content": "gmfang 发表于 2025-12-28 15:12\n感谢回复，给你加米了，想问下是recuiter打还是manager亲自打啊？还可继续加米，谢谢！.--\nrecruiter；call很走流程我感觉（不是research scientist岗）",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "gmfang 发表于 2025-12-28 15:12\n感谢回复，给你加米了，想问下是recuiter打还是manager亲自打啊？还可继续加米，谢谢！",
+          "gmfang 发表于 2025-12-28 15:12\n感谢回复，给你加米了，想问下是recuiter打还是manager亲自打啊？还可继续加米，谢谢！"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#20761670"
+      },
+      {
+        "post_id": "rate_20761670",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#rate_20761670"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "求教OpenAI Level以及Compete办法|openai求职讨论|一亩三分地求职（非面经）版",
+    "extraction_time_ms": 127,
+    "thread_title": "[找工就业]\n[工作信息]\n求教OpenAI Level以及Compete办法",
+    "thread_tags": [
+      "求职（非面经）",
+      "openai",
+      "level"
+    ],
+    "total_replies": 26
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 11,
+    "original_link": {
+      "href": "thread-1159399-1-1.html",
+      "text": "求教OpenAI Level以及Compete办法",
+      "web_agent_id": "wa-223",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1159399-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:26.655576"
+  }
+}

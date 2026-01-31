@@ -1,0 +1,568 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html",
+  "timestamp": "2026-01-08T20:19:06.234271",
+  "item_count": 27,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20741440",
+        "user": {
+          "username": "alanzz3112",
+          "user_id": "1268522",
+          "stats": {
+            "posts": "1",
+            "replies": "26",
+            "points": "113"
+          },
+          "is_anonymous": false
+        },
+        "content": "目前在纠结3个offer，希望大家给点有用的建议：\n1. OAI：大概是贴出来的offer，半核心组，和HM聊了感觉人挺nice，唯一的顾虑是目前估值偏高\n2. xAI：这个低一点，大概0.9M/年，面的不算太卷的组，目测一周75hr可以完成老板布置的任务，HM也挺nice，唯一的优点可能是在马老板公司存活下来upside还行\n3. 一家stealth创业公司：现金给到0.8-0.9M/年（用上面的offer match来的），在这基础之上还有equity，属于早期创业公司，做起来就是财务自由，估计加班程度介于1-2之间，或者和2差不多\n\n补充内容 (2025-12-15 07:34 +08:00):\nUpdate 1: 看到评论很多人说3给的很高，其实有一半现金是bonus，所以干不到一年（即做不出prototype）很大概率拿不满甚至拿不到，风浪越大鱼越贵嘛",
+        "timestamp": "",
+        "reactions": {
+          "likes": 16,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#20741440"
+      },
+      {
+        "post_id": "rate_20741440",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#rate_20741440"
+      },
+      {
+        "post_id": "20741455",
+        "user": {
+          "username": "Unknown",
+          "user_id": "65999",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "不算太卷。。75小时。。。，看来楼主是卷王",
+        "timestamp": "2025-12-13 09:40:35",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#20741455"
+      },
+      {
+        "post_id": "rate_20741455",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#rate_20741455"
+      },
+      {
+        "post_id": "20741826",
+        "user": {
+          "username": "Unknown",
+          "user_id": "58229",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "刚从XAI下来... 跟你一样的包，900K。\n其实干活强度没那么大，坦白讲，只是大家都得在。\n没事干，你也得装着有事干，找事干，否则你就很害怕。\n最闹心的是老马会垂直管理，micromanagement，可是，他真的很多不懂，瞎指挥。\n一旦效果不好，OK，大刀砍下来，你也不知道自己哪里做错了。我就属于被端掉的那一波里面的。\n目测，能干满一年的不容易。",
+        "timestamp": "2025-12-13 16:56:56",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#20741826"
+      },
+      {
+        "post_id": "rate_20741826",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#rate_20741826"
+      },
+      {
+        "post_id": "20741568",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "渝水流苏 发表于 2025-12-13 10:15:30\nstealth ai到底是干啥的。。。到处都是它却不知道他们有啥产品这是个好笑话😂",
+        "timestamp": "2025-12-13 11:21:26",
+        "reactions": {
+          "emoji_reactions": [
+            {
+              "emoji": "😂",
+              "count": 1
+            },
+            {
+              "emoji": "😂",
+              "count": 1
+            }
+          ]
+        },
+        "quotes": [
+          "渝水流苏 发表于 2025-12-13 10:15:30\nstealth ai到底是干啥的。。。到处都是它却不知道他们有啥产品",
+          "渝水流苏 发表于 2025-12-13 10:15:30\nstealth ai到底是干啥的。。。到处都是它却不知道他们有啥产品"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#20741568"
+      },
+      {
+        "post_id": "rate_div_20741568",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#rate_div_20741568"
+      },
+      {
+        "post_id": "20741482",
+        "user": {
+          "username": "AlphaOne",
+          "user_id": "43051",
+          "stats": {
+            "posts": "50",
+            "replies": "1484",
+            "points": "4556"
+          },
+          "is_anonymous": false
+        },
+        "content": "OAI钱多活少，这有啥可纠结的",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#20741482"
+      },
+      {
+        "post_id": "rate_div_20741482",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#rate_div_20741482"
+      },
+      {
+        "post_id": "20741489",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "75小时还不卷？写错了？",
+        "timestamp": "2025-12-13 10:04:16",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#20741489"
+      },
+      {
+        "post_id": "rate_div_20741489",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#rate_div_20741489"
+      },
+      {
+        "post_id": "20741492",
+        "user": {
+          "username": "Cococoder",
+          "user_id": "647517",
+          "stats": {
+            "posts": "13",
+            "replies": "85",
+            "points": "99"
+          },
+          "is_anonymous": false
+        },
+        "content": "只有我觉得clearly应该选第三个吗...",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#20741492"
+      },
+      {
+        "post_id": "rate_div_20741492",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#rate_div_20741492"
+      },
+      {
+        "post_id": "20741496",
+        "user": {
+          "username": "ChenLiu1996",
+          "user_id": "673842",
+          "stats": {
+            "posts": "40",
+            "replies": "2334",
+            "points": "1143"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-13 10:04:16\n75小时还不卷？写错了？没毛病 xai本来就是冲着100hr去的 75hr在xai真不算卷",
+        "timestamp": "",
+        "reactions": {
+          "emoji_reactions": [
+            {
+              "emoji": "羊驼宝宝\n                    爱丽丝和鲍勃\n                    celia",
+              "count": 417
+            },
+            {
+              "emoji": "羊驼宝宝\n                    爱丽丝和鲍勃\n                    celia",
+              "count": 417
+            }
+          ]
+        },
+        "quotes": [
+          "匿名用户 发表于 2025-12-13 10:04:16\n75小时还不卷？写错了？",
+          "匿名用户 发表于 2025-12-13 10:04:16\n75小时还不卷？写错了？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#20741496"
+      },
+      {
+        "post_id": "rate_div_20741496",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#rate_div_20741496"
+      },
+      {
+        "post_id": "20741500",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "要去就去Stealth，yolo",
+        "timestamp": "2025-12-13 10:14:13",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#20741500"
+      },
+      {
+        "post_id": "rate_div_20741500",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#rate_div_20741500"
+      },
+      {
+        "post_id": "20741504",
+        "user": {
+          "username": "渝水流苏",
+          "user_id": "181139",
+          "stats": {
+            "posts": "16",
+            "replies": "253",
+            "points": "1272"
+          },
+          "is_anonymous": false
+        },
+        "content": "stealth ai到底是干啥的。。。到处都是它却不知道他们有啥产品",
+        "timestamp": "",
+        "reactions": {
+          "emoji_reactions": [
+            {
+              "emoji": "🎯",
+              "count": 3
+            },
+            {
+              "emoji": "🎯",
+              "count": 3
+            }
+          ]
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#20741504"
+      },
+      {
+        "post_id": "rate_div_20741504",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#rate_div_20741504"
+      },
+      {
+        "post_id": "20741520",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "渝水流苏 发表于 2025-12-13 10:15\nstealth ai到底是干啥的。。。到处都是它却不知道他们有啥产品\nstealth不是一个公司而是一类公司",
+        "timestamp": "2025-12-13 10:26:40",
+        "reactions": {},
+        "quotes": [
+          "渝水流苏 发表于 2025-12-13 10:15\nstealth ai到底是干啥的。。。到处都是它却不知道他们有啥产品",
+          "渝水流苏 发表于 2025-12-13 10:15\nstealth ai到底是干啥的。。。到处都是它却不知道他们有啥产品"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#20741520"
+      },
+      {
+        "post_id": "rate_div_20741520",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#rate_div_20741520"
+      },
+      {
+        "post_id": "20741533",
+        "user": {
+          "username": "alanzz3112",
+          "user_id": "1268522",
+          "stats": {
+            "posts": "1",
+            "replies": "26",
+            "points": "113"
+          },
+          "is_anonymous": false
+        },
+        "content": "ChenLiu1996 发表于 2025-12-13 10:10\n没毛病 xai本来就是冲着100hr去的 75hr在xai真不算卷\n正解哈哈，我面试的时候expectation是进去需要每周100小时，后来听了面试组的情况心情大好",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "ChenLiu1996 发表于 2025-12-13 10:10\n没毛病 xai本来就是冲着100hr去的 75hr在xai真不算卷",
+          "ChenLiu1996 发表于 2025-12-13 10:10\n没毛病 xai本来就是冲着100hr去的 75hr在xai真不算卷"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#20741533"
+      },
+      {
+        "post_id": "rate_div_20741533",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#rate_div_20741533"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "OpenAI vs xAI vs Stealth|openai工资|一亩三分地🔑晒工资抖包袱版",
+    "extraction_time_ms": 111,
+    "thread_title": "[💰晒工资抖包袱]\nOpenAI vs xAI vs Stealth",
+    "thread_tags": [
+      "晒工资抖包袱",
+      "BayArea湾区",
+      "openai",
+      "xai"
+    ],
+    "total_replies": 26
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 7,
+    "original_link": {
+      "href": "thread-1157907-1-1.html",
+      "text": "OpenAI vs xAI vs Stealth",
+      "web_agent_id": "wa-198",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1157907-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:06.234312"
+  }
+}

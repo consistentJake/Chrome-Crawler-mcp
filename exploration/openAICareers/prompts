@@ -1,0 +1,16 @@
+can you move extract_job_content function out of '/home/zhenkai/personal/Projects/WebAgent/exploration/openAICareers/scrape_all_jobs.py' and put into a utils.py. then update it to extract the location correctly.        
+what and how to fix:
+1. for example take /home/zhenkai/personal/Projects/WebAgent/exploration/openAICareers/jobs/software-engineer-chatgpt-for-work.html as example input, 
+  given the content in the html, we can find this part:
+
+  ```
+  Software Engineer, ChatGPT for Work</h2><div class="mt-sm"><p class="col-span-12 text-primary-100 @md:col-span-8 @md:col-start-3 text-balance">Applied AI Engineering - Seattle and San Francisco</p></div></div></div></div><div class="flex justify-center"><a href="https://jobs.ashbyhq.com/openai/d8cbc2b8-9530-433b-ba18-6622bb79990e/application" 
+  ```
+
+  then `Software Engineer, ChatGPT for Work` is the title, `Seattle`,`San Francisco` are the two locations. https://jobs.ashbyhq.com/openai/d8cbc2b8-9530-433b-ba18-6622bb79990e/application is the application link.
+
+2.  why we initially can't correclty get the Responsibilities and Qualifications session in parsing html like exploration/openAICareers/jobs/full-stack-swe-data-acquisition-foundations.html
+3. write a new script so that we can reprocess the htmls under exploration/openAICareers/jobs/ folders, and regenerated the exploration/openAICareers/all_jobs_extracted.json files.
+4. update the exploration/openAICareers/job_filter.ipynb, the loading of the jobs after filter are taking a lots of time for GUI, debug why that happen and fix. 
+5. in the ipynb, update the filter to include location and team accordingly. 
+6. update the ipynb's skill filter list. here is the new list :exploration/openAICareers/extract_skill_lists.md

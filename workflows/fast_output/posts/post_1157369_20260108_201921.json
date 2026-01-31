@@ -1,0 +1,311 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html",
+  "timestamp": "2026-01-08T20:19:21.289573",
+  "item_count": 15,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20735014",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "求 75 Minute Coding 提示词：algorithmic coding interview in Python\n\n和 60 Mintue coding 提示词： simulation-style coding question\n\n\n\n\n有变形金刚全变种，applied 统记，分类器，RAG 系统设计，linear 带术。\n\n求留下联系方式我会联系你！同时也想问下有没有人想一起准备可以联系我。",
+        "timestamp": "2025-12-8 21:47:30",
+        "reactions": {
+          "likes": 1,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#20735014"
+      },
+      {
+        "post_id": "rate_div_20735014",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#rate_div_20735014"
+      },
+      {
+        "post_id": "20736789",
+        "user": {
+          "username": "yangc22",
+          "user_id": "241136",
+          "stats": {
+            "posts": "8",
+            "replies": "657",
+            "points": "3999"
+          },
+          "is_anonymous": false
+        },
+        "content": "楼主怎么联系？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#20736789"
+      },
+      {
+        "post_id": "rate_div_20736789",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#rate_div_20736789"
+      },
+      {
+        "post_id": "20737985",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "yangc22 发表于 2025-12-10 05:23\n楼主怎么联系？\npastamooon 在g",
+        "timestamp": "2025-12-10 19:23:15",
+        "reactions": {},
+        "quotes": [
+          "yangc22 发表于 2025-12-10 05:23\n楼主怎么联系？",
+          "yangc22 发表于 2025-12-10 05:23\n楼主怎么联系？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#20737985"
+      },
+      {
+        "post_id": "rate_div_20737985",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#rate_div_20737985"
+      },
+      {
+        "post_id": "20738163",
+        "user": {
+          "username": "openaiautopilot",
+          "user_id": "1185274",
+          "stats": {
+            "posts": "5",
+            "replies": "64",
+            "points": "505"
+          },
+          "is_anonymous": false
+        },
+        "content": "我有个小问题想问一下！我发现我的面试时长写的是 60 分钟，但我收到的 coding prompt 是 75 分钟的？你当时也是这种情况吗？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#20738163"
+      },
+      {
+        "post_id": "rate_div_20738163",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#rate_div_20738163"
+      },
+      {
+        "post_id": "20738218",
+        "user": {
+          "username": "Unknown",
+          "user_id": "175980",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "openaiautopilot 发表于 2025-12-10 21:30\n我有个小问题想问一下！我发现我的面试时长写的是 60 分钟，但我收到的 coding prompt 是 75 分钟的？你当 ...\n我还没面，但是聊的几个朋友说75分钟跟60分钟是一个题库就是有些时候follow up不一样。。所以75 分钟变60分钟应该正常吧。\n可以分享一下面的题目么，感谢感谢感谢！！",
+        "timestamp": "2025-12-10 22:11:45",
+        "reactions": {},
+        "quotes": [
+          "openaiautopilot 发表于 2025-12-10 21:30\n我有个小问题想问一下！我发现我的面试时长写的是 60 分钟，但我收到的 coding prompt 是 75 分钟的？你当 ...",
+          "openaiautopilot 发表于 2025-12-10 21:30\n我有个小问题想问一下！我发现我的面试时长写的是 60 分钟，但我收到的 coding prompt 是 75 分钟的？你当 ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#20738218"
+      },
+      {
+        "post_id": "rate_20738218",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#rate_20738218"
+      },
+      {
+        "post_id": "20742686",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "请问楼主面的是RE/MLE还是SWE？大米以加",
+        "timestamp": "2025-12-14 15:13:51",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#20742686"
+      },
+      {
+        "post_id": "rate_div_20742686",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#rate_div_20742686"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "开放爱60min,75min coding交流|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 111,
+    "thread_title": "[面试经验]\n开放爱60min, 75min coding交流",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 14
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 14,
+    "original_link": {
+      "href": "thread-1157369-1-1.html",
+      "text": "开放爱60min, 75min coding交流",
+      "web_agent_id": "wa-247",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1157369-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:21.289617"
+  }
+}

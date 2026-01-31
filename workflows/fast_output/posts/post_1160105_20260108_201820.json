@@ -1,0 +1,197 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1160105-1-1.html",
+  "timestamp": "2026-01-08T20:18:20.210227",
+  "item_count": 9,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1160105-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20770182",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "有几个题目在hello interview看起来问的挺频繁，design youtube， metric collector， 但是地里面经完全没看到，是因为location吗？比如是欧洲的题目，北美其实不会面？",
+        "timestamp": "4 天前",
+        "reactions": {
+          "likes": 0,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160105-1-1.html#20770182"
+      },
+      {
+        "post_id": "rate_div_20770182",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160105-1-1.html#rate_div_20770182"
+      },
+      {
+        "post_id": "20770585",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "都准备一下吧 万一面了没准备估计会后悔",
+        "timestamp": "4 天前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160105-1-1.html#20770585"
+      },
+      {
+        "post_id": "rate_div_20770585",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160105-1-1.html#rate_div_20770585"
+      },
+      {
+        "post_id": "20770429",
+        "user": {
+          "username": "tequilasunrise",
+          "user_id": "346361",
+          "stats": {
+            "posts": "0",
+            "replies": "133",
+            "points": "985"
+          },
+          "is_anonymous": false
+        },
+        "content": "hellointerview懈怠了，很久没有新的design题目了",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160105-1-1.html#20770429"
+      },
+      {
+        "post_id": "rate_div_20770429",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160105-1-1.html#rate_div_20770429"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160105-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160105-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "为啥hello interview 上有一些OpenAI的SD的题目地里面经没有|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 110,
+    "thread_title": "[面试经验]\n为啥hello interview 上有一些OpenAI的SD的题目地里面经没有",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 8
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 8,
+    "original_link": {
+      "href": "thread-1160105-1-1.html",
+      "text": "为啥hello interview 上有一些OpenAI的SD的题目地里面经没有",
+      "web_agent_id": "wa-202",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1160105-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:20.210267"
+  }
+}

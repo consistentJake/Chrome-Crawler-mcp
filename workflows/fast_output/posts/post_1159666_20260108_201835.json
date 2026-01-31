@@ -1,0 +1,125 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1159666-1-1.html",
+  "timestamp": "2026-01-08T20:18:35.272003",
+  "item_count": 5,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1159666-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20764510",
+        "user": {
+          "username": "chuckhelios",
+          "user_id": "153327",
+          "stats": {
+            "posts": "9",
+            "replies": "78",
+            "points": "610"
+          },
+          "is_anonymous": false
+        },
+        "content": "楼主有一些general coding跟ml coding的面经，想交流下image classifier，跟text classifier不一样\n看地里是说是一个模型做 image的 分类。 image 数据要进行额外处理 数据很脏。 还要分析image的 脏的rate等等。 follow up是 找出数据的问题 然后改进。",
+        "timestamp": "",
+        "reactions": {
+          "likes": 2,
+          "dislikes": 1
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159666-1-1.html#20764510"
+      },
+      {
+        "post_id": "rate_20764510",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159666-1-1.html#rate_20764510"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159666-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159666-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "openai面经|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 110,
+    "thread_title": "[面试经验]\nopenai面经",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 4
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 15,
+    "original_link": {
+      "href": "thread-1159666-1-1.html",
+      "text": "openai面经",
+      "web_agent_id": "wa-251",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1159666-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:35.272043"
+  }
+}

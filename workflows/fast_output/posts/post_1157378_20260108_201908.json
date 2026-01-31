@@ -1,0 +1,503 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html",
+  "timestamp": "2026-01-08T20:19:08.378425",
+  "item_count": 25,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20735138",
+        "user": {
+          "username": "Unknown",
+          "user_id": "95740",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "第一题宝可梦对战\n\n写起来不难。要练的话可以思考一下怎么implement一个宝可梦对战的简易python版本。 小tips就是熟悉一下python的fstring，打log会很方便。会问到比如技能威力不一样咋办，技能属性克制怎么搞之类的。\n\n设计题\n一个github action，主要会focus在怎么schedule，worker怎么setup，vfs怎么mount，怎么做snapshot failover，怎么stream log。",
+        "timestamp": "2025-12-8 23:02:37",
+        "reactions": {
+          "likes": 3,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#20735138"
+      },
+      {
+        "post_id": "rate_20735138",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#rate_20735138"
+      },
+      {
+        "post_id": "20736291",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "直眉瞪眼的遥控器 发表于 2025-12-09 19:16:28\n能否解释一下什么是 属性，克制表 和技能威力？谢谢了可以谷歌搜一下宝可梦对战属性克制之类的，讲的肯定比我回帖子详细。题目和宝可梦的对战系统基本上是一模一样的",
+        "timestamp": "2025-12-9 19:44:11",
+        "reactions": {},
+        "quotes": [
+          "直眉瞪眼的遥控器 发表于 2025-12-09 19:16:28\n能否解释一下什么是 属性，克制表 和技能威力？谢谢了",
+          "直眉瞪眼的遥控器 发表于 2025-12-09 19:16:28\n能否解释一下什么是 属性，克制表 和技能威力？谢谢了"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#20736291"
+      },
+      {
+        "post_id": "rate_div_20736291",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#rate_div_20736291"
+      },
+      {
+        "post_id": "20735157",
+        "user": {
+          "username": "jerrygenius",
+          "user_id": "217217",
+          "stats": {
+            "posts": "12",
+            "replies": "238",
+            "points": "613"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-08 23:06:19\n所以follow up 有几问？ 第三问能不能分享一下细节。我记得第二问加上属性，然后会给个克制表。第三问加上技能威力，要求每一个move都得是局部最优的。\n\n具体是先给技能数值还是先给属性稍微有点忘了。但最后是有属性有数值。",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-08 23:06:19\n所以follow up 有几问？ 第三问能不能分享一下细节。",
+          "匿名用户 发表于 2025-12-08 23:06:19\n所以follow up 有几问？ 第三问能不能分享一下细节。"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#20735157"
+      },
+      {
+        "post_id": "rate_20735157",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#rate_20735157"
+      },
+      {
+        "post_id": "20738466",
+        "user": {
+          "username": "yangc22",
+          "user_id": "241136",
+          "stats": {
+            "posts": "8",
+            "replies": "657",
+            "points": "3999"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-10 11:24\n其实没什么算法要求，每次攻击的时候你就用calculate_dmg(ability, pokemon) 把所有的skill都遍历一遍就可 ...\n感谢回复，再请问就是每次攻击的时候，如果说A队的monster 攻击B队的monster，attack > remaining_life 那额外的攻击值，是会传递给B队的下一个monster吗？还是这种情况也只是B队当前的monster就挂了本回合就结束了。还有如果B队当前的monster挂了，那此回合B队的monster还有攻击的机会吗？如果有，是当前挂了的monster进行攻击，还是下一个递补进来的进行攻击？已经再次加米了感谢！",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-10 11:24\n其实没什么算法要求，每次攻击的时候你就用calculate_dmg(ability, pokemon) 把所有的skill都遍历一遍就可 ...",
+          "匿名用户 发表于 2025-12-10 11:24\n其实没什么算法要求，每次攻击的时候你就用calculate_dmg(ability, pokemon) 把所有的skill都遍历一遍就可 ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#20738466"
+      },
+      {
+        "post_id": "rate_div_20738466",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#rate_div_20738466"
+      },
+      {
+        "post_id": "20735143",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "请问楼主这个帖子描述的准确吗？ 🔗 www.1point3acres.com\n所以每一round 都会是 a 攻击b，b不管死没死，都会反击a 吗？  感谢 🙏， 求楼主分享更多细节。\n\n以加米",
+        "timestamp": "2025-12-8 23:05:20",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#20735143"
+      },
+      {
+        "post_id": "rate_div_20735143",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#rate_div_20735143"
+      },
+      {
+        "post_id": "20735147",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "所以follow up 有几问？ 第三问能不能分享一下细节。",
+        "timestamp": "2025-12-8 23:06:19",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#20735147"
+      },
+      {
+        "post_id": "rate_div_20735147",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#rate_div_20735147"
+      },
+      {
+        "post_id": "20735153",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-08 23:05:20\n请问楼主这个帖子描述的准确吗？ https://www.1point3acres.com/bbs/thread-1156671-1-1.html\n所以每一ro具体细节忘记了，一周前面试的。但我记得题干写的蛮清楚的，第一pa很快就能过，就是打log打的有点烦。它要求一定要每一步都print log in some format",
+        "timestamp": "2025-12-8 23:09:21",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-08 23:05:20\n请问楼主这个帖子描述的准确吗？ https://www.1point3acres.com/bbs/thread-1156671-1-1.html\n所以每一ro",
+          "匿名用户 发表于 2025-12-08 23:05:20\n请问楼主这个帖子描述的准确吗？ https://www.1point3acres.com/bbs/thread-1156671-1-1.html\n所以每一ro"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#20735153"
+      },
+      {
+        "post_id": "rate_div_20735153",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#rate_div_20735153"
+      },
+      {
+        "post_id": "20736252",
+        "user": {
+          "username": "直眉瞪眼的遥控器",
+          "user_id": "1119998",
+          "stats": {
+            "posts": "8",
+            "replies": "168",
+            "points": "496"
+          },
+          "is_anonymous": false
+        },
+        "content": "jerrygenius 发表于 2025-12-8 23:11\n我记得第二问加上属性，然后会给个克制表。第三问加上技能威力，要求每一个move都得是局部最优的。\n\n具体 ...\n能否解释一下什么是 属性，克制表 和技能威力？谢谢了",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "jerrygenius 发表于 2025-12-8 23:11\n我记得第二问加上属性，然后会给个克制表。第三问加上技能威力，要求每一个move都得是局部最优的。\n\n具体 ...",
+          "jerrygenius 发表于 2025-12-8 23:11\n我记得第二问加上属性，然后会给个克制表。第三问加上技能威力，要求每一个move都得是局部最优的。\n\n具体 ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#20736252"
+      },
+      {
+        "post_id": "rate_div_20736252",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#rate_div_20736252"
+      },
+      {
+        "post_id": "20736253",
+        "user": {
+          "username": "直眉瞪眼的遥控器",
+          "user_id": "1119998",
+          "stats": {
+            "posts": "8",
+            "replies": "168",
+            "points": "496"
+          },
+          "is_anonymous": false
+        },
+        "content": "jerrygenius 发表于 2025-12-8 23:11\n我记得第二问加上属性，然后会给个克制表。第三问加上技能威力，要求每一个move都得是局部最优的。\n\n具体 ...\n能否解释一下什么是 属性，克制表 和技能威力？谢谢了",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "jerrygenius 发表于 2025-12-8 23:11\n我记得第二问加上属性，然后会给个克制表。第三问加上技能威力，要求每一个move都得是局部最优的。\n\n具体 ...",
+          "jerrygenius 发表于 2025-12-8 23:11\n我记得第二问加上属性，然后会给个克制表。第三问加上技能威力，要求每一个move都得是局部最优的。\n\n具体 ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#20736253"
+      },
+      {
+        "post_id": "rate_div_20736253",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#rate_div_20736253"
+      },
+      {
+        "post_id": "20736536",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "这题给我这种不会打游戏的人，都得花好长时间去理解LOL .\n\n感谢楼主！",
+        "timestamp": "2025-12-9 22:38:03",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#20736536"
+      },
+      {
+        "post_id": "rate_div_20736536",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#rate_div_20736536"
+      },
+      {
+        "post_id": "20736786",
+        "user": {
+          "username": "yangc22",
+          "user_id": "241136",
+          "stats": {
+            "posts": "8",
+            "replies": "657",
+            "points": "3999"
+          },
+          "is_anonymous": false
+        },
+        "content": "谢谢楼主分享，宝可曼对战就是最近的怪兽对战？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#20736786"
+      },
+      {
+        "post_id": "rate_div_20736786",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#rate_div_20736786"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "openai 店面|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 112,
+    "thread_title": "[面试经验]\nopenai 店面",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 24
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 8,
+    "original_link": {
+      "href": "thread-1157378-1-1.html",
+      "text": "openai 店面",
+      "web_agent_id": "wa-206",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1157378-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:08.378472"
+  }
+}

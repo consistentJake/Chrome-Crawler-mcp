@@ -1,0 +1,308 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html",
+  "timestamp": "2026-01-08T20:18:07.351128",
+  "item_count": 15,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20776430",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "75-minute \n\nin-memory data structures,\nmaintaining state\n\ndesigning simple algorithms, managing state\n\n请大家猜猜这是哪道leetcode题？也有其他题可分享",
+        "timestamp": "8 小时前",
+        "reactions": {
+          "likes": 1,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#20776430"
+      },
+      {
+        "post_id": "rate_div_20776430",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#rate_div_20776430"
+      },
+      {
+        "post_id": "20776456",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "求问这两道都是75 分钟吗",
+        "timestamp": "8 小时前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#20776456"
+      },
+      {
+        "post_id": "rate_div_20776456",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#rate_div_20776456"
+      },
+      {
+        "post_id": "20776472",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "上面是一道题75分钟，你知道是啥题吗这个？",
+        "timestamp": "7 小时前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#20776472"
+      },
+      {
+        "post_id": "rate_div_20776472",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#rate_div_20776472"
+      },
+      {
+        "post_id": "20776537",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "可能是malloc?",
+        "timestamp": "7 小时前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#20776537"
+      },
+      {
+        "post_id": "rate_div_20776537",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#rate_div_20776537"
+      },
+      {
+        "post_id": "20776544",
+        "user": {
+          "username": "发财火龙果",
+          "user_id": "1178804",
+          "stats": {
+            "posts": "7",
+            "replies": "38",
+            "points": "604"
+          },
+          "is_anonymous": false
+        },
+        "content": "听起来像是这道：\nYou need to build a simple in-memory database. Think of it as a simplified version of SQL. You will build this system step-by-step. It needs to handle creating tables, adding data, and finding data. You also need to support filtering (WHERE) and sorting (ORDER BY).\n我有原题，可以交换 whyladida 艾特 gmail.com\n\nalso请问博主面的什么岗位？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#20776544"
+      },
+      {
+        "post_id": "rate_div_20776544",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#rate_div_20776544"
+      },
+      {
+        "post_id": "20776613",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "发财火龙果 发表于 2026-1-8 12:55\n听起来像是这道：\nYou need to build a simple in-memory database. Think of it as a simplified version ...\n邮件已发",
+        "timestamp": "6 小时前",
+        "reactions": {},
+        "quotes": [
+          "发财火龙果 发表于 2026-1-8 12:55\n听起来像是这道：\nYou need to build a simple in-memory database. Think of it as a simplified version ...",
+          "发财火龙果 发表于 2026-1-8 12:55\n听起来像是这道：\nYou need to build a simple in-memory database. Think of it as a simplified version ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#20776613"
+      },
+      {
+        "post_id": "rate_div_20776613",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#rate_div_20776613"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "openai recruiter prompt,guess which question?|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 111,
+    "thread_title": "[面试经验]\nopenai recruiter prompt, guess which question?",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 14
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 2,
+    "original_link": {
+      "href": "thread-1160573-1-1.html",
+      "text": "openai recruiter prompt, guess which question?",
+      "web_agent_id": "wa-163",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1160573-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:07.351233"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1159627-1-1.html",
+  "timestamp": "2026-01-08T20:18:22.348180",
+  "item_count": 7,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1159627-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20764017",
+        "user": {
+          "username": "adwith",
+          "user_id": "399719",
+          "stats": {
+            "posts": "8",
+            "replies": "47",
+            "points": "204"
+          },
+          "is_anonymous": false
+        },
+        "content": "求教OpenAI的朋友们PERM顺利吗？最近刚收到offer但PD是22年。",
+        "timestamp": "",
+        "reactions": {
+          "likes": 3,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159627-1-1.html#20764017"
+      },
+      {
+        "post_id": "rate_div_20764017",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159627-1-1.html#rate_div_20764017"
+      },
+      {
+        "post_id": "20770453",
+        "user": {
+          "username": "jinnyatw34",
+          "user_id": "250424",
+          "stats": {
+            "posts": "14",
+            "replies": "132",
+            "points": "599"
+          },
+          "is_anonymous": false
+        },
+        "content": "同问一下",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159627-1-1.html#20770453"
+      },
+      {
+        "post_id": "rate_div_20770453",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159627-1-1.html#rate_div_20770453"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159627-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159627-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "OpenAI的朋友们PERM顺利吗|openai求职讨论|一亩三分地求职（非面经）版",
+    "extraction_time_ms": 110,
+    "thread_title": "[找工就业]\n[工作信息]\nOpenAI的朋友们PERM顺利吗",
+    "thread_tags": [
+      "求职（非面经）",
+      "openai"
+    ],
+    "total_replies": 6
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 9,
+    "original_link": {
+      "href": "thread-1159627-1-1.html",
+      "text": "OpenAI的朋友们PERM顺利吗",
+      "web_agent_id": "wa-208",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1159627-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:22.348233"
+  }
+}

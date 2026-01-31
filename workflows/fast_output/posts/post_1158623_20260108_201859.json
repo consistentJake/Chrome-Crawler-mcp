@@ -1,0 +1,314 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html",
+  "timestamp": "2026-01-08T20:18:59.759915",
+  "item_count": 15,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20750367",
+        "user": {
+          "username": "jobmajia1234",
+          "user_id": "1192164",
+          "stats": {
+            "posts": "1",
+            "replies": "6",
+            "points": "103"
+          },
+          "is_anonymous": false
+        },
+        "content": "以下内容需要积分高于 99 您已经可以浏览\n\n\nSD： 设计slack\n\ncoding： 玩具语言 node 和function那道题， 地里面经提到过\n\n\n\n\n求米～～～～",
+        "timestamp": "",
+        "reactions": {
+          "likes": 0,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#20750367"
+      },
+      {
+        "post_id": "rate_20750367",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#rate_20750367"
+      },
+      {
+        "post_id": "20752909",
+        "user": {
+          "username": "发财火龙果",
+          "user_id": "1178804",
+          "stats": {
+            "posts": "7",
+            "replies": "38",
+            "points": "604"
+          },
+          "is_anonymous": false
+        },
+        "content": "请问function是哪道题呀？\n已加米",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#20752909"
+      },
+      {
+        "post_id": "rate_div_20752909",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#rate_div_20752909"
+      },
+      {
+        "post_id": "20755411",
+        "user": {
+          "username": "jobmajia1234",
+          "user_id": "1192164",
+          "stats": {
+            "posts": "1",
+            "replies": "6",
+            "points": "103"
+          },
+          "is_anonymous": false
+        },
+        "content": "发财火龙果 发表于 2025-12-20 22:20\n请问function是哪道题呀？\n已加米\n就是这个帖子里讨论的这道 🔗 www.1point3acres.com",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "发财火龙果 发表于 2025-12-20 22:20\n请问function是哪道题呀？\n已加米",
+          "发财火龙果 发表于 2025-12-20 22:20\n请问function是哪道题呀？\n已加米"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#20755411"
+      },
+      {
+        "post_id": "rate_div_20755411",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#rate_div_20755411"
+      },
+      {
+        "post_id": "20756479",
+        "user": {
+          "username": "发财火龙果",
+          "user_id": "1178804",
+          "stats": {
+            "posts": "7",
+            "replies": "38",
+            "points": "604"
+          },
+          "is_anonymous": false
+        },
+        "content": "jobmajia1234 发表于 2025-12-23 00:16\n就是这个帖子里讨论的这道 https://www.1point3acres.com/bbs/thread-1158706-1-1.html\n感谢！",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "jobmajia1234 发表于 2025-12-23 00:16\n就是这个帖子里讨论的这道 https://www.1point3acres.com/bbs/thread-1158706-1-1.html",
+          "jobmajia1234 发表于 2025-12-23 00:16\n就是这个帖子里讨论的这道 https://www.1point3acres.com/bbs/thread-1158706-1-1.html"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#20756479"
+      },
+      {
+        "post_id": "rate_div_20756479",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#rate_div_20756479"
+      },
+      {
+        "post_id": "20760977",
+        "user": {
+          "username": "mzymarcus",
+          "user_id": "171860",
+          "stats": {
+            "posts": "7",
+            "replies": "45",
+            "points": "210"
+          },
+          "is_anonymous": false
+        },
+        "content": "请问楼主system design也会给prompt吗？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#20760977"
+      },
+      {
+        "post_id": "rate_div_20760977",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#rate_div_20760977"
+      },
+      {
+        "post_id": "20769435",
+        "user": {
+          "username": "jobmajia1234",
+          "user_id": "1192164",
+          "stats": {
+            "posts": "1",
+            "replies": "6",
+            "points": "103"
+          },
+          "is_anonymous": false
+        },
+        "content": "mzymarcus 发表于 2025-12-27 22:58\n请问楼主system design也会给prompt吗？\n没有给prompt",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "mzymarcus 发表于 2025-12-27 22:58\n请问楼主system design也会给prompt吗？",
+          "mzymarcus 发表于 2025-12-27 22:58\n请问楼主system design也会给prompt吗？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#20769435"
+      },
+      {
+        "post_id": "rate_div_20769435",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#rate_div_20769435"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "开放爱店面|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 110,
+    "thread_title": "[面试经验]\n开放爱店面",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 14
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 4,
+    "original_link": {
+      "href": "thread-1158623-1-1.html",
+      "text": "开放爱店面",
+      "web_agent_id": "wa-176",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1158623-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:59.759955"
+  }
+}

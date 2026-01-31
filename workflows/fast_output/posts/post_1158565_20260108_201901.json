@@ -1,0 +1,458 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html",
+  "timestamp": "2026-01-08T20:19:01.924262",
+  "item_count": 23,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20749709",
+        "user": {
+          "username": "Unknown",
+          "user_id": "191858",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "coding题基本都准备过，幸运的是遇到了准备过的题目所以写的很顺，我遇到的是chatbot那题\n\n但是估计是跪在sd了，至少sd肯定让我跪了，先发一个好心人收集的sd高频题目描述帖子供大家参考，但里面没有我遇到的题目。希望大家不要忽略sd的准备啊啊啊\n\n🔗 www.1point3acres.com\n\n我当时准备的时候没有好好去研究怎么准备sd，导致面试的时候逻辑说不太顺畅，我遇到的是这一题，不知道有没有别人见到过\n\n以下内容需要积分高于 200 您已经可以浏览\nDesign a calendar like apple calendar，用户要能够创建event，然后有day，month，year的view，之后的followup说要support multi device，就是一个设备创建了以后要同步到另一个设备\n\n\n看地理讨论说可能明年会有新的题目？感觉他家不好好准备的话在面试里真的很吃亏，要是遇到新题可以说是地狱难度了。",
+        "timestamp": "2025-12-18 14:07:23",
+        "reactions": {
+          "likes": 1,
+          "dislikes": 2
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#20749709"
+      },
+      {
+        "post_id": "rate_20749709",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#rate_20749709"
+      },
+      {
+        "post_id": "20754639",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-18 17:34\n请问chatbot 那题总共有几问？ 第一问是根据output 改code，第二问是需要interface refactory 这样吗？之后 ...\ncode refactoring+follow up 支持multi bots multi channel，就这样",
+        "timestamp": "2025-12-22 11:27:10",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-18 17:34\n请问chatbot 那题总共有几问？ 第一问是根据output 改code，第二问是需要interface refactory 这样吗？之后 ...",
+          "匿名用户 发表于 2025-12-18 17:34\n请问chatbot 那题总共有几问？ 第一问是根据output 改code，第二问是需要interface refactory 这样吗？之后 ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#20754639"
+      },
+      {
+        "post_id": "rate_div_20754639",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#rate_div_20754639"
+      },
+      {
+        "post_id": "20749749",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "请问chatbot 那题总共有几问？ 第一问是根据output 改code，第二问是需要interface refactory 这样吗？之后有没有其他的问题？ 感谢🙏",
+        "timestamp": "2025-12-18 14:34:06",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#20749749"
+      },
+      {
+        "post_id": "rate_div_20749749",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#rate_div_20749749"
+      },
+      {
+        "post_id": "20749958",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "楼主这是什么方向？ mobile还是backend？",
+        "timestamp": "2025-12-18 16:45:27",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#20749958"
+      },
+      {
+        "post_id": "rate_div_20749958",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#rate_div_20749958"
+      },
+      {
+        "post_id": "20750211",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-19 06:34\n请问chatbot 那题总共有几问？ 第一问是根据output 改code，第二问是需要interface refactory 这样吗？之后 ...\n请问在哪里可以找到这个题的链接呀？",
+        "timestamp": "2025-12-18 19:50:00",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-19 06:34\n请问chatbot 那题总共有几问？ 第一问是根据output 改code，第二问是需要interface refactory 这样吗？之后 ...",
+          "匿名用户 发表于 2025-12-19 06:34\n请问chatbot 那题总共有几问？ 第一问是根据output 改code，第二问是需要interface refactory 这样吗？之后 ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#20750211"
+      },
+      {
+        "post_id": "rate_div_20750211",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#rate_div_20750211"
+      },
+      {
+        "post_id": "20750525",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "请问这个面试是偏 full stack 还是 mobile 方向的？",
+        "timestamp": "2025-12-19 01:10:27",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#20750525"
+      },
+      {
+        "post_id": "rate_div_20750525",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#rate_div_20750525"
+      },
+      {
+        "post_id": "20760911",
+        "user": {
+          "username": "jocelyna",
+          "user_id": "93025",
+          "stats": {
+            "posts": "30",
+            "replies": "430",
+            "points": "559"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-19 01:10\n请问这个面试是偏 full stack 还是 mobile 方向的？\n+1，同问楼主面试的是backend吗？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-19 01:10\n请问这个面试是偏 full stack 还是 mobile 方向的？",
+          "匿名用户 发表于 2025-12-19 01:10\n请问这个面试是偏 full stack 还是 mobile 方向的？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#20760911"
+      },
+      {
+        "post_id": "rate_div_20760911",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#rate_div_20760911"
+      },
+      {
+        "post_id": "20761424",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "马上明年初要面 真的要换题库吗？",
+        "timestamp": "2025-12-28 12:04:03",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#20761424"
+      },
+      {
+        "post_id": "rate_div_20761424",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#rate_div_20761424"
+      },
+      {
+        "post_id": "20765493",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "能否详细描述一下Chatbot这题好吗？",
+        "timestamp": "2025-12-31 18:48:22",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#20765493"
+      },
+      {
+        "post_id": "rate_div_20765493",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#rate_div_20765493"
+      },
+      {
+        "post_id": "20767741",
+        "user": {
+          "username": "狗家老G",
+          "user_id": "724987",
+          "stats": {
+            "posts": "24",
+            "replies": "352",
+            "points": "589"
+          },
+          "is_anonymous": false
+        },
+        "content": "`Design a calendar like apple calendar，用户要能够创建event，然后有day，month，year的view，之后的followup说要support multi device，就是一个设备创建了以后要同步到另一个设备`\n\n这个是问题吗？感觉这就是小app的设计问题\n没有ai的东西啊",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#20767741"
+      },
+      {
+        "post_id": "rate_div_20767741",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#rate_div_20767741"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "爱开放店面挂经|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 111,
+    "thread_title": "[面试经验]\n爱开放店面挂经",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 22
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 5,
+    "original_link": {
+      "href": "thread-1158565-1-1.html",
+      "text": "爱开放店面挂经",
+      "web_agent_id": "wa-184",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1158565-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:01.924319"
+  }
+}

@@ -333,6 +333,10 @@ class MCPChromeClient:
         """
         Simulate keyboard events in the browser.
 
+        NOTE: This uses JavaScript dispatchEvent which creates untrusted events
+        (isTrusted: false). Modern React apps may ignore these for form submissions.
+        For form submissions, use type_into_element_and_submit() instead.
+
         Args:
             keys: Keys to simulate (e.g., "Enter", "Ctrl+C", "A,B,C" for sequence)
             selector: CSS selector for the element to send keyboard events to (optional)
@@ -344,6 +348,303 @@ class MCPChromeClient:
         if delay > 0:
             params["delay"] = delay
         return self._make_request("chrome_keyboard", params)
+
+    def type_into_element(
+        self,
+        selector: str,
+        text: str,
+        clear_first: bool = True
+    ) -> Dict[str, Any]:
+        """
+        Type text into an input element using chrome-mcp's fill_or_select tool.
+
+        This method uses the native chrome-mcp tool to set input values,
+        which is more reliable and compatible with React and other frameworks.
+
+        Args:
+            selector: CSS selector for the input element
+            text: Text to type into the element
+            clear_first: Clear existing value before typing (default: True)
+
+        Returns:
+            Result dictionary with status
+        """
+        # If not clearing first, need to get current value and append
+        if not clear_first:
+            # Get current value using JavaScript
+            get_value_script = f"""
+            (function() {{
+                var element = document.querySelector({json.dumps(selector)});
+                return element ? element.value : '';
+            }})()
+            """
+            current_value_result = self.browser_evaluate(f"() => {{ {get_value_script} }}")
+
+            # Extract current value from nested result structure
+            current_value = ""
+            if current_value_result.get("status") == "success":
+                result_data = current_value_result.get("result", {})
+                if isinstance(result_data, dict) and "content" in result_data:
+                    content_list = result_data.get("content", [])
+                    if isinstance(content_list, list) and len(content_list) > 0:
+                        text_content = content_list[0].get("text", "")
+                        # Parse the JSON result from "### Result\n..." format
+                        try:
+                            import re
+                            match = re.search(r'### Result\n"?([^"]*)"?', text_content)
+                            if match:
+                                current_value = match.group(1)
+                        except:
+                            pass
+
+            # Append new text to current value
+            text = current_value + text
+
+        # Use chrome-mcp's fill_or_select tool directly
+        return self._make_request("chrome_fill_or_select", {
+            "selector": selector,
+            "value": text
+        })
+
+    def type_into_element_and_submit(
+        self,
+        selector: str,
+        text: str,
+        submit_method: str = "enter",
+        submit_selector: str = None,
+        clear_first: bool = True
+    ) -> Dict[str, Any]:
+        """
+        Type text into an input element and submit the form.
+
+        This method works around the untrusted event issue by:
+        1. Setting the input value using React-compatible JavaScript
+        2. Submitting the form via form.submit(), button click, or Enter simulation
+
+        Args:
+            selector: CSS selector for the input element
+            text: Text to type into the element
+            submit_method: How to submit - "enter", "form", or "button" (default: "enter")
+            submit_selector: CSS selector for submit button (required if submit_method is "button")
+            clear_first: Clear existing value before typing (default: True)
+
+        Returns:
+            Result dictionary with status
+        """
+        # First, type the text using React-compatible method
+        type_result = self.type_into_element(selector, text, clear_first)
+        print(f"Type result: {type_result}")
+
+        # Check if typing was successful
+        if type_result.get("status") != "success":
+            return type_result
+
+        # Small delay to let React update
+        time.sleep(0.1)
+
+        # Now submit based on the method
+        if submit_method == "form":
+            # Find the form and submit it directly
+            submit_script = f"""
+            (function() {{
+                var selector = {json.dumps(selector)};
+                var element = document.querySelector(selector);
+                if (!element) {{
+                    return {{ success: false, error: 'Element not found' }};
+                }}
+
+                // Find the parent form
+                var form = element.closest('form');
+                if (form) {{
+                    form.submit();
+                    return {{ success: true, method: 'form.submit()' }};
+                }} else {{
+                    return {{ success: false, error: 'No parent form found' }};
+                }}
+            }})()
+            """
+            return self.browser_evaluate(f"() => {{ {submit_script} }}")
+
+        elif submit_method == "button":
+            if not submit_selector:
+                return {"status": "error", "message": "submit_selector required for button method"}
+            # Click the submit button
+            return self.chrome_click_element(selector=submit_selector, wait_for_navigation=True)
+
+        elif submit_method == "enter":
+            # Simulate Enter key press on the form
+            # This approach triggers the form's submit event handler
+            submit_script = f"""
+            (function() {{
+                var selector = {json.dumps(selector)};
+                var element = document.querySelector(selector);
+                if (!element) {{
+                    return {{ success: false, error: 'Element not found' }};
+                }}
+
+                // Try to find a submit button in the form and click it
+                var form = element.closest('form');
+                if (form) {{
+                    var submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
+                    if (submitBtn) {{
+                        submitBtn.click();
+                        return {{ success: true, method: 'submit button click' }};
+                    }}
+
+                    // No explicit submit button, try form.submit()
+                    form.submit();
+                    return {{ success: true, method: 'form.submit()' }};
+                }}
+
+                // No form found - try simulating Enter key with form submission
+                // Create and dispatch a submit-like keyboard event
+                var enterEvent = new KeyboardEvent('keydown', {{
+                    key: 'Enter',
+                    code: 'Enter',
+                    keyCode: 13,
+                    which: 13,
+                    bubbles: true,
+                    cancelable: true
+                }});
+                element.dispatchEvent(enterEvent);
+
+                return {{ success: true, method: 'enter key dispatch (may not work for React apps)' }};
+            }})()
+            """
+            return self.browser_evaluate(f"() => {{ {submit_script} }}")
+        else:
+            return {"status": "error", "message": f"Unknown submit_method: {submit_method}"}
+
+    def submit_form(self, form_selector: str = None, input_selector: str = None) -> Dict[str, Any]:
+        """
+        Submit a form element.
+
+        Args:
+            form_selector: CSS selector for the form element
+            input_selector: CSS selector for an input inside the form (form will be found via .closest())
+
+        Returns:
+            Result dictionary with status
+        """
+        if not form_selector and not input_selector:
+            return {"status": "error", "message": "Either form_selector or input_selector is required"}
+
+        if form_selector:
+            script = f"""
+            (function() {{
+                var form = document.querySelector({json.dumps(form_selector)});
+                if (!form) {{
+                    return {{ success: false, error: 'Form not found: ' + {json.dumps(form_selector)} }};
+                }}
+                form.submit();
+                return {{ success: true, method: 'form.submit()' }};
+            }})()
+            """
+        else:
+            script = f"""
+            (function() {{
+                var element = document.querySelector({json.dumps(input_selector)});
+                if (!element) {{
+                    return {{ success: false, error: 'Element not found: ' + {json.dumps(input_selector)} }};
+                }}
+                var form = element.closest('form');
+                if (!form) {{
+                    return {{ success: false, error: 'No parent form found' }};
+                }}
+                form.submit();
+                return {{ success: true, method: 'form.submit()' }};
+            }})()
+            """
+
+        return self.browser_evaluate(f"() => {{ {script} }}")
+
+    def search_on_site(
+        self,
+        query: str,
+        site: str = None,
+        search_url_template: str = None
+    ) -> Dict[str, Any]:
+        """
+        Perform a search on the current site by navigating directly to the search URL.
+
+        This is the most reliable way to search on SPAs (Single Page Applications)
+        like X.com, as they often don't use traditional form submissions.
+
+        Args:
+            query: The search query
+            site: Site name (e.g., "x.com", "twitter.com", "google.com")
+                  If not provided, will attempt to detect from current URL
+            search_url_template: Custom URL template with {query} placeholder
+                  If not provided, will use known patterns for common sites
+
+        Returns:
+            Result dictionary with status
+
+        Examples:
+            search_on_site("gold", site="x.com")  # -> https://x.com/search?q=gold
+            search_on_site("python", site="google.com")  # -> https://google.com/search?q=python
+            search_on_site("test", search_url_template="https://example.com/s?q={query}")
+        """
+        import urllib.parse
+
+        # URL-encode the query
+        encoded_query = urllib.parse.quote(query)
+
+        # Known search URL patterns
+        site_patterns = {
+            "x.com": "https://x.com/search?q={query}",
+            "twitter.com": "https://x.com/search?q={query}",
+            "google.com": "https://www.google.com/search?q={query}",
+            "github.com": "https://github.com/search?q={query}",
+            "youtube.com": "https://www.youtube.com/results?search_query={query}",
+            "reddit.com": "https://www.reddit.com/search/?q={query}",
+            "stackoverflow.com": "https://stackoverflow.com/search?q={query}",
+            "amazon.com": "https://www.amazon.com/s?k={query}",
+            "bing.com": "https://www.bing.com/search?q={query}",
+            "duckduckgo.com": "https://duckduckgo.com/?q={query}",
+        }
+
+        # Determine the search URL
+        if search_url_template:
+            search_url = search_url_template.replace("{query}", encoded_query)
+        elif site and site.lower() in site_patterns:
+            search_url = site_patterns[site.lower()].replace("{query}", encoded_query)
+        else:
+            # Try to detect from current URL
+            content_result = self.chrome_get_web_content(text_content=True)
+            try:
+                result_data = content_result.get("result", {})
+                if isinstance(result_data, dict) and "content" in result_data:
+                    content_list = result_data.get("content", [])
+                    if content_list:
+                        text_data = content_list[0].get("text", "{}")
+                        parsed = json.loads(text_data)
+                        current_url = parsed.get("url", "")
+
+                        # Extract domain from URL
+                        from urllib.parse import urlparse
+                        parsed_url = urlparse(current_url)
+                        domain = parsed_url.netloc.lower()
+
+                        # Remove www. prefix for matching
+                        if domain.startswith("www."):
+                            domain = domain[4:]
+
+                        if domain in site_patterns:
+                            search_url = site_patterns[domain].replace("{query}", encoded_query)
+                        else:
+                            return {
+                                "status": "error",
+                                "message": f"Unknown site: {domain}. Please provide search_url_template parameter."
+                            }
+            except Exception as e:
+                return {
+                    "status": "error",
+                    "message": f"Failed to detect site: {str(e)}. Please provide site or search_url_template parameter."
+                }
+
+        # Navigate to the search URL
+        return self.chrome_navigate(url=search_url)
 
     # Network and Requests
 
@@ -645,22 +946,25 @@ class MCPChromeClient:
 
         # Wrap the script to store result in a hidden element
         # chrome_inject_script doesn't return JS results, so we store them in DOM
+        # Use a <div> element (not <script>) as it's easier to query via chrome_get_web_content
         wrapped_script = f"""
         (function() {{
             try {{
                 var result = (function() {{ {js_code} }})();
-                // Store result in a hidden element
-                var el = document.createElement('script');
+                // Store result in a hidden div element
+                var el = document.createElement('div');
                 el.id = '{result_id}';
-                el.type = 'application/json';
+                el.style.display = 'none';
+                el.setAttribute('data-mcp-result', 'true');
                 el.textContent = JSON.stringify(result);
-                document.head.appendChild(el);
+                document.body.appendChild(el);
             }} catch (e) {{
-                var el = document.createElement('script');
+                var el = document.createElement('div');
                 el.id = '{result_id}';
-                el.type = 'application/json';
+                el.style.display = 'none';
+                el.setAttribute('data-mcp-result', 'true');
                 el.textContent = JSON.stringify({{__error__: e.message, __stack__: e.stack}});
-                document.head.appendChild(el);
+                document.body.appendChild(el);
             }}
         }})()
         """
@@ -674,85 +978,93 @@ class MCPChromeClient:
         if inject_result.get("status") != "success":
             return inject_result
 
-        # Small delay to ensure script execution completes
-        time.sleep(0.1)
+        # Retry logic with increasing delays to handle timing issues
+        max_retries = 5
+        retry_delays = [0.3, 0.5, 0.8, 1.0, 1.5]  # Increasing delays in seconds
+        last_error = None
 
-        # Retrieve the result using a second script injection
-        retrieve_script = f"""
-        (function() {{
-            var el = document.getElementById('{result_id}');
-            if (el) {{
-                var result = el.textContent;
-                el.remove();  // Clean up
-                return result;
-            }}
-            return null;
-        }})()
-        """
+        for attempt in range(max_retries):
+            # Wait before checking for the result
+            time.sleep(retry_delays[attempt])
 
-        # We need to use a different approach to get the result
-        # Use chrome_get_web_content with a selector to read the element content
-        # But first, let's check if the element exists
-        check_result = self.chrome_get_web_content(
-            selector=f'script#{result_id}',
-            text_content=True,
-            html_content=False
-        )
+            # Try to retrieve the result element
+            check_result = self.chrome_get_web_content(
+                selector=f'div#{result_id}',
+                text_content=True,
+                html_content=False
+            )
 
-        # Parse the nested Chrome MCP response
-        try:
-            result_data = check_result.get("result", {})
-            if isinstance(result_data, dict) and "content" in result_data:
-                content_list = result_data.get("content", [])
-                if isinstance(content_list, list) and len(content_list) > 0:
-                    outer_text = content_list[0].get("text", "{}")
-                    outer_data = json.loads(outer_text)
+            # Parse the nested Chrome MCP response
+            try:
+                result_data = check_result.get("data") or check_result.get("result", {})
 
-                    if outer_data.get("status") == "success":
-                        inner_data = outer_data.get("data", {})
-                        inner_content = inner_data.get("content", [])
-                        if isinstance(inner_content, list) and len(inner_content) > 0:
-                            inner_text = inner_content[0].get("text", "{}")
-                            inner_parsed = json.loads(inner_text)
-                            text_content = inner_parsed.get("textContent", "")
+                if isinstance(result_data, dict) and "content" in result_data:
+                    content_list = result_data.get("content", [])
+                    if isinstance(content_list, list) and len(content_list) > 0:
+                        outer_text = content_list[0].get("text", "{}")
+                        outer_data = json.loads(outer_text)
 
-                            # The textContent is the JSON-stringified result
-                            if text_content:
-                                try:
-                                    actual_result = json.loads(text_content)
+                        # Check if it's an error (element not found)
+                        if outer_data.get("data", {}).get("content", [{}])[0].get("isError"):
+                            # Element not found yet, continue retrying
+                            last_error = "Element not found"
+                            continue
 
-                                    # Check for error
-                                    if isinstance(actual_result, dict) and "__error__" in actual_result:
+                        if outer_data.get("status") == "success":
+                            inner_data = outer_data.get("data", {})
+                            inner_content = inner_data.get("content", [])
+                            if isinstance(inner_content, list) and len(inner_content) > 0:
+                                inner_text = inner_content[0].get("text", "{}")
+                                inner_parsed = json.loads(inner_text)
+                                text_content = inner_parsed.get("textContent", "")
+
+                                # The textContent is the JSON-stringified result
+                                if text_content:
+                                    # Clean up the result element
+                                    cleanup_script = f"""
+                                    (function() {{
+                                        var el = document.getElementById('{result_id}');
+                                        if (el) el.remove();
+                                    }})()
+                                    """
+                                    self.chrome_inject_script(js_script=cleanup_script, script_type="MAIN")
+
+                                    try:
+                                        actual_result = json.loads(text_content)
+
+                                        # Check for error
+                                        if isinstance(actual_result, dict) and "__error__" in actual_result:
+                                            return {
+                                                "status": "error",
+                                                "message": actual_result["__error__"],
+                                                "stack": actual_result.get("__stack__")
+                                            }
+
+                                        # Return in Playwright-compatible format
                                         return {
-                                            "status": "error",
-                                            "message": actual_result["__error__"],
-                                            "stack": actual_result.get("__stack__")
+                                            "status": "success",
+                                            "result": {
+                                                "content": [{
+                                                    "type": "text",
+                                                    "text": f"### Result\n{json.dumps(actual_result, ensure_ascii=False)}"
+                                                }]
+                                            }
+                                        }
+                                    except json.JSONDecodeError:
+                                        # Return raw text if not valid JSON
+                                        return {
+                                            "status": "success",
+                                            "result": {
+                                                "content": [{
+                                                    "type": "text",
+                                                    "text": f"### Result\n\"{text_content}\""
+                                                }]
+                                            }
                                         }
 
-                                    # Return in Playwright-compatible format
-                                    return {
-                                        "status": "success",
-                                        "result": {
-                                            "content": [{
-                                                "type": "text",
-                                                "text": f"### Result\n{json.dumps(actual_result, ensure_ascii=False)}"
-                                            }]
-                                        }
-                                    }
-                                except json.JSONDecodeError:
-                                    # Return raw text if not valid JSON
-                                    return {
-                                        "status": "success",
-                                        "result": {
-                                            "content": [{
-                                                "type": "text",
-                                                "text": f"### Result\n\"{text_content}\""
-                                            }]
-                                        }
-                                    }
-
-        except Exception as e:
-            pass
+            except Exception as e:
+                last_error = str(e)
+                continue
 
         # Clean up the result element if retrieval failed
         cleanup_script = f"""
@@ -763,10 +1075,10 @@ class MCPChromeClient:
         """
         self.chrome_inject_script(js_script=cleanup_script, script_type="MAIN")
 
-        # Fallback: return the original inject result (which just says injected: true)
+        # Fallback: return error with details
         return {
             "status": "error",
-            "message": "Failed to retrieve JavaScript evaluation result"
+            "message": f"Failed to retrieve JavaScript evaluation result after {max_retries} attempts. Last error: {last_error}"
         }
 
     def browser_wait_for(
@@ -989,20 +1301,25 @@ class MCPChromeClient:
 
             if result.get("status") == "success":
                 # Parse the response to extract tabs
-                result_data = result.get("result", {})
+                # Handle both "result" and "data" keys (Chrome MCP uses "data")
+                result_data = result.get("result") or result.get("data", {})
                 content = result_data.get("content", [])
 
                 if isinstance(content, list) and len(content) > 0:
                     text_data = content[0].get("text", "")
 
-                    # Parse the JSON data
+                    # Parse the JSON data (triple-nested: MCP wraps tool results)
                     try:
+                        # First parse: unwrap MCP tool result
                         data = json.loads(text_data)
+
                         if data.get("status") == "success":
+                            # Second level: get data.content
                             inner_data = data.get("data", {})
                             inner_content = inner_data.get("content", [])
 
                             if isinstance(inner_content, list) and len(inner_content) > 0:
+                                # Third level: parse the actual tabs JSON
                                 tabs_json = inner_content[0].get("text", "{}")
                                 tabs_data = json.loads(tabs_json)
 
@@ -1066,27 +1383,34 @@ class MCPChromeClient:
             tabs_result = self.get_windows_and_tabs()
 
             if tabs_result.get("status") == "success":
-                # Parse to get tab IDs
+                # Parse to get tab IDs (same triple-nesting as list action)
                 try:
-                    result_data = tabs_result.get("result", {})
+                    # Handle both "result" and "data" keys (Chrome MCP uses "data")
+                    result_data = tabs_result.get("result") or tabs_result.get("data", {})
                     content = result_data.get("content", [])
-                    text_data = content[0].get("text", "")
-                    data = json.loads(text_data)
+                    if content:
+                        text_data = content[0].get("text", "")
 
-                    if data.get("status") == "success":
-                        inner_data = data.get("data", {})
-                        inner_content = inner_data.get("content", [])
-                        tabs_json = inner_content[0].get("text", "{}")
-                        tabs_data = json.loads(tabs_json)
+                        # First parse: unwrap MCP tool result
+                        data = json.loads(text_data)
+                        if data.get("status") == "success":
+                            # Second level: get data.content
+                            inner_data = data.get("data", {})
+                            inner_content = inner_data.get("content", [])
 
-                        # Find tab at index
-                        tab_index = 0
-                        for window in tabs_data.get("windows", []):
-                            for tab in window.get("tabs", []):
-                                if tab_index == index:
-                                    tab_id = tab.get("tabId")
-                                    return self.chrome_close_tabs(tab_ids=[tab_id])
-                                tab_index += 1
+                            if isinstance(inner_content, list) and len(inner_content) > 0:
+                                # Third level: parse the actual tabs JSON
+                                tabs_json = inner_content[0].get("text", "{}")
+                                tabs_data = json.loads(tabs_json)
+
+                                # Find tab at index
+                                tab_index = 0
+                                for window in tabs_data.get("windows", []):
+                                    for tab in window.get("tabs", []):
+                                        if tab_index == index:
+                                            tab_id = tab.get("tabId")
+                                            return self.chrome_close_tabs(tab_ids=[tab_id])
+                                        tab_index += 1
 
                         return {"status": "error", "message": f"Tab at index {index} not found"}
                 except Exception as e:
@@ -1102,28 +1426,35 @@ class MCPChromeClient:
             tabs_result = self.get_windows_and_tabs()
 
             if tabs_result.get("status") == "success":
-                # Parse to get tab URLs
+                # Parse to get tab URLs (same triple-nesting as list action)
                 try:
-                    result_data = tabs_result.get("result", {})
+                    # Handle both "result" and "data" keys (Chrome MCP uses "data")
+                    result_data = tabs_result.get("result") or tabs_result.get("data", {})
                     content = result_data.get("content", [])
-                    text_data = content[0].get("text", "")
-                    data = json.loads(text_data)
+                    if content:
+                        text_data = content[0].get("text", "")
 
-                    if data.get("status") == "success":
-                        inner_data = data.get("data", {})
-                        inner_content = inner_data.get("content", [])
-                        tabs_json = inner_content[0].get("text", "{}")
-                        tabs_data = json.loads(tabs_json)
+                        # First parse: unwrap MCP tool result
+                        data = json.loads(text_data)
+                        if data.get("status") == "success":
+                            # Second level: get data.content
+                            inner_data = data.get("data", {})
+                            inner_content = inner_data.get("content", [])
 
-                        # Find tab at index
-                        tab_index = 0
-                        for window in tabs_data.get("windows", []):
-                            for tab in window.get("tabs", []):
-                                if tab_index == index:
-                                    tab_url = tab.get("url")
-                                    # Navigate to the tab's URL to activate it
-                                    return self.chrome_navigate(url=tab_url)
-                                tab_index += 1
+                            if isinstance(inner_content, list) and len(inner_content) > 0:
+                                # Third level: parse the actual tabs JSON
+                                tabs_json = inner_content[0].get("text", "{}")
+                                tabs_data = json.loads(tabs_json)
+
+                                # Find tab at index
+                                tab_index = 0
+                                for window in tabs_data.get("windows", []):
+                                    for tab in window.get("tabs", []):
+                                        if tab_index == index:
+                                            tab_url = tab.get("url")
+                                            # Navigate to the tab's URL to activate it
+                                            return self.chrome_navigate(url=tab_url)
+                                        tab_index += 1
 
                         return {"status": "error", "message": f"Tab at index {index} not found"}
                 except Exception as e:

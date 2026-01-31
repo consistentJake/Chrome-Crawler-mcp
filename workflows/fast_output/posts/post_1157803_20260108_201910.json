@@ -1,0 +1,469 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html",
+  "timestamp": "2026-01-08T20:19:10.526263",
+  "item_count": 23,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20740276",
+        "user": {
+          "username": "Unknown",
+          "user_id": "85488",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "请问有人知道这道题吗？\n\n我有其他OpenAI/Anthropic面试题可以交换\n\nEmail: 9527xiaohao @ gmail\n\n60 coding 店面\n\n●Data Structures:\n\nKnow common data structures (arrays, lists, queues, maps, trees, graphs) and when to use them.\n\nYou will not be asked to implement them from scratch.\n\n\n\n\n●Algorithms & Patterns:\n\nClassical algorithms (e.g., sorting, dynamic programming, backtracking) and design patterns (e.g., MVC, observer) are not required.\n\nThese are not emphasized in our interviews.\n\n\n\n\n●Object-Oriented Programming:\n\nTopics like inheritance or polymorphism are generally not covered.\n\n\n\n\n●Testing cases.\n\nDemonstrate the ability to proactively write unit tests and generate meaningful test\n\nWe do not expect integration tests, mocking, or test coverage metrics.\n\n\n\n\n●Debugging:\n\nIn CoderPad, debugging typically involves adding logs and carefully reading your code.\n\n\n\n\n●Eﬃciency vs. Correctness:\n\nFocus first on getting a simple and correct solution. Optimization is a bonus, not a requirement. Candidates who prematurely optimize often misunderstand the problem or run out of time.",
+        "timestamp": "2025-12-12 10:28:34",
+        "reactions": {
+          "likes": 0,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#20740276"
+      },
+      {
+        "post_id": "rate_20740276",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#rate_20740276"
+      },
+      {
+        "post_id": "20748891",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "我也收到这个了。这个应该是 general prepare guidance，不是特定题目的prompt。我的recruiter 说不提供特定题目的prompt 了",
+        "timestamp": "2025-12-18 03:11:27",
+        "reactions": {
+          "emoji_reactions": [
+            {
+              "emoji": "😢",
+              "count": 2
+            },
+            {
+              "emoji": "😢",
+              "count": 2
+            }
+          ]
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#20748891"
+      },
+      {
+        "post_id": "rate_div_20748891",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#rate_div_20748891"
+      },
+      {
+        "post_id": "20755843",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "大漠飞刀 发表于 2025-12-23 00:50\n我收到的包括你这个和楼主的都有，general code + ML coding, 没有SD. 面的RE\nlol感觉现在prompt都是一样的了",
+        "timestamp": "2025-12-23 09:20:28",
+        "reactions": {},
+        "quotes": [
+          "大漠飞刀 发表于 2025-12-23 00:50\n我收到的包括你这个和楼主的都有，general code + ML coding, 没有SD. 面的RE",
+          "大漠飞刀 发表于 2025-12-23 00:50\n我收到的包括你这个和楼主的都有，general code + ML coding, 没有SD. 面的RE"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#20755843"
+      },
+      {
+        "post_id": "rate_div_20755843",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#rate_div_20755843"
+      },
+      {
+        "post_id": "20755135",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "另外有人收到下面这个Machine Learning Coding的prompt吗？\n\nMachine Learning Coding (60–75 min)\nThis session evaluates your proficiency in implementing and debugging practical ML systems. We look for rigorous problem-solving, attention to detail, and the ability to perform root-cause analysis on model behavior.\n\n#Core Focus Areas\nML Implementation: Writing and debugging model logic.\n\nMathematical Coding: Vectorized operations and matrix manipulation.\n\nData Analysis: Exploring datasets and identifying quality issues.\n\nTech Stack: Python, NumPy, and PyTorch.\n\n#Preparation Checklist\nArchitectures: Proficiency with Transformers, MLPs, and standard neural network layers (Linear, Attention).\n\nMechanics: Deep understanding of inference, backpropagation, and gradient-based optimization.\n\nMath & Stats: Foundational probability, statistics, and linear algebra.\n\nData Integrity: Strategies for assessing label quality, denoising, and data exploration.\n\nEvaluation: Knowledge of model performance metrics and trade-off analysis.\n\nTooling: Advanced NumPy and PyTorch (specifically autograd).",
+        "timestamp": "2025-12-22 17:32:46",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#20755135"
+      },
+      {
+        "post_id": "rate_div_20755135",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#rate_div_20755135"
+      },
+      {
+        "post_id": "20741804",
+        "user": {
+          "username": "yangc22",
+          "user_id": "241136",
+          "stats": {
+            "posts": "8",
+            "replies": "657",
+            "points": "3999"
+          },
+          "is_anonymous": false
+        },
+        "content": "这些prompt加一起都是60分钟店面？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#20741804"
+      },
+      {
+        "post_id": "rate_div_20741804",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#rate_div_20741804"
+      },
+      {
+        "post_id": "20741964",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "yangc22 发表于 2025-12-13 16:30\n这些prompt加一起都是60分钟店面？\n是的 zszszs",
+        "timestamp": "2025-12-13 19:37:10",
+        "reactions": {},
+        "quotes": [
+          "yangc22 发表于 2025-12-13 16:30\n这些prompt加一起都是60分钟店面？",
+          "yangc22 发表于 2025-12-13 16:30\n这些prompt加一起都是60分钟店面？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#20741964"
+      },
+      {
+        "post_id": "rate_div_20741964",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#rate_div_20741964"
+      },
+      {
+        "post_id": "20742506",
+        "user": {
+          "username": "jackahah",
+          "user_id": "1090483",
+          "stats": {
+            "posts": "0",
+            "replies": "9",
+            "points": "502"
+          },
+          "is_anonymous": false
+        },
+        "content": "我也收到这个",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#20742506"
+      },
+      {
+        "post_id": "rate_div_20742506",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#rate_div_20742506"
+      },
+      {
+        "post_id": "20743107",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "jackahah 发表于 2025-12-14 12:09\n我也收到这个\n可以互相帮助？我们谁先面的话，可以帮帮剩下人。同时我也可以把我知道的其他题目share",
+        "timestamp": "2025-12-14 20:17:28",
+        "reactions": {},
+        "quotes": [
+          "jackahah 发表于 2025-12-14 12:09\n我也收到这个",
+          "jackahah 发表于 2025-12-14 12:09\n我也收到这个"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#20743107"
+      },
+      {
+        "post_id": "rate_div_20743107",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#rate_div_20743107"
+      },
+      {
+        "post_id": "20754898",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "+1, 我也收到这个。之前portal 还能看到每个interview的prompt，最近突然发现所有stage 都lock 了 orz",
+        "timestamp": "2025-12-22 14:56:13",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#20754898"
+      },
+      {
+        "post_id": "rate_div_20754898",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#rate_div_20754898"
+      },
+      {
+        "post_id": "20755563",
+        "user": {
+          "username": "大漠飞刀",
+          "user_id": "658745",
+          "stats": {
+            "posts": "4",
+            "replies": "48",
+            "points": "514"
+          },
+          "is_anonymous": false
+        },
+        "content": "我收到的也是这个。",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#20755563"
+      },
+      {
+        "post_id": "rate_div_20755563",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#rate_div_20755563"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "[面试经验] openai 店面 prompt|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 112,
+    "thread_title": "[面试经验]\n[面试经验] openai 店面 prompt",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 22
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 9,
+    "original_link": {
+      "href": "thread-1157803-1-1.html",
+      "text": "[面试经验] openai 店面 prompt",
+      "web_agent_id": "wa-213",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1157803-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:10.526303"
+  }
+}

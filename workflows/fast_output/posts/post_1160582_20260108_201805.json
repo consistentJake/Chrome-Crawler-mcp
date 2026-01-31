@@ -1,0 +1,455 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html",
+  "timestamp": "2026-01-08T20:18:05.208342",
+  "item_count": 23,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20776560",
+        "user": {
+          "username": "Unknown",
+          "user_id": "346361",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "coding是玩具语言那题，一共2问\n\n第一问是node和function toString\n\n第二问是infer function的返回类型\n\ntest case都是提前写好的\n\n两问都是一遍test case全过，中间被提示了在函数中最好直接用assert而不是raise exception\n\n结束时候老哥说我worked to the end of the problem\n\n结果挂了。。说我coding的pacing不够\n\n想问一下这题过了的朋友们，后面还有更多的follow up吗？还是需要自己加更多的test case？",
+        "timestamp": "7 小时前",
+        "reactions": {
+          "likes": 1,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#20776560"
+      },
+      {
+        "post_id": "rate_20776560",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#rate_20776560"
+      },
+      {
+        "post_id": "20776660",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "开放爱的coding 是出了名的random的， 面试官的水平和面试的评判标准参差不齐， 相比其他大厂， 差太多。 这个也对标他们公司的管理， 长远来看， 开放爱一定走下坡路",
+        "timestamp": "6 小时前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#20776660"
+      },
+      {
+        "post_id": "rate_div_20776660",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#rate_div_20776660"
+      },
+      {
+        "post_id": "20776575",
+        "user": {
+          "username": "发财火龙果",
+          "user_id": "1178804",
+          "stats": {
+            "posts": "7",
+            "replies": "38",
+            "points": "604"
+          },
+          "is_anonymous": false
+        },
+        "content": "应该是看出来你有原题了",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#20776575"
+      },
+      {
+        "post_id": "rate_div_20776575",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#rate_div_20776575"
+      },
+      {
+        "post_id": "20776620",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "发财火龙果 发表于 2026-1-8 16:12\n应该是看出来你有原题了\n但他们题目又臭又长的，谁准备不刷题啊...被看出来也会被挂吗",
+        "timestamp": "6 小时前",
+        "reactions": {},
+        "quotes": [
+          "发财火龙果 发表于 2026-1-8 16:12\n应该是看出来你有原题了",
+          "发财火龙果 发表于 2026-1-8 16:12\n应该是看出来你有原题了"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#20776620"
+      },
+      {
+        "post_id": "rate_div_20776620",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#rate_div_20776620"
+      },
+      {
+        "post_id": "20776823",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "\"worked to the end of the problem\" -> 这话啥意思？另外楼主你被黑了。这题就这两问。没额外的， 我朋友面的这轮做出来就过了",
+        "timestamp": "4 小时前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#20776823"
+      },
+      {
+        "post_id": "rate_div_20776823",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#rate_div_20776823"
+      },
+      {
+        "post_id": "20776832",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "楼主你是面的sde吗",
+        "timestamp": "4 小时前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#20776832"
+      },
+      {
+        "post_id": "rate_div_20776832",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#rate_div_20776832"
+      },
+      {
+        "post_id": "20776871",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "本帖最后由 匿名 于 2026-1-8 16:17 编辑 \n\n楼主回答一下大家的问题\n\n1. 是面的SDE\n2. 我没有提前写过原题，就是希望在面试的时候能自然一些，读题的时候也发现了一些和我准备不一致的地方，比如说implement的函数要求的返回类型、assertion等等\n3. 面试官说\"worked to the end of the problem\"，是因为我问他还有没有别的follow up。他最后也象征性地问了一些关于code refactory的问题",
+        "timestamp": "4 小时前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#20776871"
+      },
+      {
+        "post_id": "rate_div_20776871",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#rate_div_20776871"
+      },
+      {
+        "post_id": "20776891",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "拍拍楼主, 他家真的管理很混乱,整个recruiting pipeline都巨chaotic...lz有和hr反馈/argue吗? 不过说实话估计也没人管,hr自己都每天搞不清哪个candidate在面什么....",
+        "timestamp": "3 小时前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#20776891"
+      },
+      {
+        "post_id": "rate_div_20776891",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#rate_div_20776891"
+      },
+      {
+        "post_id": "20776896",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2026-1-8 16:28\n拍拍楼主, 他家真的管理很混乱,整个recruiting pipeline都巨chaotic...lz有和hr反馈/argue吗? 不过说实话估 ...\n没有跟hr挣扎，我觉得这样做得不到我想要的结果，anyway\n\n一开始听到结果很震惊，因为我觉得SD和coding这两轮我都面得很好，不过后来想想coporate做面试的初衷并不是为了给candidate们提供一个公平的平台去展示自己的能力，它们只是想要最低风险地筛掉false positive的人而已",
+        "timestamp": "3 小时前",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2026-1-8 16:28\n拍拍楼主, 他家真的管理很混乱,整个recruiting pipeline都巨chaotic...lz有和hr反馈/argue吗? 不过说实话估 ...",
+          "匿名用户 发表于 2026-1-8 16:28\n拍拍楼主, 他家真的管理很混乱,整个recruiting pipeline都巨chaotic...lz有和hr反馈/argue吗? 不过说实话估 ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#20776896"
+      },
+      {
+        "post_id": "rate_div_20776896",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#rate_div_20776896"
+      },
+      {
+        "post_id": "20777081",
+        "user": {
+          "username": "cherudim9",
+          "user_id": "214682",
+          "stats": {
+            "posts": "9",
+            "replies": "224",
+            "points": "137"
+          },
+          "is_anonymous": false
+        },
+        "content": "我是test case都过了之后，面试官直接给我光速下线了 。。。 毫无问题的一轮",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#20777081"
+      },
+      {
+        "post_id": "rate_div_20777081",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#rate_div_20777081"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "开放爱玩具语言挂经|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 150,
+    "thread_title": "[面试经验]\n开放爱玩具语言挂经",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 22
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 1,
+    "original_link": {
+      "href": "thread-1160582-1-1.html",
+      "text": "开放爱玩具语言挂经",
+      "web_agent_id": "wa-156",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1160582-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:05.208390"
+  }
+}

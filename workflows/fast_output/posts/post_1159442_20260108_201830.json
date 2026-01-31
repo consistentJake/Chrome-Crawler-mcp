@@ -1,0 +1,347 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html",
+  "timestamp": "2026-01-08T20:18:30.980292",
+  "item_count": 17,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20761476",
+        "user": {
+          "username": "Unknown",
+          "user_id": "220872",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "当年openai之类的AI公司横空出世的时候LZ自知背景普通根本没有申请过，最近看到地理OAi之类的的面试很多，想问下大家现在普通SDE拿到这些公司面试的难度如何？",
+        "timestamp": "2025-12-28 13:06:37",
+        "reactions": {
+          "likes": 2,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#20761476"
+      },
+      {
+        "post_id": "rate_20761476",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#rate_20761476"
+      },
+      {
+        "post_id": "20763806",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "很容易，他家recruiter都会主动reach out。大厂基本人手一个面试。",
+        "timestamp": "2025-12-30 13:31:18",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#20763806"
+      },
+      {
+        "post_id": "rate_div_20763806",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#rate_div_20763806"
+      },
+      {
+        "post_id": "20761493",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "貌似挺好拿的现在？ 有faang 两家大厂经验 5years +",
+        "timestamp": "2025-12-28 13:13:49",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#20761493"
+      },
+      {
+        "post_id": "rate_div_20761493",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#rate_div_20761493"
+      },
+      {
+        "post_id": "20763776",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-28 13:13:49. 1point 3 acres\n貌似挺好拿的现在？ 有faang 两家大厂经验 5years +faang 是指？",
+        "timestamp": "2025-12-30 13:06:52",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-28 13:13:49. 1point 3 acres\n貌似挺好拿的现在？ 有faang 两家大厂经验 5years +",
+          "匿名用户 发表于 2025-12-28 13:13:49. 1point 3 acres\n貌似挺好拿的现在？ 有faang 两家大厂经验 5years +"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#20763776"
+      },
+      {
+        "post_id": "rate_div_20763776",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#rate_div_20763776"
+      },
+      {
+        "post_id": "20763808",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "卡yoe吗 必须5年以上？",
+        "timestamp": "2025-12-30 13:33:35",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#20763808"
+      },
+      {
+        "post_id": "rate_div_20763808",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#rate_div_20763808"
+      },
+      {
+        "post_id": "20769210",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-30 13:33:35\n卡yoe吗 必须5年以上？貌似不需要 我三年yoe也被recruiter勾搭了",
+        "timestamp": "5 天前",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-30 13:33:35\n卡yoe吗 必须5年以上？",
+          "匿名用户 发表于 2025-12-30 13:33:35\n卡yoe吗 必须5年以上？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#20769210"
+      },
+      {
+        "post_id": "rate_div_20769210",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#rate_div_20769210"
+      },
+      {
+        "post_id": "20769313",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "请问大家都是什么背景",
+        "timestamp": "5 天前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#20769313"
+      },
+      {
+        "post_id": "rate_div_20769313",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#rate_div_20769313"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "现在openai之类的AI厂卡简历吗？|一亩三分地职场达人版",
+    "extraction_time_ms": 116,
+    "thread_title": "[跳槽]\n现在openai之类的AI厂卡简历吗？",
+    "thread_tags": [
+      "职场达人",
+      "openai"
+    ],
+    "total_replies": 16
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 13,
+    "original_link": {
+      "href": "thread-1159442-1-1.html",
+      "text": "现在openai之类的AI厂卡简历吗？",
+      "web_agent_id": "wa-239",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1159442-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:30.980335"
+  }
+}

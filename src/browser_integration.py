@@ -467,8 +467,8 @@ class BrowserIntegration:
         """
         Type text into an input element using the appropriate client method.
 
-        For Chrome, this uses JavaScript to simulate proper input events that
-        work with React/Vue/Angular controlled inputs.
+        For Chrome, this uses chrome-mcp's fill_or_select tool which is
+        compatible with React/Vue/Angular controlled inputs.
 
         Args:
             css_selector: CSS selector for the input element
@@ -478,68 +478,11 @@ class BrowserIntegration:
             Result dictionary with status
         """
         if self.client_type == "chrome":
-            # Use JavaScript injection to type text with proper React-compatible events
-            # This approach uses execCommand('insertText') which triggers proper input events
-            import json as json_module
-            escaped_text = json_module.dumps(text)
-
-            type_js = f"""
-            (function() {{
-                var selector = {json_module.dumps(css_selector)};
-                var text = {escaped_text};
-                var element = document.querySelector(selector);
-
-                if (!element) {{
-                    return {{ success: false, error: 'Element not found: ' + selector }};
-                }}
-
-                // Focus the element
-                element.focus();
-
-                // Clear existing content
-                element.select();
-
-                // For input/textarea elements
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {{
-                    // Set native value setter to bypass React's controlled input
-                    var nativeInputValueSetter = Object.getOwnPropertyDescriptor(
-                        window.HTMLInputElement.prototype, 'value'
-                    ).set;
-                    var nativeTextAreaValueSetter = Object.getOwnPropertyDescriptor(
-                        window.HTMLTextAreaElement.prototype, 'value'
-                    ).set;
-
-                    if (element.tagName === 'INPUT') {{
-                        nativeInputValueSetter.call(element, text);
-                    }} else {{
-                        nativeTextAreaValueSetter.call(element, text);
-                    }}
-
-                    // Dispatch input event to trigger React state update
-                    var inputEvent = new Event('input', {{ bubbles: true, cancelable: true }});
-                    element.dispatchEvent(inputEvent);
-
-                    // Also dispatch change event
-                    var changeEvent = new Event('change', {{ bubbles: true, cancelable: true }});
-                    element.dispatchEvent(changeEvent);
-
-                    return {{ success: true, method: 'native_setter' }};
-                }}
-
-                // For contenteditable elements
-                if (element.isContentEditable) {{
-                    document.execCommand('selectAll', false, null);
-                    document.execCommand('insertText', false, text);
-                    return {{ success: true, method: 'execCommand' }};
-                }}
-
-                return {{ success: false, error: 'Unsupported element type' }};
-            }})()
-            """
-
-            result = self.playwright_client.chrome_inject_script(
-                js_script=type_js,
-                script_type="MAIN"
+            # Use ChromeMcpClient's type_into_element method which calls chrome_fill_or_select
+            result = self.playwright_client.type_into_element(
+                selector=css_selector,
+                text=text,
+                clear_first=True
             )
 
             # Handle Chrome MCP response format
@@ -595,6 +538,119 @@ class BrowserIntegration:
             full_page=full_page
         )
         return result.get("status") == "success"
+
+    def manage_tabs(self, action: str, index: Optional[int] = None) -> Dict:
+        """
+        Manage browser tabs (list, create, close, or select).
+
+        Args:
+            action: Operation to perform - "list", "new", "close", or "select"
+            index: Tab index for close/select operations (0-based)
+
+        Returns:
+            Dictionary with operation results:
+            - For "list": {"success": bool, "tabs": [{"index": int, "title": str, "url": str, "active": bool}], "error": str}
+            - For other actions: {"success": bool, "message": str, "error": str}
+        """
+        if self.client_type == "chrome":
+            # Use Chrome's browser_tabs method
+            result = self.playwright_client.browser_tabs(action=action, index=index)
+
+            if result.get("status") == "success":
+                if action == "list":
+                    # Parse the markdown response to extract tabs data
+                    result_data = result.get("result", {})
+                    content_list = result_data.get("content", [])
+                    if isinstance(content_list, list) and len(content_list) > 0:
+                        text_content = content_list[0].get("text", "")
+
+                        # Parse the markdown format: "- index: [title] (url)"
+                        tabs = []
+                        for line in text_content.split("\n"):
+                            if line.strip().startswith("-"):
+                                # Extract index, title, and url using regex
+                                import re
+                                # Pattern: - 0: (current) [title] (url) or - 0: [title] (url)
+                                # Use greedy match (.+) to handle brackets in titles, match until ] (
+                                match = re.match(r'-\s*(\d+):\s*(\(current\)\s*)?\[(.+)\]\s*\(([^)]+)\)', line.strip())
+                                if match:
+                                    index_num = int(match.group(1))
+                                    is_current = match.group(2) is not None
+                                    title = match.group(3)
+                                    url = match.group(4)
+                                    tabs.append({
+                                        "index": index_num,
+                                        "title": title,
+                                        "url": url,
+                                        "active": is_current
+                                    })
+
+                        return {
+                            "success": True,
+                            "tabs": tabs
+                        }
+                else:
+                    # For other actions, return success message
+                    return {
+                        "success": True,
+                        "message": f"Tab {action} operation completed successfully"
+                    }
+            else:
+                # Return error
+                return {
+                    "success": False,
+                    "error": result.get("message", "Tab operation failed")
+                }
+        else:
+            # Playwright client - use browser_tabs if available
+            if hasattr(self.playwright_client, 'browser_tabs'):
+                result = self.playwright_client.browser_tabs(action=action, index=index)
+
+                if result.get("status") == "success":
+                    if action == "list":
+                        # Parse the markdown response to extract tabs data
+                        result_data = result.get("result", {})
+                        content_list = result_data.get("content", [])
+                        if isinstance(content_list, list) and len(content_list) > 0:
+                            text_content = content_list[0].get("text", "")
+
+                            # Parse the markdown format
+                            tabs = []
+                            for line in text_content.split("\n"):
+                                if line.strip().startswith("-"):
+                                    import re
+                                    match = re.match(r'-\s*(\d+):\s*(\(current\)\s*)?\[([^\]]+)\]\s*\(([^)]+)\)', line.strip())
+                                    if match:
+                                        index_num = int(match.group(1))
+                                        is_current = match.group(2) is not None
+                                        title = match.group(3)
+                                        url = match.group(4)
+                                        tabs.append({
+                                            "index": index_num,
+                                            "title": title,
+                                            "url": url,
+                                            "active": is_current
+                                        })
+
+                            return {
+                                "success": True,
+                                "tabs": tabs
+                            }
+                    else:
+                        return {
+                            "success": True,
+                            "message": f"Tab {action} operation completed successfully"
+                        }
+                else:
+                    return {
+                        "success": False,
+                        "error": result.get("message", "Tab operation failed")
+                    }
+            else:
+                return {
+                    "success": False,
+                    "error": "Tab management not supported for Playwright client"
+                }
 
     def close(self):
         """Close the Playwright MCP client"""

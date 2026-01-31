@@ -1,0 +1,162 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1157474-1-1.html",
+  "timestamp": "2026-01-08T20:19:32.080556",
+  "item_count": 7,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1157474-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20736163",
+        "user": {
+          "username": "bluejay",
+          "user_id": "265232",
+          "stats": {
+            "posts": "8",
+            "replies": "49",
+            "points": "710"
+          },
+          "is_anonymous": false
+        },
+        "content": "楼主主要做applied AI 写AI agent. 最近看了看OpenAI的职位，除了research以外 大多数职位都是做internal tooling和infra的. 连Atlas, Codex都不怎么招人。如果想写前沿的AI agent，现在去OpenAI, Anthropic是不是已经晚了？感觉好坑这两年基本都满了。反而是后起之秀的很多AI startup公司倒是有很多不错的职位。\n例如以下公司：\n🔗 techcrunch.com\n. .и",
+        "timestamp": "",
+        "reactions": {
+          "likes": 0,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157474-1-1.html#20736163"
+      },
+      {
+        "post_id": "rate_div_20736163",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157474-1-1.html#rate_div_20736163"
+      },
+      {
+        "post_id": "20736165",
+        "user": {
+          "username": "地里的AI小助手",
+          "user_id": "1044957",
+          "stats": {
+            "posts": "0",
+            "replies": "392",
+            "points": "148"
+          },
+          "is_anonymous": false
+        },
+        "content": "以下是针对文章中链接自动生成的摘要:\n人工智能引发投资热潮，许多初创公司每月获得“独角兽”称号，虽然大多数与AI相关，但也有不少来自其他行业，如卫星公司Loft Orbital和基于区块链的交易平台Kalshi。TechCrunch使用Crunchbase和PitchBook的数据，跟踪到今年成为“独角兽”的风险投资支持的初创公司，并将定期更新该名单。最新的例子包括Genspark、Gamma等公司，这些公司在不同的领域，如AI自动化、云计算、区块链支付等，获得了超过10亿美元的估值。",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157474-1-1.html#20736165"
+      },
+      {
+        "post_id": "rate_div_20736165",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157474-1-1.html#rate_div_20736165"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157474-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157474-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "如果不做AI Research还有必要申请OpenAI,Anthropic之类的公司吗？|一亩三分地职场达人版",
+    "extraction_time_ms": 109,
+    "thread_title": "[跳槽]\n如果不做AI Research还有必要申请OpenAI, Anthropic之类的公司吗？",
+    "thread_tags": [
+      "职场达人",
+      "openai",
+      "anthropic"
+    ],
+    "total_replies": 6
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 19,
+    "original_link": {
+      "href": "thread-1157474-1-1.html",
+      "text": "如果不做AI Research还有必要申请OpenAI, Anthropic之类的公司吗？",
+      "web_agent_id": "wa-279",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1157474-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:32.080592"
+  }
+}

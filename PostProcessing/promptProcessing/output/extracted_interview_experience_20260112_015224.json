@@ -1,0 +1,194 @@
+[
+  {
+    "type": "有用信息",
+    "title": "面试时长",
+    "content": "75分钟",
+    "url": "https://www.1point3acres.com/bbs/thread-1156388-1-1.html",
+    "category": "其他",
+    "notes": "面试时长信息"
+  },
+  {
+    "type": "面试题目",
+    "title": "ML/AI题",
+    "content": "PyTorch tensor manipulation, and autograd.",
+    "url": "https://www.1point3acres.com/bbs/thread-1156166-1-1.html",
+    "category": "ML",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "ML/AI题",
+    "content": "pytorch backprop，求分享",
+    "url": "https://www.1point3acres.com/bbs/thread-1156166-1-1.html",
+    "category": "ML",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "ML/AI题",
+    "content": "autograd的prompt，想求一下这个题是什么类型的。我有比较全的OAI面经（老的题基本都有，最近几个新的coding题 ip address, encoding, countdown也收到了），可以交换！",
+    "url": "https://www.1point3acres.com/bbs/thread-1156166-1-1.html",
+    "category": "ML",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "ML/AI题",
+    "content": "backpropagation, PyTorch tensor manipulation, and autograd.",
+    "url": "https://www.1point3acres.com/bbs/thread-1156166-1-1.html",
+    "category": "ML",
+    "notes": ""
+  },
+  {
+    "type": "有用信息",
+    "title": "题目类型",
+    "content": "新题",
+    "url": "https://www.1point3acres.com/bbs/thread-1156166-1-1.html",
+    "category": "其他",
+    "notes": "标注为新题"
+  },
+  {
+    "type": "面试题目",
+    "title": "系统设计题",
+    "content": "design a program against various adversaries.",
+    "url": "https://www.1point3acres.com/bbs/thread-1156767-1-1.html",
+    "category": "系统设计",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "算法/编程题",
+    "content": "设计并实现一个核心战斗逻辑，\n\n以下内容需要积分高于 188 您已经可以浏览\n模拟两队怪兽之间的回合制战斗，并且必须生成一份详细的战斗日志",
+    "url": "https://www.1point3acres.com/bbs/thread-1156671-1-1.html",
+    "category": "算法",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "OpenAI怪兽对战题",
+    "content": "设计并实现一个核心战斗逻辑，模拟两队怪兽之间的回合制战斗。每个队伍有有序的怪兽列表，怪兽有name、health、attack属性。战斗持续到一方没有活着的怪兽为止。需要实现Monster、Team、BattleEngine类，并生成详细战斗日志。",
+    "url": "https://www.1point3acres.com/bbs/thread-1156671-1-1.html",
+    "category": "算法",
+    "notes": "60分钟coding题，需要良好的OOD设计"
+  },
+  {
+    "type": "面试题目",
+    "title": "Crossword Puzzle系统设计",
+    "content": "设计一个service来解crossword puzzle。输入是一个board和dictionary，输出是解开的puzzle。需要考虑分布式处理，当board很大时需要分解到不同worker上处理，支持动态split task and redistribute。",
+    "url": "https://www.1point3acres.com/bbs/thread-1156374-1-1.html",
+    "category": "系统设计",
+    "notes": "考察分布式系统设计能力"
+  },
+  {
+    "type": "面试题目",
+    "title": "系统设计题",
+    "content": "Design a multi tenant CI/CD system which schedules and executes user defined workflows in response to git pushes. The system receives information about pushes via API calls from an internal service which contain the repository id and the current state of the repository (commit hash). Workflows are a sequence of jobs which are defined within a single YAML file in a static location for each repository. Users should be able to view the output and status of jobs as they are running.",
+    "url": "https://www.1point3acres.com/bbs/thread-1157300-1-1.html",
+    "category": "系统设计",
+    "notes": ""
+  },
+  {
+    "type": "有用信息",
+    "title": "面试时长",
+    "content": "60分钟",
+    "url": "https://www.1point3acres.com/bbs/thread-1156416-1-1.html",
+    "category": "其他",
+    "notes": "面试时长信息"
+  },
+  {
+    "type": "面试题目",
+    "title": "ML/AI题",
+    "content": "一次性拿下5栋楼，可塞2000名员工",
+    "url": "https://www.1point3acres.com/bbs/thread-1156875-1-1.html",
+    "category": "ML",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "算法/编程题",
+    "content": "常规问题，怎么看AI safety之类的",
+    "url": "https://www.1point3acres.com/bbs/thread-1156766-1-1.html",
+    "category": "算法",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "GPU相关编程题",
+    "content": "GPU相关的coding题目，具体细节未透露",
+    "url": "https://www.1point3acres.com/bbs/thread-1156766-1-1.html",
+    "category": "算法",
+    "notes": "提到GPU的编程题"
+  },
+  {
+    "type": "面试题目",
+    "title": "系统设计题",
+    "content": "payment system",
+    "url": "https://www.1point3acres.com/bbs/thread-1156598-1-1.html",
+    "category": "系统设计",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "系统设计题",
+    "content": "Design webhook",
+    "url": "https://www.1point3acres.com/bbs/thread-1156508-1-1.html",
+    "category": "系统设计",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "系统设计题",
+    "content": "design a Webhook service which allows users to register their callback address and an eventId. Whenever eventId is triggered, the system should call the registered callback address with a specific payload. It is safe to assume that each eventId → callback address is unique and one eventId will trigger only one callback address. Assume a highly scalable webhook delivery system which can handle up to 1B events per day",
+    "url": "https://www.1point3acres.com/bbs/thread-1156508-1-1.html",
+    "category": "系统设计",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "系统设计题",
+    "content": "Design places of interest (yelp, foursquare like) service",
+    "url": "https://www.1point3acres.com/bbs/thread-1156508-1-1.html",
+    "category": "系统设计",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "系统设计题",
+    "content": "Design slack",
+    "url": "https://www.1point3acres.com/bbs/thread-1156508-1-1.html",
+    "category": "系统设计",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "系统设计题",
+    "content": "Design CI/CD workflow system",
+    "url": "https://www.1point3acres.com/bbs/thread-1156508-1-1.html",
+    "category": "系统设计",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "系统设计题",
+    "content": "Design a distributed CI/CD workflow system similar to GitHub Actions that automatically triggers and manages predefined workflows in response to repository events. The system should handle the complete lifecycle from event detection through workflow execution to status reporting.",
+    "url": "https://www.1point3acres.com/bbs/thread-1156508-1-1.html",
+    "category": "系统设计",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "系统设计题",
+    "content": "Design payment processor",
+    "url": "https://www.1point3acres.com/bbs/thread-1156508-1-1.html",
+    "category": "系统设计",
+    "notes": ""
+  },
+  {
+    "type": "面试题目",
+    "title": "系统设计题",
+    "content": "Design a simple service architecture of a payment processor.",
+    "url": "https://www.1point3acres.com/bbs/thread-1156508-1-1.html",
+    "category": "系统设计",
+    "notes": ""
+  }
+]

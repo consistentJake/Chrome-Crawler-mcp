@@ -1,3 +1,6 @@
+## Readme
+this is a list of tasks that user should copy the sentence directly to claude code after installing the interact-web-agent mcp
+
 ## get posts
 1. use interactive-web-agent, go to https://www.1point3acres.com/bbs/tag/openai-9407-1.html, go to 3rd next page, verify that we are in the 3rd next page, get the list of posts link. The expected post link will be in format "https://www.1point3acres.com/bbs/thread-*-*-*.html"
 
@@ -13,4 +16,4 @@
 
 5. use interactive-web-agent, go to https://x.com/search?q=gold, scroll down 20 times, use special parser to parse and dump the content
 
-6. use interactive-web-agent, go to https://www.1point3acres.com/bbs/tag/openai-9407-1.html, get all the posts link. For each of the post link, we do speical parsing on the post page one by one.
+6. use interactive-web-agent, go to https://www.1point3acres.com/bbs/tag/openai-9407-1.html, get all the posts link on the current page. For first 3 post links, we do speical parsing on the post page one by one.

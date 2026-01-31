@@ -1,0 +1,236 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1158070-1-1.html",
+  "timestamp": "2026-01-08T20:19:04.090575",
+  "item_count": 11,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1158070-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20743582",
+        "user": {
+          "username": "x258456753951",
+          "user_id": "118851",
+          "stats": {
+            "posts": "20",
+            "replies": "85",
+            "points": "356"
+          },
+          "is_anonymous": false
+        },
+        "content": "设计一个企业级 GPT，允许员工就内部文档提问——本质上就是 RAG问题。面试官更关注机器学习方面的内容——如何训练模型，你会为不同的组件（Retriever, Evaluator, Generator）选择什么样的模型架构，损失函数、优化器、训练机制、训练数据准备、评估策略等等。基本上你必須讀熟RAG這領域ㄧ些重點papers, 並且非常熟悉traditional Search, Retrieval.",
+        "timestamp": "",
+        "reactions": {
+          "likes": 1,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158070-1-1.html#20743582"
+      },
+      {
+        "post_id": "rate_20743582",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158070-1-1.html#rate_20743582"
+      },
+      {
+        "post_id": "20743800",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "你好，请问你面的general SWE的岗位吗？还是MLE？谢谢",
+        "timestamp": "2025-12-15 09:11:59",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158070-1-1.html#20743800"
+      },
+      {
+        "post_id": "rate_div_20743800",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158070-1-1.html#rate_div_20743800"
+      },
+      {
+        "post_id": "20744167",
+        "user": {
+          "username": "x258456753951",
+          "user_id": "118851",
+          "stats": {
+            "posts": "20",
+            "replies": "85",
+            "points": "356"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-15 18:11\n你好，请问你面的general SWE的岗位吗？还是MLE？谢谢\nSWE in Applied AI. My background is a mix of distributed system and LLM post-training",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-15 18:11\n你好，请问你面的general SWE的岗位吗？还是MLE？谢谢",
+          "匿名用户 发表于 2025-12-15 18:11\n你好，请问你面的general SWE的岗位吗？还是MLE？谢谢"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158070-1-1.html#20744167"
+      },
+      {
+        "post_id": "rate_div_20744167",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158070-1-1.html#rate_div_20744167"
+      },
+      {
+        "post_id": "20767436",
+        "user": {
+          "username": "xjy11",
+          "user_id": "157169",
+          "stats": {
+            "posts": "7",
+            "replies": "58",
+            "points": "605"
+          },
+          "is_anonymous": false
+        },
+        "content": "你提示词是什么？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158070-1-1.html#20767436"
+      },
+      {
+        "post_id": "rate_div_20767436",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158070-1-1.html#rate_div_20767436"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158070-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158070-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "OpenAI 技術店面|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 122,
+    "thread_title": "[面试经验]\nOpenAI 技術店面",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 10
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 6,
+    "original_link": {
+      "href": "thread-1158070-1-1.html",
+      "text": "OpenAI 技術店面",
+      "web_agent_id": "wa-190",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1158070-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:04.090624"
+  }
+}

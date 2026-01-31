@@ -1,0 +1,386 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html",
+  "timestamp": "2026-01-08T20:19:12.680444",
+  "item_count": 19,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20740405",
+        "user": {
+          "username": "Unknown",
+          "user_id": "85488",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "在面RE/MLE， coding一轮面的是是toy language.\n\n接下来是一轮75min coding， prompt 如下：\n\nThis is a 75 minute algorithmic coding interview in Python. Familiarity with basic algorithms and data structures are useful. No ML or question specific preparation is required\n\n有面过这轮的小伙伴能分享下考的是哪题吗？",
+        "timestamp": "2025-12-12 12:02:23",
+        "reactions": {
+          "likes": 0,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#20740405"
+      },
+      {
+        "post_id": "rate_20740405",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#rate_20740405"
+      },
+      {
+        "post_id": "20740545",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "欢迎私信交流，左边头像发消息留下你的联系方式，我有ML coding (debug, backprop, puzzle, stats) 面筋可以换。后面也会单独开一个帖子分享。\n\n补充内容 (2025-12-13 12:08 +08:00):\n地里有的信息就不用私信了，在找75min原题",
+        "timestamp": "2025-12-12 14:08:04",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#20740545"
+      },
+      {
+        "post_id": "rate_div_20740545",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#rate_div_20740545"
+      },
+      {
+        "post_id": "20743929",
+        "user": {
+          "username": "openaiautopilot",
+          "user_id": "1185274",
+          "stats": {
+            "posts": "5",
+            "replies": "64",
+            "points": "505"
+          },
+          "is_anonymous": false
+        },
+        "content": "你的 prompt 里有 “but the attached sheet should help you prepare too!” 这句话吗？ 或者说，prompt 里有没有提到这个句子 / 有引用到 attached sheet 帮助准备？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#20743929"
+      },
+      {
+        "post_id": "rate_div_20743929",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#rate_div_20743929"
+      },
+      {
+        "post_id": "20743959",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "openaiautopilot 发表于 2025-12-15 10:36\n你的 prompt 里有 “but the attached sheet should help you prepare too!” 这句话吗？ 或者说，prompt  ...\n没有，不过我觉得没什么关系",
+        "timestamp": "2025-12-15 10:53:26",
+        "reactions": {},
+        "quotes": [
+          "openaiautopilot 发表于 2025-12-15 10:36\n你的 prompt 里有 “but the attached sheet should help you prepare too!” 这句话吗？ 或者说，prompt  ...",
+          "openaiautopilot 发表于 2025-12-15 10:36\n你的 prompt 里有 “but the attached sheet should help you prepare too!” 这句话吗？ 或者说，prompt  ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#20743959"
+      },
+      {
+        "post_id": "rate_div_20743959",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#rate_div_20743959"
+      },
+      {
+        "post_id": "20743974",
+        "user": {
+          "username": "openaiautopilot",
+          "user_id": "1185274",
+          "stats": {
+            "posts": "5",
+            "replies": "64",
+            "points": "505"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-15 10:53\n没有，不过我觉得没什么关系\n我听说其中一个是 malloc 那道题，所以我才这么问的。\n你什么时候面试？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-15 10:53\n没有，不过我觉得没什么关系",
+          "匿名用户 发表于 2025-12-15 10:53\n没有，不过我觉得没什么关系"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#20743974"
+      },
+      {
+        "post_id": "rate_div_20743974",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#rate_div_20743974"
+      },
+      {
+        "post_id": "20745105",
+        "user": {
+          "username": "VickyZhangzzz",
+          "user_id": "626051",
+          "stats": {
+            "posts": "0",
+            "replies": "1",
+            "points": "599"
+          },
+          "is_anonymous": false
+        },
+        "content": "openaiautopilot 发表于 2025-12-15 10:36\n你的 prompt 里有 “but the attached sheet should help you prepare too!” 这句话吗？ 或者说，prompt  ...\n我的有提到“but the attached sheet should help you prepare too!” 。请问这代表了啥吗？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "openaiautopilot 发表于 2025-12-15 10:36\n你的 prompt 里有 “but the attached sheet should help you prepare too!” 这句话吗？ 或者说，prompt  ...",
+          "openaiautopilot 发表于 2025-12-15 10:36\n你的 prompt 里有 “but the attached sheet should help you prepare too!” 这句话吗？ 或者说，prompt  ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#20745105"
+      },
+      {
+        "post_id": "rate_div_20745105",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#rate_div_20745105"
+      },
+      {
+        "post_id": "20753410",
+        "user": {
+          "username": "soyeol",
+          "user_id": "553231",
+          "stats": {
+            "posts": "0",
+            "replies": "3",
+            "points": "501"
+          },
+          "is_anonymous": false
+        },
+        "content": "请问lz面完了吗？可以私信交流一下题目 有偿！",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#20753410"
+      },
+      {
+        "post_id": "rate_div_20753410",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#rate_div_20753410"
+      },
+      {
+        "post_id": "20754545",
+        "user": {
+          "username": "大漠飞刀",
+          "user_id": "658745",
+          "stats": {
+            "posts": "4",
+            "replies": "48",
+            "points": "514"
+          },
+          "is_anonymous": false
+        },
+        "content": "我的RE 有4轮都是 coding, 没有system design, 另外两轮是Manager deep dive 和 research presentation, 给的指导很general, ML coding, general coding, 首相两轮是coding 还没有约时间。请教会考什么，有机会一起学习准备。",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#20754545"
+      },
+      {
+        "post_id": "rate_div_20754545",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#rate_div_20754545"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "开放爱店面 + 求75min题目|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 111,
+    "thread_title": "[面试经验]\n开放爱店面 + 求75min题目",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 18
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 10,
+    "original_link": {
+      "href": "thread-1157815-1-1.html",
+      "text": "开放爱店面 + 求75min题目",
+      "web_agent_id": "wa-219",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1157815-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:12.680482"
+  }
+}

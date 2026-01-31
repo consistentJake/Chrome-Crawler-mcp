@@ -1,0 +1,436 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html",
+  "timestamp": "2026-01-08T20:19:19.131490",
+  "item_count": 21,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20740624",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "刚开始面试，但是看到最近的其它帖子说有换题\n\n想问一下最近有人面 classifier training and dataset analysis吗？方便分享一下题目有没有变化呀？\n\nML design prompt 是identifying out-of-distribution data for a product we are trying to build\n\n\n\n\n感谢感谢！",
+        "timestamp": "2025-12-12 15:01:49",
+        "reactions": {
+          "likes": 1,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#20740624"
+      },
+      {
+        "post_id": "rate_div_20740624",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#rate_div_20740624"
+      },
+      {
+        "post_id": "20741101",
+        "user": {
+          "username": "TommyDKOZ",
+          "user_id": "844758",
+          "stats": {
+            "posts": "5",
+            "replies": "30",
+            "points": "356"
+          },
+          "is_anonymous": false
+        },
+        "content": "刚进流程 想问下prompt在哪里看呢? 给的interview guide里看起来都是general的",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#20741101"
+      },
+      {
+        "post_id": "rate_div_20741101",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#rate_div_20741101"
+      },
+      {
+        "post_id": "20741208",
+        "user": {
+          "username": "alphabetagamma",
+          "user_id": "535380",
+          "stats": {
+            "posts": "12",
+            "replies": "108",
+            "points": "213"
+          },
+          "is_anonymous": false
+        },
+        "content": "请问这是什么岗的题",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#20741208"
+      },
+      {
+        "post_id": "rate_div_20741208",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#rate_div_20741208"
+      },
+      {
+        "post_id": "20741989",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "TommyDKOZ 发表于 2025-12-12 23:04\n刚进流程 想问下prompt在哪里看呢? 给的interview guide里看起来都是general的\n是跟recruiter聊完之后，要求提交availability的邮件里，我收到的email title是 OpenAI Next Steps | Technical Screen",
+        "timestamp": "2025-12-13 20:03:52",
+        "reactions": {},
+        "quotes": [
+          "TommyDKOZ 发表于 2025-12-12 23:04\n刚进流程 想问下prompt在哪里看呢? 给的interview guide里看起来都是general的",
+          "TommyDKOZ 发表于 2025-12-12 23:04\n刚进流程 想问下prompt在哪里看呢? 给的interview guide里看起来都是general的"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#20741989"
+      },
+      {
+        "post_id": "rate_div_20741989",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#rate_div_20741989"
+      },
+      {
+        "post_id": "20741990",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "alphabetagamma 发表于 2025-12-13 02:16\n请问这是什么岗的题\n投的岗位是sde 但是面试选择的ml track",
+        "timestamp": "2025-12-13 20:04:25",
+        "reactions": {},
+        "quotes": [
+          "alphabetagamma 发表于 2025-12-13 02:16\n请问这是什么岗的题",
+          "alphabetagamma 发表于 2025-12-13 02:16\n请问这是什么岗的题"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#20741990"
+      },
+      {
+        "post_id": "rate_div_20741990",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#rate_div_20741990"
+      },
+      {
+        "post_id": "20742050",
+        "user": {
+          "username": "TommyDKOZ",
+          "user_id": "844758",
+          "stats": {
+            "posts": "5",
+            "replies": "30",
+            "points": "356"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-13 20:03\n是跟recruiter聊完之后，要求提交availability的邮件里，我收到的email title是 OpenAI Next Steps | Tec ...\n我的这封邮件里只有一个prep guide. 只写了第一轮ML Coding + Coding, 以及一些很general的准备方法",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-13 20:03\n是跟recruiter聊完之后，要求提交availability的邮件里，我收到的email title是 OpenAI Next Steps | Tec ...",
+          "匿名用户 发表于 2025-12-13 20:03\n是跟recruiter聊完之后，要求提交availability的邮件里，我收到的email title是 OpenAI Next Steps | Tec ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#20742050"
+      },
+      {
+        "post_id": "rate_div_20742050",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#rate_div_20742050"
+      },
+      {
+        "post_id": "20742379",
+        "user": {
+          "username": "微信用户_i9eye",
+          "user_id": "1196530",
+          "stats": {
+            "posts": "0",
+            "replies": "2",
+            "points": "210"
+          },
+          "is_anonymous": false
+        },
+        "content": "楼主要是求到了的话能分享一下吗",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#20742379"
+      },
+      {
+        "post_id": "rate_div_20742379",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#rate_div_20742379"
+      },
+      {
+        "post_id": "20742500",
+        "user": {
+          "username": "jackahah",
+          "user_id": "1090483",
+          "stats": {
+            "posts": "0",
+            "replies": "9",
+            "points": "502"
+          },
+          "is_anonymous": false
+        },
+        "content": "同求 发现pdf的guide非常general",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#20742500"
+      },
+      {
+        "post_id": "rate_div_20742500",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#rate_div_20742500"
+      },
+      {
+        "post_id": "20743229",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "微信用户_i9eye 发表于 2025-12-14 09:37\n楼主要是求到了的话能分享一下吗\n好的，可是现在还没求到...",
+        "timestamp": "2025-12-14 21:40:10",
+        "reactions": {
+          "emoji_reactions": [
+            {
+              "emoji": "😮",
+              "count": 1
+            },
+            {
+              "emoji": "😮",
+              "count": 1
+            }
+          ]
+        },
+        "quotes": [
+          "微信用户_i9eye 发表于 2025-12-14 09:37\n楼主要是求到了的话能分享一下吗",
+          "微信用户_i9eye 发表于 2025-12-14 09:37\n楼主要是求到了的话能分享一下吗"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#20743229"
+      },
+      {
+        "post_id": "rate_div_20743229",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#rate_div_20743229"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "求开放爱的MLCoding和MLDesign面经|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 111,
+    "thread_title": "[面试经验]\n求开放爱的MLCoding和MLDesign面经",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 20
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 13,
+    "original_link": {
+      "href": "thread-1157833-1-1.html",
+      "text": "求开放爱的MLCoding和MLDesign面经",
+      "web_agent_id": "wa-241",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1157833-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:19.131531"
+  }
+}

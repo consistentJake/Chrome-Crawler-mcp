@@ -45,3 +45,32 @@ Thumbs.db
 # Test artifacts
 test/*.html
 test/*.json
+
+# YAML files (config files may contain secrets)
+*.yaml
+*.yml
+
+# Workflow outputs
+workflows/output/
+workflows/test_output/
+PostProcessing/promptProcessing/output/
+PostProcessing/output_test/
+# PostProcessing configs / caches
+PostProcessing/config*.yaml
+PostProcessing/*.local.yaml
+PostProcessing/output/
+PostProcessing/.pytest_cache/
+PostProcessing/.vscode/
+PostProcessing/.idea/
+exploration/openAICareers/jobs/
+scraper_output/
+
+# Output directories
+output/
+output_*/
+
+# Downloads directory
+downloads/
+
+# Documentation
+docs/

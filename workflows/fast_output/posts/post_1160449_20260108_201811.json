@@ -1,0 +1,161 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1160449-1-1.html",
+  "timestamp": "2026-01-08T20:18:11.627380",
+  "item_count": 7,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1160449-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20774922",
+        "user": {
+          "username": "小亩_d2a5d1e",
+          "user_id": "821476",
+          "stats": {
+            "posts": "1",
+            "replies": "1",
+            "points": "599"
+          },
+          "is_anonymous": false
+        },
+        "content": "本帖最后由 小亩_d2a5d1e 于 2026-1-7 17:12 编辑 . Waral dи,\n\n地里有没有人也在面开放爱前段的？ \n我手头有店面的资料，求交换。",
+        "timestamp": "",
+        "reactions": {
+          "likes": 0,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160449-1-1.html#20774922"
+      },
+      {
+        "post_id": "rate_div_20774922",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160449-1-1.html#rate_div_20774922"
+      },
+      {
+        "post_id": "20775167",
+        "user": {
+          "username": "大米儿",
+          "user_id": "544657",
+          "stats": {
+            "posts": "10",
+            "replies": "62",
+            "points": "575"
+          },
+          "is_anonymous": false
+        },
+        "content": "有，刚开始面coding轮，some key words: \n in-memory data structures, designing simple algorithms, managing state, and. From 1point 3acres bbs\nreasoning about performance trade-offs \n. 1point3acres\n有见过的伙伴吗？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160449-1-1.html#20775167"
+      },
+      {
+        "post_id": "rate_div_20775167",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160449-1-1.html#rate_div_20775167"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160449-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160449-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "求交换开放爱前端店面昂赛面筋|openai求职讨论|一亩三分地求职（非面经）版",
+    "extraction_time_ms": 109,
+    "thread_title": "[找工就业]\n[工作信息]\n求交换开放爱前端店面昂赛面筋",
+    "thread_tags": [
+      "求职（非面经）",
+      "openai"
+    ],
+    "total_replies": 6
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 4,
+    "original_link": {
+      "href": "thread-1160449-1-1.html",
+      "text": "求交换开放爱前端店面昂赛面筋",
+      "web_agent_id": "wa-175",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1160449-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:11.627429"
+  }
+}

@@ -1,0 +1,488 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html",
+  "timestamp": "2026-01-08T20:18:09.489249",
+  "item_count": 25,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20774331",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "听到有些朋友说现在Open AI的估值过高。现在入职怎么样？总体来说包裹还是不错吧？但是三十年河东 三十年河西，AI这股风大家觉得还能吹多久呢？不会像当年Uber员工一上市就被套牢吧",
+        "timestamp": "昨天 08:46",
+        "reactions": {
+          "likes": 1,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#20774331"
+      },
+      {
+        "post_id": "rate_div_20774331",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#rate_div_20774331"
+      },
+      {
+        "post_id": "20774368",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "别想这么多，能加入就加入。\n接下来几年都是ai的时代，错过了就没有了",
+        "timestamp": "昨天 09:04",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#20774368"
+      },
+      {
+        "post_id": "rate_div_20774368",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#rate_div_20774368"
+      },
+      {
+        "post_id": "20774471",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "做好心理准备，即便估值缩水也拿到AI被你身边的朋友都使用那一天卖出。其他时间埋头干活，只要你进得了OPENAI.",
+        "timestamp": "昨天 09:53",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#20774471"
+      },
+      {
+        "post_id": "rate_div_20774471",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#rate_div_20774471"
+      },
+      {
+        "post_id": "20775962",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "Wish是最差的结果，OAI应该不至于。但是最好的结果可能也就是Uber了。估值确实太高了，AI这个赛道，最后可能类似云，不会有赢者通吃。uber在类似时期，股票（融资）投资者是跑输大盘的，员工从经济收入角度上看是输给大厂员工的",
+        "timestamp": "13 小时前",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#20775962"
+      },
+      {
+        "post_id": "rate_div_20775962",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#rate_div_20775962"
+      },
+      {
+        "post_id": "20774378",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "去干一阵，然后跳别的地也不错。",
+        "timestamp": "昨天 09:10",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#20774378"
+      },
+      {
+        "post_id": "rate_div_20774378",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#rate_div_20774378"
+      },
+      {
+        "post_id": "20774438",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "这个公司最大的问题没有稳定现金流，现在都看明白了，只有大厂养得起ai游戏。我估计这个公司最后会被收购。能去research镀金就行。如果是applied就算了。",
+        "timestamp": "昨天 09:39",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#20774438"
+      },
+      {
+        "post_id": "rate_div_20774438",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#rate_div_20774438"
+      },
+      {
+        "post_id": "20775172",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2026-01-07 09:39:42\n这个公司最大的问题没有稳定现金流，现在都看明白了，只有大厂养得起ai游戏。我估计这个公司最后会被收购。能去research镀金就行。如果是applied就算了。深有同感，applied感觉value不大。不过如果有懂行的欢迎纠正",
+        "timestamp": "昨天 16:40",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2026-01-07 09:39:42\n这个公司最大的问题没有稳定现金流，现在都看明白了，只有大厂养得起ai游戏。我估计这个公司最后会被收购。能去research镀金就行。如果是applied就算了。",
+          "匿名用户 发表于 2026-01-07 09:39:42\n这个公司最大的问题没有稳定现金流，现在都看明白了，只有大厂养得起ai游戏。我估计这个公司最后会被收购。能去research镀金就行。如果是applied就算了。"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#20775172"
+      },
+      {
+        "post_id": "rate_div_20775172",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#rate_div_20775172"
+      },
+      {
+        "post_id": "20775185",
+        "user": {
+          "username": "meloandmilo",
+          "user_id": "1070763",
+          "stats": {
+            "posts": "0",
+            "replies": "172",
+            "points": "42"
+          },
+          "is_anonymous": false
+        },
+        "content": "无所谓啊 base 300k equity 1.5m呢 先干半年镀金再说 管他估值多不多呢 反正死的骆驼比马大",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#20775185"
+      },
+      {
+        "post_id": "rate_div_20775185",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#rate_div_20775185"
+      },
+      {
+        "post_id": "20775215",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "镀金都没啥用吧，最近面了好几个openai出来的人，感觉优势不大",
+        "timestamp": "昨天 17:11",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#20775215"
+      },
+      {
+        "post_id": "rate_div_20775215",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#rate_div_20775215"
+      },
+      {
+        "post_id": "20775216",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "rsu不能变现岂不是base全用来交AMT税了",
+        "timestamp": "昨天 17:12",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#20775216"
+      },
+      {
+        "post_id": "rate_div_20775216",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#rate_div_20775216"
+      },
+      {
+        "post_id": "20775373",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "new grad applied值得去吗 tc和大厂差不多",
+        "timestamp": "昨天 19:14",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#20775373"
+      },
+      {
+        "post_id": "rate_div_20775373",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#rate_div_20775373"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "OpenAI估值|一亩三分地职场达人版",
+    "extraction_time_ms": 111,
+    "thread_title": "[自我提升]\nOpenAI估值",
+    "thread_tags": [
+      "职场达人",
+      "openai"
+    ],
+    "total_replies": 24
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 3,
+    "original_link": {
+      "href": "thread-1160420-1-1.html",
+      "text": "OpenAI估值",
+      "web_agent_id": "wa-169",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1160420-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:09.489288"
+  }
+}

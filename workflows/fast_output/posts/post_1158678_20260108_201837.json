@@ -1,0 +1,529 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html",
+  "timestamp": "2026-01-08T20:18:37.441783",
+  "item_count": 27,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20751116",
+        "user": {
+          "username": "Unknown",
+          "user_id": "143213",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "Anthropic: 400k base + ~900k equity\n\nOpenAI: 320k base + ~550k equity\n\n应该大概率是去anthropic. 现在主要想法是能不能improve. 因为看到地里有其他dp是L6, 股票是4年5.2M. 不知道是不是那位同学做ML infra,所以属于research org, 算作research eng? 🔗 www.1point3acres.com\n\nupdate 1: recruiter说同一个profile就是完全统一的. 没法改. 比如research scientist, research eng, general SWE都有各自fixed package. 甚至signon bonus也没法有.  感觉没有任何improve空间啊.\n\nupdate 2: 现在感觉这个帖子好像提供什么价值. 就贡献一个dp好了, 希望对后来人有帮助. 大家也可以在这个帖子讨论下anthropic offer到底是不是完全不能谈的标准包. 因为我看地里dp很少. 甚至还有些dp给出了很匪夷所思的很少的equity, 让我都怀疑是不是当事人搞错了...🔗 www.1point3acres.com 我当时看的就很困惑. \n\n希望我们的讨论能帮助以后的同学",
+        "timestamp": "2025-12-19 12:05:06",
+        "reactions": {
+          "likes": 7,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#20751116"
+      },
+      {
+        "post_id": "rate_20751116",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#rate_20751116"
+      },
+      {
+        "post_id": "20751292",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "我拿过oai rearch eng的包，一开始也说nonnegotiable，但是后面有了gdm offer他们立马又说可以加，不过最后也没去",
+        "timestamp": "2025-12-19 14:17:42",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#20751292"
+      },
+      {
+        "post_id": "rate_div_20751292",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#rate_div_20751292"
+      },
+      {
+        "post_id": "20751297",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "这是A\\ 正常的L6 eng 包，而且已经是涨过的包裹。注意这边的确fire fast，而且有一年cliff， 所以心理上压力可能会大一些",
+        "timestamp": "2025-12-19 14:22:01",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#20751297"
+      },
+      {
+        "post_id": "rate_div_20751297",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#rate_div_20751297"
+      },
+      {
+        "post_id": "20751274",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "原来普通swe就算去这种ai公司也拿不到啥大包啊。。。还得转ai....",
+        "timestamp": "2025-12-19 14:00:55",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#20751274"
+      },
+      {
+        "post_id": "rate_div_20751274",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#rate_div_20751274"
+      },
+      {
+        "post_id": "20751144",
+        "user": {
+          "username": "trazeguest005",
+          "user_id": "257544",
+          "stats": {
+            "posts": "5",
+            "replies": "696",
+            "points": "99"
+          },
+          "is_anonymous": false
+        },
+        "content": "OAI的L5 data scientist能大概拿到3M的股票，楼主可以争取多要点股票啊",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#20751144"
+      },
+      {
+        "post_id": "rate_div_20751144",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#rate_div_20751144"
+      },
+      {
+        "post_id": "20751146",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "感谢分享！o不给compete吗？a和我说他们是nonnegotiable 我还想着用a去compete o……还有请问是re岗位吗？我对a的最大concern还是竞争不过o，然后太依赖某些大厂容易暴毙……",
+        "timestamp": "2025-12-19 12:22:57",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#20751146"
+      },
+      {
+        "post_id": "rate_div_20751146",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#rate_div_20751146"
+      },
+      {
+        "post_id": "20751179",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-20 04:22\n感谢分享！o不给compete吗？a和我说他们是nonnegotiable 我还想着用a去compete o……还有请问是re岗位吗？ ...\n我还没尝试compete. 本来是感觉a的offer超过oai L5的pay band了. 而且a家不是有传言又快要融资, 估值要涨了吗,所以感觉股票upside多一些. \n不过还没有正式做什么决定, 再考虑考虑.",
+        "timestamp": "2025-12-19 12:48:02",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-20 04:22\n感谢分享！o不给compete吗？a和我说他们是nonnegotiable 我还想着用a去compete o……还有请问是re岗位吗？ ...",
+          "匿名用户 发表于 2025-12-20 04:22\n感谢分享！o不给compete吗？a和我说他们是nonnegotiable 我还想着用a去compete o……还有请问是re岗位吗？ ..."
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#20751179"
+      },
+      {
+        "post_id": "rate_div_20751179",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#rate_div_20751179"
+      },
+      {
+        "post_id": "20751201",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "openai居然少这么多吗",
+        "timestamp": "2025-12-19 13:03:19",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#20751201"
+      },
+      {
+        "post_id": "rate_div_20751201",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#rate_div_20751201"
+      },
+      {
+        "post_id": "20751235",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "你拿到的是普通engineer的包对吧",
+        "timestamp": "2025-12-19 13:29:38",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#20751235"
+      },
+      {
+        "post_id": "rate_div_20751235",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#rate_div_20751235"
+      },
+      {
+        "post_id": "20751236",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "看股票数量 是普通swe",
+        "timestamp": "2025-12-19 13:30:23",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#20751236"
+      },
+      {
+        "post_id": "rate_div_20751236",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#rate_div_20751236"
+      },
+      {
+        "post_id": "20751255",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "400k+900K / 年？ 这个很好了吧，不知道啊，就是纯羡慕而已。",
+        "timestamp": "2025-12-19 13:46:25",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#20751255"
+      },
+      {
+        "post_id": "rate_div_20751255",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#rate_div_20751255"
+      },
+      {
+        "post_id": "20751259",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-19 13:30:23\n看股票数量 是普通swe是的，普通swe。羡慕re和rs更大的包啊",
+        "timestamp": "2025-12-19 13:50:15",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-19 13:30:23\n看股票数量 是普通swe",
+          "匿名用户 发表于 2025-12-19 13:30:23\n看股票数量 是普通swe"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#20751259"
+      },
+      {
+        "post_id": "rate_div_20751259",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#rate_div_20751259"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "Anthropic vs OpenAI|anthropic工资|一亩三分地🔑晒工资抖包袱版",
+    "extraction_time_ms": 136,
+    "thread_title": "[💰晒工资抖包袱]\nAnthropic vs OpenAI",
+    "thread_tags": [
+      "晒工资抖包袱",
+      "BayArea湾区",
+      "openai",
+      "anthropic"
+    ],
+    "total_replies": 26
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 16,
+    "original_link": {
+      "href": "thread-1158678-1-1.html",
+      "text": "Anthropic vs OpenAI",
+      "web_agent_id": "wa-259",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1158678-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:37.441836"
+  }
+}

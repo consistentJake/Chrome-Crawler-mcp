@@ -1,0 +1,566 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html",
+  "timestamp": "2026-01-08T20:18:28.818151",
+  "item_count": 27,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20768235",
+        "user": {
+          "username": "nyufufu",
+          "user_id": "729323",
+          "stats": {
+            "posts": "13",
+            "replies": "700",
+            "points": "371"
+          },
+          "is_anonymous": false
+        },
+        "content": "如题，这合理吗？",
+        "timestamp": "",
+        "reactions": {
+          "likes": 0,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#20768235"
+      },
+      {
+        "post_id": "rate_div_20768235",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#rate_div_20768235"
+      },
+      {
+        "post_id": "20768764",
+        "user": {
+          "username": "微信用户_f13a817",
+          "user_id": "985072",
+          "stats": {
+            "posts": "42",
+            "replies": "479",
+            "points": "761"
+          },
+          "is_anonymous": false
+        },
+        "content": "这不是找茬吗？meta或谷歌的经理为了你去open ai给你写推荐信？",
+        "timestamp": "",
+        "reactions": {
+          "emoji_reactions": [
+            {
+              "emoji": "🤗",
+              "count": 13
+            },
+            {
+              "emoji": "🤗",
+              "count": 13
+            },
+            {
+              "emoji": "helloteacha\n                    zealinc\n                    ChenLiu",
+              "count": 1996
+            }
+          ]
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#20768764"
+      },
+      {
+        "post_id": "rate_div_20768764",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#rate_div_20768764"
+      },
+      {
+        "post_id": "20769017",
+        "user": {
+          "username": "面试问题",
+          "user_id": "154478",
+          "stats": {
+            "posts": "33",
+            "replies": "1057",
+            "points": "133"
+          },
+          "is_anonymous": false
+        },
+        "content": "蓬松自然的葫芦 发表于 2026-01-03 13:22:37\n好像没啥问题呀。\n\n据我个人想象，我之前的离职哪怕是去同行业，都是比较开心的，大家都是朋友你这个情况是有offer跳槽大家祝福，openai是写推荐信的时候还没offer，这个时候相当于老板帮你跳槽，谁愿意？就算写了，万一不发offer了谁承担后果？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "蓬松自然的葫芦 发表于 2026-01-03 13:22:37\n好像没啥问题呀。\n\n据我个人想象，我之前的离职哪怕是去同行业，都是比较开心的，大家都是朋友",
+          "蓬松自然的葫芦 发表于 2026-01-03 13:22:37\n好像没啥问题呀。\n\n据我个人想象，我之前的离职哪怕是去同行业，都是比较开心的，大家都是朋友"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#20769017"
+      },
+      {
+        "post_id": "rate_div_20769017",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#rate_div_20769017"
+      },
+      {
+        "post_id": "20769072",
+        "user": {
+          "username": "d3004",
+          "user_id": "910942",
+          "stats": {
+            "posts": "13",
+            "replies": "141",
+            "points": "119"
+          },
+          "is_anonymous": false
+        },
+        "content": "openai真的狂了 服从性测试做到这份上 被gemini超越真的是活该&指日可待",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#20769072"
+      },
+      {
+        "post_id": "rate_div_20769072",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#rate_div_20769072"
+      },
+      {
+        "post_id": "20768652",
+        "user": {
+          "username": "awsglue",
+          "user_id": "749676",
+          "stats": {
+            "posts": "4",
+            "replies": "75",
+            "points": "104"
+          },
+          "is_anonymous": false
+        },
+        "content": "应该找之前的manager也可以我记得",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#20768652"
+      },
+      {
+        "post_id": "rate_div_20768652",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#rate_div_20768652"
+      },
+      {
+        "post_id": "20768677",
+        "user": {
+          "username": "cocaptainco",
+          "user_id": "37087",
+          "stats": {
+            "posts": "28",
+            "replies": "376",
+            "points": "307"
+          },
+          "is_anonymous": false
+        },
+        "content": "如果只有一任manager或者两任manager， 但是跟前任关系不好咋办。。。",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#20768677"
+      },
+      {
+        "post_id": "rate_div_20768677",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#rate_div_20768677"
+      },
+      {
+        "post_id": "20768864",
+        "user": {
+          "username": "蓬松自然的葫芦",
+          "user_id": "1286838",
+          "stats": {
+            "posts": "0",
+            "replies": "1",
+            "points": "1"
+          },
+          "is_anonymous": false
+        },
+        "content": "微信用户_f13a817 发表于 2026-1-4 03:44\n这不是找茬吗？meta或谷歌的经理为了你去open ai给你写推荐信？. 1point 3acres \n好像没啥问题呀。. ----\n. From 1point 3acres bbs\n据我个人想象，我之前的离职哪怕是去同行业，都是比较开心的，大家都是朋友",
+        "timestamp": "",
+        "reactions": {
+          "emoji_reactions": [
+            {
+              "emoji": "➕",
+              "count": 1
+            },
+            {
+              "emoji": "➕",
+              "count": 1
+            },
+            {
+              "emoji": "❌",
+              "count": 10
+            }
+          ]
+        },
+        "quotes": [
+          "微信用户_f13a817 发表于 2026-1-4 03:44\n这不是找茬吗？meta或谷歌的经理为了你去open ai给你写推荐信？",
+          "微信用户_f13a817 发表于 2026-1-4 03:44\n这不是找茬吗？meta或谷歌的经理为了你去open ai给你写推荐信？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#20768864"
+      },
+      {
+        "post_id": "rate_div_20768864",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#rate_div_20768864"
+      },
+      {
+        "post_id": "20768874",
+        "user": {
+          "username": "bluezebra",
+          "user_id": "46198",
+          "stats": {
+            "posts": "13",
+            "replies": "345",
+            "points": "887"
+          },
+          "is_anonymous": false
+        },
+        "content": "蓬松自然的葫芦 发表于 2026-1-4 05:22.--\n好像没啥问题呀。\n\n据我个人想象，我之前的离职哪怕是去同行业，都是比较开心的，大家都是朋友\n那如果是被pip或者layoff的呢",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "蓬松自然的葫芦 发表于 2026-1-4 05:22.--\n好像没啥问题呀。\n\n据我个人想象，我之前的离职哪怕是去同行业，都是比较开心的，大家都是朋友",
+          "蓬松自然的葫芦 发表于 2026-1-4 05:22.--\n好像没啥问题呀。\n\n据我个人想象，我之前的离职哪怕是去同行业，都是比较开心的，大家都是朋友"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#20768874"
+      },
+      {
+        "post_id": "rate_div_20768874",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#rate_div_20768874"
+      },
+      {
+        "post_id": "20768895",
+        "user": {
+          "username": "ytx2013",
+          "user_id": "521202",
+          "stats": {
+            "posts": "4",
+            "replies": "412",
+            "points": "167"
+          },
+          "is_anonymous": false
+        },
+        "content": "还有这要求？ng咋办？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#20768895"
+      },
+      {
+        "post_id": "rate_div_20768895",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#rate_div_20768895"
+      },
+      {
+        "post_id": "20768941",
+        "user": {
+          "username": "nyufufu",
+          "user_id": "729323",
+          "stats": {
+            "posts": "13",
+            "replies": "700",
+            "points": "371"
+          },
+          "is_anonymous": false
+        },
+        "content": "蓬松自然的葫芦 发表于 2026-01-03 13:22:37\n好像没啥问题呀。.1point3acres\n\n据我个人想象，我之前的离职哪怕是去同行业，都是比较开心的，大家都是朋友关键是理论上存在reference不理想不给你发offer的情况",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "蓬松自然的葫芦 发表于 2026-01-03 13:22:37\n好像没啥问题呀。.1point3acres\n\n据我个人想象，我之前的离职哪怕是去同行业，都是比较开心的，大家都是朋友",
+          "蓬松自然的葫芦 发表于 2026-01-03 13:22:37\n好像没啥问题呀。.1point3acres\n\n据我个人想象，我之前的离职哪怕是去同行业，都是比较开心的，大家都是朋友"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#20768941"
+      },
+      {
+        "post_id": "rate_div_20768941",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#rate_div_20768941"
+      },
+      {
+        "post_id": "20768942",
+        "user": {
+          "username": "nyufufu",
+          "user_id": "729323",
+          "stats": {
+            "posts": "13",
+            "replies": "700",
+            "points": "371"
+          },
+          "is_anonymous": false
+        },
+        "content": "awsglue 发表于 2026-01-03 10:16:54\n应该找之前的manager也可以我记得说是current或recent manager",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "awsglue 发表于 2026-01-03 10:16:54\n应该找之前的manager也可以我记得",
+          "awsglue 发表于 2026-01-03 10:16:54\n应该找之前的manager也可以我记得"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#20768942"
+      },
+      {
+        "post_id": "rate_div_20768942",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#rate_div_20768942"
+      },
+      {
+        "post_id": "20769006",
+        "user": {
+          "username": "sszz92",
+          "user_id": "109684",
+          "stats": {
+            "posts": "17",
+            "replies": "1204",
+            "points": "542"
+          },
+          "is_anonymous": false
+        },
+        "content": "openai怎么知道谁是现在or之前的manager？\n找个关系好的同事写行不？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#20769006"
+      },
+      {
+        "post_id": "rate_div_20769006",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#rate_div_20769006"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "OpenAI 发offer前必须有现manager的推荐信|openai求职讨论|一亩三分地求职（非面经）版",
+    "extraction_time_ms": 120,
+    "thread_title": "[找工就业]\n[工作信息]\nOpenAI 发offer前必须有现manager的推荐信",
+    "thread_tags": [
+      "求职（非面经）",
+      "openai"
+    ],
+    "total_replies": 26
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 12,
+    "original_link": {
+      "href": "thread-1159950-1-1.html",
+      "text": "OpenAI 发offer前必须有现manager的推荐信",
+      "web_agent_id": "wa-231",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1159950-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:28.818211"
+  }
+}

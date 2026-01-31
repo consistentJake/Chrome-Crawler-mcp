@@ -1,0 +1,380 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html",
+  "timestamp": "2026-01-08T20:19:23.439037",
+  "item_count": 19,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20740809",
+        "user": {
+          "username": "Unknown",
+          "user_id": "282088",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "爱开放店面里遇到IP地址迭代器题，地里信息很少所以把这道题整理了一下分享出来。求加米！\n\nPart 1:\n\n以下内容需要积分高于 188 您已经可以浏览\nForward (正向迭代) 要求实现一个 IPV4Iterator 类。 给定一个起始 IP 字符串（比如 \"192.168.0.1\"），需要让这个迭代器从该起点开始，逐个返回 (yield) 后续所有的 IP 地址，直到达到 IPv4 的上限 255.255.255.255 为止。\n\n代码接口要求： 需要实现标准的 Python 迭代器协议 (Iterator Protocol)，即 __init__, __iter__, 和 __next__。\n\nPart 2: Reverse (反向迭代) 给定一个终点 IP（比如 \"192.168.0.255\"），实现一个倒序迭代器。要求从这个 IP 开始，反向遍历 (decrement) 直至 0.0.0.0。\n\nPart 3: CIDR (网段解析)：这次的输入是一个 CIDR 格式的字符串（比如 \"192.168.1.0/24\"）。 你需要解析该字符串，利用位运算 (Bitwise Operation) 算出该网段的 Start IP 和 End IP，然后遍历并返回该网段内包含的所有 IP 地址。\n\n    CIDR 格式说明：IP地址/数字（例如 192.168.1.0/24）。\n\n        斜杠前：基准 IP。\n\n        斜杠后 (/n)：网络前缀长度。意思是该 IP 的 32 位二进制中，前 n 位固定，剩下的 32-n 位（主机位）是可变的。\n\n核心考点是如何根据掩码位（Mask，即 /24）快速计算出网络区间的范围。\n\nPart 4: Optimization 后续问：如何优化时间复杂度和空间复杂度\n\n\n求加米，祝大家面试成功！",
+        "timestamp": "2025-12-12 17:45:41",
+        "reactions": {
+          "likes": 9,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#20740809"
+      },
+      {
+        "post_id": "rate_20740809",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#rate_20740809"
+      },
+      {
+        "post_id": "20740947",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "楼主请问这题是60分钟还是75分钟？大米以加！",
+        "timestamp": "2025-12-12 20:17:12",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#20740947"
+      },
+      {
+        "post_id": "rate_div_20740947",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#rate_div_20740947"
+      },
+      {
+        "post_id": "20741009",
+        "user": {
+          "username": "xybinxzz",
+          "user_id": "1280294",
+          "stats": {
+            "posts": "2",
+            "replies": "12",
+            "points": "103"
+          },
+          "is_anonymous": false
+        },
+        "content": "lz好人，已加米",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#20741009"
+      },
+      {
+        "post_id": "rate_div_20741009",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#rate_div_20741009"
+      },
+      {
+        "post_id": "20741039",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "LZ好人，已加米",
+        "timestamp": "2025-12-12 21:44:15",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#20741039"
+      },
+      {
+        "post_id": "rate_div_20741039",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#rate_div_20741039"
+      },
+      {
+        "post_id": "20741099",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-12 20:17\n楼主请问这题是60分钟还是75分钟？大米以加！\n60分钟的，感谢加米",
+        "timestamp": "2025-12-12 23:01:24",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-12 20:17\n楼主请问这题是60分钟还是75分钟？大米以加！",
+          "匿名用户 发表于 2025-12-12 20:17\n楼主请问这题是60分钟还是75分钟？大米以加！"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#20741099"
+      },
+      {
+        "post_id": "rate_div_20741099",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#rate_div_20741099"
+      },
+      {
+        "post_id": "20741158",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "楼主好人！以加米",
+        "timestamp": "2025-12-13 00:25:54",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#20741158"
+      },
+      {
+        "post_id": "rate_div_20741158",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#rate_div_20741158"
+      },
+      {
+        "post_id": "20742108",
+        "user": {
+          "username": "yangc22",
+          "user_id": "241136",
+          "stats": {
+            "posts": "8",
+            "replies": "657",
+            "points": "3999"
+          },
+          "is_anonymous": false
+        },
+        "content": "楼主大好人 已加米",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#20742108"
+      },
+      {
+        "post_id": "rate_div_20742108",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#rate_div_20742108"
+      },
+      {
+        "post_id": "20742221",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "优化时间复杂度和空间复杂度？这个有什么可以优化的吗？",
+        "timestamp": "2025-12-14 01:42:54",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#20742221"
+      },
+      {
+        "post_id": "rate_div_20742221",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#rate_div_20742221"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "分享爱开放IP地址迭代器题|openai面经|一亩三分地海外面经版",
+    "extraction_time_ms": 112,
+    "thread_title": "[面试经验]\n分享爱开放IP地址迭代器题",
+    "thread_tags": [
+      "海外面经",
+      "openai"
+    ],
+    "total_replies": 18
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 15,
+    "original_link": {
+      "href": "thread-1157855-1-1.html",
+      "text": "分享爱开放IP地址迭代器题",
+      "web_agent_id": "wa-253",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1157855-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:23.439075"
+  }
+}

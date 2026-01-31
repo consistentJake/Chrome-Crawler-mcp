@@ -1,0 +1,747 @@
+{
+  "extracted_date": "2026-01-14T02:22:37.019823",
+  "source_url": "https://openai.com/careers/search/",
+  "total_jobs": 148,
+  "jobs": [
+    {
+      "title": "AI Social Risk Analyst",
+      "url": "https://openai.com/careers/ai-social-risk-analyst-san-francisco/",
+      "team": "Intelligence & Investigation"
+    },
+    {
+      "title": "Backend Software Engineer - B2B Applications",
+      "url": "https://openai.com/careers/backend-software-engineer-b2b-applications-san-francisco/",
+      "team": "B2B Applications"
+    },
+    {
+      "title": "Backend Software Engineer (Evals) \u2013 Support Automation Engineering",
+      "url": "https://openai.com/careers/backend-software-engineer-(evals)-support-automation-engineering-san-francisco/",
+      "team": "Support Automation Engineering"
+    },
+    {
+      "title": "Backend Software Engineer, Growth",
+      "url": "https://openai.com/careers/backend-software-engineer-growth-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Backend Software Engineer, GTM Innovation",
+      "url": "https://openai.com/careers/backend-software-engineer-gtm-innovation-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Compute Business Operations Lead",
+      "url": "https://openai.com/careers/compute-business-operations-lead-san-francisco/",
+      "team": "Compute"
+    },
+    {
+      "title": "Compute Infrastructure Strategy Lead",
+      "url": "https://openai.com/careers/compute-infrastructure-strategy-lead-san-francisco/",
+      "team": "Compute"
+    },
+    {
+      "title": "Datacenter Hardware Operations Technician, AI Compute Infrastructure - Stargate",
+      "url": "https://openai.com/careers/datacenter-hardware-operations-technician-ai-compute-infrastructure-stargate-remote-us/",
+      "team": "AI Compute Infrastructure"
+    },
+    {
+      "title": "Datacenter Networking Technician, AI Compute Deployment - Stargate",
+      "url": "https://openai.com/careers/datacenter-networking-technician-ai-compute-deployment-stargate-remote-us/",
+      "team": "AI Compute Deployment"
+    },
+    {
+      "title": "Data Engineer, Analytics",
+      "url": "https://openai.com/careers/data-engineer-analytics-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Distributed Training Engineer, Sora",
+      "url": "https://openai.com/careers/distributed-training-engineer-sora-san-francisco/",
+      "team": "Sora"
+    },
+    {
+      "title": "Electrical Engineer, End-Effectors",
+      "url": "https://openai.com/careers/electrical-engineer-end-effectors-san-francisco/",
+      "team": "Robotics"
+    },
+    {
+      "title": "Engineering Manager, Atlas",
+      "url": "https://openai.com/careers/engineering-manager-atlas-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Engineering Manager, ChatGPT Growth",
+      "url": "https://openai.com/careers/engineering-manager-chatgpt-growth-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Engineering Manager, Enterprise Ecosystem",
+      "url": "https://openai.com/careers/engineering-manager-enterprise-ecosystem-seattle/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Engineering Manager, Monetization Infrastructure",
+      "url": "https://openai.com/careers/engineering-manager-monetization-infrastructure-san-francisco/",
+      "team": "Engineering"
+    },
+    {
+      "title": "Engineering Manager, Monetization Product & Platform",
+      "url": "https://openai.com/careers/engineering-manager-monetization-product-and-platform-san-francisco/",
+      "team": "Engineering"
+    },
+    {
+      "title": "Engineering Manager, Multimodal (API)",
+      "url": "https://openai.com/careers/engineering-manager-multimodal-(api)-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Engineering Manager, Youth Well-Being",
+      "url": "https://openai.com/careers/engineering-manager-youth-well-being-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Field Engineer",
+      "url": "https://openai.com/careers/field-engineer-san-francisco/",
+      "team": "Robotics"
+    },
+    {
+      "title": "Frontend Software Engineer - B2B Applications",
+      "url": "https://openai.com/careers/frontend-software-engineer-b2b-applications-san-francisco/",
+      "team": "B2B Applications"
+    },
+    {
+      "title": "Fullstack Engineer, Child Safety Tools & Systems",
+      "url": "https://openai.com/careers/fullstack-engineer-child-safety-tools-and-systems-san-francisco/",
+      "team": "Intelligence"
+    },
+    {
+      "title": "Full Stack Engineer, Fleet Scheduling",
+      "url": "https://openai.com/careers/full-stack-engineer-fleet-scheduling-san-francisco/",
+      "team": "Scaling"
+    },
+    {
+      "title": "Full Stack Engineer, Health AI",
+      "url": "https://openai.com/careers/full-stack-engineer-health-ai-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Fullstack Engineer, Intelligence Systems",
+      "url": "https://openai.com/careers/fullstack-engineer-intelligence-systems-san-francisco/",
+      "team": "Intelligence"
+    },
+    {
+      "title": "Full Stack Software Engineer, B2B Applications",
+      "url": "https://openai.com/careers/full-stack-software-engineer-b2b-applications-san-francisco/",
+      "team": "B2B Applications"
+    },
+    {
+      "title": "Full Stack Software Engineer - Enterprise Agents",
+      "url": "https://openai.com/careers/full-stack-software-engineer-enterprise-agents-san-francisco/",
+      "team": "B2B"
+    },
+    {
+      "title": "Full-Stack Software Engineer, Frontier Exploration",
+      "url": "https://openai.com/careers/full-stack-software-engineer-frontier-exploration-san-francisco/",
+      "team": "Frontier Exploration"
+    },
+    {
+      "title": "Full Stack Software Engineer, Growth",
+      "url": "https://openai.com/careers/full-stack-software-engineer-growth-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Full Stack Software Engineer, GTM Innovation",
+      "url": "https://openai.com/careers/full-stack-software-engineer-gtm-innovation-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Full-Stack SWE, Data Acquisition (Foundations)",
+      "url": "https://openai.com/careers/full-stack-swe-data-acquisition-(foundations)-san-francisco/",
+      "team": "Foundations"
+    },
+    {
+      "title": "Growth Paid Marketing Platform Engineer",
+      "url": "https://openai.com/careers/growth-paid-marketing-platform-engineer-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Inference Technical Lead, Sora",
+      "url": "https://openai.com/careers/inference-technical-lead-sora-san-francisco/",
+      "team": "Sora"
+    },
+    {
+      "title": "Machine Learning Engineer, Integrity",
+      "url": "https://openai.com/careers/machine-learning-engineer-integrity-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Manager, Protection Scientist Engineer, Intelligence and Investigations",
+      "url": "https://openai.com/careers/manager-protection-scientist-engineer-intelligence-and-investigations-san-francisco/",
+      "team": "Intelligence and Investigations"
+    },
+    {
+      "title": "Principal Software Engineer, ChatGPT for Work",
+      "url": "https://openai.com/careers/principal-software-engineer-chatgpt-for-work-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Product Engineer, GTM Innovation",
+      "url": "https://openai.com/careers/product-engineer-gtm-innovation-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Product Performance Engineer",
+      "url": "https://openai.com/careers/product-performance-engineer-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Product & Solutions Lead, Safety and Security",
+      "url": "https://openai.com/careers/product-and-solutions-lead-safety-and-security-san-francisco/",
+      "team": "Intelligence"
+    },
+    {
+      "title": "Program Manager, Human Data",
+      "url": "https://openai.com/careers/program-manager-human-data-san-francisco/",
+      "team": "Human Data"
+    },
+    {
+      "title": "Program Manager, Human Data - Strategic Initiatives",
+      "url": "https://openai.com/careers/program-manager-human-data-strategic-initiatives-san-francisco/",
+      "team": "Human Data"
+    },
+    {
+      "title": "Protection Scientist Engineer, Intelligence and Investigations",
+      "url": "https://openai.com/careers/protection-scientist-engineer-intelligence-and-investigations-san-francisco/",
+      "team": "Intelligence and Investigations"
+    },
+    {
+      "title": "Protection Scientist Engineer, Intelligence and Investigations (London)",
+      "url": "https://openai.com/careers/protection-scientist-engineer-intelligence-and-investigations-london-uk/",
+      "team": "Intelligence and Investigations"
+    },
+    {
+      "title": "Quantitative Intelligence Analyst",
+      "url": "https://openai.com/careers/quantitative-intelligence-analyst-san-francisco/",
+      "team": "Intelligence & Investigation"
+    },
+    {
+      "title": "Research Engineer",
+      "url": "https://openai.com/careers/research-engineer-san-francisco/",
+      "team": "Research"
+    },
+    {
+      "title": "Research Engineer, AI for Science",
+      "url": "https://openai.com/careers/research-engineer-ai-for-science-san-francisco/",
+      "team": "Research"
+    },
+    {
+      "title": "Research Engineer, Applied AI Engineering",
+      "url": "https://openai.com/careers/research-engineer-applied-ai-engineering-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Research Engineer, Codex",
+      "url": "https://openai.com/careers/research-engineer-codex-san-francisco/",
+      "team": "Research"
+    },
+    {
+      "title": "Research Engineer, Frontier Evals & Environments",
+      "url": "https://openai.com/careers/research-engineer-frontier-evals-and-environments-san-francisco/",
+      "team": "Research"
+    },
+    {
+      "title": "Research Engineer, Frontier Evals & Environments - Finance",
+      "url": "https://openai.com/careers/research-engineer-frontier-evals-and-environments-finance-san-francisco/",
+      "team": "Research"
+    },
+    {
+      "title": "Research Engineer, Human-Centered AI",
+      "url": "https://openai.com/careers/research-engineer-human-centered-ai-san-francisco/",
+      "team": "Human Data"
+    },
+    {
+      "title": "Research Engineer, Human Data",
+      "url": "https://openai.com/careers/research-engineer-human-data-san-francisco/",
+      "team": "Human Data"
+    },
+    {
+      "title": "Research Engineer, Notifications",
+      "url": "https://openai.com/careers/research-engineer-notifications-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Research Engineer / Research Scientist - Foundations Retrieval Lead",
+      "url": "https://openai.com/careers/research-engineer-research-scientist-foundations-retrieval-lead-san-francisco/",
+      "team": "Foundations"
+    },
+    {
+      "title": "Research Engineer / Research Scientist, Post-Training",
+      "url": "https://openai.com/careers/research-engineer-research-scientist-post-training-san-francisco/",
+      "team": "Post-Training"
+    },
+    {
+      "title": "Research Engineer/Research Scientist, RL/Reasoning",
+      "url": "https://openai.com/careers/research-engineerresearch-scientist-rlreasoning-san-francisco/",
+      "team": "RL/Reasoning"
+    },
+    {
+      "title": "Research Engineer, Retrieval & Search, Applied Engineering",
+      "url": "https://openai.com/careers/research-engineer-retrieval-and-search-applied-engineering-san-francisco/",
+      "team": "Applied Engineering"
+    },
+    {
+      "title": "Researcher, Alignment",
+      "url": "https://openai.com/careers/researcher-alignment-san-francisco/",
+      "team": "Alignment"
+    },
+    {
+      "title": "Researcher, Synthetic RL",
+      "url": "https://openai.com/careers/researcher-synthetic-rl-san-francisco/",
+      "team": "Research"
+    },
+    {
+      "title": "Researcher, Training",
+      "url": "https://openai.com/careers/researcher-training-san-francisco/",
+      "team": "Training"
+    },
+    {
+      "title": "Research Scientist",
+      "url": "https://openai.com/careers/research-scientist-san-francisco/",
+      "team": "Research"
+    },
+    {
+      "title": "Research Scientist, Mathematical Sciences",
+      "url": "https://openai.com/careers/research-scientist-mathematical-sciences-san-francisco/",
+      "team": "Research"
+    },
+    {
+      "title": "Robotics Software Engineer",
+      "url": "https://openai.com/careers/robotics-software-engineer-san-francisco/",
+      "team": "Robotics"
+    },
+    {
+      "title": "Senior Software Engineer, Data Acquisition",
+      "url": "https://openai.com/careers/senior-software-engineer-data-acquisition-san-francisco/",
+      "team": "Foundations"
+    },
+    {
+      "title": "Senior Software Engineer, Identity Platform",
+      "url": "https://openai.com/careers/senior-software-engineer-identity-platform-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Simulation Environments Engineer",
+      "url": "https://openai.com/careers/simulation-environments-engineer-san-francisco/",
+      "team": "Robotics"
+    },
+    {
+      "title": "Simulation Realism Engineer",
+      "url": "https://openai.com/careers/simulation-realism-engineer-san-francisco/",
+      "team": "Robotics"
+    },
+    {
+      "title": "Site Reliability Engineer, Frontier Systems Infrastructure",
+      "url": "https://openai.com/careers/site-reliability-engineer-frontier-systems-infrastructure-san-francisco/",
+      "team": "Frontier Systems Infrastructure"
+    },
+    {
+      "title": "Software Engineer, Accelerators",
+      "url": "https://openai.com/careers/software-engineer-accelerators-san-francisco/",
+      "team": "Kernels"
+    },
+    {
+      "title": "Software Engineer, Agent Infrastructure",
+      "url": "https://openai.com/careers/software-engineer-agent-infrastructure-san-francisco/",
+      "team": "Scaling"
+    },
+    {
+      "title": "Software Engineer, Android",
+      "url": "https://openai.com/careers/software-engineer-android-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, API Engineer",
+      "url": "https://openai.com/careers/software-engineer-api-engineer-san-francisco/",
+      "team": "B2B Applications"
+    },
+    {
+      "title": "Software Engineer, Applied Evals",
+      "url": "https://openai.com/careers/software-engineer-applied-evals-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, Backend",
+      "url": "https://openai.com/careers/software-engineer-backend-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Backend (Knowledge Innovation)",
+      "url": "https://openai.com/careers/software-engineer-backend-(knowledge-innovation)-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, Backend - Sora",
+      "url": "https://openai.com/careers/software-engineer-backend-sora-san-francisco/",
+      "team": "Sora"
+    },
+    {
+      "title": "Software Engineer, Caching Infrastructure",
+      "url": "https://openai.com/careers/software-engineer-caching-infrastructure-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, ChatGPT for Work",
+      "url": "https://openai.com/careers/software-engineer-chatgpt-for-work-seattle/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Cloud Infrastructure (London)",
+      "url": "https://openai.com/careers/software-engineer-cloud-infrastructure-london-uk/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, Cloud Infrastructure",
+      "url": "https://openai.com/careers/software-engineer-cloud-infrastructure-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, Codex for Teams (London)",
+      "url": "https://openai.com/careers/software-engineer-codex-for-teams-london-uk/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Codex for Teams",
+      "url": "https://openai.com/careers/software-engineer-codex-for-teams-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Codex Runtime",
+      "url": "https://openai.com/careers/software-engineer-codex-runtime-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Collective Communication",
+      "url": "https://openai.com/careers/software-engineer-collective-communication-san-francisco/",
+      "team": "Scaling"
+    },
+    {
+      "title": "Software Engineer, Compute - Storage",
+      "url": "https://openai.com/careers/software-engineer-compute-storage-san-francisco/",
+      "team": "Runtime"
+    },
+    {
+      "title": "Software Engineer, Core Services",
+      "url": "https://openai.com/careers/software-engineer-core-services-san-francisco/",
+      "team": "Applied AI Infrastructure"
+    },
+    {
+      "title": "Software Engineer, Data Acquisition",
+      "url": "https://openai.com/careers/software-engineer-data-acquisition-san-francisco/",
+      "team": "Foundations"
+    },
+    {
+      "title": "Software Engineer, Database Systems",
+      "url": "https://openai.com/careers/software-engineer-database-systems-san-francisco/",
+      "team": "Applied AI Infrastructure"
+    },
+    {
+      "title": "Software Engineer, Data Infrastructure",
+      "url": "https://openai.com/careers/software-engineer-data-infrastructure-san-francisco/",
+      "team": "Applied AI Infrastructure"
+    },
+    {
+      "title": "Software Engineer, Data Infrastructure - Research",
+      "url": "https://openai.com/careers/software-engineer-data-infrastructure-research-san-francisco/",
+      "team": "Scaling"
+    },
+    {
+      "title": "Software Engineer, Data Visualization",
+      "url": "https://openai.com/careers/software-engineer-data-visualization-san-francisco/",
+      "team": "Scaling"
+    },
+    {
+      "title": "Software Engineer, Developer Productivity",
+      "url": "https://openai.com/careers/software-engineer-developer-productivity-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, Distributed Data Systems (Sora)",
+      "url": "https://openai.com/careers/software-engineer-distributed-data-systems-(sora)-san-francisco/",
+      "team": "Sora"
+    },
+    {
+      "title": "Software Engineer, Distributed Systems",
+      "url": "https://openai.com/careers/software-engineer-distributed-systems-san-francisco/",
+      "team": "Scaling"
+    },
+    {
+      "title": "Software Engineer, Enterprise AI Platform",
+      "url": "https://openai.com/careers/software-engineer-enterprise-ai-platform-san-francisco/",
+      "team": "B2B Applications"
+    },
+    {
+      "title": "Software Engineer, Enterprise Identity",
+      "url": "https://openai.com/careers/software-engineer-enterprise-identity-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Financial Engineering",
+      "url": "https://openai.com/careers/software-engineer-financial-engineering-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, Fleet Hardware Health",
+      "url": "https://openai.com/careers/software-engineer-fleet-hardware-health-san-francisco/",
+      "team": "Scaling"
+    },
+    {
+      "title": "Software Engineer, Fleet Management",
+      "url": "https://openai.com/careers/software-engineer-fleet-management-san-francisco/",
+      "team": "Scaling"
+    },
+    {
+      "title": "Software Engineer, Frontend",
+      "url": "https://openai.com/careers/software-engineer-frontend-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Frontier Clusters Infrastructure",
+      "url": "https://openai.com/careers/software-engineer-frontier-clusters-infrastructure-san-francisco/",
+      "team": "Frontier Clusters Infrastructure"
+    },
+    {
+      "title": "Software Engineer, Frontier Systems",
+      "url": "https://openai.com/careers/software-engineer-frontier-systems-san-francisco/",
+      "team": "Frontiers Clusters"
+    },
+    {
+      "title": "Software Engineer, Frontier Systems - Power Management",
+      "url": "https://openai.com/careers/software-engineer-frontier-systems-power-management-san-francisco/",
+      "team": "Frontier Systems"
+    },
+    {
+      "title": "Software Engineer, Full Stack (Seattle)",
+      "url": "https://openai.com/careers/software-engineer-full-stack-seattle/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Full-Stack (New York)",
+      "url": "https://openai.com/careers/software-engineer-full-stack-new-york-city/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Full-Stack",
+      "url": "https://openai.com/careers/software-engineer-full-stack-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Full-Stack \u2014 Developer Experience",
+      "url": "https://openai.com/careers/software-engineer-full-stack-developer-experience-san-francisco/",
+      "team": "Developer Experience"
+    },
+    {
+      "title": "Software Engineer, Full Stack - Financial Experience",
+      "url": "https://openai.com/careers/software-engineer-full-stack-financial-experience-san-francisco/",
+      "team": "Financial Experience"
+    },
+    {
+      "title": "Software Engineer, Full Stack (Knowledge Innovation)",
+      "url": "https://openai.com/careers/software-engineer-full-stack-(knowledge-innovation)-san-francisco/",
+      "team": "Knowledge Innovation"
+    },
+    {
+      "title": "Software Engineer, Full Stack (People Innovation)",
+      "url": "https://openai.com/careers/software-engineer-full-stack-(people-innovation)-remote-us/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, Gov",
+      "url": "https://openai.com/careers/software-engineer-gov-washington-dc/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, GPU Infrastructure",
+      "url": "https://openai.com/careers/software-engineer-gpu-infrastructure-san-francisco/",
+      "team": "Scaling"
+    },
+    {
+      "title": "Software Engineer, GPU Infrastructure - HPC",
+      "url": "https://openai.com/careers/software-engineer-gpu-infrastructure-hpc-san-francisco/",
+      "team": "Scaling"
+    },
+    {
+      "title": "Software Engineer, Inference \u2013 AMD GPU Enablement",
+      "url": "https://openai.com/careers/software-engineer-inference-amd-gpu-enablement-san-francisco/",
+      "team": "Inference"
+    },
+    {
+      "title": "Software Engineer, Inference - Multi Modal",
+      "url": "https://openai.com/careers/software-engineer-inference-multi-modal-san-francisco/",
+      "team": "Inference"
+    },
+    {
+      "title": "Software Engineer, Infrastructure - Analytics",
+      "url": "https://openai.com/careers/software-engineer-infrastructure-analytics-san-francisco/",
+      "team": "Analytics"
+    },
+    {
+      "title": "Software Engineer, Infrastructure Reliability",
+      "url": "https://openai.com/careers/software-engineer-infrastructure-reliability-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, Integrity Foundations",
+      "url": "https://openai.com/careers/software-engineer-integrity-foundations-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, iOS",
+      "url": "https://openai.com/careers/software-engineer-ios-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer - Jobs Platform & Certifications",
+      "url": "https://openai.com/careers/software-engineer-jobs-platform-and-certifications-san-francisco/",
+      "team": "Jobs Platform"
+    },
+    {
+      "title": "Software Engineer, Load Balancing - Inference",
+      "url": "https://openai.com/careers/software-engineer-load-balancing-inference-san-francisco/",
+      "team": "Inference"
+    },
+    {
+      "title": "Software Engineer, Model Inference",
+      "url": "https://openai.com/careers/software-engineer-model-inference-san-francisco/",
+      "team": "Inference"
+    },
+    {
+      "title": "Software Engineer, Monetization Delivery",
+      "url": "https://openai.com/careers/software-engineer-monetization-delivery-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, Monetization Infrastructure",
+      "url": "https://openai.com/careers/software-engineer-monetization-infrastructure-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, Monetization Product & Platform",
+      "url": "https://openai.com/careers/software-engineer-monetization-product-and-platform-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, Networking - Inference",
+      "url": "https://openai.com/careers/software-engineer-networking-inference-san-francisco/",
+      "team": "Inference"
+    },
+    {
+      "title": "Software Engineer, Online Storage (Seattle)",
+      "url": "https://openai.com/careers/software-engineer-online-storage-seattle/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Online Storage",
+      "url": "https://openai.com/careers/software-engineer-online-storage-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Payments",
+      "url": "https://openai.com/careers/software-engineer-payments-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer - Privacy & Compliance",
+      "url": "https://openai.com/careers/software-engineer-privacy-and-compliance-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, Productivity",
+      "url": "https://openai.com/careers/software-engineer-productivity-san-francisco/",
+      "team": "Compute"
+    },
+    {
+      "title": "Software Engineer, Real Time",
+      "url": "https://openai.com/careers/software-engineer-real-time-seattle/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Reliability",
+      "url": "https://openai.com/careers/software-engineer-reliability-san-francisco/",
+      "team": "Applied AI Infrastructure"
+    },
+    {
+      "title": "Software Engineer, Research Developer Productivity",
+      "url": "https://openai.com/careers/software-engineer-research-developer-productivity-san-francisco/",
+      "team": "Research Developer Productivity"
+    },
+    {
+      "title": "Software Engineer, Research - Human Data",
+      "url": "https://openai.com/careers/software-engineer-research-human-data-san-francisco/",
+      "team": "Human Data"
+    },
+    {
+      "title": "Software Engineer, Research Infrastructure",
+      "url": "https://openai.com/careers/software-engineer-research-infrastructure-san-francisco/",
+      "team": "Scaling"
+    },
+    {
+      "title": "Software Engineer, Scaled Abuse",
+      "url": "https://openai.com/careers/software-engineer-scaled-abuse-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Software Engineer, Search Evaluations",
+      "url": "https://openai.com/careers/software-engineer-search-evaluations-san-francisco/",
+      "team": "Applied AI Infrastructure"
+    },
+    {
+      "title": "Software Engineer, Search Infrastructure",
+      "url": "https://openai.com/careers/software-engineer-search-infrastructure-san-francisco/",
+      "team": "Applied AI"
+    },
+    {
+      "title": "Software Engineer, Triton Compiler",
+      "url": "https://openai.com/careers/software-engineer-triton-compiler-san-francisco/",
+      "team": "Kernels"
+    },
+    {
+      "title": "Software Engineer, Youth Well-Being",
+      "url": "https://openai.com/careers/software-engineer-youth-well-being-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Strategic Risk Manager",
+      "url": "https://openai.com/careers/strategic-risk-manager-san-francisco/",
+      "team": "Intelligence & Investigation"
+    },
+    {
+      "title": "System Software Engineer, Applied Foundations",
+      "url": "https://openai.com/careers/system-software-engineer-applied-foundations-san-francisco/",
+      "team": "Applied Foundations"
+    },
+    {
+      "title": "Technical Business Development Manager \u2013 Infrastructure",
+      "url": "https://openai.com/careers/technical-business-development-manager-infrastructure-san-francisco/",
+      "team": "Infrastructure"
+    },
+    {
+      "title": "Technical Program Manager, Partnership Site Deployment - Stargate",
+      "url": "https://openai.com/careers/technical-program-manager-partnership-site-deployment-stargate-san-francisco/",
+      "team": "Stargate"
+    },
+    {
+      "title": "TLM, Machine Learning, Integrity",
+      "url": "https://openai.com/careers/tlm-machine-learning-integrity-san-francisco/",
+      "team": "Applied AI Engineering"
+    },
+    {
+      "title": "Training: ML Framework Engineer",
+      "url": "https://openai.com/careers/training:-ml-framework-engineer-san-francisco/",
+      "team": "Scaling"
+    },
+    {
+      "title": "Training Performance Engineer",
+      "url": "https://openai.com/careers/training-performance-engineer-san-francisco/",
+      "team": "Runtime"
+    }
+  ]
+}

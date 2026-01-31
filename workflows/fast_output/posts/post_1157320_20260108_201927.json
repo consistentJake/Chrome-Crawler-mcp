@@ -1,0 +1,314 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html",
+  "timestamp": "2026-01-08T20:19:27.758364",
+  "item_count": 15,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20734509",
+        "user": {
+          "username": "Unknown",
+          "user_id": "69943",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "Takehome是一个ab test关于offer user a free month trail 的market campaign，讨论signup rate和留存率，地里都差不多能找到。\n. 1point3acres.com \nSQL和python的部分，sql是问你这个takehome的数据的upstream长什么样，然后重新算一下这个takehome的一二问。\n\npython的部分不需要写coding，关于实验的setup，考一些ab test experience，在python code里找逻辑错误和set up有哪些问题。\n. From 1point 3acres bbs\n个人感觉是技术难度不高，要求比较强的business sense，strategic thinking\n\n借这个帖子也求一下databricks DS onsite的面经，如果有哪位朋友有面过databricks ds onsite，求戳",
+        "timestamp": "2025-12-8 15:22:24",
+        "reactions": {
+          "likes": 4,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#20734509"
+      },
+      {
+        "post_id": "rate_20734509",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#rate_20734509"
+      },
+      {
+        "post_id": "20734511",
+        "user": {
+          "username": "Unknown",
+          "user_id": "610725",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "再求一个大米谢谢了！",
+        "timestamp": "2025-12-8 15:24:10",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#20734511"
+      },
+      {
+        "post_id": "rate_20734511",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#rate_20734511"
+      },
+      {
+        "post_id": "20734924",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "lz 能不能模糊分享下大致背景 \n羡慕能拿到oai面试的大佬",
+        "timestamp": "2025-12-8 20:41:31",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#20734924"
+      },
+      {
+        "post_id": "rate_div_20734924",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#rate_div_20734924"
+      },
+      {
+        "post_id": "20735741",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-8 20:41\nlz 能不能模糊分享下大致背景 \n羡慕能拿到oai面试的大佬\n背景很简单，一直在meta",
+        "timestamp": "2025-12-9 12:28:12",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-8 20:41\nlz 能不能模糊分享下大致背景 \n羡慕能拿到oai面试的大佬",
+          "匿名用户 发表于 2025-12-8 20:41\nlz 能不能模糊分享下大致背景 \n羡慕能拿到oai面试的大佬"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#20735741"
+      },
+      {
+        "post_id": "rate_div_20735741",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#rate_div_20735741"
+      },
+      {
+        "post_id": "20738567",
+        "user": {
+          "username": "runspoon",
+          "user_id": "501122",
+          "stats": {
+            "posts": "5",
+            "replies": "33",
+            "points": "609"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-9 12:28\n背景很简单，一直在meta\n请问是ic6+么？不知道是不是那样才能有机会面",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-9 12:28\n背景很简单，一直在meta",
+          "匿名用户 发表于 2025-12-9 12:28\n背景很简单，一直在meta"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#20738567"
+      },
+      {
+        "post_id": "rate_div_20738567",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#rate_div_20738567"
+      },
+      {
+        "post_id": "20741632",
+        "user": {
+          "username": "lxy83730976",
+          "user_id": "560903",
+          "stats": {
+            "posts": "7",
+            "replies": "17",
+            "points": "153"
+          },
+          "is_anonymous": false
+        },
+        "content": "runspoon 发表于 2025-12-11 07:52:56\n请问是ic6+么？不知道是不是那样才能有机会面\n我是ic6但应该不需要6+，有e5的同事也在面",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "runspoon 发表于 2025-12-11 07:52:56\n请问是ic6+么？不知道是不是那样才能有机会面",
+          "runspoon 发表于 2025-12-11 07:52:56\n请问是ic6+么？不知道是不是那样才能有机会面"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#20741632"
+      },
+      {
+        "post_id": "rate_div_20741632",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#rate_div_20741632"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "Openai DS takehome + tech 面经|openaiPM面经|一亩三分地数科面经版",
+    "extraction_time_ms": 110,
+    "thread_title": "[面试经验]\nOpenai DS takehome + tech 面经",
+    "thread_tags": [
+      "数科面经",
+      "openai"
+    ],
+    "total_replies": 14
+  },
+  "workflow_metadata": {
+    "source_page": 2,
+    "post_index": 17,
+    "original_link": {
+      "href": "thread-1157320-1-1.html",
+      "text": "Openai DS takehome + tech 面经",
+      "web_agent_id": "wa-265",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1157320-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:19:27.758394"
+  }
+}

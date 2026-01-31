@@ -51,10 +51,18 @@ from PlaywrightMcpClient import activate_chrome_and_position_mouse
 
 # Configuration
 DOWNLOADS_DIR = os.getenv("DOWNLOADS_DIR", "./downloads")
-Path(DOWNLOADS_DIR).mkdir(parents=True, exist_ok=True)
 
-# Debug mode configuration
-DEBUG_MODE = os.getenv("DEBUG_MODE", "false").lower() in ("true", "1", "yes")
+# Logging configuration
+# ENABLE_LOGGING: Controls whether to save any outputs (downloads, parsed results, debug logs)
+# Set to "false" to prevent disk storage bloat when using this MCP server in projects
+ENABLE_LOGGING = os.getenv("ENABLE_LOGGING", "false").lower() in ("true", "1", "yes")
+
+# Only create downloads directory if logging is enabled
+if ENABLE_LOGGING:
+    Path(DOWNLOADS_DIR).mkdir(parents=True, exist_ok=True)
+
+# Debug mode configuration (only active when ENABLE_LOGGING is true)
+DEBUG_MODE = ENABLE_LOGGING and os.getenv("DEBUG_MODE", "false").lower() in ("true", "1", "yes")
 SESSION_TIMEOUT_SECONDS = int(os.getenv("SESSION_TIMEOUT_SECONDS", "60"))
 
 # MCP Client type configuration ("playwright" or "chrome")
@@ -71,9 +79,13 @@ current_page_title = ""
 session_manager = None
 debug_logger = None
 
-if DEBUG_MODE:
-    print(f"[DEBUG MODE] Enabled - Sessions will be saved to {DOWNLOADS_DIR}/sessions/")
-    session_manager = SessionManager(DOWNLOADS_DIR, timeout_seconds=SESSION_TIMEOUT_SECONDS)
+if ENABLE_LOGGING:
+    print(f"[LOGGING] Enabled - Outputs will be saved to {DOWNLOADS_DIR}")
+    if DEBUG_MODE:
+        print(f"[DEBUG MODE] Enabled - Sessions will be saved to {DOWNLOADS_DIR}/sessions/")
+        session_manager = SessionManager(DOWNLOADS_DIR, timeout_seconds=SESSION_TIMEOUT_SECONDS)
+else:
+    print(f"[LOGGING] Disabled - No outputs will be saved to disk")
 
 
 def get_browser() -> BrowserIntegration:
@@ -385,6 +397,8 @@ The downloaded file will include:
 - Metadata (URL, title, timestamp)
 - Filename is auto-generated or can be specified
 
+NOTE: This requires ENABLE_LOGGING=true environment variable. By default, logging is disabled to prevent disk storage bloat.
+
 Workflow Example:
 1. navigate() to target page
 2. click_element() to get to specific content
@@ -595,19 +609,28 @@ Use this when you need to extract structured data from supported websites:
 - **x.com / twitter.com**: Extracts tweets with user info, text, engagement metrics, media
   - Supports: search results, timelines, profiles
   - Returns: tweet ID, username, display name, text, timestamp, metrics (replies, retweets, likes, views), media
+- **linkedin.com/jobs**: Extracts job listings with metadata
+  - Supports: job search results, company job pages
+  - Returns: job ID, title, company, location, salary, insights, application status
+- **1point3acres.com**: Extracts forum posts and replies
+  - Supports: thread pages
+  - Returns: main post, replies, user info, reactions
+- **reddit.com**: Extracts posts and comments from Reddit
+  - Supports: subreddit listings (hot, new, top, etc.) and individual post pages
+  - Returns: post titles, links, timestamps, authors, scores, and top comments
 
 The parser is auto-selected based on the current URL, or you can specify one explicitly.
-Results are automatically saved to the session's parsed_results folder as JSON.
+NOTE: Results are only saved to disk when ENABLE_LOGGING=true. By default, logging is disabled to prevent disk storage bloat.
 
 Example workflow:
 1. navigate(url="https://x.com/search?q=gold")
 2. scroll_down(times=20)  # Load more content
 3. parse_page_with_special_parser()  # Extract all visible tweets
-4. Result: File saved with 50+ tweets in structured JSON format
+4. Result: File saved with 50+ tweets in structured JSON format (if ENABLE_LOGGING=true)
 
 Returns:
 - Summary of extracted items (count, types)
-- Full file path to saved JSON results
+- Full file path to saved JSON results (if logging enabled)
 - Parser used and execution time
 """,
             inputSchema={
@@ -616,7 +639,7 @@ Returns:
                     "parser_name": {
                         "type": "string",
                         "description": "Parser to use (auto-detected from URL if not specified)",
-                        "enum": ["auto", "x.com"]
+                        "enum": ["auto", "x.com", "1point3acres", "linkedin-jobs", "reddit"]
                     },
                     "save_results": {
                         "type": "boolean",
@@ -1476,6 +1499,23 @@ async def download_page(filename: Optional[str] = None, include_metadata: bool =
     input_data = {"filename": filename, "include_metadata": include_metadata}
 
     with timer:
+        # Check if logging is enabled
+        if not ENABLE_LOGGING:
+            output = {
+                "success": False,
+                "error": "Download disabled: ENABLE_LOGGING=false. Set ENABLE_LOGGING=true to save page downloads.",
+                "logging_enabled": False
+            }
+
+            # Log failed operation (will be skipped if debug logger not available)
+            logger = get_debug_logger()
+            if logger:
+                logger.log_operation("download_page", input_data, output, timer.get_duration())
+                if session_manager:
+                    session_manager.update_operation_time()
+
+            return output
+
         browser = get_browser()
 
         # Get current page HTML
@@ -1493,7 +1533,8 @@ async def download_page(filename: Optional[str] = None, include_metadata: bool =
             logger = get_debug_logger()
             if logger:
                 logger.log_operation("download_page", input_data, output, timer.get_duration())
-                session_manager.update_operation_time()
+                if session_manager:
+                    session_manager.update_operation_time()
 
             return output
 
@@ -2047,23 +2088,34 @@ async def parse_page_with_special_parser(
             }
             return output
 
-        # Save results if requested
+        # Save results if requested and logging is enabled
         filepath = None
-        if save_results:
+        if save_results and ENABLE_LOGGING:
             filepath = _save_parsed_results(parser.name, parsed_data)
+        elif save_results and not ENABLE_LOGGING:
+            # User requested save but logging is disabled
+            pass  # Don't save, just continue
 
         # Build output
+        message = f"Successfully parsed {parsed_data.get('item_count', 0)} items using {parser.name} parser"
+        if filepath:
+            message += f". Results saved to {filepath}"
+        elif save_results and not ENABLE_LOGGING:
+            message += ". (Results not saved: ENABLE_LOGGING=false)"
+
         output = {
             "success": True,
             "parser_used": parser.name,
             "parser_version": parser.version,
             "url": current_url,
             "item_count": parsed_data.get("item_count", 0),
+            "items": parsed_data.get("items", []),  # Include full items data
             "items_summary": _summarize_items(parsed_data.get("items", [])),
+            "metadata": parsed_data.get("metadata", {}),
             "filepath": str(filepath) if filepath else None,
+            "logging_enabled": ENABLE_LOGGING,
             "execution_time_ms": parsed_data.get("metadata", {}).get("extraction_time_ms", 0),
-            "message": f"Successfully parsed {parsed_data.get('item_count', 0)} items using {parser.name} parser" +
-                      (f". Results saved to {filepath}" if filepath else "")
+            "message": message
         }
 
     # Log operation

@@ -1,0 +1,507 @@
+{
+  "parser": "1point3acres",
+  "parser_version": "1.0.0",
+  "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html",
+  "timestamp": "2026-01-08T20:18:13.767765",
+  "item_count": 25,
+  "items": {
+    "main_post": {
+      "post_id": "reply",
+      "user": {
+        "username": "Unknown",
+        "user_id": "",
+        "stats": {
+          "posts": "",
+          "replies": "",
+          "points": ""
+        },
+        "is_anonymous": false
+      },
+      "content": "",
+      "timestamp": "",
+      "reactions": {},
+      "quotes": [],
+      "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#reply"
+    },
+    "replies": [
+      {
+        "post_id": "20755612",
+        "user": {
+          "username": "Unknown",
+          "user_id": "44512",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "开放爱后端IC",
+        "timestamp": "2025-12-23 02:34:58",
+        "reactions": {
+          "likes": 0,
+          "dislikes": 0
+        },
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#20755612"
+      },
+      {
+        "post_id": "rate_20755612",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#rate_20755612"
+      },
+      {
+        "post_id": "20756203",
+        "user": {
+          "username": "Unknown",
+          "user_id": "118591",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-23 08:49:00\n恭喜楼主。求问coding遇到的是哪个题？GPU CREDIT AND 那道什么plant的题目",
+        "timestamp": "2025-12-23 12:49:32",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-23 08:49:00\n恭喜楼主。求问coding遇到的是哪个题？",
+          "匿名用户 发表于 2025-12-23 08:49:00\n恭喜楼主。求问coding遇到的是哪个题？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#20756203"
+      },
+      {
+        "post_id": "rate_20756203",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#rate_20756203"
+      },
+      {
+        "post_id": "20757899",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "USStockSupport 发表于 2025-12-24 19:22\n恭喜楼主，请问openai现在发的RSU，HR有说未来会有tender offer吗\nRSU 没说",
+        "timestamp": "2025-12-24 20:44:06",
+        "reactions": {},
+        "quotes": [
+          "USStockSupport 发表于 2025-12-24 19:22\n恭喜楼主，请问openai现在发的RSU，HR有说未来会有tender offer吗",
+          "USStockSupport 发表于 2025-12-24 19:22\n恭喜楼主，请问openai现在发的RSU，HR有说未来会有tender offer吗"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#20757899"
+      },
+      {
+        "post_id": "rate_div_20757899",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#rate_div_20757899"
+      },
+      {
+        "post_id": "20756076",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "抹香鲸 发表于 2025-12-23 08:00\n2.2M是一年吧？\n这是个普通SWE的岗位，不是ML的，2.2M当然是四年总共的",
+        "timestamp": "2025-12-23 11:17:29",
+        "reactions": {},
+        "quotes": [
+          "抹香鲸 发表于 2025-12-23 08:00\n2.2M是一年吧？",
+          "抹香鲸 发表于 2025-12-23 08:00\n2.2M是一年吧？"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#20756076"
+      },
+      {
+        "post_id": "rate_div_20756076",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#rate_div_20756076"
+      },
+      {
+        "post_id": "20755756",
+        "user": {
+          "username": "抹香鲸",
+          "user_id": "546583",
+          "stats": {
+            "posts": "3",
+            "replies": "37",
+            "points": "615"
+          },
+          "is_anonymous": false
+        },
+        "content": "2.2M是一年吧？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#20755756"
+      },
+      {
+        "post_id": "rate_div_20755756",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#rate_div_20755756"
+      },
+      {
+        "post_id": "20755796",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "恭喜楼主。求问coding遇到的是哪个题？",
+        "timestamp": "2025-12-23 08:49:00",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#20755796"
+      },
+      {
+        "post_id": "rate_div_20755796",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#rate_div_20755796"
+      },
+      {
+        "post_id": "20756235",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-24 04:49\nGPU CREDIT AND 那道什么plant的题目\n感谢感谢！ Plant那道题可以分享一下吗？ 好像没在地理见过。。",
+        "timestamp": "2025-12-23 13:05:51",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-24 04:49\nGPU CREDIT AND 那道什么plant的题目",
+          "匿名用户 发表于 2025-12-24 04:49\nGPU CREDIT AND 那道什么plant的题目"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#20756235"
+      },
+      {
+        "post_id": "rate_div_20756235",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#rate_div_20756235"
+      },
+      {
+        "post_id": "20756843",
+        "user": {
+          "username": "chuckhelios",
+          "user_id": "153327",
+          "stats": {
+            "posts": "9",
+            "replies": "78",
+            "points": "610"
+          },
+          "is_anonymous": false
+        },
+        "content": "匿名用户 发表于 2025-12-23 13:05:51\n感谢感谢！ Plant那道题可以分享一下吗？ 好像没在地理见过。。请问Plant是什么题",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-23 13:05:51\n感谢感谢！ Plant那道题可以分享一下吗？ 好像没在地理见过。。",
+          "匿名用户 发表于 2025-12-23 13:05:51\n感谢感谢！ Plant那道题可以分享一下吗？ 好像没在地理见过。。"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#20756843"
+      },
+      {
+        "post_id": "rate_20756843",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#rate_20756843"
+      },
+      {
+        "post_id": "20756875",
+        "user": {
+          "username": "Unknown",
+          "user_id": "153327",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "chuckhelios 发表于 2025-12-23 20:26:17\n请问Plant是什么题This: 🔗 www.1point3acres.com",
+        "timestamp": "2025-12-23 21:01:44",
+        "reactions": {},
+        "quotes": [
+          "chuckhelios 发表于 2025-12-23 20:26:17\n请问Plant是什么题",
+          "chuckhelios 发表于 2025-12-23 20:26:17\n请问Plant是什么题"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#20756875"
+      },
+      {
+        "post_id": "rate_20756875",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#rate_20756875"
+      },
+      {
+        "post_id": "20756880",
+        "user": {
+          "username": "ytx2013",
+          "user_id": "521202",
+          "stats": {
+            "posts": "4",
+            "replies": "412",
+            "points": "167"
+          },
+          "is_anonymous": false
+        },
+        "content": "恭喜恭喜！积分不够看不到内容。。楼主能透露啥级别吗？",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#20756880"
+      },
+      {
+        "post_id": "rate_div_20756880",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#rate_div_20756880"
+      },
+      {
+        "post_id": "20756925",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": true
+        },
+        "content": "匿名用户 发表于 2025-12-24 13:01\nThis: https://www.1point3acres.com/bbs/thread-1157706-1-1.html\n感谢分享 🙏 这个题一直没有完整的面经。 能问下楼主 具体题目 5个小问 每个是什么样的吗？",
+        "timestamp": "2025-12-23 21:58:52",
+        "reactions": {},
+        "quotes": [
+          "匿名用户 发表于 2025-12-24 13:01\nThis: https://www.1point3acres.com/bbs/thread-1157706-1-1.html",
+          "匿名用户 发表于 2025-12-24 13:01\nThis: https://www.1point3acres.com/bbs/thread-1157706-1-1.html"
+        ],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#20756925"
+      },
+      {
+        "post_id": "rate_div_20756925",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#rate_div_20756925"
+      },
+      {
+        "post_id": "new",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#new"
+      },
+      {
+        "post_id": "replytmp",
+        "user": {
+          "username": "Unknown",
+          "user_id": "",
+          "stats": {
+            "posts": "",
+            "replies": "",
+            "points": ""
+          },
+          "is_anonymous": false
+        },
+        "content": "",
+        "timestamp": "",
+        "reactions": {},
+        "quotes": [],
+        "url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html#replytmp"
+      }
+    ]
+  },
+  "metadata": {
+    "page_title": "开放爱标准包|openai工资|一亩三分地🔑晒工资抖包袱版",
+    "extraction_time_ms": 113,
+    "thread_title": "[💰晒工资抖包袱]\n开放爱标准包",
+    "thread_tags": [
+      "晒工资抖包袱",
+      "BayArea湾区",
+      "openai"
+    ],
+    "total_replies": 24
+  },
+  "workflow_metadata": {
+    "source_page": 1,
+    "post_index": 5,
+    "original_link": {
+      "href": "thread-1159050-1-1.html",
+      "text": "开放爱标准包",
+      "web_agent_id": "wa-183",
+      "full_url": "https://www.1point3acres.com/bbs/thread-1159050-1-1.html"
+    },
+    "processed_at": "2026-01-08T20:18:13.767809"
+  }
+}
