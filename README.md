@@ -9,6 +9,8 @@ A web automation and extraction toolkit for intelligent web scraping and LLM-bas
 - **LLM Integration**: Extract structured data using Anthropic Claude or OpenAI models
 - **MCP Server**: Use as a Model Context Protocol server with Claude Code or other MCP clients
 - **Unified Pipeline**: Orchestrated scraping and extraction workflow
+- **Smart HTML Sanitization**: Token-efficient HTML processing with interactable element detection
+- **Multi-Strategy Locators**: XPath, CSS selectors, and data attributes for robust element targeting
 
 ## Quick Start
 
@@ -225,6 +227,69 @@ The interactive web agent includes special parsers for:
 - **1point3acres**: Forum threads and posts
 
 Use the `parse_page_with_special_parser` MCP tool to automatically extract structured data from these sites.
+
+## Core Technologies
+
+### HTML Sanitization
+
+The `HTMLSanitizer` (src/html_sanitizer.py:14) provides intelligent HTML processing optimized for both LLM consumption and browser automation:
+
+**Key Features:**
+- **Token-Efficient Processing**: Removes scripts, styles, and non-essential elements while preserving page structure
+- **Interactive Element Detection**: Identifies and indexes all clickable/interactable elements (links, buttons, inputs)
+- **Unique Element IDs**: Assigns `data-web-agent-id` attributes to each interactable element for reliable targeting
+- **Multi-Strategy Locators**: Generates XPath, CSS selectors, ID, class, and href-based locators for robust element location
+- **Security-Aware**: Filters dangerous protocols (javascript:, data:) and hidden elements
+- **Indexed Output**: Produces numbered element lists for easy LLM understanding
+
+**Usage:**
+```python
+from src.html_sanitizer import HTMLSanitizer
+
+sanitizer = HTMLSanitizer(max_tokens=8000)
+result = sanitizer.sanitize(html_content, extraction_mode='links')
+
+# Access sanitized HTML
+print(result['sanitized_html'])
+
+# Access element registry with web_agent_ids
+for element in result['element_registry']:
+    print(f"[{element['index']}] {element['tag']}: {element['text']}")
+    print(f"  ID: {element['web_agent_id']}")
+    print(f"  Locators: {element['locators']}")
+```
+
+### Special Parsers
+
+Special parsers extract structured data from specific websites using either JavaScript execution or HTML parsing. Each parser implements the `BaseParser` interface (src/special_parsers/base.py:13) and is automatically selected based on URL patterns.
+
+**Architecture:**
+- **Auto-Detection**: URL pattern matching automatically selects the appropriate parser
+- **Dual-Strategy Extraction**: JavaScript execution for dynamic content, HTML parsing for CSP-restricted sites
+- **Structured Output**: Returns JSON with item count, metadata, and extracted data
+- **Version Tracking**: Each parser tracks its version for reproducibility
+
+**Available Parsers:**
+- **Reddit** (src/special_parsers/reddit.py:19): Subreddit listings and post pages with comments
+- **Twitter/X** (src/special_parsers/x_com.py): Tweets with engagement metrics and media
+- **LinkedIn Jobs** (src/special_parsers/linkedin_jobs.py): Job listings with salary and metadata
+- **1point3acres** (src/special_parsers/onepoint3acres.py): Forum posts with reactions and replies
+
+**Example Output Structure:**
+```json
+{
+  "parser": "reddit",
+  "parser_version": "1.0.0",
+  "url": "https://reddit.com/r/python",
+  "timestamp": "2026-01-31T10:30:00Z",
+  "item_count": 25,
+  "items": [...],
+  "metadata": {
+    "subreddit": "python",
+    "sort": "hot"
+  }
+}
+```
 
 ## Development
 
