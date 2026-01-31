@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "interactive-web-agent": {
+      "command": "python",
+      "args": [
+        "/path/to/WebAgent/src/interactive_web_agent_mcp.py"
+      ],
+      "env": {
+        "ENABLE_LOGGING": "false",
+        "DEBUG_MODE": "false",
+        "DOWNLOADS_DIR": "./downloads",
+        "MCP_CLIENT_TYPE": "chrome",
+        "BROWSER_APP_NAME": "Google Chrome",
+        "SESSION_TIMEOUT_SECONDS": "60"
+      }
+    },
+    "interactive-web-agent-with-logging": {
+      "command": "python",
+      "args": [
+        "/path/to/WebAgent/src/interactive_web_agent_mcp.py"
+      ],
+      "env": {
+        "ENABLE_LOGGING": "true",
+        "DEBUG_MODE": "true",
+        "DOWNLOADS_DIR": "./web_agent_outputs",
+        "MCP_CLIENT_TYPE": "chrome",
+        "BROWSER_APP_NAME": "Google Chrome",
+        "SESSION_TIMEOUT_SECONDS": "60"
+      }
+    }
+  }
+}
