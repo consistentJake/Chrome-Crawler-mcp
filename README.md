@@ -1,19 +1,19 @@
-# WebAgent
+# Chrome-Crawler-mcp
 
 A web automation and extraction toolkit for intelligent web scraping and LLM-based data extraction, powered by MCP (Model Context Protocol) servers.
 
 > **Educational Use Only**: This project is designed for educational purposes, research, and authorized testing environments. Users are responsible for ensuring their usage complies with website terms of service and applicable laws.
 
-## Why WebAgent?
+## Why Chrome-Crawler-mcp?
 
-### The Context Window Problem
+### The Context Explosion Problem
 
 Traditional web scraping MCPs face a critical challenge: **they return full HTML content that quickly exhausts LLM context windows**. A typical modern webpage can contain 50,000+ tokens of HTML, leaving little room for reasoning, tool calls, or multi-turn conversations. This forces agents to either:
 - Work with severely limited context
 - Repeatedly re-fetch the same content
 - Miss important content due to truncation
 
-**WebAgent solves this with intelligent HTML sanitization** that reduces pages to ~5-10% of their original size while preserving all interactive capabilities.
+**Chrome-Crawler-mcp solves this with intelligent HTML sanitization** that reduces pages to ~5-10% of their original size while preserving all interactive capabilities.
 
 ### Our Solution: Smart Sanitization + Element Remapping
 
@@ -46,7 +46,7 @@ Most web agents ask the LLM to:
 
 **This is expensive, slow, and burns through context windows.**
 
-**WebAgent's Approach:**
+**Chrome-Crawler-mcp's Approach:**
 - Pre-written, battle-tested parsers for common platforms (Reddit, X, LinkedIn, 1point3acres)
 - Parsers use JavaScript execution or optimized HTML parsing
 - Extract structured JSON in milliseconds, not LLM calls
@@ -60,7 +60,7 @@ Most web agents ask the LLM to:
 
 ### Advantages Over Other Web Agent MCPs
 
-| Feature | WebAgent | Typical MCP Servers |
+| Feature | Chrome-Crawler-mcp | Typical MCP Servers |
 |---------|----------|-------------------|
 | **Context Efficiency** | ~5KB per page (10x reduction) | 50-100KB per page |
 | **Pages per Context** | 10-20 pages | 1-3 pages |
@@ -72,7 +72,7 @@ Most web agents ask the LLM to:
 
 ### Flexibility Through MCP
 
-As an MCP (Model Context Protocol) server, WebAgent works with:
+As an MCP (Model Context Protocol) server, Chrome-Crawler-mcp works with:
 - Claude Code (official Anthropic CLI)
 - Any MCP-compatible client
 - Custom integrations via the MCP SDK
@@ -125,11 +125,11 @@ Add to your `~/.claude.json` or MCP client configuration:
     "interactive-web-agent": {
       "command": "python3",
       "args": [
-        "/path/to/WebAgent/src/interactive_web_agent_mcp.py"
+        "/path/to/Chrome-Crawler-mcp/src/interactive_web_agent_mcp.py"
       ],
       "env": {
-        "DOWNLOADS_DIR": "/path/to/WebAgent/downloads",
-        "PYTHONPATH": "/path/to/WebAgent",
+        "DOWNLOADS_DIR": "/path/to/Chrome-Crawler-mcp/downloads",
+        "PYTHONPATH": "/path/to/Chrome-Crawler-mcp",
         "DEBUG_MODE": "true",
         "ENABLE_LOGGING": "true"
       }
@@ -145,7 +145,7 @@ Add to your `~/.claude.json` or MCP client configuration:
 }
 ```
 
-**Important**: Replace `/path/to/WebAgent` with your actual project path (e.g., `/home/user/Projects/WebAgent`)
+**Important**: Replace `/path/to/Chrome-Crawler-mcp` with your actual project path (e.g., `/home/user/Projects/Chrome-Crawler-mcp`)
 
 #### 3. Start Using the MCP Server
 
@@ -159,7 +159,7 @@ Once configured, the server provides tools for:
 ## Project Structure
 
 ```
-WebAgent/
+Chrome-Crawler-mcp/
 ├── main.py                 # Pipeline orchestrator (scrape + extract)
 ├── config.yaml             # Unified configuration file
 ├── shared/                 # Shared utilities
