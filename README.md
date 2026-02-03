@@ -1,14 +1,18 @@
 # Chrome-Crawler-mcp
 Educational Use Only web browsing tools.
 ## Why Chrome-Crawler-mcp?
-> Have you used popular playwright-mcp? it is hard to reuse your own profile and log in status. 
-Here, mcp act as yourself without creating seperate browser instance.
-> Have you experience the web agent mcp return huge page content to llm and you agent quicky run out of context window. 
-Here we condense page content without losing the ability to interacte with original page.
-> Have you worry about asking llm to process hundreds of webpages which **burn your tokens** like nothing.  
-Here you can ask your agent to smartly create speical parsers and workflow to run crawling without using LLM. Your agent is only needed for original investigation and writing parser/workflow for you.
-> Do you hate to use extensions and worry about give up your privacy of using AI companies' browser tools.
-Here you build you own crawler in much faster and robust way (yes, vibe coding is what you need), and just run it without giving up your privacy
+Have you used popular playwright-mcp? it is **hard to reuse your own profile and log in status**.
+- Here, mcp act as yourself without creating seperate browser instance.
+
+Have you experience the web agent mcp return **huge page content to llm** and you agent quicky run out of context window.
+- Here we condense page content without losing the ability to interacte with original page.
+
+Have you worry about asking llm to process hundreds of webpages which **burn your tokens** like nothing.
+
+- Here you can ask your agent to smartly create speical parsers and workflow to run crawling without using LLM. Your agent is only needed for original investigation and writing parser/workflow for you.
+
+Do you hate to use extensions and worry about **give up your privacy** of using AI companies' browser tools.
+- Here you build you own crawler in much faster and robust way (yes, vibe coding is what you need), and just run it without giving up your privacy
 ### The Context Explosion Problem
 
 Traditional web scraping MCPs face a critical challenge: **they return full HTML content that quickly exhausts LLM context windows**. A typical modern webpage can contain 50,000+ tokens of HTML, leaving little room for reasoning, tool calls, or multi-turn conversations. This forces agents to either:
